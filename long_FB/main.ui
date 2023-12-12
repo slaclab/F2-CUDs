@@ -1,0 +1,3123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="banner" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1920</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255,149,60);
+color: rgb(0, 34, 130);</string>
+   </property>
+   <widget class="PyDMDrawingImage" name="F2_icon">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>5</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="filename" stdset="0">
+     <string>/home/fphysics/zack/workspace/resources/F2_icon.png</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="title">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>0</y>
+      <width>1000</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>30</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>LONGITUDINAL FEEDBACK SYSTEMS</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="body" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>50</y>
+     <width>1920</width>
+     <height>1030</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 10);
+color: rgb(255, 255, 255);
+
+PyDMLabel {
+  border-radius: 5px;
+}
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
+  background-color: rgb(0,255,0);
+  color: rgb(0,0,0);
+}
+
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;1&quot;] {
+  background-color: rgb(255,255,0);
+  color: rgb(0,0,0);
+}
+
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;2&quot;] {
+  background-color: rgb(255,0,0);
+  color: rgb(255,255,255);
+}
+
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;3&quot;] {
+  background-color: rgb(192,0,255);
+  color: rgb(255,255,0);
+}
+
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
+  color: rgb(218,218,218);
+  background-color: rgb(25,25,25);
+}</string>
+   </property>
+   <widget class="QWidget" name="FB_1_DL10E" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>310</width>
+      <height>960</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 5px;
+background-color: rgb(20, 20, 30);
+color: rgb(255, 255, 255);</string>
+    </property>
+    <widget class="QLabel" name="header_1">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>5</y>
+       <width>310</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>18</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>DL10 Energy</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="meas_1_l">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>170</y>
+       <width>310</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(200, 200, 200);</string>
+     </property>
+     <property name="text">
+      <string>IN10 BPM 731 X</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="act_1_l">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>460</y>
+       <width>310</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(230,230,230);</string>
+     </property>
+     <property name="text">
+      <string>IN10 KLYS 41 SFB_ADES</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="PyDMTimePlot" name="act_1_hist">
+     <property name="geometry">
+      <rect>
+       <x>-30</x>
+       <y>780</y>
+       <width>320</width>
+       <height>180</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="backgroundBrush">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>20</red>
+        <green>20</green>
+        <blue>30</blue>
+       </color>
+      </brush>
+     </property>
+     <property name="backgroundColor">
+      <color>
+       <red>20</red>
+       <green>20</green>
+       <blue>30</blue>
+      </color>
+     </property>
+     <property name="yAxes">
+      <stringlist>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+      </stringlist>
+     </property>
+     <property name="curves">
+      <stringlist>
+       <string>{&quot;channel&quot;: &quot;ca://SIOC:SYS1:ML01:AO257&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot; &quot;, &quot;color&quot;: &quot;gainsboro&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+      </stringlist>
+     </property>
+     <property name="updatesAsynchronously">
+      <bool>true</bool>
+     </property>
+     <property name="timeSpan">
+      <double>600.000000000000000</double>
+     </property>
+     <property name="updateInterval">
+      <double>0.050000000000000</double>
+     </property>
+     <property name="autoRangeY">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="act_1_hist_l">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>750</y>
+       <width>310</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(200, 200, 200);</string>
+     </property>
+     <property name="text">
+      <string>10min Actuator History</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QWidget" name="info_1" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>580</y>
+       <width>310</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <widget class="QLabel" name="stat_tmit_1">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>105</y>
+        <width>280</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(55,55,60);
+color: rgb(200, 200, 200);</string>
+      </property>
+      <property name="text">
+       <string>TMIT OK</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>1</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="stat_act_1">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>5</y>
+        <width>280</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(55,55,60);
+color: rgb(200, 200, 200);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="text">
+       <string>ACTUATOR OK</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>1</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="stat_meas_1">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>55</y>
+        <width>280</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(55,55,60);
+color: rgb(200, 200, 200);</string>
+      </property>
+      <property name="text">
+       <string>STATE OK</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>1</number>
+      </property>
+     </widget>
+    </widget>
+    <widget class="PyDMLabel" name="act_1_pct">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>500</y>
+       <width>310</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>44</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="showUnits" stdset="0">
+      <bool>true</bool>
+     </property>
+     <property name="precisionFromPV" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="alarmSensitiveBorder" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="channel" stdset="0">
+      <string>SIOC:SYS1:ML00:CALC142</string>
+     </property>
+    </widget>
+    <widget class="PyDMTimePlot" name="meas_1">
+     <property name="geometry">
+      <rect>
+       <x>-25</x>
+       <y>200</y>
+       <width>320</width>
+       <height>180</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="backgroundBrush">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>20</red>
+        <green>20</green>
+        <blue>30</blue>
+       </color>
+      </brush>
+     </property>
+     <property name="backgroundColor">
+      <color>
+       <red>20</red>
+       <green>20</green>
+       <blue>30</blue>
+      </color>
+     </property>
+     <property name="yAxes">
+      <stringlist>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+      </stringlist>
+     </property>
+     <property name="curves">
+      <stringlist>
+       <string>{&quot;channel&quot;: &quot;ca://BPMS:IN10:731:X1H&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot; &quot;, &quot;color&quot;: &quot;#0a84ff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+       <string>{&quot;channel&quot;: &quot;ca://SIOC:SYS1:ML00:AO858&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;SIOC:SYS1:ML00:AO858&quot;, &quot;color&quot;: &quot;#ffaa00&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+      </stringlist>
+     </property>
+     <property name="updatesAsynchronously">
+      <bool>true</bool>
+     </property>
+     <property name="timeSpan">
+      <double>93.000000000000000</double>
+     </property>
+     <property name="updateInterval">
+      <double>0.050000000000000</double>
+     </property>
+     <property name="autoRangeY">
+      <bool>false</bool>
+     </property>
+     <property name="minYRange">
+      <double>-1.100000000000000</double>
+     </property>
+     <property name="maxYRange">
+      <double>1.100000000000000</double>
+     </property>
+    </widget>
+    <widget class="PyDMAnalogIndicator" name="BC11BL_act_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>400</y>
+       <width>280</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="channel" stdset="0">
+      <string>SIOC:SYS1:ML00:CALC142</string>
+     </property>
+     <property name="showValue" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="showTicks" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="flipScale" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="backgroundColor" stdset="0">
+      <color>
+       <red>55</red>
+       <green>55</green>
+       <blue>60</blue>
+      </color>
+     </property>
+     <property name="indicatorColor" stdset="0">
+      <color>
+       <red>255</red>
+       <green>255</green>
+       <blue>255</blue>
+      </color>
+     </property>
+     <property name="tickColor" stdset="0">
+      <color>
+       <red>0</red>
+       <green>0</green>
+       <blue>0</blue>
+      </color>
+     </property>
+     <property name="backgroundSizeRate" stdset="0">
+      <double>0.500000000000000</double>
+     </property>
+     <property name="tickSizeRate" stdset="0">
+      <double>0.200000000000000</double>
+     </property>
+     <property name="numDivisions" stdset="0">
+      <number>20</number>
+     </property>
+     <property name="scaleHeight" stdset="0">
+      <number>50</number>
+     </property>
+     <property name="limitsFromChannel" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="userLowerLimit" stdset="0">
+      <double>0.000000000000000</double>
+     </property>
+     <property name="userUpperLimit" stdset="0">
+      <double>100.000000000000000</double>
+     </property>
+     <property name="minorAlarmRegionColor" stdset="0">
+      <color>
+       <red>65</red>
+       <green>65</green>
+       <blue>70</blue>
+      </color>
+     </property>
+     <property name="majorAlarmRegionColor" stdset="0">
+      <color>
+       <red>75</red>
+       <green>75</green>
+       <blue>80</blue>
+      </color>
+     </property>
+     <property name="minorAlarmFromChannel" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="userUpperMinorAlarm" stdset="0">
+      <double>70.000000000000000</double>
+     </property>
+     <property name="userLowerMinorAlarm" stdset="0">
+      <double>0.000000000000000</double>
+     </property>
+     <property name="majorAlarmFromChannel" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="userUpperMajorAlarm" stdset="0">
+      <double>90.000000000000000</double>
+     </property>
+     <property name="userLowerMajorAlarm" stdset="0">
+      <double>0.000000000000000</double>
+     </property>
+    </widget>
+    <zorder>meas_1_l</zorder>
+    <zorder>act_1_l</zorder>
+    <zorder>act_1_hist</zorder>
+    <zorder>act_1_hist_l</zorder>
+    <zorder>info_1</zorder>
+    <zorder>act_1_pct</zorder>
+    <zorder>meas_1</zorder>
+    <zorder>BC11BL_act_2</zorder>
+    <zorder>header_1</zorder>
+   </widget>
+   <widget class="QWidget" name="FB_2_BC11E" native="true">
+    <property name="geometry">
+     <rect>
+      <x>328</x>
+      <y>60</y>
+      <width>310</width>
+      <height>960</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 5px;
+background-color: rgb(20, 20, 30);
+color: rgb(255, 255, 255);</string>
+    </property>
+    <widget class="QLabel" name="header_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>5</y>
+       <width>310</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>18</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>BC11 Energy</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>170</y>
+       <width>310</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(200, 200, 200);</string>
+     </property>
+     <property name="text">
+      <string>LI11 BPM 333 X</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="act_2_l">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>460</y>
+       <width>310</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(230,230,230);</string>
+     </property>
+     <property name="text">
+      <string>KLYS LI11 11 &amp; 21 SSSB_ADES</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="PyDMTimePlot" name="act_2_hist">
+     <property name="geometry">
+      <rect>
+       <x>-30</x>
+       <y>780</y>
+       <width>320</width>
+       <height>180</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="backgroundBrush">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>20</red>
+        <green>20</green>
+        <blue>30</blue>
+       </color>
+      </brush>
+     </property>
+     <property name="backgroundColor">
+      <color>
+       <red>20</red>
+       <green>20</green>
+       <blue>30</blue>
+      </color>
+     </property>
+     <property name="yAxes">
+      <stringlist>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+      </stringlist>
+     </property>
+     <property name="curves">
+      <stringlist>
+       <string>{&quot;channel&quot;: &quot;ca://SIOC:SYS1:ML01:AO259&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot; &quot;, &quot;color&quot;: &quot;gainsboro&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+      </stringlist>
+     </property>
+     <property name="updatesAsynchronously">
+      <bool>true</bool>
+     </property>
+     <property name="timeSpan">
+      <double>600.000000000000000</double>
+     </property>
+     <property name="updateInterval">
+      <double>0.050000000000000</double>
+     </property>
+     <property name="autoRangeY">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="act_2_hist_l">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>750</y>
+       <width>310</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(200, 200, 200);</string>
+     </property>
+     <property name="text">
+      <string>10min Actuator History</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QWidget" name="info_2" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>580</y>
+       <width>310</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <widget class="QLabel" name="stat_tmit_2">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>105</y>
+        <width>280</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(55,55,60);
+color: rgb(200, 200, 200);</string>
+      </property>
+      <property name="text">
+       <string>TMIT OK</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>1</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="stat_act_2">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>5</y>
+        <width>280</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(55,55,60);
+color: rgb(200, 200, 200);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="text">
+       <string>ACTUATOR OK</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>1</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="stat_meas_2">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>55</y>
+        <width>280</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(55,55,60);
+color: rgb(200, 200, 200);</string>
+      </property>
+      <property name="text">
+       <string>STATE OK</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>1</number>
+      </property>
+     </widget>
+    </widget>
+    <widget class="PyDMLabel" name="act_2_pct">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>500</y>
+       <width>310</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>44</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="showUnits" stdset="0">
+      <bool>true</bool>
+     </property>
+     <property name="precisionFromPV" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="alarmSensitiveBorder" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="channel" stdset="0">
+      <string>SIOC:SYS1:ML00:CALC143</string>
+     </property>
+    </widget>
+    <widget class="PyDMTimePlot" name="meas_2">
+     <property name="geometry">
+      <rect>
+       <x>-25</x>
+       <y>200</y>
+       <width>320</width>
+       <height>180</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="backgroundBrush">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>20</red>
+        <green>20</green>
+        <blue>30</blue>
+       </color>
+      </brush>
+     </property>
+     <property name="backgroundColor">
+      <color>
+       <red>20</red>
+       <green>20</green>
+       <blue>30</blue>
+      </color>
+     </property>
+     <property name="yAxes">
+      <stringlist>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+      </stringlist>
+     </property>
+     <property name="curves">
+      <stringlist>
+       <string>{&quot;channel&quot;: &quot;ca://BPMS:LI11:333:X1H&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot; &quot;, &quot;color&quot;: &quot;#0a84ff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+       <string>{&quot;channel&quot;: &quot;ca://SIOC:SYS1:ML01:AO207&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;SIOC:SYS1:ML01:AO207&quot;, &quot;color&quot;: &quot;#ffaa00&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+      </stringlist>
+     </property>
+     <property name="updatesAsynchronously">
+      <bool>true</bool>
+     </property>
+     <property name="timeSpan">
+      <double>93.000000000000000</double>
+     </property>
+     <property name="updateInterval">
+      <double>0.050000000000000</double>
+     </property>
+     <property name="autoRangeY">
+      <bool>false</bool>
+     </property>
+     <property name="minYRange">
+      <double>-2.200000000000000</double>
+     </property>
+     <property name="maxYRange">
+      <double>2.200000000000000</double>
+     </property>
+    </widget>
+    <widget class="PyDMAnalogIndicator" name="BC11E_act">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>400</y>
+       <width>280</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="channel" stdset="0">
+      <string>SIOC:SYS1:ML00:CALC143</string>
+     </property>
+     <property name="showValue" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="showTicks" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="flipScale" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="backgroundColor" stdset="0">
+      <color>
+       <red>55</red>
+       <green>55</green>
+       <blue>60</blue>
+      </color>
+     </property>
+     <property name="indicatorColor" stdset="0">
+      <color>
+       <red>255</red>
+       <green>255</green>
+       <blue>255</blue>
+      </color>
+     </property>
+     <property name="tickColor" stdset="0">
+      <color>
+       <red>0</red>
+       <green>0</green>
+       <blue>0</blue>
+      </color>
+     </property>
+     <property name="backgroundSizeRate" stdset="0">
+      <double>0.500000000000000</double>
+     </property>
+     <property name="tickSizeRate" stdset="0">
+      <double>0.700000000000000</double>
+     </property>
+     <property name="numDivisions" stdset="0">
+      <number>20</number>
+     </property>
+     <property name="scaleHeight" stdset="0">
+      <number>50</number>
+     </property>
+     <property name="limitsFromChannel" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="userLowerLimit" stdset="0">
+      <double>0.000000000000000</double>
+     </property>
+     <property name="userUpperLimit" stdset="0">
+      <double>100.000000000000000</double>
+     </property>
+     <property name="minorAlarmRegionColor" stdset="0">
+      <color>
+       <red>65</red>
+       <green>65</green>
+       <blue>70</blue>
+      </color>
+     </property>
+     <property name="majorAlarmRegionColor" stdset="0">
+      <color>
+       <red>75</red>
+       <green>75</green>
+       <blue>80</blue>
+      </color>
+     </property>
+     <property name="minorAlarmFromChannel" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="userUpperMinorAlarm" stdset="0">
+      <double>70.000000000000000</double>
+     </property>
+     <property name="userLowerMinorAlarm" stdset="0">
+      <double>0.000000000000000</double>
+     </property>
+     <property name="majorAlarmFromChannel" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="userUpperMajorAlarm" stdset="0">
+      <double>90.000000000000000</double>
+     </property>
+     <property name="userLowerMajorAlarm" stdset="0">
+      <double>0.000000000000000</double>
+     </property>
+    </widget>
+    <zorder>label_4</zorder>
+    <zorder>act_2_l</zorder>
+    <zorder>act_2_hist</zorder>
+    <zorder>act_2_hist_l</zorder>
+    <zorder>info_2</zorder>
+    <zorder>act_2_pct</zorder>
+    <zorder>meas_2</zorder>
+    <zorder>BC11E_act</zorder>
+    <zorder>header_2</zorder>
+   </widget>
+   <widget class="QWidget" name="FB_3_BC11BL" native="true">
+    <property name="geometry">
+     <rect>
+      <x>646</x>
+      <y>60</y>
+      <width>310</width>
+      <height>960</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 5px;
+background-color: rgb(20, 20, 30);
+color: rgb(255, 255, 255);</string>
+    </property>
+    <widget class="QLabel" name="header_3">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>5</y>
+       <width>310</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>18</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>BC11 Bunch Length</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="PyDMTimePlot" name="meas_3">
+     <property name="geometry">
+      <rect>
+       <x>-25</x>
+       <y>200</y>
+       <width>320</width>
+       <height>180</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="backgroundBrush">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>20</red>
+        <green>20</green>
+        <blue>30</blue>
+       </color>
+      </brush>
+     </property>
+     <property name="backgroundColor">
+      <color>
+       <red>20</red>
+       <green>20</green>
+       <blue>30</blue>
+      </color>
+     </property>
+     <property name="yAxes">
+      <stringlist>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+      </stringlist>
+     </property>
+     <property name="curves">
+      <stringlist>
+       <string>{&quot;channel&quot;: &quot;ca://BLEN:LI11:359:BZ11359B_S_SUM&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot; &quot;, &quot;color&quot;: &quot;#0a84ff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+       <string>{&quot;channel&quot;: &quot;ca://SIOC:SYS1:ML01:AO221&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;SIOC:SYS1:ML01:AO221&quot;, &quot;color&quot;: &quot;#ffaa00&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+      </stringlist>
+     </property>
+     <property name="updatesAsynchronously">
+      <bool>true</bool>
+     </property>
+     <property name="timeSpan">
+      <double>93.000000000000000</double>
+     </property>
+     <property name="updateInterval">
+      <double>0.050000000000000</double>
+     </property>
+     <property name="autoRangeY">
+      <bool>false</bool>
+     </property>
+     <property name="maxYRange">
+      <double>5000.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>170</y>
+       <width>310</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(200, 200, 200);</string>
+     </property>
+     <property name="text">
+      <string>LI11 BLEN 359</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="act_3_l">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>460</y>
+       <width>310</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(230,230,230);</string>
+     </property>
+     <property name="text">
+      <string>KLYS LI11 11 &amp; 21 SSSB_PDES</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="PyDMTimePlot" name="act_3_hist">
+     <property name="geometry">
+      <rect>
+       <x>-20</x>
+       <y>780</y>
+       <width>310</width>
+       <height>180</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="backgroundBrush">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>20</red>
+        <green>20</green>
+        <blue>30</blue>
+       </color>
+      </brush>
+     </property>
+     <property name="backgroundColor">
+      <color>
+       <red>20</red>
+       <green>20</green>
+       <blue>30</blue>
+      </color>
+     </property>
+     <property name="yAxes">
+      <stringlist>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+      </stringlist>
+     </property>
+     <property name="curves">
+      <stringlist>
+       <string>{&quot;channel&quot;: &quot;ca://KLYS:LI11:11:SSSB_PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot; &quot;, &quot;color&quot;: &quot;gainsboro&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+      </stringlist>
+     </property>
+     <property name="updatesAsynchronously">
+      <bool>true</bool>
+     </property>
+     <property name="timeSpan">
+      <double>600.000000000000000</double>
+     </property>
+     <property name="updateInterval">
+      <double>0.050000000000000</double>
+     </property>
+     <property name="autoRangeY">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="act_3_hist_l">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>750</y>
+       <width>310</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(200, 200, 200);</string>
+     </property>
+     <property name="text">
+      <string>10min Actuator History</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QWidget" name="info_3" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>580</y>
+       <width>310</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <widget class="QLabel" name="stat_tmit_3">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>105</y>
+        <width>280</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(55,55,60);
+color: rgb(200, 200, 200);</string>
+      </property>
+      <property name="text">
+       <string>TMIT OK</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>1</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="stat_act_3">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>5</y>
+        <width>280</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(55,55,60);
+color: rgb(200, 200, 200);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="text">
+       <string>ACTUATOR OK</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>1</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="stat_meas_3">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>55</y>
+        <width>280</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(55,55,60);
+color: rgb(200, 200, 200);</string>
+      </property>
+      <property name="text">
+       <string>STATE OK</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>1</number>
+      </property>
+     </widget>
+    </widget>
+    <widget class="PyDMLabel" name="act_3_deg">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>500</y>
+       <width>310</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>40</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="margin">
+      <number>5</number>
+     </property>
+     <property name="precision" stdset="0">
+      <number>1</number>
+     </property>
+     <property name="showUnits" stdset="0">
+      <bool>true</bool>
+     </property>
+     <property name="precisionFromPV" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="alarmSensitiveBorder" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="channel" stdset="0">
+      <string>KLYS:LI11:11:SSSB_PDES</string>
+     </property>
+    </widget>
+    <widget class="PyDMAnalogIndicator" name="BC11BL_act">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>400</y>
+       <width>280</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="channel" stdset="0">
+      <string>SIOC:SYS1:ML01:AO260</string>
+     </property>
+     <property name="showValue" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="showTicks" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="flipScale" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="backgroundColor" stdset="0">
+      <color>
+       <red>55</red>
+       <green>55</green>
+       <blue>60</blue>
+      </color>
+     </property>
+     <property name="indicatorColor" stdset="0">
+      <color>
+       <red>255</red>
+       <green>255</green>
+       <blue>255</blue>
+      </color>
+     </property>
+     <property name="tickColor" stdset="0">
+      <color>
+       <red>0</red>
+       <green>0</green>
+       <blue>0</blue>
+      </color>
+     </property>
+     <property name="backgroundSizeRate" stdset="0">
+      <double>0.500000000000000</double>
+     </property>
+     <property name="tickSizeRate" stdset="0">
+      <double>0.700000000000000</double>
+     </property>
+     <property name="numDivisions" stdset="0">
+      <number>20</number>
+     </property>
+     <property name="scaleHeight" stdset="0">
+      <number>50</number>
+     </property>
+     <property name="limitsFromChannel" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="userLowerLimit" stdset="0">
+      <double>-30.000000000000000</double>
+     </property>
+     <property name="userUpperLimit" stdset="0">
+      <double>0.000000000000000</double>
+     </property>
+     <property name="minorAlarmRegionColor" stdset="0">
+      <color>
+       <red>65</red>
+       <green>65</green>
+       <blue>70</blue>
+      </color>
+     </property>
+     <property name="majorAlarmRegionColor" stdset="0">
+      <color>
+       <red>75</red>
+       <green>75</green>
+       <blue>80</blue>
+      </color>
+     </property>
+     <property name="minorAlarmFromChannel" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="userUpperMinorAlarm" stdset="0">
+      <double>-5.000000000000000</double>
+     </property>
+     <property name="userLowerMinorAlarm" stdset="0">
+      <double>-25.000000000000000</double>
+     </property>
+     <property name="majorAlarmFromChannel" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="userUpperMajorAlarm" stdset="0">
+      <double>-2.000000000000000</double>
+     </property>
+     <property name="userLowerMajorAlarm" stdset="0">
+      <double>-28.000000000000000</double>
+     </property>
+    </widget>
+    <zorder>meas_3</zorder>
+    <zorder>label_5</zorder>
+    <zorder>act_3_l</zorder>
+    <zorder>act_3_hist</zorder>
+    <zorder>act_3_hist_l</zorder>
+    <zorder>info_3</zorder>
+    <zorder>act_3_deg</zorder>
+    <zorder>BC11BL_act</zorder>
+    <zorder>header_3</zorder>
+   </widget>
+   <widget class="QWidget" name="FB_4_BC14E" native="true">
+    <property name="geometry">
+     <rect>
+      <x>964</x>
+      <y>60</y>
+      <width>310</width>
+      <height>960</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 5px;
+background-color: rgb(20, 20, 30);
+color: rgb(255, 255, 255);</string>
+    </property>
+    <widget class="QLabel" name="header_4">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>5</y>
+       <width>310</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>18</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>BC14 Energy</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>170</y>
+       <width>310</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(200, 200, 200);</string>
+     </property>
+     <property name="text">
+      <string>LI14 BPM 801 X</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="PyDMLabel" name="act_4_l">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>460</y>
+       <width>310</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Sans Serif</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(230,230,230);</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="alarmSensitiveBorder" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="channel" stdset="0">
+      <string>SIOC:SYS1:ML01:AO245.DESC</string>
+     </property>
+    </widget>
+    <widget class="PyDMTimePlot" name="act_4_hist">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>780</y>
+       <width>300</width>
+       <height>180</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="backgroundBrush">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>20</red>
+        <green>20</green>
+        <blue>30</blue>
+       </color>
+      </brush>
+     </property>
+     <property name="backgroundColor">
+      <color>
+       <red>20</red>
+       <green>20</green>
+       <blue>30</blue>
+      </color>
+     </property>
+     <property name="yAxes">
+      <stringlist/>
+     </property>
+     <property name="curves">
+      <stringlist/>
+     </property>
+     <property name="updatesAsynchronously">
+      <bool>true</bool>
+     </property>
+     <property name="updateMode" stdset="0">
+      <enum>PyDMTimePlot::AtFixedRate</enum>
+     </property>
+     <property name="timeSpan">
+      <double>600.000000000000000</double>
+     </property>
+     <property name="updateInterval">
+      <double>0.050000000000000</double>
+     </property>
+     <property name="autoRangeY">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="act_4_hist_l">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>750</y>
+       <width>310</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(200, 200, 200);</string>
+     </property>
+     <property name="text">
+      <string>10min Actuator History</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QWidget" name="info_4" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>580</y>
+       <width>310</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <widget class="QLabel" name="stat_tmit_4">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>105</y>
+        <width>280</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(55,55,60);
+color: rgb(200, 200, 200);</string>
+      </property>
+      <property name="text">
+       <string>TMIT OK</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>1</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="stat_act_4">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>5</y>
+        <width>280</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(55,55,60);
+color: rgb(200, 200, 200);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="text">
+       <string>ACTUATOR OK</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>1</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="stat_meas_4">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>55</y>
+        <width>280</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(55,55,60);
+color: rgb(200, 200, 200);</string>
+      </property>
+      <property name="text">
+       <string>STATE OK</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>1</number>
+      </property>
+     </widget>
+    </widget>
+    <widget class="PyDMLabel" name="act_4_pct">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>500</y>
+       <width>310</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>44</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="showUnits" stdset="0">
+      <bool>true</bool>
+     </property>
+     <property name="precisionFromPV" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="alarmSensitiveBorder" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="channel" stdset="0">
+      <string/>
+     </property>
+    </widget>
+    <widget class="PyDMTimePlot" name="meas_4">
+     <property name="geometry">
+      <rect>
+       <x>-25</x>
+       <y>200</y>
+       <width>320</width>
+       <height>180</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="backgroundBrush">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>20</red>
+        <green>20</green>
+        <blue>30</blue>
+       </color>
+      </brush>
+     </property>
+     <property name="backgroundColor">
+      <color>
+       <red>20</red>
+       <green>20</green>
+       <blue>30</blue>
+      </color>
+     </property>
+     <property name="yAxes">
+      <stringlist>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+      </stringlist>
+     </property>
+     <property name="curves">
+      <stringlist>
+       <string>{&quot;channel&quot;: &quot;ca://BPMS:LI14:801:X1H&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot; &quot;, &quot;color&quot;: &quot;#0a84ff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+       <string>{&quot;channel&quot;: &quot;ca://SIOC:SYS1:ML00:AO898&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;SIOC:SYS1:ML00:AO898&quot;, &quot;color&quot;: &quot;#ffaa00&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+      </stringlist>
+     </property>
+     <property name="updatesAsynchronously">
+      <bool>true</bool>
+     </property>
+     <property name="timeSpan">
+      <double>93.000000000000000</double>
+     </property>
+     <property name="updateInterval">
+      <double>0.050000000000000</double>
+     </property>
+     <property name="autoRangeY">
+      <bool>false</bool>
+     </property>
+     <property name="minYRange">
+      <double>-4.400000000000000</double>
+     </property>
+     <property name="maxYRange">
+      <double>4.400000000000000</double>
+     </property>
+    </widget>
+    <widget class="PyDMAnalogIndicator" name="BC14E_act">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>400</y>
+       <width>280</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="channel" stdset="0">
+      <string>SIOC:SYS1:ML00:CALC148</string>
+     </property>
+     <property name="showValue" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="showTicks" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="flipScale" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="backgroundColor" stdset="0">
+      <color>
+       <red>55</red>
+       <green>55</green>
+       <blue>60</blue>
+      </color>
+     </property>
+     <property name="indicatorColor" stdset="0">
+      <color>
+       <red>255</red>
+       <green>255</green>
+       <blue>255</blue>
+      </color>
+     </property>
+     <property name="tickColor" stdset="0">
+      <color>
+       <red>0</red>
+       <green>0</green>
+       <blue>0</blue>
+      </color>
+     </property>
+     <property name="backgroundSizeRate" stdset="0">
+      <double>0.500000000000000</double>
+     </property>
+     <property name="tickSizeRate" stdset="0">
+      <double>0.700000000000000</double>
+     </property>
+     <property name="numDivisions" stdset="0">
+      <number>20</number>
+     </property>
+     <property name="scaleHeight" stdset="0">
+      <number>50</number>
+     </property>
+     <property name="limitsFromChannel" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="userLowerLimit" stdset="0">
+      <double>-100.000000000000000</double>
+     </property>
+     <property name="userUpperLimit" stdset="0">
+      <double>100.000000000000000</double>
+     </property>
+     <property name="minorAlarmRegionColor" stdset="0">
+      <color>
+       <red>65</red>
+       <green>65</green>
+       <blue>70</blue>
+      </color>
+     </property>
+     <property name="majorAlarmRegionColor" stdset="0">
+      <color>
+       <red>85</red>
+       <green>85</green>
+       <blue>90</blue>
+      </color>
+     </property>
+     <property name="minorAlarmFromChannel" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="userUpperMinorAlarm" stdset="0">
+      <double>70.000000000000000</double>
+     </property>
+     <property name="userLowerMinorAlarm" stdset="0">
+      <double>-70.000000000000000</double>
+     </property>
+     <property name="majorAlarmFromChannel" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="userUpperMajorAlarm" stdset="0">
+      <double>90.000000000000000</double>
+     </property>
+     <property name="userLowerMajorAlarm" stdset="0">
+      <double>-90.000000000000000</double>
+     </property>
+    </widget>
+    <zorder>label_6</zorder>
+    <zorder>act_4_l</zorder>
+    <zorder>act_4_hist</zorder>
+    <zorder>act_4_hist_l</zorder>
+    <zorder>info_4</zorder>
+    <zorder>act_4_pct</zorder>
+    <zorder>meas_4</zorder>
+    <zorder>BC14E_act</zorder>
+    <zorder>header_4</zorder>
+   </widget>
+   <widget class="QWidget" name="FB_5_BC14BL" native="true">
+    <property name="geometry">
+     <rect>
+      <x>1282</x>
+      <y>60</y>
+      <width>310</width>
+      <height>960</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 5px;
+background-color: rgb(20, 20, 30);
+color: rgb(255, 255, 255);</string>
+    </property>
+    <widget class="QLabel" name="header_5">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>5</y>
+       <width>310</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>18</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>BC14 Bunch Length</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="PyDMTimePlot" name="meas_5">
+     <property name="geometry">
+      <rect>
+       <x>-25</x>
+       <y>200</y>
+       <width>320</width>
+       <height>180</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="backgroundBrush">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>20</red>
+        <green>20</green>
+        <blue>30</blue>
+       </color>
+      </brush>
+     </property>
+     <property name="backgroundColor">
+      <color>
+       <red>20</red>
+       <green>20</green>
+       <blue>30</blue>
+      </color>
+     </property>
+     <property name="yAxes">
+      <stringlist>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+      </stringlist>
+     </property>
+     <property name="curves">
+      <stringlist>
+       <string>{&quot;channel&quot;: &quot;ca://BLEN:LI14:888:BZ14888B_S_SUM&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot; &quot;, &quot;color&quot;: &quot;#0a84ff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+       <string>{&quot;channel&quot;: &quot;ca://SIOC:SYS1:ML00:CALC144&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;SIOC:SYS1:ML00:CALC144&quot;, &quot;color&quot;: &quot;#ffaa00&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+      </stringlist>
+     </property>
+     <property name="updatesAsynchronously">
+      <bool>true</bool>
+     </property>
+     <property name="timeSpan">
+      <double>93.000000000000000</double>
+     </property>
+     <property name="updateInterval">
+      <double>0.050000000000000</double>
+     </property>
+     <property name="autoRangeY">
+      <bool>false</bool>
+     </property>
+     <property name="minYRange">
+      <double>0.000000000000000</double>
+     </property>
+     <property name="maxYRange">
+      <double>5000.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>170</y>
+       <width>310</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(200, 200, 200);</string>
+     </property>
+     <property name="text">
+      <string>LI14 BLEN 888</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="act_5_l">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>460</y>
+       <width>310</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(230,230,230);</string>
+     </property>
+     <property name="text">
+      <string>L2 PHASE</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="PyDMTimePlot" name="act_5_hist">
+     <property name="geometry">
+      <rect>
+       <x>-20</x>
+       <y>780</y>
+       <width>310</width>
+       <height>180</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="backgroundBrush">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>20</red>
+        <green>20</green>
+        <blue>30</blue>
+       </color>
+      </brush>
+     </property>
+     <property name="backgroundColor">
+      <color>
+       <red>20</red>
+       <green>20</green>
+       <blue>30</blue>
+      </color>
+     </property>
+     <property name="yAxes">
+      <stringlist>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+      </stringlist>
+     </property>
+     <property name="curves">
+      <stringlist>
+       <string>{&quot;channel&quot;: &quot;ca://LI11:SBST:1:PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot; &quot;, &quot;color&quot;: &quot;gainsboro&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+      </stringlist>
+     </property>
+     <property name="updatesAsynchronously">
+      <bool>true</bool>
+     </property>
+     <property name="timeSpan">
+      <double>600.000000000000000</double>
+     </property>
+     <property name="updateInterval">
+      <double>0.050000000000000</double>
+     </property>
+     <property name="autoRangeY">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="act_5_hist_l">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>750</y>
+       <width>310</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(200, 200, 200);</string>
+     </property>
+     <property name="text">
+      <string>10min Actuator History</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QWidget" name="info_5" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>580</y>
+       <width>310</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <widget class="QLabel" name="stat_tmit_5">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>105</y>
+        <width>280</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(55,55,60);
+color: rgb(200, 200, 200);</string>
+      </property>
+      <property name="text">
+       <string>TMIT OK</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>1</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="stat_act_5">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>5</y>
+        <width>280</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(55,55,60);
+color: rgb(200, 200, 200);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="text">
+       <string>ACTUATOR OK</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>1</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="stat_meas_5">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>55</y>
+        <width>280</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(55,55,60);
+color: rgb(200, 200, 200);</string>
+      </property>
+      <property name="text">
+       <string>STATE OK</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>1</number>
+      </property>
+     </widget>
+    </widget>
+    <widget class="PyDMLabel" name="act_5_deg">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>500</y>
+       <width>310</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>40</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="margin">
+      <number>5</number>
+     </property>
+     <property name="precision" stdset="0">
+      <number>1</number>
+     </property>
+     <property name="showUnits" stdset="0">
+      <bool>true</bool>
+     </property>
+     <property name="precisionFromPV" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="alarmSensitiveBorder" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="channel" stdset="0">
+      <string>SIOC:SYS1:ML00:CALC145</string>
+     </property>
+    </widget>
+    <widget class="PyDMAnalogIndicator" name="BC14BL_act">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>400</y>
+       <width>280</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="channel" stdset="0">
+      <string>SIOC:SYS1:ML00:CALC145</string>
+     </property>
+     <property name="showValue" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="showTicks" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="flipScale" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="backgroundColor" stdset="0">
+      <color>
+       <red>55</red>
+       <green>55</green>
+       <blue>60</blue>
+      </color>
+     </property>
+     <property name="indicatorColor" stdset="0">
+      <color>
+       <red>255</red>
+       <green>255</green>
+       <blue>255</blue>
+      </color>
+     </property>
+     <property name="tickColor" stdset="0">
+      <color>
+       <red>0</red>
+       <green>0</green>
+       <blue>0</blue>
+      </color>
+     </property>
+     <property name="backgroundSizeRate" stdset="0">
+      <double>0.500000000000000</double>
+     </property>
+     <property name="tickSizeRate" stdset="0">
+      <double>0.700000000000000</double>
+     </property>
+     <property name="numDivisions" stdset="0">
+      <number>20</number>
+     </property>
+     <property name="scaleHeight" stdset="0">
+      <number>50</number>
+     </property>
+     <property name="limitsFromChannel" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="userLowerLimit" stdset="0">
+      <double>-40.000000000000000</double>
+     </property>
+     <property name="userUpperLimit" stdset="0">
+      <double>0.000000000000000</double>
+     </property>
+     <property name="minorAlarmRegionColor" stdset="0">
+      <color>
+       <red>65</red>
+       <green>65</green>
+       <blue>70</blue>
+      </color>
+     </property>
+     <property name="majorAlarmRegionColor" stdset="0">
+      <color>
+       <red>75</red>
+       <green>75</green>
+       <blue>80</blue>
+      </color>
+     </property>
+     <property name="minorAlarmFromChannel" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="userUpperMinorAlarm" stdset="0">
+      <double>-5.000000000000000</double>
+     </property>
+     <property name="userLowerMinorAlarm" stdset="0">
+      <double>-35.000000000000000</double>
+     </property>
+     <property name="majorAlarmFromChannel" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="userUpperMajorAlarm" stdset="0">
+      <double>-2.000000000000000</double>
+     </property>
+     <property name="userLowerMajorAlarm" stdset="0">
+      <double>-38.000000000000000</double>
+     </property>
+    </widget>
+    <zorder>meas_5</zorder>
+    <zorder>label_7</zorder>
+    <zorder>act_5_l</zorder>
+    <zorder>act_5_hist</zorder>
+    <zorder>act_5_hist_l</zorder>
+    <zorder>info_5</zorder>
+    <zorder>act_5_deg</zorder>
+    <zorder>BC14BL_act</zorder>
+    <zorder>header_5</zorder>
+   </widget>
+   <widget class="QWidget" name="FB_6_BC20E" native="true">
+    <property name="geometry">
+     <rect>
+      <x>1600</x>
+      <y>60</y>
+      <width>310</width>
+      <height>960</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 5px;
+background-color: rgb(20, 20, 30);
+color: rgb(255, 255, 255);</string>
+    </property>
+    <widget class="QLabel" name="header_6">
+     <property name="geometry">
+      <rect>
+       <x>-5</x>
+       <y>5</y>
+       <width>310</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>18</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>BC20 Energy</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="PyDMTimePlot" name="meas_6">
+     <property name="geometry">
+      <rect>
+       <x>-30</x>
+       <y>200</y>
+       <width>320</width>
+       <height>180</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="backgroundBrush">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>20</red>
+        <green>20</green>
+        <blue>30</blue>
+       </color>
+      </brush>
+     </property>
+     <property name="backgroundColor">
+      <color>
+       <red>20</red>
+       <green>20</green>
+       <blue>30</blue>
+      </color>
+     </property>
+     <property name="yAxes">
+      <stringlist>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+      </stringlist>
+     </property>
+     <property name="curves">
+      <stringlist>
+       <string>{&quot;channel&quot;: &quot;ca://BPMS:LI20:2050:X57&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot; &quot;, &quot;color&quot;: &quot;#0a84ff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+       <string>{&quot;channel&quot;: &quot;ca://SIOC:SYS1:ML01:AO234&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;SIOC:SYS1:ML01:AO234&quot;, &quot;color&quot;: &quot;#ffaa00&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+      </stringlist>
+     </property>
+     <property name="updatesAsynchronously">
+      <bool>true</bool>
+     </property>
+     <property name="timeSpan">
+      <double>93.000000000000000</double>
+     </property>
+     <property name="updateInterval">
+      <double>0.050000000000000</double>
+     </property>
+     <property name="autoRangeY">
+      <bool>false</bool>
+     </property>
+     <property name="minYRange">
+      <double>-4.400000000000000</double>
+     </property>
+     <property name="maxYRange">
+      <double>4.400000000000000</double>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>170</y>
+       <width>310</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(200, 200, 200);</string>
+     </property>
+     <property name="text">
+      <string>LI20 BPM 2050 X</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="PyDMLabel" name="act_6_l">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>460</y>
+       <width>310</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Sans Serif</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(230,230,230);</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="alarmSensitiveBorder" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="channel" stdset="0">
+      <string>SIOC:SYS1:ML01:AO244.DESC</string>
+     </property>
+    </widget>
+    <widget class="PyDMTimePlot" name="act_6_hist">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>780</y>
+       <width>300</width>
+       <height>180</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="backgroundBrush">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>20</red>
+        <green>20</green>
+        <blue>30</blue>
+       </color>
+      </brush>
+     </property>
+     <property name="backgroundColor">
+      <color>
+       <red>20</red>
+       <green>20</green>
+       <blue>30</blue>
+      </color>
+     </property>
+     <property name="yAxes">
+      <stringlist/>
+     </property>
+     <property name="curves">
+      <stringlist/>
+     </property>
+     <property name="updatesAsynchronously">
+      <bool>true</bool>
+     </property>
+     <property name="updateMode" stdset="0">
+      <enum>PyDMTimePlot::AtFixedRate</enum>
+     </property>
+     <property name="timeSpan">
+      <double>600.000000000000000</double>
+     </property>
+     <property name="updateInterval">
+      <double>0.050000000000000</double>
+     </property>
+     <property name="autoRangeY">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="act_6_hist_l">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>750</y>
+       <width>310</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(200, 200, 200);</string>
+     </property>
+     <property name="text">
+      <string>10min Actuator History</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QWidget" name="info_6" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>580</y>
+       <width>310</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <widget class="QLabel" name="stat_tmit_6">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>105</y>
+        <width>280</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(55,55,60);
+color: rgb(200, 200, 200);</string>
+      </property>
+      <property name="text">
+       <string>TMIT OK</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>1</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="stat_act_6">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>5</y>
+        <width>280</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(55,55,60);
+color: rgb(200, 200, 200);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="text">
+       <string>ACTUATOR OK</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>1</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="stat_meas_6">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>55</y>
+        <width>280</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(55,55,60);
+color: rgb(200, 200, 200);</string>
+      </property>
+      <property name="text">
+       <string>STATE OK</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>1</number>
+      </property>
+     </widget>
+    </widget>
+    <widget class="PyDMLabel" name="act_6_pct">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>500</y>
+       <width>310</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>44</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="showUnits" stdset="0">
+      <bool>true</bool>
+     </property>
+     <property name="precisionFromPV" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="alarmSensitiveBorder" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="channel" stdset="0">
+      <string/>
+     </property>
+    </widget>
+    <widget class="PyDMAnalogIndicator" name="BC20E_act">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>400</y>
+       <width>280</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="channel" stdset="0">
+      <string>SIOC:SYS1:ML00:CALC146</string>
+     </property>
+     <property name="showValue" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="showTicks" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="flipScale" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="backgroundColor" stdset="0">
+      <color>
+       <red>55</red>
+       <green>55</green>
+       <blue>60</blue>
+      </color>
+     </property>
+     <property name="indicatorColor" stdset="0">
+      <color>
+       <red>255</red>
+       <green>255</green>
+       <blue>255</blue>
+      </color>
+     </property>
+     <property name="tickColor" stdset="0">
+      <color>
+       <red>0</red>
+       <green>0</green>
+       <blue>0</blue>
+      </color>
+     </property>
+     <property name="backgroundSizeRate" stdset="0">
+      <double>0.500000000000000</double>
+     </property>
+     <property name="tickSizeRate" stdset="0">
+      <double>0.700000000000000</double>
+     </property>
+     <property name="numDivisions" stdset="0">
+      <number>20</number>
+     </property>
+     <property name="scaleHeight" stdset="0">
+      <number>50</number>
+     </property>
+     <property name="limitsFromChannel" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="userLowerLimit" stdset="0">
+      <double>-100.000000000000000</double>
+     </property>
+     <property name="userUpperLimit" stdset="0">
+      <double>100.000000000000000</double>
+     </property>
+     <property name="minorAlarmRegionColor" stdset="0">
+      <color>
+       <red>65</red>
+       <green>65</green>
+       <blue>70</blue>
+      </color>
+     </property>
+     <property name="majorAlarmRegionColor" stdset="0">
+      <color>
+       <red>75</red>
+       <green>75</green>
+       <blue>80</blue>
+      </color>
+     </property>
+     <property name="minorAlarmFromChannel" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="userUpperMinorAlarm" stdset="0">
+      <double>70.000000000000000</double>
+     </property>
+     <property name="userLowerMinorAlarm" stdset="0">
+      <double>-70.000000000000000</double>
+     </property>
+     <property name="majorAlarmFromChannel" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="userUpperMajorAlarm" stdset="0">
+      <double>90.000000000000000</double>
+     </property>
+     <property name="userLowerMajorAlarm" stdset="0">
+      <double>-90.000000000000000</double>
+     </property>
+    </widget>
+    <zorder>meas_6</zorder>
+    <zorder>label_8</zorder>
+    <zorder>act_6_l</zorder>
+    <zorder>act_6_hist</zorder>
+    <zorder>act_6_hist_l</zorder>
+    <zorder>info_6</zorder>
+    <zorder>act_6_pct</zorder>
+    <zorder>BC20E_act</zorder>
+    <zorder>header_6</zorder>
+   </widget>
+   <widget class="PyDMLabel" name="HB_MDLFF">
+    <property name="geometry">
+     <rect>
+      <x>1770</x>
+      <y>10</y>
+      <width>140</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
+  border-radius: 5px;
+  background-color: rgb(0, 255, 0);
+  color: rgb(0, 0, 0);
+}
+
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;1&quot;] {
+  border-radius: 5px;
+  color: rgb(255,192,0);
+}
+
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;2&quot;] {
+  border-radius: 5px;
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;3&quot;] {
+  border-radius: 5px;
+  color: rgb(0,0,0);
+  background-color: rgb(160,50,200);
+}
+
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
+  border-radius: 5px;
+  color: rgb(218,218,218);
+}</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="alarmSensitiveContent" stdset="0">
+     <bool>true</bool>
+    </property>
+    <property name="channel" stdset="0">
+     <string>F2:WATCHER:MDLFF_STAT</string>
+    </property>
+   </widget>
+   <widget class="PyDMLabel" name="HB_watcher">
+    <property name="geometry">
+     <rect>
+      <x>1390</x>
+      <y>10</y>
+      <width>140</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
+  border-radius: 5px;
+  background-color: rgb(0, 255, 0);
+  color: rgb(0, 0, 0);
+}
+
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;1&quot;] {
+  border-radius: 5px;
+  color: rgb(255,192,0);
+}
+
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;2&quot;] {
+  border-radius: 5px;
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;3&quot;] {
+  border-radius: 5px;
+  color: rgb(0,0,0);
+  background-color: rgb(160,50,200);
+}
+
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
+  border-radius: 5px;
+  color: rgb(218,218,218);
+}</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="alarmSensitiveContent" stdset="0">
+     <bool>true</bool>
+    </property>
+    <property name="channel" stdset="0">
+     <string>F2:WATCHER:FEEDBACKS_STAT</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="HB_watcher_label">
+    <property name="geometry">
+     <rect>
+      <x>1190</x>
+      <y>10</y>
+      <width>200</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Matlab Watcher: </string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="HB_MDLFF_label">
+    <property name="geometry">
+     <rect>
+      <x>1570</x>
+      <y>10</y>
+      <width>200</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>MDL Feedforward: </string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PyDMLabel</class>
+   <extends>QLabel</extends>
+   <header>pydm.widgets.label</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMTimePlot</class>
+   <extends>QGraphicsView</extends>
+   <header>pydm.widgets.timeplot</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMDrawingImage</class>
+   <extends>QWidget</extends>
+   <header>pydm.widgets.drawing</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMScaleIndicator</class>
+   <extends>QFrame</extends>
+   <header>pydm.widgets.scale</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMAnalogIndicator</class>
+   <extends>PyDMScaleIndicator</extends>
+   <header>pydm.widgets.analog_indicator</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
