@@ -22,7 +22,7 @@ REPO_ROOT = path.join(*path.split(SELF_PATH)[:-1])
 
 sys.path.append(REPO_ROOT)
 
-from core import launcher, common, beam_refs
+from core import launch, common, beam_refs
 import core.ACR_remote_control as rctrl
 
 
