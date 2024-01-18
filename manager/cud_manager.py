@@ -314,7 +314,7 @@ class F2CUDManager(Display):
 def _load_ACR_defaults():
     """" load default display setting for each LM/SM from config file """
     defaults = {}
-    with open(path.join(REPO_ROOT, 'core', 'ACR_defaults.csv'), 'r') as f:
+    with open(path.join(REPO_ROOT, 'core', 'defaults.csv'), 'r') as f:
         for line in f.readlines():
             if line.startswith('#'): continue
             r = line.strip().split(',')
