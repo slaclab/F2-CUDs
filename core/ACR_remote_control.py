@@ -6,7 +6,7 @@ from time import sleep
 
 from epics import caget, caput
 
-from core import launcher, common
+from core import launch, common
 
 
 # list of LM/SM machines in ACR quadrant 2
@@ -126,7 +126,7 @@ def send_to_monitor(monitor, CUD_ID):
     init_disp = os.environ['DISPLAY']
     os.environ['DISPLAY'] = get_display_name(monitor)
 
-    p = launcher.run_CUD(CUD_ID)
+    p = launch.run_CUD(CUD_ID)
 
     # wmctrl+grep to check for the new window & grab its ID
     n, CUD_win_ID = 0, ''
