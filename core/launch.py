@@ -43,7 +43,7 @@ ALT_LAUNCH_COMMANDS = {
     'orbit': 'python /home/fphysics/zack/workspace/F2_CUD_orbit/orbit_display.py --cud --path facet --rate TH',
     # 'MPS': 'bash /home/fphysics/zack/workspace/F2_CUD_MPS/nc_mps_gui.bash -c summary',
     'MPS': MPS_CMD,
-    'network': 'pydm --hide-nav-bar --hide-menu-bar --hide-status-bar /home/fphysics/aaditya/workspace/network_panel/F2_CUD_watcher.ui',
+    'network': 'pydm --hide-nav-bar --hide-menu-bar --hide-status-bar /home/fphysics/aaditya/workspace/network_panel/F2_CUD_watcher.py',
 }
 
 
