@@ -53,6 +53,7 @@ CUD_IDS = [
     'network',
     'orbit',
     'MPS',
+    'wfh',
     ]
 
 # verbose descriptions/names of CUDs for CUD launcher use

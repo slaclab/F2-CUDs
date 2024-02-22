@@ -29,6 +29,7 @@ PYDM_LAUNCH_OBJECTS = {
     'transport':    'transport/main.py',
     'PPS_BCS':      'PPS_BCS/main.ui',
     'mini_klys':    'klystrons_mini/main.py',
+    'wfh':          'wfh/main.py',
     # 'network': 'network/main.py',
 }
 
