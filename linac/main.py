@@ -1,4 +1,5 @@
 import os, sys
+from os import path
 from sys import exit
 from functools import partial
 from epics import caput, PV
@@ -14,6 +15,13 @@ from PyQt5 import QtGui, QtCore
 from PyQt5.QtWidgets import QGridLayout, QWidget, QProgressBar
 from PyQt5.QtCore import Qt, QTimer
 from PyQt5.QtGui import QColor, QFont
+
+SELF_PATH = path.dirname(path.abspath(__file__))
+REPO_ROOT = path.join(*path.split(SELF_PATH)[:-1])
+
+sys.path.append(REPO_ROOT)
+
+from core.common import bitStatusLabel
 
 SELF_PATH = os.path.dirname(os.path.abspath(__file__))
 
@@ -34,25 +42,50 @@ PV_IPWS1_MSMT  = 'WIRE:LI20:3179:XRMS'
 PV_IPBlen_MSMT = 'CAMR:LI20:107:BLEN'
 # PV_IPBlen_TS   = 'SIOC:SYS1:ML03:CA954'
 
+PV_FB_ENABLE = 'SIOC:SYS1:ML00:AO856'
+
 STAT_REG  = QFont('Sans Serif', 18)
+
+# STYLE_GREEN = """
+# PyDMLabel {
+#   border-radius: 2px;
+# }
+# PyDMLabel[alarmSensitiveBorder="true"][alarmSeverity="0"] {
+#   background-color: rgb(0,0,10);
+#   color: rgb(0,255,0);
+# }
+# """
+
+# STYLE_YELLOW = """
+# PyDMLabel {
+#   border-radius: 2px;
+# }
+# PyDMLabel[alarmSensitiveBorder="true"][alarmSeverity="0"] {
+#   background-color: rgb(0,0,10);
+#   color: rgb(255,255,0);
+# }
+# """
 
 STYLE_GREEN = """
 PyDMLabel {
-  border-radius: 2px;
+  border-radius: 0px;
 }
 PyDMLabel[alarmSensitiveBorder="true"][alarmSeverity="0"] {
   background-color: rgb(0,0,10);
   color: rgb(0,255,0);
+  border-width: 0px;
 }
 """
 
 STYLE_YELLOW = """
 PyDMLabel {
-  border-radius: 2px;
+  border-radius: 0px;
 }
 PyDMLabel[alarmSensitiveBorder="true"][alarmSeverity="0"] {
   background-color: rgb(0,0,10);
   color: rgb(255,255,0);
+  border-color: rgb(180,180,0);
+  border-width: 2px;
 }
 """
 
@@ -82,16 +115,47 @@ class F2_CUD_linac(Display):
         self.IPWS1_msmt_PV  = PV(PV_IPWS1_MSMT)
         self.IPBlen_msmt_PV = PV(PV_IPBlen_MSMT)
 
+        Qbunch_enable = bitStatusLabel(
+            'SIOC:SYS1:ML03:AO502', word_length=1, bit=0, parent=self.ui.ind_qfb)
+
+        DL10E_enable = bitStatusLabel(
+            PV_FB_ENABLE, word_length=6, bit=0, parent=self.ui.ind_dl10e)
+
+        BC11E_enable = bitStatusLabel(
+            PV_FB_ENABLE, word_length=6, bit=2, parent=self.ui.ind_bc11e)
+        BC11BL_enable = bitStatusLabel(
+            PV_FB_ENABLE, word_length=6, bit=3, parent=self.ui.ind_bc11bl)
+
+        BC14E_enable = bitStatusLabel(
+            PV_FB_ENABLE, word_length=6, bit=1, parent=self.ui.ind_bc14e)
+        BC14BL_enable = bitStatusLabel(
+            PV_FB_ENABLE, word_length=6, bit=5, parent=self.ui.ind_bc14bl)
+
+        BC20E_enable = bitStatusLabel(
+            PV_FB_ENABLE, word_length=6, bit=4, parent=self.ui.ind_bc20e)
+
+        for ind in [
+            Qbunch_enable,
+            DL10E_enable,
+            BC11E_enable,
+            BC11BL_enable,
+            BC14E_enable,
+            BC14BL_enable,
+            BC20E_enable,
+            ]:
+            ind.setGeometry(0,0,110,32)
+            ind.setFont(STAT_REG)
+            ind.onstyle = STYLE_GREEN
+            ind.offstyle = STYLE_YELLOW
+
         ind_LI11 = F2SteeringFeedbackIndicator(
-            'LI11:FBCK:26:HSTA', parent=self.ui.cont_LI11FB
-            )
+            'LI11:FBCK:26:HSTA', parent=self.ui.ind_l2steer)
         ind_LI18 = F2SteeringFeedbackIndicator(
-            'LI18:FBCK:28:HSTA', parent=self.ui.cont_LI18FB
-            )
+            'LI18:FBCK:28:HSTA', parent=self.ui.ind_l3steer)
         ind_LI11.setFont(STAT_REG)
         ind_LI18.setFont(STAT_REG)
-        ind_LI11.setGeometry(0,0,110,40)
-        ind_LI18.setGeometry(0,0,110,40)
+        ind_LI11.setGeometry(0,0,110,32)
+        ind_LI18.setGeometry(0,0,110,32)
 
         self.setWindowTitle('FACET-II CUD: Linac')
 
@@ -132,10 +196,10 @@ class F2SteeringFeedbackIndicator(PyDMLabel):
     def value_changed(self, new_value):
         PyDMLabel.value_changed(self, new_value)
         if new_value == HSTA_FBCK_ON:    
-            self.setText('Enabled')
+            self.setText('ON')
             self.setStyleSheet(STYLE_GREEN)
         elif new_value == HSTA_FBCK_COMP:
-            self.setText('Compute')
+            self.setText('Comp.')
             self.setStyleSheet(STYLE_YELLOW)
         else:                            
             self.setText('Off/Sample')
