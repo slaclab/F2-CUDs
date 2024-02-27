@@ -71,6 +71,7 @@ CUD_DESC_MAP = {
     'orbit':        'Orbit',
     'MPS':          'MPS',
     'network':      'Network/Watchers',
+    'wfh':          'Work-from-home',
     }
 
 # reverse map of the above
@@ -88,8 +89,22 @@ CUD_ID_MAP = {
     'Orbit':            'orbit',
     'MPS':              'MPS',
     'Network/Watchers': 'network',
+    'Work-from-home':   'wfh',
 }
 
+STYLE_BITLABEL_ON = """
+background-color: rgb(0, 255, 0);
+color: rgb(0, 0, 0);
+"""
+
+STYLE_BITLABEL_OFF = """
+background-color: rgb(255, 0, 0);
+color: rgb(255, 255, 255);
+"""
+
+STATUS_FONT = QFont()
+STATUS_FONT.setBold(True)
+STATUS_FONT.setPointSize(16)
 
 def CUD_IDs(): return CUD_IDS
 
@@ -192,6 +207,9 @@ class bitStatusLabel(PyDMLabel):
         self.text_on = 'ON'
         self.text_off = 'OFF'
 
+        self.onstyle = STYLE_BITLABEL_ON
+        self.offstyle = STYLE_BITLABEL_OFF
+
         # set bold text, center text alignment
         self.setAlignment(Qt.AlignCenter)
         self.setFont(STATUS_FONT)
@@ -206,8 +224,8 @@ class bitStatusLabel(PyDMLabel):
         on_state = (int(abs(new_value)) >> (self.bit)) & 1
 
         # set text and stylesheet accordingly
-        style = STYLE_BITLABEL_ON if on_state else STYLE_BITLABEL_OFF
-        text = self.text_on       if on_state else self.text_off
+        style = self.onstyle if on_state else self.offstyle
+        text = self.text_on  if on_state else self.text_off
 
         self.setStyleSheet(style)
         self.setText(text)
