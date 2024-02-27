@@ -6461,13 +6461,13 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
       <widget class="QLabel" name="label_40">
        <property name="maximumSize">
         <size>
-         <width>100</width>
+         <width>115</width>
          <height>16777215</height>
         </size>
        </property>
        <property name="font">
         <font>
-         <pointsize>16</pointsize>
+         <pointsize>18</pointsize>
          <weight>50</weight>
          <italic>true</italic>
          <bold>false</bold>
@@ -6775,13 +6775,13 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
       <widget class="QLabel" name="label_60">
        <property name="maximumSize">
         <size>
-         <width>50</width>
+         <width>55</width>
          <height>16777215</height>
         </size>
        </property>
        <property name="font">
         <font>
-         <pointsize>16</pointsize>
+         <pointsize>18</pointsize>
          <weight>50</weight>
          <italic>true</italic>
          <bold>false</bold>
@@ -6876,13 +6876,13 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
       <widget class="QLabel" name="label_42">
        <property name="maximumSize">
         <size>
-         <width>100</width>
+         <width>115</width>
          <height>16777215</height>
         </size>
        </property>
        <property name="font">
         <font>
-         <pointsize>16</pointsize>
+         <pointsize>18</pointsize>
          <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
@@ -7142,7 +7142,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>EVNT:SYS1:1:BEAMRATE</string>
+        <string>LI12:SBST:1:PDES</string>
        </property>
        <property name="enableRichText" stdset="0">
         <bool>false</bool>
@@ -7337,7 +7337,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>EVNT:SYS1:1:BEAMRATE</string>
+        <string>KLYS:LI11:11:SSSB_PDES</string>
        </property>
        <property name="enableRichText" stdset="0">
         <bool>false</bool>
@@ -7570,7 +7570,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>EVNT:SYS1:1:BEAMRATE</string>
+        <string>LI15:SBST:1:PDES</string>
        </property>
        <property name="enableRichText" stdset="0">
         <bool>false</bool>
@@ -7581,13 +7581,13 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
       <widget class="QLabel" name="label_119">
        <property name="maximumSize">
         <size>
-         <width>50</width>
+         <width>55</width>
          <height>16777215</height>
         </size>
        </property>
        <property name="font">
         <font>
-         <pointsize>16</pointsize>
+         <pointsize>18</pointsize>
          <weight>50</weight>
          <italic>true</italic>
          <bold>false</bold>
@@ -7646,13 +7646,13 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
       <widget class="QLabel" name="label_116">
        <property name="maximumSize">
         <size>
-         <width>50</width>
+         <width>55</width>
          <height>16777215</height>
         </size>
        </property>
        <property name="font">
         <font>
-         <pointsize>16</pointsize>
+         <pointsize>18</pointsize>
          <weight>50</weight>
          <italic>true</italic>
          <bold>false</bold>
@@ -7747,13 +7747,13 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
       <widget class="QLabel" name="label_130">
        <property name="maximumSize">
         <size>
-         <width>50</width>
+         <width>90</width>
          <height>16777215</height>
         </size>
        </property>
        <property name="font">
         <font>
-         <pointsize>16</pointsize>
+         <pointsize>18</pointsize>
          <weight>50</weight>
          <italic>true</italic>
          <bold>false</bold>
@@ -7876,13 +7876,13 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
       <widget class="QLabel" name="label_134">
        <property name="maximumSize">
         <size>
-         <width>50</width>
+         <width>90</width>
          <height>16777215</height>
         </size>
        </property>
        <property name="font">
         <font>
-         <pointsize>16</pointsize>
+         <pointsize>18</pointsize>
          <weight>50</weight>
          <italic>true</italic>
          <bold>false</bold>
@@ -7917,13 +7917,13 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
       <widget class="QLabel" name="label_41">
        <property name="maximumSize">
         <size>
-         <width>100</width>
+         <width>115</width>
          <height>16777215</height>
         </size>
        </property>
        <property name="font">
         <font>
-         <pointsize>16</pointsize>
+         <pointsize>18</pointsize>
          <weight>50</weight>
          <italic>true</italic>
          <bold>false</bold>
