@@ -1,4 +1,5 @@
 import os, sys
+from os import path
 import numpy as np
 from sys import exit
 from functools import partial
@@ -17,7 +18,13 @@ from PyQt5.QtWidgets import QGridLayout, QWidget, QProgressBar
 from PyQt5.QtCore import Qt, QTimer
 from PyQt5.QtGui import QColor, QFont
 
+SELF_PATH = path.dirname(path.abspath(__file__))
+REPO_ROOT = path.join(*path.split(SELF_PATH)[:-1])
+
+sys.path.append(REPO_ROOT)
+
 from klys_indicator import sbstIndicator, klysIndicator
+from core.common import bitStatusLabel
 
 SELF_PATH = os.path.dirname(os.path.abspath(__file__))
 
@@ -38,28 +45,6 @@ PV_IPWS1_MSMT  = 'WIRE:LI20:3179:XRMS'
 PV_IPBlen_MSMT = 'CAMR:LI20:107:BLEN'
 # PV_IPBlen_TS   = 'SIOC:SYS1:ML03:CA954'
 
-# STAT_REG  = QFont('Sans Serif', 18)
-
-# STYLE_GREEN = """
-# PyDMLabel {
-#   border-radius: 2px;
-# }
-# PyDMLabel[alarmSensitiveBorder="true"][alarmSeverity="0"] {
-#   background-color: rgb(0,0,10);
-#   color: rgb(0,255,0);
-# }
-# """
-
-# STYLE_YELLOW = """
-# PyDMLabel {
-#   border-radius: 2px;
-# }
-# PyDMLabel[alarmSensitiveBorder="true"][alarmSeverity="0"] {
-#   background-color: rgb(0,0,10);
-#   color: rgb(255,255,0);
-# }
-# """
-
 SELF_PATH = os.path.dirname(os.path.abspath(__file__))
 
 # L2: S11-S14, L3: S15-S19, 8x klys per sector
@@ -71,6 +56,28 @@ KLYSTRONS = [str(i) for i in range(1,9)]
 # stations that don't exist
 NONEXISTANT_RFS = ['11-3', '14-7', '15-2', '19-7', '19-8']
 
+PV_FB_ENABLE = 'SIOC:SYS1:ML00:AO856'
+
+STYLE_GREEN = """
+PyDMLabel {
+  border-radius: 2px;
+}
+PyDMLabel[alarmSensitiveBorder="true"][alarmSeverity="0"] {
+  background-color: rgb(0,0,10);
+  color: rgb(0,255,0);
+}
+"""
+
+STYLE_YELLOW = """
+PyDMLabel {
+  border-radius: 2px;
+}
+PyDMLabel[alarmSensitiveBorder="true"][alarmSeverity="0"] {
+  background-color: rgb(0,0,10);
+  color: rgb(255,255,0);
+}
+"""
+
 
 class F2_WFH(Display):
 
@@ -79,31 +86,58 @@ class F2_WFH(Display):
 
         self.setWindowTitle('FACET-II work-from-home CUD')
 
-        SYAG_image = InvertedImage(
+        self.SYAG_image = InvertedImage(
             im_ch='CAMR:LI20:100:Image:ArrayData',
             w_ch='CAMR:LI20:100:Image:ArraySize0_RBV',
             parent=self.ui.frame_SYAG
             )
-        SYAG_image.readingOrder = 1
-        SYAG_image.colorMap = 4
+        self.SYAG_image.readingOrder = 1
+        self.SYAG_image.colorMap = 4
         # SYAG_image.setGeometry(0,0, 340, 170)
 
-        VCCF_image = InvertedImage(
+        self.VCCF_image = InvertedImage(
             im_ch='CAMR:LT10:900:Image:ArrayData',
             w_ch='CAMR:LT10:900:Image:ArraySize0_RBV',
             parent=self.ui.frame_vcc
             )
-        VCCF_image.readingOrder = 1
-        VCCF_image.colorMap = 4
-        VCCF_image.colorMapMin = 10.0
-        VCCF_image.colorMapMax = 60.0
-        VCCF_image.showAxes = True
-        VCCF_image.maxRedrawRate = 10
+        self.VCCF_image.readingOrder = 1
+        self.VCCF_image.colorMap = 4
+        self.VCCF_image.colorMapMin = 10.0
+        self.VCCF_image.colorMapMax = 60.0
+        self.VCCF_image.showAxes = True
+        self.VCCF_image.maxRedrawRate = 10
         # VCCF_image.setGeometry(15,85,360,300)
         # VCCF_image.getView().getViewBox().setLimits(
         #     xMin=170, xMax=1340, yMin=110, yMax=1000
         #     )
 
+        DL10E_enable = bitStatusLabel(
+            PV_FB_ENABLE, word_length=6, bit=0, parent=self.ui.ind_dl10e)
+
+        BC11E_enable = bitStatusLabel(
+            PV_FB_ENABLE, word_length=6, bit=2, parent=self.ui.ind_bc11e)
+        BC11BL_enable = bitStatusLabel(
+            PV_FB_ENABLE, word_length=6, bit=3, parent=self.ui.ind_bc11bl)
+
+        BC14E_enable = bitStatusLabel(
+            PV_FB_ENABLE, word_length=6, bit=1, parent=self.ui.ind_bc14e)
+        BC14BL_enable = bitStatusLabel(
+            PV_FB_ENABLE, word_length=6, bit=5, parent=self.ui.ind_bc14bl)
+
+        BC20E_enable = bitStatusLabel(
+            PV_FB_ENABLE, word_length=6, bit=4, parent=self.ui.ind_bc20e)
+
+        for ind in [
+            DL10E_enable,
+            BC11E_enable,
+            BC11BL_enable,
+            BC14E_enable,
+            BC14BL_enable,
+            BC20E_enable,
+            ]:
+            ind.setGeometry(0,0,114,27)
+            ind.onstyle = STYLE_GREEN
+            ind.offstyle = STYLE_YELLOW
 
         self.L0_msmt     = PyDMChannel(address=PV_L0_MSMT, value_slot=self.msmt_ts_L0)
         self.L2_msmt     = PyDMChannel(address=PV_L2_MSMT, value_slot=self.msmt_ts_L2)
@@ -123,6 +157,14 @@ class F2_WFH(Display):
         self.setup_L1()
         self.setup_L2_L3()
 
+        self.ui.fps_VCC.currentTextChanged.connect(self.update_camera_FPS)
+        self.ui.fps_SYAG.currentTextChanged.connect(self.update_camera_FPS)
+        self.ui.fps_DTOTR2.currentTextChanged.connect(self.update_camera_FPS)
+        self.ui.fps_VCC.setCurrentText('1')
+        self.ui.fps_SYAG.setCurrentText('10')
+        self.ui.fps_DTOTR2.setCurrentText('10')
+        self.update_camera_FPS()
+
         # ind_XTCAVF = klysIndicator('20-4', parent=self.ui.cont_XTCAVF)
         # ind_XTCAVF.setGeometry(0,0,100,80)
 
@@ -130,6 +172,12 @@ class F2_WFH(Display):
 
     def ui_filename(self):
         return os.path.join(SELF_PATH, 'main.ui')
+
+    def update_camera_FPS(self):
+        self.VCCF_image.maxRedrawRate = int(self.ui.fps_VCC.currentText())
+        self.SYAG_imagemaxRedrawRate = int(self.ui.fps_SYAG.currentText())
+        self.ui.live_DTOTR2.maxRedrawRate = int(self.ui.fps_DTOTR2.currentText())
+        return
 
     def msmt_ts_L0(self, value=None, char_value=None):
         self.msmt_ts(self.L0_msmt_PV, self.ui.ts_L0, value=value, char_value=char_value)
@@ -160,7 +208,6 @@ class F2_WFH(Display):
 
         for ind in [ind_gun, ind_L0A, ind_L0B, ind_TCAV0]:
             ind.setGeometry(0,0,60,50)
-
         return
 
     def setup_L1(self):
