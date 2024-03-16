@@ -175,7 +175,7 @@ class F2_WFH(Display):
 
     def update_camera_FPS(self):
         self.VCCF_image.maxRedrawRate = int(self.ui.fps_VCC.currentText())
-        self.SYAG_imagemaxRedrawRate = int(self.ui.fps_SYAG.currentText())
+        self.SYAG_image.maxRedrawRate = int(self.ui.fps_SYAG.currentText())
         self.ui.live_DTOTR2.maxRedrawRate = int(self.ui.fps_DTOTR2.currentText())
         return
 
