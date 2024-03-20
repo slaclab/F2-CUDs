@@ -235,10 +235,10 @@ class F2CUDManager(Display):
         return
 
     def local_CUD_launch(self, CUD_ID):
-        """ function for launching CUDs locally. Just a wrapper for launcher.run_CUD """
+        """ function for launching CUDs locally. Just a wrapper for launch.run_CUD """
         CUD_desc = common.CUD_desc(CUD_ID)
         self.status(f'Launching display: [{CUD_desc}] ...')
-        launcher.run_CUD(CUD_ID)
+        launch.run_CUD(CUD_ID)
         return
 
     def remote_CUD_launch(self, monitor):
