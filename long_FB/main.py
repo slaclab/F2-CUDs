@@ -10,6 +10,7 @@ while there's no MPS interlocks
 
 
 import os, sys
+from os import path
 from sys import exit
 import time
 import numpy as np
@@ -29,7 +30,13 @@ from PyQt5.QtWidgets import  QGridLayout
 from PyQt5.QtCore import Qt, QTimer
 from PyQt5.QtGui import QColor, QFont
 from PyQt5.QtWidgets import QWidget, QProgressBar
-import sip
+
+SELF_PATH = path.dirname(path.abspath(__file__))
+REPO_ROOT = path.join(*path.split(SELF_PATH)[:-1])
+
+sys.path.append(REPO_ROOT)
+
+from core.common import bitStatusLabel
 
 
 # ==============================================================================
@@ -49,70 +56,26 @@ color: rgb(0, 0, 0);
 """
 
 STYLE_BITLABEL_OFF = """
-background-color: rgb(255, 0, 0);
-color: rgb(255, 255, 255);
-"""
-
-STYLE_GAUGE_OFF = """
-QProgressBar {
-    background-color: #37373c;
-    border-radius: 0px;
-}
-QProgressBar::chunk {
-    background-color: #c8c8c8;
-    margin: 0.5px;
-    width: 2px;
-    border-radius: 0px;
-}
-"""
-
-STYLE_GAUGE_NOM = """
-QProgressBar {
-    background-color: #37373c;
-    border-radius: 0px;
-}
-QProgressBar::chunk {
-    background-color: #00ff00;
-    margin: 0.5px;
-    width: 2px;
-    border-radius: 0px;
-}
-"""
-
-STYLE_GAUGE_WARN = """
-QProgressBar {
-    background-color: #37373c;
-    border-radius: 0px;
-}
-QProgressBar::chunk {
-    background-color: #ffff00;
-    margin: 0.5px;
-    width: 2px;
-    border-radius: 0px;
-}
-"""
-
-STYLE_GAUGE_ALARM = """
-QProgressBar {
-    background-color: #37373c;
-    border-radius: 0px;
-}
-QProgressBar::chunk {
-    background-color: #ff0000;
-    margin: 0.5px;
-    width: 2px;
-    border-radius: 0px;
-}
+background-color: rgb(55, 55, 60);
+color: rgb(200,200,200);
 """
 
 STYLE_STAT_NOM = """
-background-color: rgb(55,55,60);
-color: rgb(230, 230, 230);
+background-color: rgb(30,30,40);
+color: rgb(170,170,170);
+"""
+
+STYLE_STAT_WARN = """
+background-color: rgb(30,30,40);
+color: rgb(255,255,0);
+border-color: rgb(255,255,0);
+border-width: 2px;
+border-style: solid;
 """
 
 STYLE_STAT_ALM = """
-background-color: rgb(255, 0, 0);
-color: rgb(255, 255, 255);
+background-color: rgb(255,0,0);
+color: rgb(255,255,255);
 """
 
 STYLE_OFF = """
@@ -146,18 +109,11 @@ ACT_GREEN = QColor(144,255,124)
 ACT_ORANGE = QColor(255,197,97)
 ACT_GREY = QColor(220,220,220)
 
-IND_ENABLE_XYWH = (55, 60,  200, 40)
-IND_STATUS_XYWH = (55, 110, 200, 40)
-
-ACT_GAUGE_XYWH = (15, 455, 280, 30)
-
-TWIN_GAUGE_NEG_FWD_XYWH = (155, 445, 136, 20)
-TWIN_GAUGE_NEG_BAK_XYWH = (15,  445, 136, 20)
-TWIN_GAUGE_POS_FWD_XYWH = (155, 470, 136, 20)
-TWIN_GAUGE_POS_BAK_XYWH = (15,  470, 136, 20)
+IND_ENABLE_XYWH = (15, 50, 160, 40)
+IND_STATUS_XYWH = (185, 50, 110, 40)
 
 # cadence for status watcher updates in ms
-STATUS_WATCHER_INTERVAL = 1000
+STATUS_WATCHER_INTERVAL = 2500
 
 # absolute tolerance of allowable difference between individual elements
 # of a multiknob actuator
@@ -201,16 +157,6 @@ class facetFeedbackCUD(Display):
             address=self.config['BC20E']['mkb'],
             value_slot=self.update_BC20E_acts
             )
-
-        # # monitor TMIT PVs for each FB
-        # self.tmit_watcher = {
-        #     'DL10E'  : PV(self.config['DL10E']['tmit']),
-        #     'BC11E'  : PV(self.config['BC11E']['tmit']),
-        #     'BC11BL' : PV(self.config['BC11BL']['tmit']),
-        #     'BC14E'  : PV(self.config['BC14E']['tmit']),
-        #     'BC14BL' : PV(self.config['BC14BL']['tmit']),
-        #     'BC20E'  : PV(self.config['BC20E']['tmit']),
-        #     }
 
         # keep track of BC14E, BC20E act gauges to update for mkb changes
         self.mkb_gauges = {}
@@ -285,8 +231,9 @@ class facetFeedbackCUD(Display):
 
         for si in self.status_indicators:
             si.setGeometry(*IND_STATUS_XYWH)
-            si.text_on = 'RUNNING'
-            si.text_off = 'NOT RUNNING'
+            si.text_on = 'Active'
+            si.text_off = 'Inactive'
+            si.offstyle = STYLE_BITLABEL_OFF
 
         # map of FB status indicators, one for actuator, measurement and TMIT
         self.stat_watchers = {
@@ -377,9 +324,22 @@ class facetFeedbackCUD(Display):
 
             stat = check_act[fb_name](fb_name)
 
-            style = STYLE_STAT_ALM if stat else STYLE_STAT_NOM
-            font = INF_FONT_ALM if stat else INF_FONT_NOM
-            if not stat: stat = 'ACTUATOR OK'
+            # font = INF_FONT_NOM
+            if not stat:
+                style = STYLE_STAT_NOM
+            elif stat == 'ACT. INVALID':
+                # font = INF_FONT_NOM
+                style = STYLE_STAT_WARN
+            else:
+                # font = INF_FONT_ALM
+                style = STYLE_STAT_ALM
+
+            # font = INF_FONT_NOM if not stat else INF_FONT_ALM
+            font = INF_FONT_ALM
+
+            if not stat:
+                font = INF_FONT_NOM
+                stat = 'ACTUATOR OK'
 
             self.stat_watchers[fb_name]['act'].setText(stat)
             self.stat_watchers[fb_name]['act'].setStyleSheet(style)
@@ -397,9 +357,9 @@ class facetFeedbackCUD(Display):
         act_lo = caget(self.config[fb_name]['act_lo'])
         act_hi = caget(self.config[fb_name]['act_hi'])
 
-        if not act_c:           stat = 'ACTUATOR INVALID'
-        elif (act_c <= act_lo): stat = 'ACTUATOR LIMIT LOW'
-        elif (act_c >= act_hi): stat = 'ACTUATOR LIMIT HIGH'
+        if not act_c:           stat = 'ACT. INVALID'
+        elif (act_c <= act_lo): stat = 'ACT. LIMIT LOW'
+        elif (act_c >= act_hi): stat = 'ACT. LIMIT HIGH'
 
         return stat
 
@@ -434,12 +394,12 @@ class facetFeedbackCUD(Display):
         """
         stat = None
 
-        if (not act_neg) or (not act_pos): stat = 'ACTUATOR INVALID'
-        elif (act_neg <= act_lo):          stat = 'ACTUATOR LIMIT LOW'
-        elif (act_neg >= act_hi):          stat = 'ACTUATOR LIMIT HIGH'
+        if (not act_neg) or (not act_pos): stat = 'ACT. INVALID'
+        elif (act_neg <= act_lo):          stat = 'ACT. LIMIT LOW'
+        elif (act_neg >= act_hi):          stat = 'ACT. LIMIT HIGH'
 
         if (abs(act_neg) - abs(act_pos)) >= MKB_TOL:
-            stat = 'ACTUATOR MISMATCH'
+            stat = 'ACT. MISMATCH'
 
         return stat
 
@@ -491,13 +451,25 @@ class facetFeedbackCUD(Display):
             elif (meas <= set_lo):  stat = 'STATE LIMIT LOW'
             elif (meas >= set_hi):  stat = 'STATE LIMIT HIGH'
 
-            style = STYLE_STAT_ALM if stat else STYLE_STAT_NOM
-            font = INF_FONT_ALM if stat else INF_FONT_NOM
-            if not stat: stat = 'STATE OK'
+            # font = INF_FONT_NOM
+            if not stat:
+                style = STYLE_STAT_NOM
+            elif stat == 'STATE INVALID':
+                style = STYLE_STAT_WARN
+            else :
+                # font = INF_FONT_ALM
+                style = STYLE_STAT_ALM
+
+            # font = INF_FONT_NOM if not stat else INF_FONT_ALM
+            font = INF_FONT_ALM
+
+            if not stat:
+                stat = 'STATE OK'
+                font = INF_FONT_NOM
 
             self.stat_watchers[fb_name]['meas'].setText(stat)
             self.stat_watchers[fb_name]['meas'].setStyleSheet(style)
-            self.stat_watchers[fb_name]['meas'].setFont(font)
+            self.stat_watchers[fb_name]['act'].setFont(font)
 
         return stat
 
@@ -517,14 +489,26 @@ class facetFeedbackCUD(Display):
             if not tmit:            stat = 'TMIT INVALID'
             elif (tmit <= tmit_lo): stat = 'TMIT LOW'
             elif (tmit >= tmit_hi): stat = 'TMIT HIGH'
+            
+            # font = INF_FONT_NOM
+            if not stat:
+                style = STYLE_STAT_NOM
+            elif stat == 'TMIT INVALID' or stat == 'TMIT HIGH':
+                style = STYLE_STAT_WARN
+            else:
+                # font = INF_FONT_ALM
+                style = STYLE_STAT_ALM
 
-            style = STYLE_STAT_ALM if stat else STYLE_STAT_NOM
-            font = INF_FONT_ALM if stat else INF_FONT_NOM
-            if not stat: stat = 'TMIT OK'
+            # font = INF_FONT_NOM if not stat else INF_FONT_ALM
+            font = INF_FONT_ALM
+
+            if not stat:
+                stat = 'TMIT OK'
+                font = INF_FONT_NOM
 
             self.stat_watchers[fb_name]['tmit'].setText(stat)
             self.stat_watchers[fb_name]['tmit'].setStyleSheet(style)
-            self.stat_watchers[fb_name]['tmit'].setFont(font)
+            self.stat_watchers[fb_name]['act'].setFont(font)
 
         return
 
@@ -546,9 +530,6 @@ class facetFeedbackCUD(Display):
         act_min = caget(self.config['DL10E']['act_lo'])
         act_max = caget(self.config['DL10E']['act_hi'])
 
-        self.ui.act_1_hist.setMinYRange(act_min)
-        self.ui.act_1_hist.setMaxYRange(act_max)
-
         return
 
 
@@ -569,9 +550,6 @@ class facetFeedbackCUD(Display):
 
         act_min = caget(self.config['BC11E']['act_lo'])
         act_max = caget(self.config['BC11E']['act_hi'])
-
-        self.ui.act_2_hist.setMinYRange(act_min)
-        self.ui.act_2_hist.setMaxYRange(act_max)
 
         return
 
@@ -597,10 +575,6 @@ class facetFeedbackCUD(Display):
         act_max = caget(self.config['BC11BL']['act_lo'])
 
         self.ui.act_3_deg.setStyleSheet(STYLE_NOM)
-
-        self.ui.act_3_hist.setMinYRange(act_min)
-        self.ui.act_3_hist.setMaxYRange(act_max)
-
         return
 
     def init_BC14E(self):
@@ -628,18 +602,6 @@ class facetFeedbackCUD(Display):
         PV_act_pct = self.mkb_percent['BC14E'][mkb_type]
         self.ui.act_4_pct.channel = PV_act_pct
         self.ui.BC14E_act.channel = PV_act_pct
-
-        self.ui.act_4_hist.addYChannel(
-            y_channel=self.mkb_acts['BC14E'][mkb_type][1], color=ACT_GREY
-            )
-        self.ui.act_4_hist.addYChannel(
-            y_channel=self.mkb_acts['BC14E'][mkb_type][0], color=ACT_GREY
-            )
-
-        # act_min = caget(self.config['BC14E']['act_lo'])
-        # act_max = caget(self.config['BC14E']['act_hi'])
-        self.ui.act_4_hist.setMinYRange(-180.0)
-        self.ui.act_4_hist.setMaxYRange(180.0)
         
         return
 
@@ -673,17 +635,10 @@ class facetFeedbackCUD(Display):
         self.enable_indicators.append(BC14BL_enable)
         self.status_indicators.append(BC14BL_status)
 
-        # act_min = caget(self.config['BC14BL']['act_lo'])
-        # act_max = caget(self.config['BC14BL']['act_hi'])
         act_min = 0.0
         act_max = 180.0
 
         self.ui.act_5_deg.setStyleSheet(STYLE_NOM)
-
-        # self.ui.act_5_hist.setMinYRange(0.0)
-        # self.ui.act_5_hist.setMaxYRange(-60.0)
-        self.ui.act_5_hist.setMinYRange(-40.0)
-        self.ui.act_5_hist.setMaxYRange(0.0)
 
         return
 
@@ -710,18 +665,6 @@ class facetFeedbackCUD(Display):
         self.ui.act_6_pct.channel = PV_act_pct
         self.ui.BC20E_act.channel = PV_act_pct
 
-        self.ui.act_6_hist.addYChannel(
-            y_channel=self.mkb_acts['BC20E'][mkb_type][1], color=ACT_GREY
-            )
-        self.ui.act_6_hist.addYChannel(
-            y_channel=self.mkb_acts['BC20E'][mkb_type][0], color=ACT_GREY
-            )
-
-        # act_min = caget(self.config['BC20E']['act_lo'])
-        # act_max = caget(self.config['BC20E']['act_hi'])
-        self.ui.act_6_hist.setMinYRange(-180.0)
-        self.ui.act_6_hist.setMaxYRange(180.0)
-
         return
 
     def update_BC20E_acts(self):
@@ -739,110 +682,4 @@ class facetFeedbackCUD(Display):
 
         # update actuator history plot!
         return
-
-
-class bitStatusLabel(PyDMLabel):
-    """
-    PyDMLabel subclass to display text based on status bits from a given word
-    """
-
-    def __init__(self, channel, word_length=8, bit=0, parent=None, args=None):
-        super(bitStatusLabel, self).__init__(parent=parent)
-
-        self.channel = channel
-        self.word_length = word_length
-        self.bit = bit
-        self.text_on = 'ON'
-        self.text_off = 'OFF'
-
-        # set bold text, center text alignment
-        self.setAlignment(Qt.AlignCenter)
-        self.setFont(STATUS_FONT)
-
-    def value_changed(self, new_value):
-        """
-        slot for PV value changes
-        """
-        super(bitStatusLabel, self).value_changed(new_value)
-
-        # extract the desired bit
-        on_state = (int(abs(new_value)) >> (self.bit)) & 1
-
-        # set text and stylesheet accordingly
-        style = STYLE_BITLABEL_ON if on_state else STYLE_BITLABEL_OFF
-        text = self.text_on       if on_state else self.text_off
-
-        self.setStyleSheet(style)
-        self.setText(text)
-
-
-class linearGauge(QProgressBar, PyDMWidget):
-    """
-    QProgressBar with hooks for channel access
-    """
-
-    def __init__(self, channel, lmin, lmax, \
-        abs_val=False, ofs_90=False, parent=None, args=None
-        ):
-        QProgressBar.__init__(self, parent=parent)
-        PyDMWidget.__init__(self)
-
-        self.PV = PyDMChannel(address=channel, value_slot=self.value_changed)
-        self.PV.connect()
-
-        self.pct_label = None
-
-        self.minimum = int(lmin)
-        self.maximum = int(lmax)
-        self.abs_val = abs_val
-        self.ofs_90 = ofs_90
-        self.reg_bounds = [75, 90]
-
-        self.mkb_family = False
-
-        if self.abs_val:
-            self.minimum = abs(self.minimum)
-            self.maximum = abs(self.maximum)
-
-        self.setRange(self.minimum, self.maximum)
-        self.setStyleSheet(STYLE_GAUGE_NOM)
-        self.setTextVisible(False)
-
-    def value_changed(self, new_value):
-        """
-        PV value change slot
-        """
-        # shift or take absolute value if needed
-        if self.abs_val: new_value = abs(new_value)
-        elif self.ofs_90: new_value = 90.0 - new_value
-
-        if (new_value > self.maximum) or (new_value < self.minimum):
-            self.reset()
-
-        else:
-            self.setValue(new_value)
-        
-        # color the progressBar chunks according to severity
-        # and the actuation percentage label, if it exists
-        if self.text():
-            num_pct = abs(int(self.text().replace('%', '')))
-
-            bd_lo, bd_hi = self.reg_bounds[0], self.reg_bounds[1]
-
-            if num_pct < bd_lo:
-                style_label = STYLE_NOM
-                style_gauge = STYLE_GAUGE_NOM
-
-            elif num_pct < bd_hi:
-                style_label = STYLE_WARN
-                style_gauge = STYLE_GAUGE_WARN
-
-            elif num_pct >= bd_hi:
-                style_label = STYLE_ALARM
-                style_gauge = STYLE_GAUGE_ALARM
-
-            self.setStyleSheet(style_gauge)
-
-            if self.pct_label:
-                self.pct_label.setStyleSheet(style_label)
 
