@@ -16,6 +16,12 @@ from PyQt5.QtCore import Qt, QTimer
 from PyQt5.QtGui import QColor, QFont
 
 SELF_PATH = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.join(*os.path.split(SELF_PATH)[:-1])
+
+sys.path.append(REPO_ROOT)
+
+from core.common import bitStatusLabel
+
 
 # L2: S11-S14, L3: S15-S19, 8x klys per sector
 L2 = [str(i) for i in range(11,15)]
@@ -25,6 +31,10 @@ KLYSTRONS = [str(i) for i in range(1,9)]
 
 # stations that don't exist
 NONEXISTANT_RFS = ['11-3', '14-7', '15-2', '19-7', '19-8']
+
+STATUS_FONT = QFont()
+STATUS_FONT.setBold(True)
+STATUS_FONT.setPointSize(22)
 
 
 class F2_CUD_klystrons(Display):
@@ -45,6 +55,12 @@ class F2_CUD_klystrons(Display):
             ]:
 
             plot.hideAxis('bottom')
+
+        mdlff_onstat = bitStatusLabel('SIOC:SYS1:ML01:AO489', word_length=1, bit=0)
+        mdlff_onstat.text_on = 'Enabled'
+        mdlff_onstat.text_off = 'Disabled'
+        mdlff_onstat.setFont(STATUS_FONT)
+        self.ui.procMonitor.layout().addWidget(mdlff_onstat)
 
         self.setWindowTitle('FACET-II CUD: RF (Klystrons)')
         

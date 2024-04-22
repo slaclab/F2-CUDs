@@ -116,7 +116,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
       <x>1625</x>
       <y>10</y>
       <width>280</width>
-      <height>200</height>
+      <height>251</height>
      </rect>
     </property>
     <property name="font">
@@ -3824,9 +3824,9 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
     <property name="geometry">
      <rect>
       <x>1625</x>
-      <y>220</y>
+      <y>284</y>
       <width>280</width>
-      <height>380</height>
+      <height>316</height>
      </rect>
     </property>
     <property name="styleSheet">
