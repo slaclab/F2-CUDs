@@ -60,7 +60,7 @@ color: rgb(0, 34, 130);</string>
      </font>
     </property>
     <property name="text">
-     <string>LONGITUDINAL FEEDBACK HISTORY PLOTS</string>
+     <string>LONGITUDINAL HISTORY PLOTS</string>
     </property>
    </widget>
   </widget>
@@ -69,8 +69,8 @@ color: rgb(0, 34, 130);</string>
     <rect>
      <x>0</x>
      <y>50</y>
-     <width>1920</width>
-     <height>1030</height>
+     <width>1940</width>
+     <height>1084</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -105,106 +105,545 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
   background-color: rgb(25,25,25);
 }</string>
    </property>
-   <layout class="QGridLayout" name="gridLayout">
-    <property name="leftMargin">
-     <number>15</number>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>5</y>
+      <width>1910</width>
+      <height>1016</height>
+     </rect>
     </property>
-    <property name="topMargin">
-     <number>15</number>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>100</height>
+     </size>
     </property>
-    <property name="rightMargin">
-     <number>15</number>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
     </property>
-    <property name="bottomMargin">
-     <number>15</number>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
     </property>
-    <property name="spacing">
-     <number>15</number>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="3" column="1">
+      <widget class="PyDMTimePlot" name="L2_energy">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>250</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="showXGrid">
+        <bool>false</bool>
+       </property>
+       <property name="showYGrid">
+        <bool>false</bool>
+       </property>
+       <property name="yAxes">
+        <stringlist>
+         <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -4.4, &quot;maxRange&quot;: 4.4, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Axis 2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -180.0, &quot;maxRange&quot;: 180.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+        </stringlist>
+       </property>
+       <property name="curves">
+        <stringlist>
+         <string>{&quot;channel&quot;: &quot;BPMS:LI14:801:X1H&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BPMS:LI14:801:X1H&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+         <string>{&quot;channel&quot;: &quot;LI14:KLYS:41:PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI14:41;PDES&quot;, &quot;color&quot;: &quot;#ffaaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+         <string>{&quot;channel&quot;: &quot;LI14:KLYS:61:PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI14:61!:PDES&quot;, &quot;color&quot;: &quot;#ffaaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+        </stringlist>
+       </property>
+       <property name="updateMode" stdset="0">
+        <enum>PyDMTimePlot::AtFixedRate</enum>
+       </property>
+       <property name="timeSpan">
+        <double>900.000000000000000</double>
+       </property>
+       <property name="autoRangeY">
+        <bool>false</bool>
+       </property>
+       <property name="maxYRange">
+        <double>14000.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="PyDMTimePlot" name="L1_energy">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>250</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="showXGrid">
+        <bool>false</bool>
+       </property>
+       <property name="showYGrid">
+        <bool>false</bool>
+       </property>
+       <property name="yAxes">
+        <stringlist>
+         <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -2.2, &quot;maxRange&quot;: 2.2, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Axis 2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: 120.0, &quot;maxRange&quot;: 160.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+        </stringlist>
+       </property>
+       <property name="curves">
+        <stringlist>
+         <string>{&quot;channel&quot;: &quot;BPMS:LI11:333:X1H&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BPMS:LI11:333:X1H&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+         <string>{&quot;channel&quot;: &quot;KLYS:LI11:11:SSSB_ADES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI11:11:SSSB_ADES&quot;, &quot;color&quot;: &quot;#ffaaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+         <string>{&quot;channel&quot;: &quot;KLYS:LI11:21:SSSB_ADES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI11:11:SSSB_PDES&quot;, &quot;color&quot;: &quot;#ffaaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+        </stringlist>
+       </property>
+       <property name="updateMode" stdset="0">
+        <enum>PyDMTimePlot::AtFixedRate</enum>
+       </property>
+       <property name="timeSpan">
+        <double>900.000000000000000</double>
+       </property>
+       <property name="autoRangeY">
+        <bool>false</bool>
+       </property>
+       <property name="maxYRange">
+        <double>9000.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2">
+      <widget class="PyDMTimePlot" name="L3_blen">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>250</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="showXGrid">
+        <bool>false</bool>
+       </property>
+       <property name="showYGrid">
+        <bool>false</bool>
+       </property>
+       <property name="yAxes">
+        <stringlist>
+         <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 300.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Axis2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;  &quot;, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+        </stringlist>
+       </property>
+       <property name="curves">
+        <stringlist>
+         <string>{&quot;channel&quot;: &quot;BLEN:LI20:3014:BZ203014B_S_SUM&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BLEN:LI20:3014:BZ203014B_S_SUM&quot;, &quot;color&quot;: &quot;#ffff7f&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+        </stringlist>
+       </property>
+       <property name="updateMode" stdset="0">
+        <enum>PyDMTimePlot::AtFixedRate</enum>
+       </property>
+       <property name="timeSpan">
+        <double>900.000000000000000</double>
+       </property>
+       <property name="autoRangeY">
+        <bool>false</bool>
+       </property>
+       <property name="minYRange">
+        <double>-300.000000000000000</double>
+       </property>
+       <property name="maxYRange">
+        <double>0.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="PyDMTimePlot" name="L1_blen">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>250</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="showXGrid">
+        <bool>false</bool>
+       </property>
+       <property name="showYGrid">
+        <bool>false</bool>
+       </property>
+       <property name="yAxes">
+        <stringlist>
+         <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 8000.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Axis 2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -40.0, &quot;maxRange&quot;: 5.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+        </stringlist>
+       </property>
+       <property name="curves">
+        <stringlist>
+         <string>{&quot;channel&quot;: &quot;BLEN:LI11:359:BZ11359B_S_SUM&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BLEN:LI11:359:BZ11359B_S_SUM&quot;, &quot;color&quot;: &quot;#ffff7f&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+         <string>{&quot;channel&quot;: &quot;ca://SIOC:SYS1:ML01:AO221&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;SIOC:SYS1:ML01:AO221&quot;, &quot;color&quot;: &quot;#ffaa00&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+         <string>{&quot;channel&quot;: &quot;KLYS:LI11:11:SSSB_PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI11:11:SSSB_PDES&quot;, &quot;color&quot;: &quot;#00aa7f&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+         <string>{&quot;channel&quot;: &quot;KLYS:LI11:21:SSSB_PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI11:21:SSSB_PDES&quot;, &quot;color&quot;: &quot;#00aa7f&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+        </stringlist>
+       </property>
+       <property name="updateMode" stdset="0">
+        <enum>PyDMTimePlot::AtFixedRate</enum>
+       </property>
+       <property name="timeSpan">
+        <double>900.000000000000000</double>
+       </property>
+       <property name="autoRangeY">
+        <bool>false</bool>
+       </property>
+       <property name="maxYRange">
+        <double>9000.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="PyDMTimePlot" name="L0_energy">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>250</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="showXGrid">
+        <bool>false</bool>
+       </property>
+       <property name="showYGrid">
+        <bool>false</bool>
+       </property>
+       <property name="yAxes">
+        <stringlist>
+         <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -1.1, &quot;maxRange&quot;: 1.1, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Axis 2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: 25.0, &quot;maxRange&quot;: 40.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+        </stringlist>
+       </property>
+       <property name="curves">
+        <stringlist>
+         <string>{&quot;channel&quot;: &quot;BPMS:IN10:731:X1H&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BPMS:IN10:731:X1H&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+         <string>{&quot;channel&quot;: &quot;KLYS:LI10:41:SFB_ADES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI10:41:SFB_ADES&quot;, &quot;color&quot;: &quot;#ffaaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+        </stringlist>
+       </property>
+       <property name="updateMode" stdset="0">
+        <enum>PyDMTimePlot::AtFixedRate</enum>
+       </property>
+       <property name="timeSpan">
+        <double>900.000000000000000</double>
+       </property>
+       <property name="autoRangeY">
+        <bool>false</bool>
+       </property>
+       <property name="maxYRange">
+        <double>9000.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="PyDMTimePlot" name="L2_blen">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>250</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="showXGrid">
+        <bool>false</bool>
+       </property>
+       <property name="showYGrid">
+        <bool>false</bool>
+       </property>
+       <property name="yAxes">
+        <stringlist>
+         <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 12000.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Axis 2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -60.0, &quot;maxRange&quot;: -20.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+        </stringlist>
+       </property>
+       <property name="curves">
+        <stringlist>
+         <string>{&quot;channel&quot;: &quot;BLEN:LI14:888:BZ14888B_S_SUM&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BLEN:LI14:888:BZ14888B_S_SUM&quot;, &quot;color&quot;: &quot;#ffff7f&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+         <string>{&quot;channel&quot;: &quot;ca://SIOC:SYS1:ML00:CALC144&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;SIOC:SYS1:ML00:CALC144&quot;, &quot;color&quot;: &quot;#ffaa00&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+         <string>{&quot;channel&quot;: &quot;LI12:SBST:1:PHAS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI12:SBST:1:PHAS&quot;, &quot;color&quot;: &quot;#00aa7f&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+         <string>{&quot;channel&quot;: &quot;LI13:SBST:1:PHAS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI13:SBST:PHAS&quot;, &quot;color&quot;: &quot;#00aa7f&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+         <string>{&quot;channel&quot;: &quot;LI14:SBST:1:PHAS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI13:SBST:PHAS&quot;, &quot;color&quot;: &quot;#00aa7f&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+        </stringlist>
+       </property>
+       <property name="updateMode" stdset="0">
+        <enum>PyDMTimePlot::AtFixedRate</enum>
+       </property>
+       <property name="timeSpan">
+        <double>900.000000000000000</double>
+       </property>
+       <property name="autoRangeY">
+        <bool>false</bool>
+       </property>
+       <property name="maxYRange">
+        <double>14000.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="PyDMTimePlot" name="L3_energy">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>250</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="showXGrid">
+        <bool>false</bool>
+       </property>
+       <property name="showYGrid">
+        <bool>false</bool>
+       </property>
+       <property name="yAxes">
+        <stringlist>
+         <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -4.4, &quot;maxRange&quot;: 4.4, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Axis 2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -180.0, &quot;maxRange&quot;: 180.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+        </stringlist>
+       </property>
+       <property name="curves">
+        <stringlist>
+         <string>{&quot;channel&quot;: &quot;BPMS:LI20:2445:X1H&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BPMS:LI20:2445:X1H&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+         <string>{&quot;channel&quot;: &quot;LI19:KLYS:41:PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI19:41:PDES&quot;, &quot;color&quot;: &quot;#ffaaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+         <string>{&quot;channel&quot;: &quot;LI19:KLYS:51:PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI19:61:PDES&quot;, &quot;color&quot;: &quot;#ffaaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+        </stringlist>
+       </property>
+       <property name="updateMode" stdset="0">
+        <enum>PyDMTimePlot::AtFixedRate</enum>
+       </property>
+       <property name="timeSpan">
+        <double>900.000000000000000</double>
+       </property>
+       <property name="autoRangeY">
+        <bool>false</bool>
+       </property>
+       <property name="minYRange">
+        <double>-300.000000000000000</double>
+       </property>
+       <property name="maxYRange">
+        <double>0.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+         <italic>true</italic>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgba(255, 255, 255, 70);</string>
+       </property>
+       <property name="text">
+        <string>it's free real estate</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label_80">
+    <property name="geometry">
+     <rect>
+      <x>85</x>
+      <y>35</y>
+      <width>300</width>
+      <height>30</height>
+     </rect>
     </property>
-    <item row="0" column="0">
-     <widget class="PyDMTimePlot" name="PyDMTimePlot">
-      <property name="toolTip">
-       <string/>
-      </property>
-      <property name="yAxes">
-       <stringlist>
-        <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;X (mm)&quot;, &quot;minRange&quot;: -5.5, &quot;maxRange&quot;: 5.5, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
-        <string>{&quot;name&quot;: &quot;Axis 2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;X (mm)&quot;, &quot;minRange&quot;: -5.5, &quot;maxRange&quot;: 5.5, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
-       </stringlist>
-      </property>
-      <property name="showLegend">
-       <bool>true</bool>
-      </property>
-      <property name="curves">
-       <stringlist>
-        <string>{&quot;channel&quot;: &quot;BPMS:IN10:731:X1H&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BPMS:IN10:731:X1H&quot;, &quot;color&quot;: &quot;#8dd3c7&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-        <string>{&quot;channel&quot;: &quot;BPMS:LI11:333:X1H&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BPMS:LI11:333:X1H&quot;, &quot;color&quot;: &quot;#ffffb3&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-        <string>{&quot;channel&quot;: &quot;BPMS:LI14:801:X1H&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BPMS:LI14:801:X1H&quot;, &quot;color&quot;: &quot;#bebada&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-        <string>{&quot;channel&quot;: &quot;BPMS:LI20:2445:X1H&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BPMS:LI20:2445:X1H&quot;, &quot;color&quot;: &quot;#fb8072&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-       </stringlist>
-      </property>
-      <property name="updateMode" stdset="0">
-       <enum>PyDMTimePlot::AtFixedRate</enum>
-      </property>
-      <property name="timeSpan">
-       <double>1800.000000000000000</double>
-      </property>
-      <property name="autoRangeY">
-       <bool>false</bool>
-      </property>
-      <property name="minYRange">
-       <double>-5.500000000000000</double>
-      </property>
-      <property name="maxYRange">
-       <double>5.500000000000000</double>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="PyDMTimePlot" name="PyDMTimePlot_2">
-      <property name="toolTip">
-       <string/>
-      </property>
-      <property name="yAxes">
-       <stringlist>
-        <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;phi (degS)&quot;, &quot;minRange&quot;: -180.0, &quot;maxRange&quot;: 180.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
-        <string>{&quot;name&quot;: &quot;Axis 2&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;ADES&quot;, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 150.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
-       </stringlist>
-      </property>
-      <property name="showLegend">
-       <bool>true</bool>
-      </property>
-      <property name="curves">
-       <stringlist>
-        <string>{&quot;channel&quot;: &quot;KLYS:LI10:41:SFB_ADES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI10:41:SFB_ADES&quot;, &quot;color&quot;: &quot;#8dd3c7&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-        <string>{&quot;channel&quot;: &quot;KLYS:LI11:11:SSSB_ADES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI11:11:SSSB_ADES&quot;, &quot;color&quot;: &quot;#ffffb3&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-        <string>{&quot;channel&quot;: &quot;KLYS:LI11:21:SSSB_ADES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI11:21:SSSB_ADES&quot;, &quot;color&quot;: &quot;#ffffb3&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-        <string>{&quot;channel&quot;: &quot;LI14:KLYS:41:PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI14:KLYS:41:PDES&quot;, &quot;color&quot;: &quot;#bebada&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-        <string>{&quot;channel&quot;: &quot;LI14:KLYS:51:PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI19:KLYS:41:PDES&quot;, &quot;color&quot;: &quot;#bebada&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-        <string>{&quot;channel&quot;: &quot;LI14:KLYS:61:PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI14:KLYS:61:PDES&quot;, &quot;color&quot;: &quot;#bebada&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-        <string>{&quot;channel&quot;: &quot;LI19:KLYS:41:PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI19:KLYS:41:PDES&quot;, &quot;color&quot;: &quot;#fb8072&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-        <string>{&quot;channel&quot;: &quot;LI19:KLYS:51:PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI19:KLYS:51:PDES&quot;, &quot;color&quot;: &quot;#fb8072&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-        <string>{&quot;channel&quot;: &quot;LI19:KLYS:61:PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI19:KLYS:61:PDES&quot;, &quot;color&quot;: &quot;#fb8072&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-       </stringlist>
-      </property>
-      <property name="updateMode" stdset="0">
-       <enum>PyDMTimePlot::AtFixedRate</enum>
-      </property>
-      <property name="timeSpan">
-       <double>1800.000000000000000</double>
-      </property>
-      <property name="autoRangeY">
-       <bool>false</bool>
-      </property>
-      <property name="minYRange">
-       <double>-180.000000000000000</double>
-      </property>
-      <property name="maxYRange">
-       <double>180.000000000000000</double>
-      </property>
-     </widget>
-    </item>
-   </layout>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>L0 → DL10 Energy</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_81">
+    <property name="geometry">
+     <rect>
+      <x>85</x>
+      <y>285</y>
+      <width>300</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>L1 → BC11 Energy</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_84">
+    <property name="geometry">
+     <rect>
+      <x>85</x>
+      <y>535</y>
+      <width>300</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>L2 → BC14 Energy</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_83">
+    <property name="geometry">
+     <rect>
+      <x>85</x>
+      <y>785</y>
+      <width>300</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>L3 → BC20 Energy</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_82">
+    <property name="geometry">
+     <rect>
+      <x>1035</x>
+      <y>285</y>
+      <width>200</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>BC11 BLen</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_85">
+    <property name="geometry">
+     <rect>
+      <x>1040</x>
+      <y>530</y>
+      <width>200</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>BC14 BLen</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_86">
+    <property name="geometry">
+     <rect>
+      <x>1040</x>
+      <y>785</y>
+      <width>200</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>BC20 BLen</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <customwidgets>

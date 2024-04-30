@@ -25,7 +25,7 @@ PYDM_LAUNCH_OBJECTS = {
     # secondary/SM displays
     'alarms':       'alarms/main.ui',
     'long_FB':      'long_FB/main.py',
-    'long_FB_hist': 'long_FB/history.ui',
+    'long_FB_hist': 'long_FB/hist.py',
     'transport':    'transport/main.py',
     'PPS_BCS':      'PPS_BCS/main.ui',
     'mini_klys':    'klystrons_mini/main.py',
