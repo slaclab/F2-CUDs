@@ -44,11 +44,13 @@ class F2HistoryPlots(Display):
         # axis limits
 
         self.ui.plot_lrtemp.getAxis('Axis 1').linkedView().setYRange(68, 74)
-        self.ui.plot_lrtemp.getAxis('Axis 2').linkedView().setYRange(40, 60)
+        self.ui.plot_lrtemp.getAxis('Axis 2').linkedView().setYRange(30, 70)
 
         self.ui.plot_in10temp.getAxis('Axis 1').linkedView().setYRange(90, 120)
         self.ui.plot_in10temp.getAxis('Axis 2').linkedView().setYRange(90, 120)
 
+        self.ui.plot_laserE.getAxis('Axis 1').linkedView().setYRange(0, 80)
+        self.ui.plot_laserE.getAxis('Axis 2').linkedView().setYRange(35,65)
 
         # self.ui.plot_gun_ampl.getAxis('Axis 1').linkedView().setYRange(0,0)
         self.ui.plot_gun_ampl.getAxis('Axis 2').linkedView().setYRange(10,60)

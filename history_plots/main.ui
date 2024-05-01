@@ -136,22 +136,6 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
       <property name="spacing">
        <number>0</number>
       </property>
-      <item row="1" column="5">
-       <spacer name="horizontalSpacer">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeType">
-         <enum>QSizePolicy::Minimum</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
       <item row="1" column="3">
        <widget class="QLabel" name="label_6">
         <property name="font">
@@ -167,23 +151,21 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         </property>
        </widget>
       </item>
-      <item row="1" column="1">
-       <widget class="QCheckBox" name="tabCycle">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-         </font>
+      <item row="1" column="5">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
         </property>
-        <property name="text">
-         <string>Auto-cycle tabs</string>
+        <property name="sizeType">
+         <enum>QSizePolicy::Minimum</enum>
         </property>
-        <property name="checked">
-         <bool>true</bool>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
         </property>
-        <property name="tristate">
-         <bool>false</bool>
-        </property>
-       </widget>
+       </spacer>
       </item>
       <item row="1" column="2">
        <spacer name="horizontalSpacer_2">
@@ -257,6 +239,24 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         </property>
        </spacer>
       </item>
+      <item row="1" column="1">
+       <widget class="QCheckBox" name="tabCycle">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Auto-cycle tabs</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <property name="tristate">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
       <item row="0" column="0" colspan="6">
        <widget class="QTabWidget" name="tabWidget">
         <property name="font">
@@ -279,7 +279,7 @@ background-color: rgba(0,0,10);
          <enum>QTabWidget::North</enum>
         </property>
         <property name="currentIndex">
-         <number>5</number>
+         <number>0</number>
         </property>
         <property name="elideMode">
          <enum>Qt::ElideNone</enum>
@@ -289,7 +289,7 @@ background-color: rgba(0,0,10);
         </property>
         <widget class="QWidget" name="tab_3">
          <attribute name="title">
-          <string>IN10 Temperature</string>
+          <string>S10 Injector</string>
          </attribute>
          <layout class="QGridLayout" name="gridLayout_5">
           <item row="0" column="0" colspan="2">
@@ -309,14 +309,20 @@ background-color: rgba(0,0,10);
             <property name="showLegend">
              <bool>true</bool>
             </property>
+            <property name="updateMode" stdset="0">
+             <enum>PyDMTimePlot::AtFixedRate</enum>
+            </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
             </property>
+            <property name="updateInterval">
+             <double>60.000000000000000</double>
+            </property>
             <property name="curves">
              <stringlist>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;DAQ:LR10:TM01:AF01Temp_F&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Laser Room&quot;, &quot;color&quot;: &quot;white&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;LASR:LR10:1:OSCILATOR&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Odcillator&quot;, &quot;color&quot;: &quot;red&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;HVAC:IN10:1:LSR_HMD&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Humidity&quot;, &quot;color&quot;: &quot;dodgerblue&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;DAQ:LR10:TM01:AF01Temp_F&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Laser Room&quot;, &quot;color&quot;: &quot;white&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 0, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 2, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;LASR:LR10:1:OSCILATOR&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Odcillator&quot;, &quot;color&quot;: &quot;red&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 0, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 2, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;HVAC:IN10:1:LSR_HMD&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Humidity&quot;, &quot;color&quot;: &quot;dodgerblue&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 0, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 2, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
              </stringlist>
             </property>
            </widget>
@@ -338,8 +344,14 @@ background-color: rgba(0,0,10);
             <property name="showLegend">
              <bool>true</bool>
             </property>
+            <property name="updateMode" stdset="0">
+             <enum>PyDMTimePlot::AtFixedRate</enum>
+            </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
+            </property>
+            <property name="updateInterval">
+             <double>60.000000000000000</double>
             </property>
             <property name="curves">
              <stringlist>
@@ -349,6 +361,41 @@ background-color: rgba(0,0,10);
               <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;WATR:IN10:1:L0A_SUPP_TMP&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;L0-A Supply&quot;, &quot;color&quot;: &quot;forestgreen&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
               <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;WATR:IN10:1:L0B_SUPP_TMP&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;L0-B Supply&quot;, &quot;color&quot;: &quot;yellow&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
               <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;WATR:IN10:1:TCV_SUPP_TMP&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TCAV Supply&quot;, &quot;color&quot;: &quot;magenta&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+             </stringlist>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="PyDMArchiverTimePlot" name="plot_laserE">
+            <property name="toolTip">
+             <string/>
+            </property>
+            <property name="showXGrid">
+             <bool>true</bool>
+            </property>
+            <property name="yAxes">
+             <stringlist>
+              <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;Laser Energy (deg)&quot;, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+              <string>{&quot;name&quot;: &quot;Axis 2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;UV WP Angle (deg)&quot;, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+             </stringlist>
+            </property>
+            <property name="showLegend">
+             <bool>true</bool>
+            </property>
+            <property name="updateMode" stdset="0">
+             <enum>PyDMTimePlot::AtFixedRate</enum>
+            </property>
+            <property name="timeSpan">
+             <double>86400.000000000000000</double>
+            </property>
+            <property name="updateInterval">
+             <double>60.000000000000000</double>
+            </property>
+            <property name="curves">
+             <stringlist>
+              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;LASR:LT10:930:PWR&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;UV energy&quot;, &quot;color&quot;: &quot;#55aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;PMTR:HT10:950:PW&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;IR energy&quot;, &quot;color&quot;: &quot;#ffaaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;WPLT:LT10:150:WP_ANGLE.RBV&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;UV waveplate&quot;, &quot;color&quot;: &quot;#ffaa00&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
              </stringlist>
             </property>
            </widget>
@@ -380,8 +427,14 @@ background-color: rgba(0,0,10);
             <property name="showLegend">
              <bool>true</bool>
             </property>
+            <property name="updateMode" stdset="0">
+             <enum>PyDMTimePlot::AtFixedRate</enum>
+            </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
+            </property>
+            <property name="updateInterval">
+             <double>60.000000000000000</double>
             </property>
             <property name="curves">
              <stringlist>
@@ -413,8 +466,14 @@ background-color: rgba(0,0,10);
             <property name="showLegend">
              <bool>true</bool>
             </property>
+            <property name="updateMode" stdset="0">
+             <enum>PyDMTimePlot::AtFixedRate</enum>
+            </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
+            </property>
+            <property name="updateInterval">
+             <double>60.000000000000000</double>
             </property>
             <property name="curves">
              <stringlist>
@@ -446,8 +505,14 @@ background-color: rgba(0,0,10);
             <property name="showLegend">
              <bool>true</bool>
             </property>
+            <property name="updateMode" stdset="0">
+             <enum>PyDMTimePlot::AtFixedRate</enum>
+            </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
+            </property>
+            <property name="updateInterval">
+             <double>60.000000000000000</double>
             </property>
             <property name="curves">
              <stringlist>
@@ -476,8 +541,14 @@ background-color: rgba(0,0,10);
             <property name="showLegend">
              <bool>true</bool>
             </property>
+            <property name="updateMode" stdset="0">
+             <enum>PyDMTimePlot::AtFixedRate</enum>
+            </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
+            </property>
+            <property name="updateInterval">
+             <double>60.000000000000000</double>
             </property>
             <property name="curves">
              <stringlist>
@@ -523,8 +594,14 @@ background-color: rgba(0,0,10);
             <property name="showLegend">
              <bool>true</bool>
             </property>
+            <property name="updateMode" stdset="0">
+             <enum>PyDMTimePlot::AtFixedRate</enum>
+            </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
+            </property>
+            <property name="updateInterval">
+             <double>60.000000000000000</double>
             </property>
             <property name="curves">
              <stringlist>
@@ -553,8 +630,14 @@ background-color: rgba(0,0,10);
             <property name="showLegend">
              <bool>true</bool>
             </property>
+            <property name="updateMode" stdset="0">
+             <enum>PyDMTimePlot::AtFixedRate</enum>
+            </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
+            </property>
+            <property name="updateInterval">
+             <double>60.000000000000000</double>
             </property>
             <property name="curves">
              <stringlist>
@@ -649,8 +732,14 @@ background-color: rgba(0,0,10);
             <property name="showLegend">
              <bool>true</bool>
             </property>
+            <property name="updateMode" stdset="0">
+             <enum>PyDMTimePlot::AtFixedRate</enum>
+            </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
+            </property>
+            <property name="updateInterval">
+             <double>60.000000000000000</double>
             </property>
             <property name="curves">
              <stringlist>
@@ -685,8 +774,14 @@ background-color: rgba(0,0,10);
             <property name="showLegend">
              <bool>true</bool>
             </property>
+            <property name="updateMode" stdset="0">
+             <enum>PyDMTimePlot::AtFixedRate</enum>
+            </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
+            </property>
+            <property name="updateInterval">
+             <double>60.000000000000000</double>
             </property>
             <property name="minYRange">
              <double>0.000000000000000</double>
@@ -733,16 +828,22 @@ background-color: rgba(0,0,10);
             <property name="showLegend">
              <bool>true</bool>
             </property>
+            <property name="updateMode" stdset="0">
+             <enum>PyDMTimePlot::AtFixedRate</enum>
+            </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
+            </property>
+            <property name="updateInterval">
+             <double>60.000000000000000</double>
             </property>
             <property name="autoRangeY">
              <bool>false</bool>
             </property>
             <property name="curves">
              <stringlist>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;BPMS:IN10:731:X1H&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BPMS:IN10:731:X1H&quot;, &quot;color&quot;: &quot;white&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI10:41:SFB_ADES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI10:41:SFB_ADES&quot;, &quot;color&quot;: &quot;red&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;BPMS:IN10:731:X1H&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BPMS:IN10:731:X1H&quot;, &quot;color&quot;: &quot;#8a8a8a&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 0, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 2, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI10:41:SFB_ADES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI10:41:SFB_ADES&quot;, &quot;color&quot;: &quot;red&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 0, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 2, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
              </stringlist>
             </property>
            </widget>
@@ -770,18 +871,24 @@ background-color: rgba(0,0,10);
             <property name="showLegend">
              <bool>true</bool>
             </property>
+            <property name="updateMode" stdset="0">
+             <enum>PyDMTimePlot::AtFixedRate</enum>
+            </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
+            </property>
+            <property name="updateInterval">
+             <double>60.000000000000000</double>
             </property>
             <property name="autoRangeY">
              <bool>false</bool>
             </property>
             <property name="curves">
              <stringlist>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;BPMS:LI14:801:X1H&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BPMS:LI14:801:X1H&quot;, &quot;color&quot;: &quot;white&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI14:41:PHAS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI14:41:PHAS&quot;, &quot;color&quot;: &quot;red&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI14:51:PHAS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI14:51:PHAS&quot;, &quot;color&quot;: &quot;dodgerblue&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI14:61:PHAS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI14:61:PHAS&quot;, &quot;color&quot;: &quot;forestgreen&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;BPMS:LI14:801:X1H&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BPMS:LI14:801:X1H&quot;, &quot;color&quot;: &quot;#8a8a8a&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;LI14:KLYS:41:PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI14:KLYS:41:PDES&quot;, &quot;color&quot;: &quot;red&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;LI14:KLYS:51:PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI14:KLYS:51:PDES&quot;, &quot;color&quot;: &quot;dodgerblue&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;LI14:KLYS:61:PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI14:KLYS:61:PDES&quot;, &quot;color&quot;: &quot;forestgreen&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
              </stringlist>
             </property>
            </widget>
@@ -809,17 +916,23 @@ background-color: rgba(0,0,10);
             <property name="showLegend">
              <bool>true</bool>
             </property>
+            <property name="updateMode" stdset="0">
+             <enum>PyDMTimePlot::AtFixedRate</enum>
+            </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
+            </property>
+            <property name="updateInterval">
+             <double>60.000000000000000</double>
             </property>
             <property name="autoRangeY">
              <bool>false</bool>
             </property>
             <property name="curves">
              <stringlist>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;BPMS:LI11:333:X1H&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BPMS:LI11:333:X1H&quot;, &quot;color&quot;: &quot;white&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI11:11:SSSB_ADES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI11:11:SSSB_ADES&quot;, &quot;color&quot;: &quot;red&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI11:21:SSSB_ADES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI11:21:SSSB_ADES&quot;, &quot;color&quot;: &quot;dodgerblue&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;BPMS:LI11:333:X1H&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BPMS:LI11:333:X1H&quot;, &quot;color&quot;: &quot;#8a8a8a&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 0, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 1, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI11:11:SSSB_ADES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI11:11:SSSB_ADES&quot;, &quot;color&quot;: &quot;red&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 0, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 1, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI11:21:SSSB_ADES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI11:21:SSSB_ADES&quot;, &quot;color&quot;: &quot;dodgerblue&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 0, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 1, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
              </stringlist>
             </property>
            </widget>
@@ -847,19 +960,25 @@ background-color: rgba(0,0,10);
             <property name="showLegend">
              <bool>true</bool>
             </property>
+            <property name="updateMode" stdset="0">
+             <enum>PyDMTimePlot::AtFixedRate</enum>
+            </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
+            </property>
+            <property name="updateInterval">
+             <double>60.000000000000000</double>
             </property>
             <property name="autoRangeY">
              <bool>false</bool>
             </property>
             <property name="curves">
              <stringlist>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;BPMS:LI20:2445:X1H&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BPMS:LI20:2445:X1H&quot;, &quot;color&quot;: &quot;white&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI19:31:PHAS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI19:31:PHAS&quot;, &quot;color&quot;: &quot;red&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI19:41:PHAS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI19:41:PHAS&quot;, &quot;color&quot;: &quot;dodgerblue&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI19:51:PHAS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI19:51:PHAS&quot;, &quot;color&quot;: &quot;forestgreen&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI19:61:PHAS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI19:61:PHAS&quot;, &quot;color&quot;: &quot;yellow&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;BPMS:LI20:2445:X1H&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BPMS:LI20:2445:X1H&quot;, &quot;color&quot;: &quot;#8a8a8a&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;LI19:KLYS:31:PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI19:KLYS:31:PDES&quot;, &quot;color&quot;: &quot;red&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;LI19:KLYS:41:PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI19:KLYS:41:PDES&quot;, &quot;color&quot;: &quot;dodgerblue&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;LI19:KLYS:51:PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI19:KLYS:51:PDES&quot;, &quot;color&quot;: &quot;forestgreen&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;LI19:KLYS:61:PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI19:KLYS:61:PDES&quot;, &quot;color&quot;: &quot;yellow&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
               <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: null, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;&quot;, &quot;color&quot;: &quot;magenta&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
              </stringlist>
             </property>
@@ -895,15 +1014,21 @@ background-color: rgba(0,0,10);
             <property name="showLegend">
              <bool>true</bool>
             </property>
+            <property name="updateMode" stdset="0">
+             <enum>PyDMTimePlot::AtFixedRate</enum>
+            </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
+            </property>
+            <property name="updateInterval">
+             <double>60.000000000000000</double>
             </property>
             <property name="autoRangeY">
              <bool>false</bool>
             </property>
             <property name="curves">
              <stringlist>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;BLEN:LI14:888:BZ14888B_S_SUM&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BLEN:LI11:359:BZ11359B_S_SUM&quot;, &quot;color&quot;: &quot;white&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;BLEN:LI14:888:BZ14888B_S_SUM&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BLEN:LI11:359:BZ11359B_S_SUM&quot;, &quot;color&quot;: &quot;#8a8a8a&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 0, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
               <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;LI12:SBST:1:PHAS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI12:SBST:1:PHAS&quot;, &quot;color&quot;: &quot;red&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
               <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;LI13:SBST:1:PHAS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI13:SBST:1:PHAS&quot;, &quot;color&quot;: &quot;dodgerblue&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
               <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;LI14:SBST:1:PHAS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI14:SBST:1:PHAS&quot;, &quot;color&quot;: &quot;forestgreen&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
@@ -934,15 +1059,21 @@ background-color: rgba(0,0,10);
             <property name="showLegend">
              <bool>true</bool>
             </property>
+            <property name="updateMode" stdset="0">
+             <enum>PyDMTimePlot::AtFixedRate</enum>
+            </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
+            </property>
+            <property name="updateInterval">
+             <double>60.000000000000000</double>
             </property>
             <property name="autoRangeY">
              <bool>false</bool>
             </property>
             <property name="curves">
              <stringlist>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;BLEN:LI11:359:BZ11359B_S_SUM&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BLEN:LI11:359:BZ11359B_S_SUM&quot;, &quot;color&quot;: &quot;white&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;BLEN:LI11:359:BZ11359B_S_SUM&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BLEN:LI11:359:BZ11359B_S_SUM&quot;, &quot;color&quot;: &quot;#8a8a8a&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 0, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
               <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI11:11:SSSB_PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI11:11:SSSB_PDES&quot;, &quot;color&quot;: &quot;red&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
               <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI11:21:SSSB_PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI11:21:SSSB_PDES&quot;, &quot;color&quot;: &quot;dodgerblue&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
              </stringlist>
@@ -972,15 +1103,21 @@ background-color: rgba(0,0,10);
             <property name="showLegend">
              <bool>true</bool>
             </property>
+            <property name="updateMode" stdset="0">
+             <enum>PyDMTimePlot::AtFixedRate</enum>
+            </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
+            </property>
+            <property name="updateInterval">
+             <double>60.000000000000000</double>
             </property>
             <property name="autoRangeY">
              <bool>false</bool>
             </property>
             <property name="curves">
              <stringlist>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;BLEN:LI20:3014:BZ203014B_S_SUM&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BLEN:LI11:359:BZ11359B_S_SUM&quot;, &quot;color&quot;: &quot;white&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;BLEN:LI20:3014:BZ203014B_S_SUM&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BLEN:LI11:359:BZ11359B_S_SUM&quot;, &quot;color&quot;: &quot;#8a8a8a&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 0, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
              </stringlist>
             </property>
            </widget>
@@ -1015,8 +1152,14 @@ background-color: rgba(0,0,10);
             <property name="showLegend">
              <bool>true</bool>
             </property>
+            <property name="updateMode" stdset="0">
+             <enum>PyDMTimePlot::AtFixedRate</enum>
+            </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
+            </property>
+            <property name="updateInterval">
+             <double>60.000000000000000</double>
             </property>
             <property name="autoRangeY">
              <bool>false</bool>
@@ -1061,8 +1204,14 @@ background-color: rgba(0,0,10);
             <property name="showLegend">
              <bool>true</bool>
             </property>
+            <property name="updateMode" stdset="0">
+             <enum>PyDMTimePlot::AtFixedRate</enum>
+            </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
+            </property>
+            <property name="updateInterval">
+             <double>60.000000000000000</double>
             </property>
             <property name="autoRangeY">
              <bool>false</bool>
@@ -1098,8 +1247,14 @@ background-color: rgba(0,0,10);
             <property name="showLegend">
              <bool>true</bool>
             </property>
+            <property name="updateMode" stdset="0">
+             <enum>PyDMTimePlot::AtFixedRate</enum>
+            </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
+            </property>
+            <property name="updateInterval">
+             <double>60.000000000000000</double>
             </property>
             <property name="autoRangeY">
              <bool>false</bool>
