@@ -30,6 +30,7 @@ PYDM_LAUNCH_OBJECTS = {
     'PPS_BCS':      'PPS_BCS/main.ui',
     'mini_klys':    'klystrons_mini/main.py',
     'wfh':          'wfh/main.py',
+    'history':      'history_plots/main.py',
     # 'network': 'network/main.py',
 }
 

@@ -54,6 +54,7 @@ CUD_IDS = [
     'orbit',
     'MPS',
     'wfh',
+    'history'
     ]
 
 # verbose descriptions/names of CUDs for CUD launcher use
@@ -72,6 +73,7 @@ CUD_DESC_MAP = {
     'MPS':          'MPS',
     'network':      'Network/Watchers',
     'wfh':          'Work-from-home',
+    'history':      '24-Hour history',
     }
 
 # reverse map of the above
@@ -90,6 +92,7 @@ CUD_ID_MAP = {
     'MPS':              'MPS',
     'Network/Watchers': 'network',
     'Work-from-home':   'wfh',
+    '24-Hour history':  'history',
 }
 
 STYLE_BITLABEL_ON = """
