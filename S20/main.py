@@ -79,8 +79,7 @@ class F2_CUD_S20(Display):
             o.append(bpm)
         for bpm_name in s20_BPMs_SCP:
             bpm = FacetSCPBPM(bpm_name, suffix='57')
-            if bpm.name in FacetOrbit.energy_bpms():
-                bpm.is_energy_bpm = True
+            if bpm.name in FacetOrbit.energy_bpms(): bpm.is_energy_bpm = True
             o.append(bpm)
         o.connect()
         cud_orbit = partial(OrbitView,
@@ -99,9 +98,6 @@ class F2_CUD_S20(Display):
         ref_update_flag = PyDMChannel(address=PV_REF_UPDATE, value_slot=self.update_beam_refs)
         ref_update_flag.connect()
 
-        self.ui.live_DTOTR2.getView().getViewBox().setLimits(
-            xMin=0, xMax=100, yMin=0, yMax=100
-            )
         self.setWindowTitle('FACET-II CUD: Sector 20')
         return
 
