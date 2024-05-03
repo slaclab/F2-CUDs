@@ -279,7 +279,7 @@ background-color: rgba(0,0,10);
          <enum>QTabWidget::North</enum>
         </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>3</number>
         </property>
         <property name="elideMode">
          <enum>Qt::ElideNone</enum>
@@ -316,7 +316,7 @@ background-color: rgba(0,0,10);
              <double>86400.000000000000000</double>
             </property>
             <property name="updateInterval">
-             <double>60.000000000000000</double>
+             <double>1.000000000000000</double>
             </property>
             <property name="curves">
              <stringlist>
@@ -441,7 +441,6 @@ background-color: rgba(0,0,10);
               <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI10:21:POWER_W0CH0&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;SLED Forward&quot;, &quot;color&quot;: &quot;white&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
               <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI10:21:ASET05&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;DAC Out&quot;, &quot;color&quot;: &quot;red&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
               <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;ACCL:LI10:21:POWER_W0CH6&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;WVG Forward&quot;, &quot;color&quot;: &quot;dodgerblue&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI10:21:SFB_ADES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;SFB ADES&quot;, &quot;color&quot;: &quot;forestgreen&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
              </stringlist>
             </property>
            </widget>
@@ -480,7 +479,6 @@ background-color: rgba(0,0,10);
               <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI10:41:POWER_W0CH0&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;SLED Forward&quot;, &quot;color&quot;: &quot;white&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
               <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI10:41:ASET05&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;DAC Out&quot;, &quot;color&quot;: &quot;red&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
               <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;ACCL:LI10:41:POWER_W0CH0&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;WVG Forward&quot;, &quot;color&quot;: &quot;dodgerblue&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI10:41:SFB_ADES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;SFB ADES&quot;, &quot;color&quot;: &quot;forestgreen&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
              </stringlist>
             </property>
            </widget>
@@ -519,7 +517,6 @@ background-color: rgba(0,0,10);
               <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI10:31:POWER_W0CH0&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;SLED Forward&quot;, &quot;color&quot;: &quot;white&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
               <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI10:31:ASET05&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;DAC Out&quot;, &quot;color&quot;: &quot;red&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
               <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;ACCL:LI10:31:POWER_W0CH0&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;WVG Forward&quot;, &quot;color&quot;: &quot;dodgerblue&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI10:31:SFB_ADES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;SFB ADES&quot;, &quot;color&quot;: &quot;forestgreen&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
              </stringlist>
             </property>
            </widget>
@@ -552,10 +549,8 @@ background-color: rgba(0,0,10);
             </property>
             <property name="curves">
              <stringlist>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI10:41:SFB_PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;SFB PDES&quot;, &quot;color&quot;: &quot;white&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
               <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;ACCL:LI10:41:PHASE_W0CH0&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;WVG Phase&quot;, &quot;color&quot;: &quot;red&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
               <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI10:41:T5:PREQ_OFFSET&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;SFB Offset&quot;, &quot;color&quot;: &quot;dodgerblue&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI10:41:T5:PREQ_OFFSET&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;FFB Offset&quot;, &quot;color&quot;: &quot;forestgreen&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
              </stringlist>
             </property>
            </widget>
@@ -605,10 +600,8 @@ background-color: rgba(0,0,10);
             </property>
             <property name="curves">
              <stringlist>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI10:21:SFB_PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;SFB PDES&quot;, &quot;color&quot;: &quot;white&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
               <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;ACCL:LI10:21:PHASE_W0CH6&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;WVG Phase&quot;, &quot;color&quot;: &quot;red&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
               <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI10:21:T5:PREQ_OFFSET&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;SFB Offset&quot;, &quot;color&quot;: &quot;dodgerblue&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI10:21:T5:PREQ_OFFSET&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;FFB Offset&quot;, &quot;color&quot;: &quot;forestgreen&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
              </stringlist>
             </property>
            </widget>
@@ -641,10 +634,8 @@ background-color: rgba(0,0,10);
             </property>
             <property name="curves">
              <stringlist>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI10:31:SFB_PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;SFB PDES&quot;, &quot;color&quot;: &quot;white&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
               <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;ACCL:LI10:31:PHASE_W0CH0&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;WVG Phase&quot;, &quot;color&quot;: &quot;red&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
               <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI10:31:T5:PREQ_OFFSET&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;SFB Offset&quot;, &quot;color&quot;: &quot;dodgerblue&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI10:31:T5:PREQ_OFFSET&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;FFB Offset&quot;, &quot;color&quot;: &quot;forestgreen&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
              </stringlist>
             </property>
            </widget>
@@ -752,7 +743,6 @@ background-color: rgba(0,0,10);
               <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;LI17:SBST:1:PMDL&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI17&quot;, &quot;color&quot;: &quot;turquoise&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
               <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;LI18:SBST:1:PMDL&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI18&quot;, &quot;color&quot;: &quot;deeppink&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
               <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;LI19:SBST:1:PMDL&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI19&quot;, &quot;color&quot;: &quot;lime&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;LI20:SBST:1:PMDL&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI20&quot;, &quot;color&quot;: &quot;orange&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
              </stringlist>
             </property>
            </widget>
@@ -805,94 +795,6 @@ background-color: rgba(0,0,10);
           <string>Longitudinal Feedbacks (1/2)</string>
          </attribute>
          <layout class="QGridLayout" name="gridLayout_7">
-          <item row="0" column="0">
-           <widget class="PyDMArchiverTimePlot" name="plot_l0_energy">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="toolTip">
-             <string/>
-            </property>
-            <property name="showXGrid">
-             <bool>true</bool>
-            </property>
-            <property name="yAxes">
-             <stringlist>
-              <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
-              <string>{&quot;name&quot;: &quot;Axis 2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;&quot;, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
-             </stringlist>
-            </property>
-            <property name="showLegend">
-             <bool>true</bool>
-            </property>
-            <property name="updateMode" stdset="0">
-             <enum>PyDMTimePlot::AtFixedRate</enum>
-            </property>
-            <property name="timeSpan">
-             <double>86400.000000000000000</double>
-            </property>
-            <property name="updateInterval">
-             <double>60.000000000000000</double>
-            </property>
-            <property name="autoRangeY">
-             <bool>false</bool>
-            </property>
-            <property name="curves">
-             <stringlist>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;BPMS:IN10:731:X1H&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BPMS:IN10:731:X1H&quot;, &quot;color&quot;: &quot;#8a8a8a&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 0, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 2, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI10:41:SFB_ADES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI10:41:SFB_ADES&quot;, &quot;color&quot;: &quot;red&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 0, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 2, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-             </stringlist>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="PyDMArchiverTimePlot" name="plot_l2_energy">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="toolTip">
-             <string/>
-            </property>
-            <property name="showXGrid">
-             <bool>true</bool>
-            </property>
-            <property name="yAxes">
-             <stringlist>
-              <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
-              <string>{&quot;name&quot;: &quot;Axis 2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;degS&quot;, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
-             </stringlist>
-            </property>
-            <property name="showLegend">
-             <bool>true</bool>
-            </property>
-            <property name="updateMode" stdset="0">
-             <enum>PyDMTimePlot::AtFixedRate</enum>
-            </property>
-            <property name="timeSpan">
-             <double>86400.000000000000000</double>
-            </property>
-            <property name="updateInterval">
-             <double>60.000000000000000</double>
-            </property>
-            <property name="autoRangeY">
-             <bool>false</bool>
-            </property>
-            <property name="curves">
-             <stringlist>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;BPMS:LI14:801:X1H&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BPMS:LI14:801:X1H&quot;, &quot;color&quot;: &quot;#8a8a8a&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;LI14:KLYS:41:PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI14:KLYS:41:PDES&quot;, &quot;color&quot;: &quot;red&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;LI14:KLYS:51:PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI14:KLYS:51:PDES&quot;, &quot;color&quot;: &quot;dodgerblue&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;LI14:KLYS:61:PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI14:KLYS:61:PDES&quot;, &quot;color&quot;: &quot;forestgreen&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-             </stringlist>
-            </property>
-           </widget>
-          </item>
           <item row="1" column="0">
            <widget class="PyDMArchiverTimePlot" name="plot_l1_energy">
             <property name="sizePolicy">
@@ -975,11 +877,96 @@ background-color: rgba(0,0,10);
             <property name="curves">
              <stringlist>
               <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;BPMS:LI20:2445:X1H&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BPMS:LI20:2445:X1H&quot;, &quot;color&quot;: &quot;#8a8a8a&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;LI19:KLYS:31:PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI19:KLYS:31:PDES&quot;, &quot;color&quot;: &quot;red&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;LI19:KLYS:41:PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI19:KLYS:41:PDES&quot;, &quot;color&quot;: &quot;dodgerblue&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;LI19:KLYS:51:PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI19:KLYS:51:PDES&quot;, &quot;color&quot;: &quot;forestgreen&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;LI19:KLYS:61:PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI19:KLYS:61:PDES&quot;, &quot;color&quot;: &quot;yellow&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: null, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;&quot;, &quot;color&quot;: &quot;magenta&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;LI19:KLYS:41:PHAS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI19:KLYS:41:PHAS&quot;, &quot;color&quot;: &quot;dodgerblue&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;LI19:KLYS:51:PHAS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI19:KLYS:51:PHAS&quot;, &quot;color&quot;: &quot;forestgreen&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+             </stringlist>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="PyDMArchiverTimePlot" name="plot_l0_energy">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="toolTip">
+             <string/>
+            </property>
+            <property name="showXGrid">
+             <bool>true</bool>
+            </property>
+            <property name="yAxes">
+             <stringlist>
+              <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+              <string>{&quot;name&quot;: &quot;Axis 2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;&quot;, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+             </stringlist>
+            </property>
+            <property name="showLegend">
+             <bool>true</bool>
+            </property>
+            <property name="updateMode" stdset="0">
+             <enum>PyDMTimePlot::AtFixedRate</enum>
+            </property>
+            <property name="timeSpan">
+             <double>86400.000000000000000</double>
+            </property>
+            <property name="updateInterval">
+             <double>60.000000000000000</double>
+            </property>
+            <property name="autoRangeY">
+             <bool>false</bool>
+            </property>
+            <property name="curves">
+             <stringlist>
+              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;BPMS:IN10:731:X1H&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BPMS:IN10:731:X1H&quot;, &quot;color&quot;: &quot;#8a8a8a&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 0, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 2, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;KLYS:LI10:41:SFB_ADES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI10:41:SFB_ADES&quot;, &quot;color&quot;: &quot;red&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 0, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 2, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+             </stringlist>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="PyDMArchiverTimePlot" name="plot_l2_energy">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="toolTip">
+             <string/>
+            </property>
+            <property name="showXGrid">
+             <bool>true</bool>
+            </property>
+            <property name="yAxes">
+             <stringlist>
+              <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+              <string>{&quot;name&quot;: &quot;Axis 2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;degS&quot;, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+             </stringlist>
+            </property>
+            <property name="showLegend">
+             <bool>true</bool>
+            </property>
+            <property name="updateMode" stdset="0">
+             <enum>PyDMTimePlot::AtFixedRate</enum>
+            </property>
+            <property name="timeSpan">
+             <double>86400.000000000000000</double>
+            </property>
+            <property name="updateInterval">
+             <double>60.000000000000000</double>
+            </property>
+            <property name="autoRangeY">
+             <bool>false</bool>
+            </property>
+            <property name="curves">
+             <stringlist>
+              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;BPMS:LI14:801:X1H&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BPMS:LI14:801:X1H&quot;, &quot;color&quot;: &quot;#8a8a8a&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;LI14:KLYS:41:PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI14:KLYS:41:PDES&quot;, &quot;color&quot;: &quot;red&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;LI14:KLYS:51:PHAS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI14:KLYS:51:PHAS&quot;, &quot;color&quot;: &quot;dodgerblue&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+              <string>{&quot;useArchiveData&quot;: true, &quot;channel&quot;: &quot;LI14:KLYS:61:PDES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI14:KLYS:61:PDES&quot;, &quot;color&quot;: &quot;forestgreen&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
              </stringlist>
             </property>
            </widget>
