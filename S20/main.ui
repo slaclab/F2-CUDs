@@ -531,8 +531,17 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <property name="toolTip">
          <string/>
         </property>
+        <property name="colorMapMin" stdset="0">
+         <double>0.000000000000000</double>
+        </property>
+        <property name="colorMapMax" stdset="0">
+         <double>255.000000000000000</double>
+        </property>
         <property name="colorMap" stdset="0">
          <enum>PyDMImageView::Jet</enum>
+        </property>
+        <property name="normalizeData" stdset="0">
+         <bool>true</bool>
         </property>
         <property name="readingOrder" stdset="0">
          <enum>PyDMImageView::Fortranlike</enum>
