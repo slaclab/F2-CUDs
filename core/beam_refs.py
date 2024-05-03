@@ -13,7 +13,8 @@ from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog, QMessageBox,
 SELF_PATH = path.dirname(path.abspath(__file__))
 REPO_ROOT = path.join(*path.split(SELF_PATH)[:-1])
 REFS_PATH = path.join(REPO_ROOT, 'beam_refs')
-CURRENT_REFS_FILE = path.join(REFS_PATH, 'current_refs.csv')
+# CURRENT_REFS_FILE = path.join(REFS_PATH, 'current_refs.csv')
+'/home/fphysics/zack/workspace/F2-CUDs/beam_refs/current_refs.csv'
 
 # defines what a valid <ref_type> is also
 REF_TYPES = [
