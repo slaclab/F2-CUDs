@@ -16,8 +16,11 @@ from PyQt5.QtWidgets import QGridLayout, QWidget, QProgressBar
 from PyQt5.QtCore import Qt, QTimer
 from PyQt5.QtGui import QColor, QFont
 
+import orbit
 from orbit import FacetOrbit, BPM, FacetSCPBPM
 from orbit_view import OrbitView 
+
+
 
 # ==== for later =====
 # RESOLUTION 9.91
@@ -32,7 +35,7 @@ sys.path.append(REPO_ROOT)
 from core import beam_refs
 
 ORBIT_DRAW_RATE = 10
-ORBIT_POS_SCALE = 1
+ORBIT_POS_SCALE = 2.2
 ORBIT_TMIT_MAX = 1.4e10
 
 PV_REF_UPDATE = 'SIOC:SYS1:ML03:AO976'
@@ -54,13 +57,13 @@ class F2_CUD_S20(Display):
         # setup IN10 - TD11 orbit
         self.draw_orbit = QTimer(self)
 
-        s20_BPMs_EPICS = [
+        s20_BPMs_SCP = [
             'BPMS:LI20:2050', 'BPMS:LI20:2147', 'BPMS:LI20:2160',
             'BPMS:LI20:2223', 'BPMS:LI20:2235', 'BPMS:LI20:2261', 'BPMS:LI20:2278', 'BPMS:LI20:2340',
             'BPMS:LI20:2360', 'BPMS:LI20:3013', 'BPMS:LI20:3036', 'BPMS:LI20:3101',
             'BPMS:LI20:3120', 'BPMS:LI20:3340'
             ]
-        s20_BPMs_SCP = [
+        s20_BPMs_EPICS = [
             "BPMS:LI20:2445", "BPMS:LI20:3156", "BPMS:LI20:3218",
             "BPMS:LI20:3265", "BPMS:LI20:3315"
             ]
@@ -96,6 +99,9 @@ class F2_CUD_S20(Display):
         ref_update_flag = PyDMChannel(address=PV_REF_UPDATE, value_slot=self.update_beam_refs)
         ref_update_flag.connect()
 
+        self.ui.live_DTOTR2.getView().getViewBox().setLimits(
+            xMin=0, xMax=100, yMin=0, yMax=100
+            )
         self.setWindowTitle('FACET-II CUD: Sector 20')
         return
 
