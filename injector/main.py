@@ -10,13 +10,14 @@ from pydm.widgets.label import PyDMLabel
 from pydm.widgets.base import PyDMWidget
 from pydm.widgets.channel import PyDMChannel
 from pydm.widgets.image import PyDMImageView
+from pydm.widgets.timeplot import PyDMTimePlot
 
 from PyQt5 import QtGui, QtCore
 from PyQt5.QtWidgets import QGridLayout, QWidget, QProgressBar
 from PyQt5.QtCore import Qt, QTimer
 from PyQt5.QtGui import QColor, QFont
 
-from orbit import FacetOrbit, BPM
+from orbit import FacetOrbit, DiffOrbit, BaseOrbit, BPM
 from orbit_view import OrbitView 
 
 SELF_PATH = path.dirname(path.abspath(__file__))
@@ -79,19 +80,19 @@ class F2_CUD_injector(Display):
             "BPMS:LI11:333", "BPMS:LI11:358", "BPMS:LI11:362", "BPMS:LI11:393"
             ]
 
-        orbit = FacetOrbit(
+        self.live_orbit = FacetOrbit(
             ignore_bad_bpms=True, rate_suffix='TH', scp_suffix='57',
             name='FACET-II IN10 - L1 orbit'
             )
-        orbit.bpms = []
+        self.live_orbit.bpms = []
         for bpm_name in inj_BPMs:
             bpm = BPM(bpm_name, edef='TH')
             if bpm.name in FacetOrbit.energy_bpms(): bpm.is_energy_bpm = True
-            orbit.append(bpm)
-        orbit.connect()
+            self.live_orbit.append(bpm)
+        self.live_orbit.connect()
         cud_orbit = partial(OrbitView,
             parent=self, draw_timer=self.draw_orbit.start(),
-            units="mm",  ymin=-ORBIT_POS_SCALE, ymax=ORBIT_POS_SCALE, orbit=orbit
+            units="mm",  ymin=-ORBIT_POS_SCALE, ymax=ORBIT_POS_SCALE, orbit=self.live_orbit
             )
 
         self.xOrbitView = cud_orbit(axis="x", name="X", label="X")
@@ -102,9 +103,13 @@ class F2_CUD_injector(Display):
         self.ui.cont_orbit.layout().addWidget(self.yOrbitView)
         self.draw_orbit.start()
 
+        self.ui.plot_Q.getAxis('Axis 2').linkedView().setYRange(35,65)
+
         self.setWindowTitle('FACET-II CUD: Injector')
 
-        ref_update_flag = PyDMChannel(address=PV_REF_UPDATE, value_slot=self.update_beam_refs)
+        self.reference_orbit = None
+        self.difference_orbit = None
+        ref_update_flag = PyDMChannel(address=PV_REF_UPDATE, value_slot=self.update_ref_orbit)
         ref_update_flag.connect()
 
         return
@@ -112,12 +117,27 @@ class F2_CUD_injector(Display):
     def ui_filename(self):
         return os.path.join(SELF_PATH, 'main.ui')
 
-    def update_beam_refs(self):
+    def update_ref_orbit(self):
         ref_dict = beam_refs.read_current_refs()
+        orbit_fpath, ftype = ref_dict['orbit_inj'], 'Absolute'
+        if orbit_fpath != 'NOTSET':
+            try:
+                self.reference_orbit = BaseOrbit.from_MATLAB_file(orbit_fpath)
+                fname = path.split(orbit_fpath)[-1]
+                ftype = 'Diff'
+                self.difference_orbit = DiffOrbit(self.live_orbit, self.reference_orbit)
+                print(f"Reference orbit loaded from file {orbit_fpath}")
+            except Exception as e:
+                print("Couldn't load orbit from MATLAB file.")
+                print("Only MATLAB files created by Orbit Display are supported\n")
+                raise(e)
+        self.ui.ref_orbit_name.setText(path.split(orbit_fpath)[-1])
+        self.ui.label_orbit_type.setText(ftype)
 
-        # (1) update orbit
-        ref_fname_orbit = ref_dict['orbit_inj']
-        self.ui.ts_ref_orbit.setText(beam_refs.ts_from_ref_fname(ref_fname_orbit))
+        orbit = self.live_orbit
+        if ftype == 'Diff': orbit = DiffOrbit(self.live_orbit, self.reference_orbit)
+        self.xOrbitView.set_orbit(orbit)
+        self.yOrbitView.set_orbit(orbit)
         return
 
 

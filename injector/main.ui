@@ -479,73 +479,6 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
       <double>1.000000000000000</double>
      </property>
     </widget>
-    <widget class="QLabel" name="label_39">
-     <property name="geometry">
-      <rect>
-       <x>444</x>
-       <y>10</y>
-       <width>304</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>16777215</width>
-       <height>25</height>
-      </size>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>16</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>some relevant status</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-    </widget>
-    <widget class="PyDMDrawingCircle" name="hb_indicator_4">
-     <property name="geometry">
-      <rect>
-       <x>750</x>
-       <y>10</y>
-       <width>25</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>25</width>
-       <height>25</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>25</width>
-       <height>25</height>
-      </size>
-     </property>
-     <property name="toolTip">
-      <string/>
-     </property>
-     <property name="alarmSensitiveContent" stdset="0">
-      <bool>true</bool>
-     </property>
-     <property name="channel" stdset="0">
-      <string>SIOC:IN10:PM01:HEARTBEATSUM</string>
-     </property>
-     <property name="brush" stdset="0">
-      <brush brushstyle="SolidPattern">
-       <color alpha="255">
-        <red>0</red>
-        <green>255</green>
-        <blue>0</blue>
-       </color>
-      </brush>
-     </property>
-    </widget>
     <widget class="PyDMTimePlot" name="plot_gun_vac">
      <property name="geometry">
       <rect>
@@ -560,7 +493,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
      </property>
      <property name="yAxes">
       <stringlist>
-       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;Pressure (Torr)&quot;, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: true}</string>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;Pressure (Torr)&quot;, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: true}</string>
       </stringlist>
      </property>
      <property name="showLegend">
@@ -583,6 +516,9 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
      </property>
      <property name="timeSpan">
       <double>1800.000000000000000</double>
+     </property>
+     <property name="autoRangeY">
+      <bool>true</bool>
      </property>
      <property name="maxYRange">
       <double>1.000000000000000</double>
@@ -2919,7 +2855,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <enum>PyDMTimePlot::AtFixedRate</enum>
        </property>
        <property name="timeSpan">
-        <double>43200.000000000000000</double>
+        <double>3600.000000000000000</double>
        </property>
        <property name="updateInterval">
         <double>15.000000000000000</double>
@@ -3246,7 +3182,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
       </widget>
      </item>
      <item row="3" column="0" rowspan="6" colspan="7">
-      <widget class="PyDMTimePlot" name="PyDMTimePlot">
+      <widget class="PyDMTimePlot" name="plot_Q">
        <property name="toolTip">
         <string/>
        </property>
@@ -5666,6 +5602,9 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          <pointsize>16</pointsize>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(180,180,180);</string>
+       </property>
        <property name="text">
         <string>Ref. Orbit:</string>
        </property>
@@ -5687,6 +5626,9 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          <pointsize>16</pointsize>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(180,180,180);</string>
+       </property>
        <property name="text">
         <string>Orbit:</string>
        </property>
@@ -5696,7 +5638,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
       </widget>
      </item>
      <item row="0" column="4">
-      <widget class="QLabel" name="ts_ref_orbit">
+      <widget class="QLabel" name="ref_orbit_name">
        <property name="maximumSize">
         <size>
          <width>16777215</width>

@@ -1,5 +1,5 @@
 import os, sys
-from os import path
+from os import path, environ
 from functools import partial
 from socket import gethostname
 from time import sleep
@@ -13,7 +13,7 @@ from pydm.widgets.label import PyDMLabel
 from pydm.widgets.base import PyDMWidget
 from pydm.widgets.channel import PyDMChannel
 
-from PyQt5.QtWidgets import QGridLayout, QWidget, QFrame, QPushButton, QComboBox, QApplication
+from PyQt5.QtWidgets import QGridLayout, QWidget, QFrame, QPushButton, QComboBox, QApplication, QFileDialog
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QColor, QFont
 
@@ -47,6 +47,7 @@ background-color: rgb(180,220,255);
 color: rgb(200,200,200);
 }
 """
+
 
 
 # class F2CUDManager(Display):
@@ -294,15 +295,20 @@ class F2CUDManager(Display):
 
     def refresh_beam_refs(self):
         # set the beam ref labels appropriately from current_refs.csv
-        for ref_type, ref_fname in beam_refs.read_current_refs().items():
-            ts_raw = ref_fname.split('_')[-1].split('.')[0]
-            self.ref_labels[ref_type].setText(beam_refs.readable_ts(ts_raw))
+        for ref_type, ref_fpath in beam_refs.read_current_refs().items():
+            fname = 'NOTSET'
+            if ref_fpath != 'NOTSET': fname = path.split(ref_fpath)[-1]
+            self.ref_labels[ref_type].setText(fname)
         return
 
     def set_reference(self, ref_type, N_avg=1):
         self.ref_labels[ref_type].setText('Working  ...')
-        ts = beam_refs.set(ref_type=ref_type)
-        self.ref_labels[ref_type].setText(ts)
+        fname = 'not implemented ...'
+        if ref_type in ['orbit_inj', 'orbit_s20']:
+            fpath = self._get_orbit_file()
+            fname = path.split(fpath)[-1]
+        self.ref_labels[ref_type].setText(fname)
+        beam_refs.update_current_refs(ref_type, fpath)
         return
 
     def clear_reference(self, ref_type):
@@ -310,6 +316,11 @@ class F2CUDManager(Display):
         beam_refs.clear(ref_type)
         self.refresh_beam_refs()
         return
+
+    def _get_orbit_file(self):
+        matlab_data_dir = path.join("/u1", environ.get('FACILITY', 'facet'), 'matlab', 'data')
+        filename = str(QFileDialog.getOpenFileName(self, "Open File", matlab_data_dir, "Orbit data files (*.mat *.json)")[0])
+        return filename
 
 def _load_ACR_defaults():
     """" load default display setting for each LM/SM from config file """

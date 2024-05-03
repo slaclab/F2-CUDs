@@ -1,11 +1,13 @@
 # code for collecting beam references
 # gets reference from relevant PV/device & saves to /beam_refs/
 
-from os import path
+from os import path, environ
 from datetime import datetime
 from epics import caget, caput
 from numpy import loadtxt
 from time import sleep
+
+from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog, QMessageBox, QTextEdit, QWidget, QHBoxLayout, QLabel, QPushButton
 
 
 SELF_PATH = path.dirname(path.abspath(__file__))
@@ -26,28 +28,63 @@ DATE_FMT_TIMESTAMP = '%Y%m%d%H%M%S'
 
 PV_REF_UPDATE = 'SIOC:SYS1:ML03:AO976'
 
-def set(ref_type, N_avg=1):
-    """
-    takes a new (possibly averaged) reference of the given <ref_type>
-    wrapper to fork requests to the _set_ref_<ref_type> methods
-    """
-    ref_time = datetime.now()
-    ts_readable = ref_time.strftime(DATE_FMT_READABLE)
-    ts = ref_time.strftime(DATE_FMT_TIMESTAMP)
 
-    if ref_type == 'img_SYAG': ref_fname = _set_ref_img_SYAG(ts, N_avg=N_avg)
-    elif ref_type == 'img_DTOTR2': ref_fname = _set_ref_img_DTOTR2(ts, N_avg=N_avg)
-    elif ref_type == 'orbit_inj': ref_fname = _set_ref_orbit_inj(ts, N_avg=N_avg)
-    elif ref_type == 'orbit_s20': ref_fname = _set_ref_orbit_s20(ts, N_avg=N_avg)
+# @pyqtSlot()
+#     def load_orbit_from_file(self):
+#         matlab_data_dir = os.path.join("/u1", os.environ.get('FACILITY', 'lcls'), 'matlab', 'data')
+#         filename = str(QFileDialog.getOpenFileName(self, "Open File", matlab_data_dir, "Orbit data files (*.mat *.json)")[0])
+#         extension = os.path.splitext(filename)[1].lower()
+#         if extension == ".json":
+#             try:
+#                 o = BaseOrbit.from_json_file(filename)
+#                 self.add_reference_orbit(o)
+#                 self.statusBar().showMessage("Reference orbit loaded from file {}".format(filename), 10000)
+#             except Exception as e:
+#                 msgBox = QMessageBox()
+#                 msgBox.setText("Couldn't load orbit from JSON file.")
+#                 msgBox.setInformativeText("Error: {}".format(str(e)))
+#                 msgBox.setStandardButtons(QMessageBox.Ok)
+#                 msgBox.exec_()
+#                 return
+#         elif extension == ".mat":
+#             try:
+#                 o = BaseOrbit.from_MATLAB_file(filename)
+#                 self.add_reference_orbit(o)
+#                 self.statusBar().showMessage("Reference orbit loaded from file {}".format(filename), 10000)
+#             except Exception as e:
+#                 msgBox = QMessageBox()
+#                 msgBox.setText("Couldn't load orbit from MATLAB file.")
+#                 msgBox.setInformativeText("Orbit Display supports MATLAB files created by Orbit Display, but not the MATLAB BPMs vs. Z GUI.  Error: {}".format(str(e)))
+#                 msgBox.setStandardButtons(QMessageBox.Ok)
+#                 msgBox.exec_()
 
-    update_current_refs(ref_type, path.join(REFS_PATH, ref_fname))
 
-    return ts_readable
+# def set(ref_type, N_avg=1):
+#     """
+#     takes a new (possibly averaged) reference of the given <ref_type>
+#     wrapper to fork requests to the _set_ref_<ref_type> methods
+#     """
+#     ref_time = datetime.now()
+#     ts_readable = ref_time.strftime(DATE_FMT_READABLE)
+#     ts = ref_time.strftime(DATE_FMT_TIMESTAMP)
 
-def load(ref_type):
-    """ loads the latest reference file for <ref_type> """
-    # with open(CURRENT_REFS_FILE) as f:
-    return
+#     if ref_type == 'img_SYAG': ref_fname = _set_ref_img_SYAG(ts, N_avg=N_avg)
+#     elif ref_type == 'img_DTOTR2': ref_fname = _set_ref_img_DTOTR2(ts, N_avg=N_avg)
+#     elif ref_type == 'orbit_inj': ref_fpath = _get_orbit_file()
+#     elif ref_type == 'orbit_s20': ref_fpath = _get_orbit_file()
+
+#     update_current_refs(ref_type, ref_fpath)
+
+#     return ts_readable
+
+# def load(ref_type):
+#     """ loads the latest reference file for <ref_type> """
+#     fpath = None
+#     with open(CURRENT_REFS_FILE) as f:
+#         for line in f.readlines():
+#             if line.split(',')[0] == ref_type:
+#                 fpath = line.split(',')[1]
+#     return fpath
 
 def clear(ref_type):
     """ update current_refs.csv to unset <ref_type> """
@@ -101,20 +138,15 @@ def _set_ref_img_DTOTR2(ts, N_avg=1):
 
     return ref_fname
 
-def _set_ref_orbit_inj(ts, N_avg=1):
-    ref_fname = f'ref_orbit_inj_{ts}.mat'
+# def _set_ref_orbit_inj():
+#     # ref_fname = f'ref_orbit_inj_{ts}.mat'
+#     ref_fname = _get_orbit_file()
+#     return ref_fname
 
-    return ref_fname
-
-def _set_ref_orbit_s20(ts, N_avg=1):
-    ref_fname = f'ref_orbit_s20_{ts}.mat'
-
-    return ref_fname
-
-
-def _collect_reference_orbit(orbit_type, N_avg=1):
-    """ create an orbit object of the correct type, save a reference """
-    return
+# def _set_ref_orbit_s20():
+#     # ref_fname = f'ref_orbit_s20_{ts}.mat'
+#     ref_fname = _get_orbit_file()
+#     return ref_fname
 
 def ts_from_ref_fname(ref_fname):
     # ts_raw = ref_fname.split('_')[-1].split('.')

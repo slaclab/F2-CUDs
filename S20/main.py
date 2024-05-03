@@ -12,12 +12,12 @@ from pydm.widgets.channel import PyDMChannel
 from pydm.widgets.image import PyDMImageView
 
 from PyQt5 import QtGui, QtCore
-from PyQt5.QtWidgets import QGridLayout, QWidget, QProgressBar
+from PyQt5.QtWidgets import QGridLayout, QWidget, QProgressBar, QMessageBox
 from PyQt5.QtCore import Qt, QTimer
 from PyQt5.QtGui import QColor, QFont
 
-import orbit
-from orbit import FacetOrbit, BPM, FacetSCPBPM
+# import orbit
+from orbit import FacetOrbit, DiffOrbit, BaseOrbit, BPM, FacetSCPBPM
 from orbit_view import OrbitView 
 
 
@@ -54,39 +54,19 @@ class F2_CUD_S20(Display):
         SYAG_image.colorMap = 4
         SYAG_image.setGeometry(5, 5, 490, 240)
 
-        # setup IN10 - TD11 orbit
+        # setup S20 orbit
         self.draw_orbit = QTimer(self)
-
-        s20_BPMs_SCP = [
-            'BPMS:LI20:2050', 'BPMS:LI20:2147', 'BPMS:LI20:2160',
-            'BPMS:LI20:2223', 'BPMS:LI20:2235', 'BPMS:LI20:2261', 'BPMS:LI20:2278', 'BPMS:LI20:2340',
-            'BPMS:LI20:2360', 'BPMS:LI20:3013', 'BPMS:LI20:3036', 'BPMS:LI20:3101',
-            'BPMS:LI20:3120', 'BPMS:LI20:3340'
-            ]
-        s20_BPMs_EPICS = [
-            "BPMS:LI20:2445", "BPMS:LI20:3156", "BPMS:LI20:3218",
-            "BPMS:LI20:3265", "BPMS:LI20:3315"
-            ]
-
-        o = FacetOrbit(
+        self.live_orbit = FacetOrbit(
             ignore_bad_bpms=True, rate_suffix='TH', scp_suffix='57',
             name='FACET-II BC20 - DUMP orbit'
             )
-        o.bpms = []
-        for bpm_name in s20_BPMs_EPICS:
-            bpm = BPM(bpm_name, edef='TH')
-            if bpm.name in FacetOrbit.energy_bpms(): bpm.is_energy_bpm = True
-            o.append(bpm)
-        for bpm_name in s20_BPMs_SCP:
-            bpm = FacetSCPBPM(bpm_name, suffix='57')
-            if bpm.name in FacetOrbit.energy_bpms(): bpm.is_energy_bpm = True
-            o.append(bpm)
-        o.connect()
-        cud_orbit = partial(OrbitView,
-            parent=self, draw_timer=self.draw_orbit.start(),
-            units="mm",  ymin=-ORBIT_POS_SCALE, ymax=ORBIT_POS_SCALE, orbit=o
-            )
+        self.live_orbit.bpms = self.S20_BPMs()
+        self.live_orbit.connect()        
 
+        cud_orbit = partial(OrbitView,
+            parent=self, draw_timer=self.draw_orbit,
+            units="mm",  ymin=-ORBIT_POS_SCALE, ymax=ORBIT_POS_SCALE, orbit=self.live_orbit
+            )
         self.xOrbitView = cud_orbit(axis="x", name="X", label="X")
         self.yOrbitView = cud_orbit(axis="y", name="Y", label="Y")
         self.yOrbitView.setXLink(self.xOrbitView)
@@ -95,7 +75,9 @@ class F2_CUD_S20(Display):
         self.ui.cont_orbit.layout().addWidget(self.yOrbitView)
         self.draw_orbit.start()
 
-        ref_update_flag = PyDMChannel(address=PV_REF_UPDATE, value_slot=self.update_beam_refs)
+        self.reference_orbit = None
+        self.difference_orbit = None
+        ref_update_flag = PyDMChannel(address=PV_REF_UPDATE, value_slot=self.udpate_ref_orbit)
         ref_update_flag.connect()
 
         self.setWindowTitle('FACET-II CUD: Sector 20')
@@ -104,23 +86,50 @@ class F2_CUD_S20(Display):
     def ui_filename(self):
         return os.path.join(SELF_PATH, 'main.ui')
 
-    def update_beam_refs(self):
+    def udpate_ref_orbit(self):
         ref_dict = beam_refs.read_current_refs()
+        orbit_fpath, ftype = ref_dict['orbit_s20'], 'Absolute'
+        if orbit_fpath != 'NOTSET':
+            try:
+                self.reference_orbit = BaseOrbit.from_MATLAB_file(orbit_fpath)
+                fname = path.split(orbit_fpath)[-1]
+                ftype = 'Diff'
+                self.difference_orbit = DiffOrbit(self.live_orbit, self.reference_orbit)
+                print(f"Reference orbit loaded from file {orbit_fpath}")
+            except Exception as e:
+                print("Couldn't load orbit from MATLAB file.")
+                print("Only MATLAB files created by Orbit Display are supported\n")
+                raise(e)
+        self.ui.ref_orbit_name.setText(path.split(orbit_fpath)[-1])
+        self.ui.label_orbit_type.setText(ftype)
 
-        # (1) update SYAG image
-        ref_fname_SYAG = ref_dict['img_SYAG']
-        self.ui.ts_ref_SYAG.setText(beam_refs.ts_from_ref_fname(ref_fname_SYAG))
-
-        # (2) update DTOTR2 image
-        ref_fname_DTOTR2 = ref_dict['img_DTOTR2']
-        self.ui.ts_ref_DTOTR2.setText(beam_refs.ts_from_ref_fname(ref_fname_DTOTR2))
-
-        # (3) update BC20-FDMP orbit
-        ref_fname_orbit = ref_dict['orbit_s20']
-        self.ui.ts_ref_orbit.setText(beam_refs.ts_from_ref_fname(ref_fname_orbit))
-
-
+        orbit = self.live_orbit
+        if ftype == 'Diff': orbit = DiffOrbit(self.live_orbit, self.reference_orbit)
+        self.xOrbitView.set_orbit(orbit)
+        self.yOrbitView.set_orbit(orbit)
         return
+
+    def S20_BPMs(self):
+        s20_BPMs_SCP = [
+            'BPMS:LI20:2050', 'BPMS:LI20:2147', 'BPMS:LI20:2160', 'BPMS:LI20:2223',
+            'BPMS:LI20:2235', 'BPMS:LI20:2261', 'BPMS:LI20:2278', 'BPMS:LI20:2340',
+            'BPMS:LI20:2360', 'BPMS:LI20:3013', 'BPMS:LI20:3036', 'BPMS:LI20:3101',
+            'BPMS:LI20:3120', 'BPMS:LI20:3340'
+            ]
+        s20_BPMs_EPICS = [
+            "BPMS:LI20:2445", "BPMS:LI20:3156", "BPMS:LI20:3218", "BPMS:LI20:3265",
+            "BPMS:LI20:3315"
+            ]
+        bpms = []
+        for bpm_name in s20_BPMs_EPICS:
+            bpm = BPM(bpm_name, edef='TH')
+            if bpm.name in FacetOrbit.energy_bpms(): bpm.is_energy_bpm = True
+            bpms.append(bpm)
+        for bpm_name in s20_BPMs_SCP:
+            bpm = FacetSCPBPM(bpm_name, suffix='57')
+            if bpm.name in FacetOrbit.energy_bpms(): bpm.is_energy_bpm = True
+            bpms.append(bpm)
+        return bpms
 
 # subclass to flip iamge in X/Y - performance intensive :(
 class SYAGImg(PyDMImageView):
