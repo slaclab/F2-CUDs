@@ -143,7 +143,7 @@ class F2_CUD_linac(Display):
             BC14BL_enable,
             BC20E_enable,
             ]:
-            ind.setGeometry(0,0,110,32)
+            ind.setGeometry(0,0,70,29)
             ind.setFont(STAT_REG)
             ind.onstyle = STYLE_GREEN
             ind.offstyle = STYLE_YELLOW
@@ -154,8 +154,8 @@ class F2_CUD_linac(Display):
             'LI18:FBCK:28:HSTA', parent=self.ui.ind_l3steer)
         ind_LI11.setFont(STAT_REG)
         ind_LI18.setFont(STAT_REG)
-        ind_LI11.setGeometry(0,0,110,32)
-        ind_LI18.setGeometry(0,0,110,32)
+        ind_LI11.setGeometry(0,0,70,29)
+        ind_LI18.setGeometry(0,0,70,29)
 
         self.setWindowTitle('FACET-II CUD: Linac')
 
