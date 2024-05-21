@@ -67,6 +67,9 @@ COMMAND_WMCTRL_MOVE = 'wmctrl -i -r {}'
 COMMAND_WMCTRL_REPOSITION = f'{COMMAND_WMCTRL_MOVE} -e 0,{{}},0,{{}},{{}}' # args: x, w, h
 COMMAND_WMCTRL_FULLSCREEN = f'{COMMAND_WMCTRL_MOVE} -b add,fullscreen'
 
+# need physics user to write to ACR CUD PVs 
+PHYS_CAPUT = "ssh physics@lcls-srv01 'caput {} {}'"
+
 def LM_names(): return LARGE_MONITORS
 
 def SM_names(): return SMALL_MONITORS
@@ -109,9 +112,10 @@ def kill_monitor(monitor):
     # verify success somehow?
 
     # unset display name, PID and windowID PVs
-    caput(CUD_PV_disp(monitor), '')
-    caput(CUD_PV_pid(monitor), '')
-    caput(CUD_PV_wid(monitor), '')
+    # call(PHYS_CAPUT.format())
+    call(PHYS_CAPUT.format(CUD_PV_disp(monitor), '""'), shell=True)
+    call(PHYS_CAPUT.format(CUD_PV_pid(monitor), '""'), shell=True)
+    call(PHYS_CAPUT.format(CUD_PV_wid(monitor), '""'), shell=True)
 
     return
 
@@ -144,9 +148,9 @@ def send_to_monitor(monitor, CUD_ID):
     # TO DO: verify success somehow?
 
     # caput to display name, PID and windowID PVs
-    caput(CUD_PV_disp(monitor), common.CUD_desc(CUD_ID))
-    caput(CUD_PV_pid(monitor), str(p.pid))
-    caput(CUD_PV_wid(monitor), CUD_win_ID)
+    call(PHYS_CAPUT.format(CUD_PV_disp(monitor), common.CUD_desc(CUD_ID)), shell=True)
+    call(PHYS_CAPUT.format(CUD_PV_pid(monitor), str(p.pid)), shell=True)
+    call(PHYS_CAPUT.format(CUD_PV_wid(monitor), CUD_win_ID), shell=True)
 
     # restore $DISPLAY to localhost
     os.environ['DISPLAY'] = init_disp
