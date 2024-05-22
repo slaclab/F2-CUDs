@@ -89,28 +89,28 @@ class F2CUDManager(Display):
         self.ui.kill_all.clicked.connect(self.kill_everything)
 
         self.ref_labels = {
-            'img_SYAG': self.ui.ref_ts_img_SYAG,
-            'img_DTOTR2': self.ui.ref_ts_img_DTOTR2,
+            # 'img_SYAG': self.ui.ref_ts_img_SYAG,
+            # 'img_DTOTR2': self.ui.ref_ts_img_DTOTR2,
             'orbit_inj': self.ui.ref_ts_orbit_inj,
             'orbit_s20': self.ui.ref_ts_orbit_s20,
             }
 
         # beam reference set/clear controls setup
         refs = [
-            'img_SYAG',
-            'img_DTOTR2',
+            # 'img_SYAG',
+            # 'img_DTOTR2',
             'orbit_inj',
             'orbit_s20',
             ]
         ref_sets = [
-            self.ui.ref_set_img_SYAG,
-            self.ui.ref_set_img_DTOTR2,
+            # self.ui.ref_set_img_SYAG,
+            # self.ui.ref_set_img_DTOTR2,
             self.ui.ref_set_orbit_inj,
             self.ui.ref_set_orbit_s20,
             ]
         ref_clears = [
-            self.ui.ref_clear_img_SYAG,
-            self.ui.ref_clear_img_DTOTR2,
+            # self.ui.ref_clear_img_SYAG,
+            # self.ui.ref_clear_img_DTOTR2,
             self.ui.ref_clear_orbit_inj,
             self.ui.ref_clear_orbit_s20,
             ]
@@ -312,7 +312,6 @@ class F2CUDManager(Display):
         return
 
     def clear_reference(self, ref_type):
-        """ general purpose clear function -- just needs to delete files """
         beam_refs.clear(ref_type)
         self.refresh_beam_refs()
         return

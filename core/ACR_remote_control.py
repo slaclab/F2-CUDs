@@ -112,7 +112,6 @@ def kill_monitor(monitor):
     # verify success somehow?
 
     # unset display name, PID and windowID PVs
-    # call(PHYS_CAPUT.format())
     call(PHYS_CAPUT.format(CUD_PV_disp(monitor), '""'), shell=True)
     call(PHYS_CAPUT.format(CUD_PV_pid(monitor), '""'), shell=True)
     call(PHYS_CAPUT.format(CUD_PV_wid(monitor), '""'), shell=True)
