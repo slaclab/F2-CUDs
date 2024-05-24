@@ -35,7 +35,7 @@ sys.path.append(REPO_ROOT)
 from core import beam_refs
 
 ORBIT_DRAW_RATE = 10
-ORBIT_POS_SCALE = 2.2
+ORBIT_POS_SCALE = 1.1
 ORBIT_TMIT_MAX = 1.4e10
 
 PV_REF_UPDATE = 'SIOC:SYS1:ML03:AO976'
