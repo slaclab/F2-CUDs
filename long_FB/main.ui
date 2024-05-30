@@ -311,7 +311,7 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="yAxes">
       <stringlist>
-       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -100.0, &quot;maxRange&quot;: 100.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
       </stringlist>
      </property>
      <property name="curves">
@@ -1629,7 +1629,7 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="yAxes">
       <stringlist>
-       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -3300.0, &quot;maxRange&quot;: 3300.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
       </stringlist>
      </property>
      <property name="curves">
@@ -2812,7 +2812,7 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="yAxes">
       <stringlist>
-       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 7500.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
       </stringlist>
      </property>
      <property name="curves">
@@ -3879,7 +3879,7 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="yAxes">
       <stringlist>
-       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -85.0, &quot;maxRange&quot;: 85.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
       </stringlist>
      </property>
      <property name="curves">
@@ -5094,7 +5094,7 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="yAxes">
       <stringlist>
-       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 12500.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
       </stringlist>
      </property>
      <property name="curves">
@@ -6023,13 +6023,13 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="yAxes">
       <stringlist>
-       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -171.6, &quot;maxRange&quot;: 171.6, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
       </stringlist>
      </property>
      <property name="curves">
       <stringlist>
        <string>{&quot;channel&quot;: &quot;SIOC:SYS1:ML01:AO624&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot; &quot;, &quot;color&quot;: &quot;#0a84ff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-       <string>{&quot;channel&quot;: &quot;ca://SIOC:SYS1:ML00:AO895&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;SIOC:SYS1:ML01:AO234&quot;, &quot;color&quot;: &quot;#ffaa00&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+       <string>{&quot;channel&quot;: &quot;SIOC:SYS1:ML01:AO234&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;SIOC:SYS1:ML01:AO234&quot;, &quot;color&quot;: &quot;#ffaa00&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
       </stringlist>
      </property>
      <property name="updatesAsynchronously">
@@ -6425,7 +6425,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          <string/>
         </property>
         <property name="channel" stdset="0">
-         <string>SIOC:SYS1:ML00:AO895</string>
+         <string>SIOC:SYS1:ML01:AO234</string>
         </property>
         <property name="enableRichText" stdset="0">
          <bool>false</bool>
