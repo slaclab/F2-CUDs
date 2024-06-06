@@ -51,7 +51,7 @@ class F2_CUD_injector(Display):
         VCCF_image.maxRedrawRate = 10
         VCCF_image.setGeometry(15,85,360,300)
         VCCF_image.getView().getViewBox().setLimits(
-            xMin=170, xMax=1340, yMin=110, yMax=1000
+            xMin=0, xMax=1340, yMin=0, yMax=1000
             )
 
         CATH_image = InvertedImage(
