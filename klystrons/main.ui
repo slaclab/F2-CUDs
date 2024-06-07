@@ -663,7 +663,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
     <widget class="QLabel" name="label_18">
      <property name="geometry">
       <rect>
-       <x>355</x>
+       <x>328</x>
        <y>45</y>
        <width>30</width>
        <height>25</height>
@@ -687,7 +687,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
     <widget class="QLabel" name="label_16">
      <property name="geometry">
       <rect>
-       <x>325</x>
+       <x>358</x>
        <y>45</y>
        <width>30</width>
        <height>25</height>
@@ -711,7 +711,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
     <widget class="QLabel" name="label_19">
      <property name="geometry">
       <rect>
-       <x>355</x>
+       <x>328</x>
        <y>70</y>
        <width>30</width>
        <height>25</height>
@@ -735,7 +735,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
     <widget class="QLabel" name="label_17">
      <property name="geometry">
       <rect>
-       <x>325</x>
+       <x>358</x>
        <y>70</y>
        <width>30</width>
        <height>25</height>
@@ -2721,7 +2721,7 @@ background-color: rgb(20, 20, 30);
       <enum>QFrame::Box</enum>
      </property>
      <property name="text">
-      <string>L1-SA</string>
+      <string>L1-A</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -2747,7 +2747,7 @@ background-color: rgb(20, 20, 30);
       <enum>QFrame::Box</enum>
      </property>
      <property name="text">
-      <string>L1-SB</string>
+      <string>L1-B</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -3824,7 +3824,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
     <property name="geometry">
      <rect>
       <x>1625</x>
-      <y>284</y>
+      <y>275</y>
       <width>280</width>
       <height>316</height>
      </rect>
@@ -3845,97 +3845,7 @@ color: rgb(80,80,80);
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <layout class="QGridLayout" name="gridLayout">
-     <item row="4" column="0">
-      <widget class="QLabel" name="label_23">
-       <property name="font">
-        <font>
-         <pointsize>16</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>idk dude you tell me</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-       </property>
-       <property name="wordWrap">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="label_20">
-       <property name="font">
-        <font>
-         <pointsize>16</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>ENLD estimated linac amplitudes?</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-       </property>
-       <property name="wordWrap">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="0" colspan="2">
-      <widget class="QLabel" name="label_15">
-       <property name="font">
-        <font>
-         <pointsize>20</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>Coming soon:</string>
-       </property>
-       <property name="wordWrap">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="0">
-      <widget class="QLabel" name="label_22">
-       <property name="font">
-        <font>
-         <pointsize>16</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Headroom estimate from off-beam stations + feedback vernier?</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-       </property>
-       <property name="wordWrap">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="0">
-      <widget class="QLabel" name="label_21">
-       <property name="font">
-        <font>
-         <pointsize>16</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>L1, L2 chirp in MeV?</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-       </property>
-       <property name="wordWrap">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-    </layout>
+    <layout class="QGridLayout" name="gridLayout"/>
    </widget>
    <widget class="QFrame" name="L2_label">
     <property name="geometry">
