@@ -420,16 +420,16 @@ class facetFeedbackCUD(Display):
         # BC11BL_alarm_lo, BC11BL_alarm_hi = -55, -5
         # BC14BL_warn_lo,  BC14BL_warn_hi = -50, -10
         # BC14BL_alarm_lo, BC14BL_alarm_hi = -55, -5
-        warn_lo,  warn_hi = -50, -10
-        alarm_lo, alarm_hi = -55, -5
-        for act_label in [self.ui.act_3_deg, self.ui.act_5_deg]:
-            val = act_label.value
-            if (val <= warn_hi) or (val >= warn_lo):
-                act_label.setStyleSheet(STYLE_NOM)
-            elif (val <= alarm_hi) or (val >= alarm_lo):
-                act_label.setStyleSheet(STYLE_WARN)
-            elif (val > alarm_hi) or (val < alarm_lo):
-                act_label.setStyleSheet(STYLE_ALARM)
+        #warn_lo,  warn_hi = -50, -10
+        #alarm_lo, alarm_hi = -55, -5
+        #for act_label in [self.ui.act_3_deg, self.ui.act_5_deg]:
+        #    val = act_label.value
+        #    if (val <= warn_hi) or (val >= warn_lo):
+        #        act_label.setStyleSheet(STYLE_NOM)
+        #    elif (val <= alarm_hi) or (val >= alarm_lo):
+        #        act_label.setStyleSheet(STYLE_WARN)
+        #    elif (val > alarm_hi) or (val < alarm_lo):
+        #        act_label.setStyleSheet(STYLE_ALARM)
         return
 
     def check_FB_meas(self):
@@ -574,7 +574,7 @@ class facetFeedbackCUD(Display):
         act_min = caget(self.config['BC11BL']['act_hi'])
         act_max = caget(self.config['BC11BL']['act_lo'])
 
-        self.ui.act_3_deg.setStyleSheet(STYLE_NOM)
+        # self.ui.act_3_deg.setStyleSheet(STYLE_NOM)
         return
 
     def init_BC14E(self):
@@ -638,7 +638,7 @@ class facetFeedbackCUD(Display):
         act_min = 0.0
         act_max = 180.0
 
-        self.ui.act_5_deg.setStyleSheet(STYLE_NOM)
+        # self.ui.act_5_deg.setStyleSheet(STYLE_NOM)
 
         return
 
