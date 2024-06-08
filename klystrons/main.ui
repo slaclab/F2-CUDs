@@ -3825,7 +3825,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
      <rect>
       <x>1625</x>
       <y>270</y>
-      <width>280</width>
+      <width>260</width>
       <height>330</height>
      </rect>
     </property>
@@ -4085,6 +4085,12 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
      </item>
      <item row="6" column="0">
       <widget class="QLabel" name="label_50">
+       <property name="minimumSize">
+        <size>
+         <width>40</width>
+         <height>0</height>
+        </size>
+       </property>
        <property name="maximumSize">
         <size>
          <width>110</width>
@@ -4139,6 +4145,12 @@ border-radius: 5px;</string>
      </item>
      <item row="2" column="0">
       <widget class="QLabel" name="label_49">
+       <property name="minimumSize">
+        <size>
+         <width>40</width>
+         <height>0</height>
+        </size>
+       </property>
        <property name="maximumSize">
         <size>
          <width>110</width>
@@ -4314,6 +4326,12 @@ border-radius: 5px;</string>
      </item>
      <item row="0" column="0">
       <widget class="QLabel" name="label_48">
+       <property name="minimumSize">
+        <size>
+         <width>40</width>
+         <height>0</height>
+        </size>
+       </property>
        <property name="maximumSize">
         <size>
          <width>110</width>
@@ -4463,6 +4481,12 @@ border-radius: 5px;</string>
      </item>
      <item row="9" column="0">
       <widget class="QLabel" name="label_51">
+       <property name="minimumSize">
+        <size>
+         <width>40</width>
+         <height>0</height>
+        </size>
+       </property>
        <property name="maximumSize">
         <size>
          <width>110</width>
