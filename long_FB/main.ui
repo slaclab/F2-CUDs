@@ -311,7 +311,7 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="yAxes">
       <stringlist>
-       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -100.0, &quot;maxRange&quot;: 100.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -330.0, &quot;maxRange&quot;: 330.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
       </stringlist>
      </property>
      <property name="curves">
@@ -333,10 +333,10 @@ color: rgb(255, 255, 255);</string>
       <bool>false</bool>
      </property>
      <property name="minYRange">
-      <double>-100.000000000000000</double>
+      <double>-330.000000000000000</double>
      </property>
      <property name="maxYRange">
-      <double>100.000000000000000</double>
+      <double>330.000000000000000</double>
      </property>
     </widget>
     <widget class="PyDMAnalogIndicator" name="BC11BL_act_2">
