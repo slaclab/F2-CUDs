@@ -2939,7 +2939,7 @@ color: rgb(200, 200, 200);</string>
       <rect>
        <x>20</x>
        <y>555</y>
-       <width>270</width>
+       <width>190</width>
        <height>60</height>
       </rect>
      </property>
@@ -2953,6 +2953,14 @@ color: rgb(200, 200, 200);</string>
      <property name="toolTip">
       <string/>
      </property>
+     <property name="styleSheet">
+      <string notr="true">PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
+  color: rgb(144,194,255);
+}</string>
+     </property>
+     <property name="text">
+      <string>-9999</string>
+     </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
@@ -2960,19 +2968,19 @@ color: rgb(200, 200, 200);</string>
       <number>5</number>
      </property>
      <property name="precision" stdset="0">
-      <number>1</number>
+      <number>0</number>
      </property>
      <property name="showUnits" stdset="0">
       <bool>false</bool>
      </property>
      <property name="precisionFromPV" stdset="0">
-      <bool>false</bool>
+      <bool>true</bool>
      </property>
      <property name="alarmSensitiveBorder" stdset="0">
-      <bool>false</bool>
+      <bool>true</bool>
      </property>
      <property name="channel" stdset="0">
-      <string>KLYS:LI11:11:SSSB_PDES</string>
+      <string>SIOC:SYS1:ML01:AO719</string>
      </property>
     </widget>
     <widget class="PyDMAnalogIndicator" name="BC11BL_act">
@@ -3664,6 +3672,29 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
       </item>
      </layout>
     </widget>
+    <widget class="QLabel" name="meas_1_l_10">
+     <property name="geometry">
+      <rect>
+       <x>215</x>
+       <y>570</y>
+       <width>90</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>24</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>MeV</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
     <zorder>meas_3</zorder>
     <zorder>info_3</zorder>
     <zorder>act_3_deg</zorder>
@@ -3672,6 +3703,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
     <zorder>widget_2</zorder>
     <zorder>widget_13</zorder>
     <zorder>widget_18</zorder>
+    <zorder>meas_1_l_10</zorder>
    </widget>
    <widget class="QWidget" name="FB_4_BC14E" native="true">
     <property name="geometry">
@@ -5224,7 +5256,7 @@ color: rgb(200, 200, 200);</string>
       <rect>
        <x>20</x>
        <y>555</y>
-       <width>270</width>
+       <width>190</width>
        <height>60</height>
       </rect>
      </property>
@@ -5238,6 +5270,14 @@ color: rgb(200, 200, 200);</string>
      <property name="toolTip">
       <string/>
      </property>
+     <property name="styleSheet">
+      <string notr="true">PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
+  color: rgb(144,194,255);
+}</string>
+     </property>
+     <property name="text">
+      <string>-9999</string>
+     </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
@@ -5245,19 +5285,22 @@ color: rgb(200, 200, 200);</string>
       <number>5</number>
      </property>
      <property name="precision" stdset="0">
-      <number>1</number>
+      <number>0</number>
      </property>
      <property name="showUnits" stdset="0">
       <bool>false</bool>
      </property>
      <property name="precisionFromPV" stdset="0">
+      <bool>true</bool>
+     </property>
+     <property name="alarmSensitiveContent" stdset="0">
       <bool>false</bool>
      </property>
      <property name="alarmSensitiveBorder" stdset="0">
-      <bool>false</bool>
+      <bool>true</bool>
      </property>
      <property name="channel" stdset="0">
-      <string>SIOC:SYS1:ML00:CALC145</string>
+      <string>SIOC:SYS1:ML01:AO721</string>
      </property>
     </widget>
     <widget class="PyDMAnalogIndicator" name="BC14BL_act">
@@ -5943,6 +5986,29 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
       </item>
      </layout>
     </widget>
+    <widget class="QLabel" name="meas_1_l_9">
+     <property name="geometry">
+      <rect>
+       <x>215</x>
+       <y>570</y>
+       <width>90</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>24</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>MeV</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
     <zorder>meas_5</zorder>
     <zorder>info_5</zorder>
     <zorder>act_5_deg</zorder>
@@ -5951,6 +6017,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
     <zorder>widget_3</zorder>
     <zorder>widget_14</zorder>
     <zorder>widget_19</zorder>
+    <zorder>meas_1_l_9</zorder>
    </widget>
    <widget class="QWidget" name="FB_6_BC20E" native="true">
     <property name="geometry">
@@ -6023,7 +6090,7 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="yAxes">
       <stringlist>
-       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -171.6, &quot;maxRange&quot;: 171.6, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -165.0, &quot;maxRange&quot;: 165.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
       </stringlist>
      </property>
      <property name="curves">
