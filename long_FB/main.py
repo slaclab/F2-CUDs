@@ -103,7 +103,7 @@ INF_FONT_NOM.setPointSize(14)
 
 INF_FONT_ALM = QFont()
 INF_FONT_ALM.setPointSize(14)
-INF_FONT_ALM.setBold(True)
+# INF_FONT_ALM.setBold(True)
 
 ACT_GREEN = QColor(144,255,124)
 ACT_ORANGE = QColor(255,197,97)
@@ -324,7 +324,7 @@ class facetFeedbackCUD(Display):
 
             stat = check_act[fb_name](fb_name)
 
-            # font = INF_FONT_NOM
+            font = INF_FONT_NOM
             if not stat:
                 style = STYLE_STAT_NOM
             elif stat == 'ACT. INVALID':
@@ -335,7 +335,7 @@ class facetFeedbackCUD(Display):
                 style = STYLE_STAT_ALM
 
             # font = INF_FONT_NOM if not stat else INF_FONT_ALM
-            font = INF_FONT_ALM
+            # font = INF_FONT_ALM
 
             if not stat:
                 font = INF_FONT_NOM
@@ -461,7 +461,7 @@ class facetFeedbackCUD(Display):
                 style = STYLE_STAT_ALM
 
             # font = INF_FONT_NOM if not stat else INF_FONT_ALM
-            font = INF_FONT_ALM
+            font = INF_FONT_NOM
 
             if not stat:
                 stat = 'STATE OK'
