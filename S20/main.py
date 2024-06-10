@@ -46,7 +46,6 @@ PV_DTOTR = 'CAMR:LI20:107'
 PV_DTOTR_IMG = f'{PV_DTOTR}:Image:ArrayData'
 IMG_W = caget(f'{PV_DTOTR}:Image:ArraySize0_RBV')
 IMG_H = caget(f'{PV_DTOTR}:Image:ArraySize1_RBV')
-
 MASK = np.ones((IMG_W,IMG_H),dtype=int)
 
 def calc_dtotr_centroid():
@@ -69,6 +68,10 @@ class F2_CUD_S20(Display):
         SYAG_image.readingOrder = 1
         SYAG_image.colorMap = 4
         SYAG_image.setGeometry(5, 5, 490, 240)
+        SYAG_image.getView().getViewBox().setLimits(
+            xMin=0, xMax=caget('CAMR:LI20:100:Image:ArraySize0_RBV')+100,
+            yMin=0, yMax=caget('CAMR:LI20:100:Image:ArraySize1_RBV')/2.0
+            )
 
         self.track_dtotr = QTimer(self)
         self.track_dtotr.start()
