@@ -20,7 +20,9 @@ from PyQt5.QtGui import QColor, QFont
 from orbit import FacetOrbit, DiffOrbit, BaseOrbit, BPM, FacetSCPBPM
 from orbit_view import OrbitView 
 
-
+from epics import caget
+from skimage.measure import regionprops
+from skimage.filters import threshold_mean
 
 # ==== for later =====
 # RESOLUTION 9.91
@@ -40,6 +42,20 @@ ORBIT_TMIT_MAX = 1.4e10
 
 PV_REF_UPDATE = 'SIOC:SYS1:ML03:AO976'
 
+PV_DTOTR = 'CAMR:LI20:107'
+PV_DTOTR_IMG = f'{PV_DTOTR}:Image:ArrayData'
+IMG_W = caget(f'{PV_DTOTR}:Image:ArraySize0_RBV')
+IMG_H = caget(f'{PV_DTOTR}:Image:ArraySize1_RBV')
+
+MASK = np.ones((IMG_W,IMG_H),dtype=int)
+
+def calc_dtotr_centroid():
+    """ get the image centroid from DTOTR2 & determine CUD image ROI """
+    image = np.reshape(caget(PV_DTOTR_IMG), (IMG_W,IMG_H), order='F')
+    mask = (image > threshold_mean(image)).astype(int)
+    cy,cx = regionprops(mask, image)[0].centroid
+    return cx,cy
+
 class F2_CUD_S20(Display):
 
     def __init__(self, parent=None, args=None):
@@ -53,6 +69,11 @@ class F2_CUD_S20(Display):
         SYAG_image.readingOrder = 1
         SYAG_image.colorMap = 4
         SYAG_image.setGeometry(5, 5, 490, 240)
+
+        self.track_dtotr = QTimer(self)
+        self.track_dtotr.start()
+        self.track_dtotr.setInterval(200)
+        self.track_dtotr.timeout.connect(self.set_DTOTR2_ROI)
 
         # setup S20 orbit
         self.draw_orbit = QTimer(self)
@@ -130,6 +151,13 @@ class F2_CUD_S20(Display):
             if bpm.name in FacetOrbit.energy_bpms(): bpm.is_energy_bpm = True
             bpms.append(bpm)
         return bpms
+
+    def set_DTOTR2_ROI(self):
+        cx,cy = calc_dtotr_centroid()
+        self.ui.live_DTOTR2.getView().getViewBox().setLimits(
+            xMin=cx-200, xMax=cx+200, yMin=cy-215, yMax=cy+215
+            )
+        return
 
 # subclass to flip iamge in X/Y - performance intensive :(
 class SYAGImg(PyDMImageView):
