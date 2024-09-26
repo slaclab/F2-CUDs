@@ -49,6 +49,9 @@ class F2_CUD_klystrons(Display):
         ind_XTCAVF = klysIndicator('20-4', parent=self.ui.cont_XTCAVF)
         ind_XTCAVF.setGeometry(0,0,100,80)
 
+        ind_TCAV3 = klysIndicator('14-8', parent=self.ui.cont_TCAV3)
+        ind_TCAV3.setGeometry(0,0,100,80)
+
         for plot in [
             self.ui.plot_DL10, self.ui.plot_BC11,
             self.ui.plot_BC14,self.ui.plot_BC20
@@ -78,10 +81,10 @@ class F2_CUD_klystrons(Display):
         return
 
     def setup_L1(self):
-        ind_L1SA = klysIndicator(
+        ind_L1A = klysIndicator(
             '11-1', pv_pdes='KLYS:LI11:11:SSSB_PDES', parent=self.ui.cont_L1SA
             )
-        ind_L1SB = klysIndicator(
+        ind_L1B = klysIndicator(
             '11-2', pv_pdes='KLYS:LI11:21:SSSB_PDES', parent=self.ui.cont_L1SB
             )
 
