@@ -4166,7 +4166,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
       <string/>
      </property>
      <property name="channel" stdset="0">
-      <string>TCAV:LI15:280:TC0_VRLFD</string>
+      <string>TCAV:LI15:280:TC0_VRFLD</string>
      </property>
      <property name="enableRichText" stdset="0">
       <bool>false</bool>
