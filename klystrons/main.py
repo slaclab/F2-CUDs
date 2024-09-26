@@ -108,6 +108,7 @@ class F2_CUD_klystrons(Display):
                 for k in KLYSTRONS:
                     # exclude 11-1 & 2
                     if s == '11' and k in ['1','2']: continue
+                    if s == '14' and k == '8': continue
                     klys = klysIndicator(f'{s}-{k}')
                     L.addWidget(klys, int(k), i_sbst)
 
