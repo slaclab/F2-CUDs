@@ -32,6 +32,7 @@ PYDM_LAUNCH_OBJECTS = {
     'wfh':          'wfh/main.py',
     'history':      'history_plots/main.py',
     # 'network': 'network/main.py',
+    'lem':          'lem/main.py',
 }
 
 # oh god this is disgusting get rid of this once fphysics@facet-srv02 works
