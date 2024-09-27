@@ -56,6 +56,7 @@ CUD_IDS = [
     'wfh',
     'history',
     'lem',
+    'screens'
     ]
 
 # verbose descriptions/names of CUDs for CUD launcher use
@@ -76,6 +77,7 @@ CUD_DESC_MAP = {
     'wfh':          'Work-from-home',
     'history':      '24-Hour history',
     'lem':          'LEM',
+    'screens':      'Beam Stay-clear'
     }
 
 # reverse map of the above
@@ -96,6 +98,7 @@ CUD_ID_MAP = {
     'Work-from-home':   'wfh',
     '24-Hour history':  'history',
     'LEM':              'lem',
+    'Beam Stay-clear':  'screens',      
 }
 
 STYLE_BITLABEL_ON = """
