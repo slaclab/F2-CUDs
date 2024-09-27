@@ -34,6 +34,7 @@ PYDM_LAUNCH_OBJECTS = {
     # 'network': 'network/main.py',
     'lem':          'lem/main.py',
     'screens':      'screens/main.ui',
+    'fields':      'lattice/main.ui',
 }
 
 # oh god this is disgusting get rid of this once fphysics@facet-srv02 works
