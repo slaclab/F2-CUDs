@@ -30,9 +30,9 @@ ACR:
     LM22L: S20
     LM22R: klystrons
     LM23L: history
-    LM23R: injector
-    LM24L: klystrons
-    LM24R: S20
+    # LM23R: injector
+    # LM24L: klystrons
+    # LM24R: S20
   sm:
     SM20A: long_FB
     SM20B: long_FB_hist
@@ -48,12 +48,12 @@ ACR:
     SM24D: transport
     SM26A: lem
     SM26B: network
-    SM26C: PPS_BCS
-    SM26D: transport
-    SM28A: alarms
-    SM28B: network
-    SM28C: MPS
-    SM28D: PPS_BCS
+    # SM26C: PPS_BCS
+    # SM26D: transport
+    # SM28A: alarms
+    # SM28B: network
+    # SM28C: MPS
+    # SM28D: PPS_BCS
 
 injector:
   desc: 'Injector'
@@ -80,7 +80,7 @@ alarms:
   pydm: 'alarms/main.ui'
 
 long_FB:
-  desc: 'Longitudinal Feedbacks'
+  desc: 'Longitudinal FB'
   pydm: 'long_FB/main.py'
 
 long_FB_hist:
