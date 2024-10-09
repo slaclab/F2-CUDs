@@ -10,6 +10,9 @@
     <height>1080</height>
    </rect>
   </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::NoContextMenu</enum>
+  </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
@@ -160,7 +163,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;Dose Rate (mrem/h)&quot;, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;Dose Rate (mrem/h)&quot;, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 150000.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="showLegend">
@@ -202,7 +205,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;Counts&quot;, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;Counts&quot;, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 19500.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="showLegend">
@@ -4463,8 +4466,8 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>1635</x>
-      <y>370</y>
+      <x>1630</x>
+      <y>380</y>
       <width>275</width>
       <height>641</height>
      </rect>

@@ -3,6 +3,8 @@ from os import path, environ
 from functools import partial
 from socket import gethostname
 from time import sleep
+from multiprocessing import Pool
+import yaml
 
 from epics import caget, caput
 
@@ -17,8 +19,10 @@ from PyQt5.QtWidgets import QGridLayout, QWidget, QFrame, QPushButton, QComboBox
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QColor, QFont
 
-SELF_PATH = os.path.dirname(os.path.abspath(__file__))
+SELF_PATH = path.dirname(path.abspath(__file__))
 REPO_ROOT = path.join(*path.split(SELF_PATH)[:-1])
+with open(os.path.join(REPO_ROOT, 'core', 'config.yaml'), 'r') as f:
+    CONFIG = yaml.safe_load(f)
 
 sys.path.append(REPO_ROOT)
 
@@ -89,28 +93,20 @@ class F2CUDManager(Display):
         self.ui.kill_all.clicked.connect(self.kill_everything)
 
         self.ref_labels = {
-            # 'img_SYAG': self.ui.ref_ts_img_SYAG,
-            # 'img_DTOTR2': self.ui.ref_ts_img_DTOTR2,
             'orbit_inj': self.ui.ref_ts_orbit_inj,
             'orbit_s20': self.ui.ref_ts_orbit_s20,
             }
 
         # beam reference set/clear controls setup
         refs = [
-            # 'img_SYAG',
-            # 'img_DTOTR2',
             'orbit_inj',
             'orbit_s20',
             ]
         ref_sets = [
-            # self.ui.ref_set_img_SYAG,
-            # self.ui.ref_set_img_DTOTR2,
             self.ui.ref_set_orbit_inj,
             self.ui.ref_set_orbit_s20,
             ]
         ref_clears = [
-            # self.ui.ref_clear_img_SYAG,
-            # self.ui.ref_clear_img_DTOTR2,
             self.ui.ref_clear_orbit_inj,
             self.ui.ref_clear_orbit_s20,
             ]
@@ -147,6 +143,8 @@ class F2CUDManager(Display):
 
             kill_button = QPushButton('Kill')
             kill_button.clicked.connect(partial(self.kill_CUD, monitor=monitor))
+
+            print(monitor, self.default_displays[monitor])
 
             CUD_select = QComboBox()
             CUD_select.addItems(self.CUD_descs)
@@ -217,7 +215,7 @@ class F2CUDManager(Display):
             self.ui.launch_klystrons: 'klystrons',
             self.ui.launch_S20: 'S20',
 
-            # self.ui.launch_LEM: 'LEM',
+            self.ui.launch_LEM: 'lem',
             self.ui.launch_transport: 'transport',
             self.ui.launch_long_FB: 'long_FB',
             self.ui.launch_long_FB_hist: 'long_FB_hist',
@@ -268,6 +266,7 @@ class F2CUDManager(Display):
             self._update_CUD_summary()
         self.ui.CUD_summary.setCurrentIndex(0)
         self.status('Done.')
+        return
 
     def kill_monitors(self, monitors):
         """ kill displays on all monitors (LM or SM) """
@@ -324,12 +323,9 @@ class F2CUDManager(Display):
 def _load_ACR_defaults():
     """" load default display setting for each LM/SM from config file """
     defaults = {}
-    with open(path.join(REPO_ROOT, 'core', 'defaults.csv'), 'r') as f:
-        for line in f.readlines():
-            if line.startswith('#'): continue
-            r = line.strip().split(',')
-            monitor, CUD_ID = r[0], r[1]
-            defaults[monitor] = CUD_ID
+    for mtype in ['lm', 'sm']:
+        for monitor in CONFIG['ACR'][mtype]:
+            defaults[monitor] = CONFIG['ACR'][mtype][monitor]
     return defaults
 
 
@@ -338,4 +334,5 @@ def _set_dropdown_default(combo_box, default):
     for i in range(combo_box.count()):
         if common.CUD_ID(combo_box.itemText(i)) == default:
             combo_box.setCurrentIndex(i)
+            print(default, i)
             break

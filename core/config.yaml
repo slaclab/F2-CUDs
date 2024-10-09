@@ -1,0 +1,128 @@
+# FACET-II ACR CUD config/setup file
+
+CUD_IDs: [
+  injector,
+  linac,
+  klystrons,
+  S20,
+  alarms,
+  long_FB,
+  long_FB_hist,
+  transport,
+  PPS_BCS,
+  mini_klys,
+  network,
+  orbit,
+  MPS,
+  wfh,
+  history,
+  lem,
+  screens,
+  fields,
+]
+
+ACR:
+  lm:
+    LM20L: injector
+    LM20R: linac
+    LM21L: klystrons
+    LM21R: orbit
+    LM22L: S20
+    LM22R: klystrons
+    LM23L: history
+    LM23R: injector
+    LM24L: klystrons
+    LM24R: S20
+  sm:
+    SM20A: long_FB
+    SM20B: long_FB_hist
+    SM20C: orbit
+    SM20D: transport
+    SM22A: lem
+    SM22B: PPS_BCS
+    SM22C: MPS
+    SM22D: screens
+    SM24A: long_FB
+    SM24B: long_FB_hist
+    SM24C: orbit
+    SM24D: transport
+    SM26A: lem
+    SM26B: network
+    SM26C: PPS_BCS
+    SM26D: transport
+    SM28A: alarms
+    SM28B: network
+    SM28C: MPS
+    SM28D: PPS_BCS
+
+injector:
+  desc: 'Injector'
+  pydm: 'injector/main.py'
+
+linac:
+  desc: 'Linac'
+  pydm: 'linac/main.py'
+
+klystrons:
+  desc: 'RF System'
+  pydm: 'klystrons/main.py'
+
+S20:
+  desc: 'Sector 20'
+  pydm: 'S20/main.py'
+
+orbit:
+  desc: 'Orbit Display'
+  pydm: ''
+
+alarms:
+  desc: 'EPICS alarms'
+  pydm: 'alarms/main.ui'
+
+long_FB:
+  desc: 'Longitudinal Feedbacks'
+  pydm: 'long_FB/main.py'
+
+long_FB_hist:
+  desc: 'Long. FB History'
+  pydm: 'long_FB/history.ui'
+
+transport:
+  desc: 'Beam Transport'
+  pydm: 'transport/main.py'
+
+PPS_BCS:
+  desc: 'PPS/BCS'
+  pydm: 'PPS_BCS/main.ui'
+
+MPS:
+  desc: 'MPS'
+  pydm: ''
+
+mini_klys:
+  desc: 'RF System'
+  pydm: 'klystrons_mini/main.py'
+
+wfh:
+  desc: 'Work-from-home Display'
+  pydm: 'wfh/main.py'
+
+history:
+  desc: 'History Plots'
+  pydm: 'history_plots/main.py'
+
+lem:
+  desc: 'LEM'
+  pydm: 'lem/main.py'
+
+screens:
+  desc: 'Beam Stay-clear'
+  pydm: 'screens/main.ui'
+
+fields:
+  desc: 'Field Errors'
+  pydm: 'lattice/main.ui'
+
+network:
+  desc: 'Network/Watchers'
+  pydm: ''

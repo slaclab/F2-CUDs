@@ -104,17 +104,23 @@ def kill_monitor(monitor):
     resets CUD:ACR0:<monitor> PVs
     """
     CUD_PID = caget(CUD_PV_pid(monitor))
-    try:
-        check_output(f'kill -9 {CUD_PID}', shell=True)
-    except CalledProcessError:
-        print('nothing running')
+    if CUD_PID:
+        try:
+            check_output(f'kill -9 {CUD_PID}', shell=True)
+        except CalledProcessError:
+            print('nothing running')
+
+        # unset display name, PID and windowID PVs
+        call(PHYS_CAPUT.format(CUD_PV_disp(monitor), '""'), shell=True)
+        call(PHYS_CAPUT.format(CUD_PV_pid(monitor), '""'), shell=True)
+        call(PHYS_CAPUT.format(CUD_PV_wid(monitor), '""'), shell=True)
 
     # verify success somehow?
 
-    # unset display name, PID and windowID PVs
-    call(PHYS_CAPUT.format(CUD_PV_disp(monitor), '""'), shell=True)
-    call(PHYS_CAPUT.format(CUD_PV_pid(monitor), '""'), shell=True)
-    call(PHYS_CAPUT.format(CUD_PV_wid(monitor), '""'), shell=True)
+    # # unset display name, PID and windowID PVs
+    # call(PHYS_CAPUT.format(CUD_PV_disp(monitor), '""'), shell=True)
+    # call(PHYS_CAPUT.format(CUD_PV_pid(monitor), '""'), shell=True)
+    # call(PHYS_CAPUT.format(CUD_PV_wid(monitor), '""'), shell=True)
 
     return
 
@@ -166,12 +172,19 @@ def _find_win_ID(CUD_ID):
     """
     use wmctrl and grep for the windowID of a CUD, if grep fails, return nothing
     """
+    CUD_window_title = f'FACET-II CUD: {common.CUD_desc(CUD_ID)}'
+    CUD_window_title_alt = f'{common.CUD_desc(CUD_ID)}'
+    
     try:
-        CUD_window_title = f'FACET-II CUD: {common.CUD_desc(CUD_ID)}'
-        args = COMMAND_WMCTRL_FIND.format(common.CUD_desc(CUD_ID))
+        args = COMMAND_WMCTRL_FIND.format(CUD_window_title)
         return check_output(args, shell=True).decode('utf-8').strip().split()[0]
+
     except CalledProcessError:
-        return ''
+        try:
+            args = COMMAND_WMCTRL_FIND.format(CUD_window_title_alt)
+            return check_output(args, shell=True).decode('utf-8').strip().split()[0]
+        except CalledProcessError:
+            return ''
 
 def _reposition_CUD(win_ID, monitor):
     """

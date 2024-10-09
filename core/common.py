@@ -6,6 +6,7 @@ from sys import exit
 from functools import partial
 from epics import caput, PV
 from datetime import datetime as dt
+import yaml
 
 import pydm
 from pydm import Display
@@ -18,91 +19,12 @@ from PyQt5.QtWidgets import QGridLayout, QWidget, QFrame
 from PyQt5.QtCore import Qt, QTimer
 from PyQt5.QtGui import QColor, QFont
 
-# # mapping between CUD shorthand names, and filenames for pydm
-# CUD_IDS = {
+SELF_PATH = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.join(*os.path.split(SELF_PATH)[:-1])
+DIR_CONFIG = os.path.join(SELF_PATH, 'config')
+with open(os.path.join(REPO_ROOT, 'core', 'config.yaml'), 'r') as f:
+    CONFIG = yaml.safe_load(f)
 
-#     # primary LM displays
-#     'injector':  'injector/main.py',
-#     'linac':     'linac/main.py',
-#     'klystrons': 'klystrons/main.py',
-#     'S20':       'S20/main.py',
-
-#     # secondary/SM displays
-#     'alarms':       'alarms/main.ui',
-#     'long_FB':      'long_FB/main.py',
-#     'long_FB_hist': 'long_FB_hist/main.ui',
-#     'transport':    'transport/main.py',
-#     'PPS_BCS':      'PPS_BCS/main.ui',
-#     'mini_klys':    'klystrons_mini/main.py',
-#     # 'network': 'network/main.py',
-# }
-
-
-# keyword IDs for CUDs
-CUD_IDS = [
-    'injector',
-    'linac',
-    'klystrons',
-    'S20',
-    'alarms',
-    'long_FB',
-    'long_FB_hist',
-    'transport',
-    'PPS_BCS',
-    'mini_klys',
-    'network',
-    'orbit',
-    'MPS',
-    'wfh',
-    'history',
-    'lem',
-    'screens',
-    'fields',
-    ]
-
-# verbose descriptions/names of CUDs for CUD launcher use
-CUD_DESC_MAP = {
-    'injector':     'Injector',
-    'linac':        'Linac',
-    'klystrons':    'RF (Klystrons)',
-    'S20':          'Sector 20',
-    'alarms':       'EPICS Alarms',
-    'long_FB':      'Longitudinal FB',
-    'long_FB_hist': 'Long. FB History',
-    'transport':    'Beam Transport',
-    'PPS_BCS':      'PPS/BCS',
-    'mini_klys':    'Mini-klystrons',
-    'orbit':        'Orbit',
-    'MPS':          'MPS',
-    'network':      'Network/Watchers',
-    'wfh':          'Work-from-home',
-    'history':      '24-Hour history',
-    'lem':          'LEM',
-    'screens':      'Beam Stay-clear',
-    'fields':       'Field Errors',
-    }
-
-# reverse map of the above
-CUD_ID_MAP = {
-    'Injector':         'injector',
-    'Linac':            'linac',
-    'RF (Klystrons)':   'klystrons',
-    'Sector 20':        'S20',
-    'EPICS Alarms':     'alarms',
-    'Longitudinal FB':  'long_FB',
-    'Long. FB History': 'long_FB_hist',
-    'Beam Transport':   'transport',
-    'PPS/BCS':          'PPS_BCS',
-    'Mini-klystrons':   'mini_klys',
-    'Orbit':            'orbit',
-    'MPS':              'MPS',
-    'Network/Watchers': 'network',
-    'Work-from-home':   'wfh',
-    '24-Hour history':  'history',
-    'LEM':              'lem',
-    'Beam Stay-clear':  'screens',
-    'Field Errors':     'fields',  
-}
 
 STYLE_BITLABEL_ON = """
 background-color: rgb(0, 255, 0);
@@ -118,11 +40,15 @@ STATUS_FONT = QFont()
 STATUS_FONT.setBold(True)
 STATUS_FONT.setPointSize(16)
 
-def CUD_IDs(): return CUD_IDS
 
-def CUD_desc(CUD_ID): return CUD_DESC_MAP[CUD_ID]
+def CUD_IDs(): return CONFIG['CUD_IDs']
 
-def CUD_ID(CUD_desc): return CUD_ID_MAP[CUD_desc]
+def CUD_desc(CUD_ID): return CONFIG[CUD_ID]['desc']
+
+def CUD_ID(CUD_desc):
+    for k,v in CONFIG.items():
+        if k not in CONFIG['CUD_IDs']: continue
+        if v['desc'] == CUD_desc: return k
 
 
 class F2SteeringFeedbackIndicator(PyDMLabel):
@@ -192,18 +118,6 @@ class F2FeedbackToggle(QFrame):
         feedback_on = (int(abs(new_value)) >> (self.bit)) & 1
         self.toggle_on.setDown(feedback_on)
         self.toggle_off.setDown(not feedback_on)
-
-
-
-# class SYAGImg(PyDMImageView):
-#     """
-#     subclass to flip iamge in X/Y - performance intensive :(
-#     """
-#     def __init__(self, im_ch, w_ch, parent=None, args=None):
-#         PyDMImageView.__init__(self, parent=parent, image_channel=im_ch, width_channel=w_ch)
-
-#     def process_image(self, image): return np.flip(image)
-
 
 class bitStatusLabel(PyDMLabel):
     """

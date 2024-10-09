@@ -221,7 +221,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
           <string/>
          </property>
          <property name="channel" stdset="0">
-          <string>SIOC:SYS1:ML00:AO618</string>
+          <string>F2:WATCHER:MODEL_SERVER_STAT</string>
          </property>
          <property name="offColor" stdset="0">
           <color>
@@ -387,10 +387,10 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
           <bool>true</bool>
          </property>
          <property name="PyDMToolTip" stdset="0">
-          <string>SIOC:SYS1:ML00:AO624</string>
+          <string/>
          </property>
          <property name="channel" stdset="0">
-          <string>SIOC:SYS1:ML00:AO619</string>
+          <string>F2:WATCHER:MODEL_SERVER2_STAT</string>
          </property>
          <property name="offColor" stdset="0">
           <color>
