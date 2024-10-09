@@ -310,7 +310,7 @@ background-color: rgba(0,0,10);
              <bool>true</bool>
             </property>
             <property name="updateMode" stdset="0">
-             <enum>PyDMTimePlot::AtFixedRate</enum>
+             <enum>PyDMTimePlot::OnValueChange</enum>
             </property>
             <property name="timeSpan">
              <double>3602.451052665710449</double>
@@ -345,7 +345,7 @@ background-color: rgba(0,0,10);
              <bool>true</bool>
             </property>
             <property name="updateMode" stdset="0">
-             <enum>PyDMTimePlot::AtFixedRate</enum>
+             <enum>PyDMTimePlot::OnValueChange</enum>
             </property>
             <property name="timeSpan">
              <double>3603.048006772994995</double>
@@ -383,7 +383,7 @@ background-color: rgba(0,0,10);
              <bool>true</bool>
             </property>
             <property name="updateMode" stdset="0">
-             <enum>PyDMTimePlot::AtFixedRate</enum>
+             <enum>PyDMTimePlot::OnValueChange</enum>
             </property>
             <property name="timeSpan">
              <double>3603.158877372741699</double>
@@ -428,7 +428,7 @@ background-color: rgba(0,0,10);
              <bool>true</bool>
             </property>
             <property name="updateMode" stdset="0">
-             <enum>PyDMTimePlot::AtFixedRate</enum>
+             <enum>PyDMTimePlot::OnValueChange</enum>
             </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
@@ -466,7 +466,7 @@ background-color: rgba(0,0,10);
              <bool>true</bool>
             </property>
             <property name="updateMode" stdset="0">
-             <enum>PyDMTimePlot::AtFixedRate</enum>
+             <enum>PyDMTimePlot::OnValueChange</enum>
             </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
@@ -504,7 +504,7 @@ background-color: rgba(0,0,10);
              <bool>true</bool>
             </property>
             <property name="updateMode" stdset="0">
-             <enum>PyDMTimePlot::AtFixedRate</enum>
+             <enum>PyDMTimePlot::OnValueChange</enum>
             </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
@@ -539,7 +539,7 @@ background-color: rgba(0,0,10);
              <bool>true</bool>
             </property>
             <property name="updateMode" stdset="0">
-             <enum>PyDMTimePlot::AtFixedRate</enum>
+             <enum>PyDMTimePlot::OnValueChange</enum>
             </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
@@ -590,7 +590,7 @@ background-color: rgba(0,0,10);
              <bool>true</bool>
             </property>
             <property name="updateMode" stdset="0">
-             <enum>PyDMTimePlot::AtFixedRate</enum>
+             <enum>PyDMTimePlot::OnValueChange</enum>
             </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
@@ -624,7 +624,7 @@ background-color: rgba(0,0,10);
              <bool>true</bool>
             </property>
             <property name="updateMode" stdset="0">
-             <enum>PyDMTimePlot::AtFixedRate</enum>
+             <enum>PyDMTimePlot::OnValueChange</enum>
             </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
@@ -724,7 +724,7 @@ background-color: rgba(0,0,10);
              <bool>true</bool>
             </property>
             <property name="updateMode" stdset="0">
-             <enum>PyDMTimePlot::AtFixedRate</enum>
+             <enum>PyDMTimePlot::OnValueChange</enum>
             </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
@@ -765,7 +765,7 @@ background-color: rgba(0,0,10);
              <bool>true</bool>
             </property>
             <property name="updateMode" stdset="0">
-             <enum>PyDMTimePlot::AtFixedRate</enum>
+             <enum>PyDMTimePlot::OnValueChange</enum>
             </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
@@ -819,7 +819,7 @@ background-color: rgba(0,0,10);
              <bool>true</bool>
             </property>
             <property name="updateMode" stdset="0">
-             <enum>PyDMTimePlot::AtFixedRate</enum>
+             <enum>PyDMTimePlot::OnValueChange</enum>
             </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
@@ -863,7 +863,7 @@ background-color: rgba(0,0,10);
              <bool>true</bool>
             </property>
             <property name="updateMode" stdset="0">
-             <enum>PyDMTimePlot::AtFixedRate</enum>
+             <enum>PyDMTimePlot::OnValueChange</enum>
             </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
@@ -907,7 +907,7 @@ background-color: rgba(0,0,10);
              <bool>true</bool>
             </property>
             <property name="updateMode" stdset="0">
-             <enum>PyDMTimePlot::AtFixedRate</enum>
+             <enum>PyDMTimePlot::OnValueChange</enum>
             </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
@@ -950,7 +950,7 @@ background-color: rgba(0,0,10);
              <bool>true</bool>
             </property>
             <property name="updateMode" stdset="0">
-             <enum>PyDMTimePlot::AtFixedRate</enum>
+             <enum>PyDMTimePlot::OnValueChange</enum>
             </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
@@ -1002,7 +1002,7 @@ background-color: rgba(0,0,10);
              <bool>true</bool>
             </property>
             <property name="updateMode" stdset="0">
-             <enum>PyDMTimePlot::AtFixedRate</enum>
+             <enum>PyDMTimePlot::OnValueChange</enum>
             </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
@@ -1047,7 +1047,7 @@ background-color: rgba(0,0,10);
              <bool>true</bool>
             </property>
             <property name="updateMode" stdset="0">
-             <enum>PyDMTimePlot::AtFixedRate</enum>
+             <enum>PyDMTimePlot::OnValueChange</enum>
             </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
@@ -1091,7 +1091,7 @@ background-color: rgba(0,0,10);
              <bool>true</bool>
             </property>
             <property name="updateMode" stdset="0">
-             <enum>PyDMTimePlot::AtFixedRate</enum>
+             <enum>PyDMTimePlot::OnValueChange</enum>
             </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
@@ -1140,7 +1140,7 @@ background-color: rgba(0,0,10);
              <bool>true</bool>
             </property>
             <property name="updateMode" stdset="0">
-             <enum>PyDMTimePlot::AtFixedRate</enum>
+             <enum>PyDMTimePlot::OnValueChange</enum>
             </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
@@ -1192,7 +1192,7 @@ background-color: rgba(0,0,10);
              <bool>true</bool>
             </property>
             <property name="updateMode" stdset="0">
-             <enum>PyDMTimePlot::AtFixedRate</enum>
+             <enum>PyDMTimePlot::OnValueChange</enum>
             </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
@@ -1235,7 +1235,7 @@ background-color: rgba(0,0,10);
              <bool>true</bool>
             </property>
             <property name="updateMode" stdset="0">
-             <enum>PyDMTimePlot::AtFixedRate</enum>
+             <enum>PyDMTimePlot::OnValueChange</enum>
             </property>
             <property name="timeSpan">
              <double>86400.000000000000000</double>
