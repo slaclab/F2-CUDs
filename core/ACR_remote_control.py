@@ -22,10 +22,10 @@ LARGE_MONITORS = [
     'LM22R',
 
     'LM23L',
-    'LM23R',
-
-    'LM24L',
-    'LM24R',
+    # 'LM23R',
+    
+    # 'LM24L',
+    # 'LM24R',
     ]
 
 SMALL_MONITORS = [
@@ -46,13 +46,12 @@ SMALL_MONITORS = [
 
     'SM26A',
     'SM26B',
-    'SM26C',
-    'SM26D',
-
-    'SM28A',
-    'SM28B',
-    'SM28C',
-    'SM28D',
+    # 'SM26C',
+    # 'SM26D',
+    # 'SM28A',
+    # 'SM28B',
+    # 'SM28C',
+    # 'SM28D',
     ]
 
 CUD_PV_ROOT = 'CUD:ACR0:{{}}:{}'
