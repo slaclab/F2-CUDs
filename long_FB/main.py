@@ -439,7 +439,10 @@ class facetFeedbackCUD(Display):
         for fb_name in self.fb_names:
             stat = None
 
-            meas = caget(self.config[fb_name]['meas'])
+            try:
+                meas = caget(self.config[fb_name]['meas'])
+            except:
+                meas = None
             set_lo = caget(self.config[fb_name]['set_lo'])
             set_hi = caget(self.config[fb_name]['set_hi'])
 
@@ -482,7 +485,10 @@ class facetFeedbackCUD(Display):
             stat = None
 
             # normalize tmit as upper/lower bounds are in units of 1e9 Nel
-            tmit = caget(self.config[fb_name]['tmit']) / 1.e9
+            try:
+                tmit = caget(self.config[fb_name]['tmit']) / 1.e9
+            except:
+                tmit = 0
             tmit_lo = caget(self.config[fb_name]['tmit_lo'])
             tmit_hi = caget(self.config[fb_name]['tmit_hi'])
 
