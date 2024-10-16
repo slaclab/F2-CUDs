@@ -2880,7 +2880,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
       <string/>
      </property>
      <property name="channel" stdset="0">
-      <string>KLYS:LI11:11:SSSB_ADES</string>
+      <string>KLYS:LI11:11:AREQ</string>
      </property>
      <property name="enableRichText" stdset="0">
       <bool>false</bool>
@@ -2965,7 +2965,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
       <string/>
      </property>
      <property name="channel" stdset="0">
-      <string>KLYS:LI11:11:SSSB_PDES</string>
+      <string>KLYS:LI11:11:PREQ</string>
      </property>
      <property name="enableRichText" stdset="0">
       <bool>false</bool>
@@ -3056,7 +3056,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
       <string/>
      </property>
      <property name="channel" stdset="0">
-      <string>KLYS:LI11:21:SSSB_ADES</string>
+      <string>KLYS:LI11:21:AREQ</string>
      </property>
      <property name="enableRichText" stdset="0">
       <bool>false</bool>
@@ -3141,7 +3141,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
       <string/>
      </property>
      <property name="channel" stdset="0">
-      <string>KLYS:LI11:21:SSSB_PDES</string>
+      <string>KLYS:LI11:21:PREQ</string>
      </property>
      <property name="enableRichText" stdset="0">
       <bool>false</bool>

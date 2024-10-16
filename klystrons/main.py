@@ -82,10 +82,10 @@ class F2_CUD_klystrons(Display):
 
     def setup_L1(self):
         ind_L1A = klysIndicator(
-            '11-1', pv_pdes='KLYS:LI11:11:SSSB_PDES', parent=self.ui.cont_L1SA
+            '11-1', pv_pdes='KLYS:LI11:11:PREQ', parent=self.ui.cont_L1SA
             )
         ind_L1B = klysIndicator(
-            '11-2', pv_pdes='KLYS:LI11:21:SSSB_PDES', parent=self.ui.cont_L1SB
+            '11-2', pv_pdes='KLYS:LI11:21:PREQ', parent=self.ui.cont_L1SB
             )
 
         for ind in [ind_L1A, ind_L1B]:
