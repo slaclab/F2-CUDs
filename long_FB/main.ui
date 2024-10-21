@@ -311,7 +311,7 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="yAxes">
       <stringlist>
-       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -330.0, &quot;maxRange&quot;: 330.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -343.2, &quot;maxRange&quot;: 343.2, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
       </stringlist>
      </property>
      <property name="curves">
@@ -2976,11 +2976,20 @@ color: rgb(200, 200, 200);</string>
      <property name="precisionFromPV" stdset="0">
       <bool>true</bool>
      </property>
+     <property name="alarmSensitiveContent" stdset="0">
+      <bool>false</bool>
+     </property>
      <property name="alarmSensitiveBorder" stdset="0">
       <bool>true</bool>
      </property>
+     <property name="PyDMToolTip" stdset="0">
+      <string/>
+     </property>
      <property name="channel" stdset="0">
       <string>SIOC:SYS1:ML01:AO719</string>
+     </property>
+     <property name="enableRichText" stdset="0">
+      <bool>false</bool>
      </property>
     </widget>
     <widget class="PyDMAnalogIndicator" name="BC11BL_act">
@@ -3911,12 +3920,12 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="yAxes">
       <stringlist>
-       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -85.0, &quot;maxRange&quot;: 85.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -88.4, &quot;maxRange&quot;: 88.4, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
       </stringlist>
      </property>
      <property name="curves">
       <stringlist>
-       <string>{&quot;channel&quot;: &quot;SIOC:SYS1:ML01:AO618&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot; &quot;, &quot;color&quot;: &quot;#0a84ff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+       <string>{&quot;channel&quot;: &quot;SIOC:SYS1:ML01:CALC151&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot; &quot;, &quot;color&quot;: &quot;#0a84ff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
        <string>{&quot;channel&quot;: &quot;ca://SIOC:SYS1:ML00:AO898&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;SIOC:SYS1:ML00:AO898&quot;, &quot;color&quot;: &quot;#ffaa00&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
       </stringlist>
      </property>
@@ -4257,7 +4266,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          <string/>
         </property>
         <property name="channel" stdset="0">
-         <string>SIOC:SYS1:ML01:AO618</string>
+         <string>SIOC:SYS1:ML00:CALC151</string>
         </property>
         <property name="enableRichText" stdset="0">
          <bool>false</bool>
@@ -5299,8 +5308,14 @@ color: rgb(200, 200, 200);</string>
      <property name="alarmSensitiveBorder" stdset="0">
       <bool>true</bool>
      </property>
+     <property name="PyDMToolTip" stdset="0">
+      <string/>
+     </property>
      <property name="channel" stdset="0">
       <string>SIOC:SYS1:ML01:AO721</string>
+     </property>
+     <property name="enableRichText" stdset="0">
+      <bool>false</bool>
      </property>
     </widget>
     <widget class="PyDMAnalogIndicator" name="BC14BL_act">
@@ -6095,7 +6110,7 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="curves">
       <stringlist>
-       <string>{&quot;channel&quot;: &quot;SIOC:SYS1:ML01:AO624&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot; &quot;, &quot;color&quot;: &quot;#0a84ff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+       <string>{&quot;channel&quot;: &quot;SIOC:SYS1:ML01:CALC152&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot; &quot;, &quot;color&quot;: &quot;#0a84ff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
        <string>{&quot;channel&quot;: &quot;SIOC:SYS1:ML01:AO234&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;SIOC:SYS1:ML01:AO234&quot;, &quot;color&quot;: &quot;#ffaa00&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
       </stringlist>
      </property>
@@ -6240,17 +6255,29 @@ color: rgb(200, 200, 200);</string>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
+     <property name="precision" stdset="0">
+      <number>0</number>
+     </property>
      <property name="showUnits" stdset="0">
       <bool>true</bool>
      </property>
      <property name="precisionFromPV" stdset="0">
       <bool>false</bool>
      </property>
+     <property name="alarmSensitiveContent" stdset="0">
+      <bool>false</bool>
+     </property>
      <property name="alarmSensitiveBorder" stdset="0">
       <bool>false</bool>
      </property>
+     <property name="PyDMToolTip" stdset="0">
+      <string/>
+     </property>
      <property name="channel" stdset="0">
       <string/>
+     </property>
+     <property name="enableRichText" stdset="0">
+      <bool>false</bool>
      </property>
     </widget>
     <widget class="PyDMAnalogIndicator" name="BC20E_act">
@@ -6571,7 +6598,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          <string/>
         </property>
         <property name="channel" stdset="0">
-         <string>SIOC:SYS1:ML01:AO624</string>
+         <string>SIOC:SYS1:ML00:CALC152</string>
         </property>
         <property name="enableRichText" stdset="0">
          <bool>false</bool>
