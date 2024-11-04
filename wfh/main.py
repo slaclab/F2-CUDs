@@ -78,6 +78,12 @@ PyDMLabel[alarmSensitiveBorder="true"][alarmSeverity="0"] {
 }
 """
 
+STAT_REG  = QFont('Sans Serif', 18)
+
+# stupid magic numbers because I can't find a FBCK HSTA bit decoder
+HSTA_FBCK_ON = 268601505
+HSTA_FBCK_COMP = 268599457
+
 
 class F2_WFH(Display):
 
@@ -165,8 +171,21 @@ class F2_WFH(Display):
         self.ui.fps_DTOTR2.setCurrentText('10')
         self.update_camera_FPS()
 
-        # ind_XTCAVF = klysIndicator('20-4', parent=self.ui.cont_XTCAVF)
-        # ind_XTCAVF.setGeometry(0,0,100,80)
+        ind_XTCAVF = klysIndicator('20-4', parent=self.ui.cont_XTCAVF)
+        ind_XTCAVF.setGeometry(0,0,60,50)
+
+        Qbunch_enable = bitStatusLabel(
+            'SIOC:SYS1:ML03:AO502', word_length=1, bit=0, parent=self.ui.ind_qfb
+            )
+        Qbunch_enable.setGeometry(0,0,114,27)
+        ind_LI11 = F2SteeringFeedbackIndicator(
+            'LI11:FBCK:26:HSTA', parent=self.ui.ind_l2steer)
+        ind_LI18 = F2SteeringFeedbackIndicator(
+            'LI18:FBCK:28:HSTA', parent=self.ui.ind_l3steer)
+        ind_LI11.setFont(STAT_REG)
+        ind_LI18.setFont(STAT_REG)
+        ind_LI11.setGeometry(0,0,114,27)
+        ind_LI18.setGeometry(0,0,114,27)
 
         return
 
@@ -212,10 +231,10 @@ class F2_WFH(Display):
 
     def setup_L1(self):
         ind_L1SA = klysIndicator(
-            '11-1', pv_pdes='KLYS:LI11:11:SSSB_PDES', parent=self.ui.cont_L1SA
+            '11-1', pv_pdes='KLYS:LI11:11:PREQ', parent=self.ui.cont_L1SA
             )
         ind_L1SB = klysIndicator(
-            '11-2', pv_pdes='KLYS:LI11:21:SSSB_PDES', parent=self.ui.cont_L1SB
+            '11-2', pv_pdes='KLYS:LI11:21:PREQ', parent=self.ui.cont_L1SB
             )
 
         for ind in [ind_L1SA, ind_L1SB]:
@@ -249,3 +268,21 @@ class InvertedImage(PyDMImageView):
         PyDMImageView.__init__(self, parent=parent, image_channel=im_ch, width_channel=w_ch)
 
     def process_image(self, image): return np.flip(image)
+
+class F2SteeringFeedbackIndicator(PyDMLabel):
+    """ checks FBCK hardware status to check for feedback enable/compute """
+
+    def __init__(self, init_channel, parent=None, args=None):
+        PyDMLabel.__init__(self, init_channel=init_channel, parent=parent)
+        self.setAlignment(Qt.AlignCenter)
+
+    def value_changed(self, new_value):
+        PyDMLabel.value_changed(self, new_value)
+        if new_value == HSTA_FBCK_ON:    
+            self.setText('ON')
+            self.setStyleSheet(STYLE_GREEN)
+        elif new_value == HSTA_FBCK_COMP:
+            self.setText('Comp.')
+            self.setStyleSheet(STYLE_YELLOW)
+        else:                            
+            self.setText('Off/Sample')
