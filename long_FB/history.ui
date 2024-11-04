@@ -136,7 +136,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <string>{}</string>
        </property>
        <property name="filename" stdset="0">
-        <string>/home/fphysics/zack/workspace/F2-CUDs/long_FB/histplots.ui</string>
+        <string>/usr/local/facet/tools/python/F2-CUDs/long_FB/histplots.ui</string>
        </property>
        <property name="loadWhenShown" stdset="0">
         <bool>true</bool>
