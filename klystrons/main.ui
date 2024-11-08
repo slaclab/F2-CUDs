@@ -2977,6 +2977,12 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
       </item>
       <item row="0" column="0">
        <widget class="PyDMLabel" name="pwr_gun_11">
+        <property name="maximumSize">
+         <size>
+          <width>99</width>
+          <height>16777215</height>
+         </size>
+        </property>
         <property name="font">
          <font>
           <pointsize>16</pointsize>
@@ -3029,7 +3035,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          <number>3</number>
         </property>
         <property name="precision" stdset="0">
-         <number>1</number>
+         <number>3</number>
         </property>
         <property name="showUnits" stdset="0">
          <bool>true</bool>
@@ -3218,6 +3224,12 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
       </item>
       <item row="0" column="0">
        <widget class="PyDMLabel" name="pwr_gun_12">
+        <property name="maximumSize">
+         <size>
+          <width>99</width>
+          <height>16777215</height>
+         </size>
+        </property>
         <property name="font">
          <font>
           <pointsize>16</pointsize>
@@ -3270,7 +3282,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          <number>3</number>
         </property>
         <property name="precision" stdset="0">
-         <number>1</number>
+         <number>3</number>
         </property>
         <property name="showUnits" stdset="0">
          <bool>true</bool>
