@@ -113,7 +113,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          <double>900.000000000000000</double>
         </property>
         <property name="autoRangeY">
-         <bool>false</bool>
+         <bool>true</bool>
         </property>
         <property name="maxYRange">
          <double>14000.000000000000000</double>
@@ -133,8 +133,8 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         </property>
         <property name="yAxes">
          <stringlist>
-          <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -180.0, &quot;maxRange&quot;: 9180.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
-          <string>{&quot;name&quot;: &quot;Axis 2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -180.0, &quot;maxRange&quot;: 9180.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+          <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 9000.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+          <string>{&quot;name&quot;: &quot;Axis 2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 9000.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
          </stringlist>
         </property>
         <property name="curves">
@@ -151,7 +151,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          <double>900.000000000000000</double>
         </property>
         <property name="autoRangeY">
-         <bool>false</bool>
+         <bool>true</bool>
         </property>
         <property name="maxYRange">
          <double>9000.000000000000000</double>
@@ -187,7 +187,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          <double>900.000000000000000</double>
         </property>
         <property name="autoRangeY">
-         <bool>false</bool>
+         <bool>true</bool>
         </property>
         <property name="minYRange">
          <double>-300.000000000000000</double>
@@ -210,8 +210,8 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         </property>
         <property name="yAxes">
          <stringlist>
-          <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -180.0, &quot;maxRange&quot;: 9180.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
-          <string>{&quot;name&quot;: &quot;Axis 2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -180.0, &quot;maxRange&quot;: 9180.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+          <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 9000.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+          <string>{&quot;name&quot;: &quot;Axis 2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 9000.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
          </stringlist>
         </property>
         <property name="curves">
@@ -229,7 +229,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          <double>900.000000000000000</double>
         </property>
         <property name="autoRangeY">
-         <bool>false</bool>
+         <bool>true</bool>
         </property>
         <property name="maxYRange">
          <double>9000.000000000000000</double>
@@ -266,7 +266,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          <double>900.000000000000000</double>
         </property>
         <property name="autoRangeY">
-         <bool>false</bool>
+         <bool>true</bool>
         </property>
         <property name="maxYRange">
          <double>9000.000000000000000</double>
@@ -306,7 +306,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          <double>900.000000000000000</double>
         </property>
         <property name="autoRangeY">
-         <bool>false</bool>
+         <bool>true</bool>
         </property>
         <property name="maxYRange">
          <double>14000.000000000000000</double>
@@ -344,7 +344,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          <double>900.000000000000000</double>
         </property>
         <property name="autoRangeY">
-         <bool>false</bool>
+         <bool>true</bool>
         </property>
         <property name="minYRange">
          <double>-300.000000000000000</double>
