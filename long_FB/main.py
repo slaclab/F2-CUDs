@@ -93,5 +93,5 @@ class facetFeedbackCUD(Display):
         return
 
     def ui_filename(self):
-        return os.path.join(SELF_PATH, 'main2.ui')
+        return os.path.join(SELF_PATH, 'main.ui')
 
