@@ -176,7 +176,7 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="yAxes">
       <stringlist>
-       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -330.0, &quot;maxRange&quot;: 330.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
       </stringlist>
      </property>
      <property name="curves">
@@ -195,13 +195,7 @@ color: rgb(255, 255, 255);</string>
       <double>0.050000000000000</double>
      </property>
      <property name="autoRangeY">
-      <bool>false</bool>
-     </property>
-     <property name="minYRange">
-      <double>-330.000000000000000</double>
-     </property>
-     <property name="maxYRange">
-      <double>330.000000000000000</double>
+      <bool>true</bool>
      </property>
     </widget>
     <widget class="PyDMAnalogIndicator" name="DL10E_act">
@@ -1028,15 +1022,6 @@ color: rgb(255, 255, 255);</string>
      <property name="updateInterval">
       <double>0.050000000000000</double>
      </property>
-     <property name="autoRangeY">
-      <bool>false</bool>
-     </property>
-     <property name="minYRange">
-      <double>-3300.000000000000000</double>
-     </property>
-     <property name="maxYRange">
-      <double>3300.000000000000000</double>
-     </property>
     </widget>
     <widget class="PyDMAnalogIndicator" name="BC11E_act">
      <property name="geometry">
@@ -1862,12 +1847,6 @@ color: rgb(255, 255, 255);</string>
      <property name="updateInterval">
       <double>0.050000000000000</double>
      </property>
-     <property name="autoRangeY">
-      <bool>false</bool>
-     </property>
-     <property name="maxYRange">
-      <double>7500.000000000000000</double>
-     </property>
     </widget>
     <widget class="PyDMLabel" name="act_3_deg">
      <property name="geometry">
@@ -2669,7 +2648,7 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="yAxes">
       <stringlist>
-       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -85.0, &quot;maxRange&quot;: 85.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 84.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
       </stringlist>
      </property>
      <property name="curves">
@@ -2688,13 +2667,7 @@ color: rgb(255, 255, 255);</string>
       <double>0.050000000000000</double>
      </property>
      <property name="autoRangeY">
-      <bool>false</bool>
-     </property>
-     <property name="minYRange">
-      <double>-85.000000000000000</double>
-     </property>
-     <property name="maxYRange">
-      <double>85.000000000000000</double>
+      <bool>true</bool>
      </property>
     </widget>
     <widget class="PyDMAnalogIndicator" name="BC14E_act">
@@ -3403,7 +3376,7 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="yAxes">
       <stringlist>
-       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 12500.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
       </stringlist>
      </property>
      <property name="curves">
@@ -3422,13 +3395,7 @@ color: rgb(255, 255, 255);</string>
       <double>0.050000000000000</double>
      </property>
      <property name="autoRangeY">
-      <bool>false</bool>
-     </property>
-     <property name="minYRange">
-      <double>0.000000000000000</double>
-     </property>
-     <property name="maxYRange">
-      <double>12500.000000000000000</double>
+      <bool>true</bool>
      </property>
     </widget>
     <widget class="PyDMLabel" name="act_5_deg">
@@ -4333,13 +4300,7 @@ color: rgb(255, 255, 255);</string>
       <double>0.050000000000000</double>
      </property>
      <property name="autoRangeY">
-      <bool>false</bool>
-     </property>
-     <property name="minYRange">
-      <double>-165.000000000000000</double>
-     </property>
-     <property name="maxYRange">
-      <double>165.000000000000000</double>
+      <bool>true</bool>
      </property>
     </widget>
     <widget class="PyDMAnalogIndicator" name="BC20E_act">
