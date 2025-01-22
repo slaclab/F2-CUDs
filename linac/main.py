@@ -117,36 +117,40 @@ class F2_CUD_linac(Display):
 
         Qbunch_enable = bitStatusLabel(
             'SIOC:SYS1:ML03:AO502', word_length=1, bit=0, parent=self.ui.ind_qfb)
+        Qbunch_enable.setGeometry(0,0,70,38)
+        Qbunch_enable.setFont(STAT_REG)
+        Qbunch_enable.onstyle = STYLE_GREEN
+        Qbunch_enable.offstyle = STYLE_YELLOW
 
-        DL10E_enable = bitStatusLabel(
-            PV_FB_ENABLE, word_length=6, bit=0, parent=self.ui.ind_dl10e)
+        # DL10E_enable = bitStatusLabel(
+        #     PV_FB_ENABLE, word_length=6, bit=0, parent=self.ui.ind_dl10e)
 
-        BC11E_enable = bitStatusLabel(
-            PV_FB_ENABLE, word_length=6, bit=2, parent=self.ui.ind_bc11e)
-        BC11BL_enable = bitStatusLabel(
-            PV_FB_ENABLE, word_length=6, bit=3, parent=self.ui.ind_bc11bl)
+        # BC11E_enable = bitStatusLabel(
+        #     PV_FB_ENABLE, word_length=6, bit=2, parent=self.ui.ind_bc11e)
+        # BC11BL_enable = bitStatusLabel(
+        #     PV_FB_ENABLE, word_length=6, bit=3, parent=self.ui.ind_bc11bl)
 
-        BC14E_enable = bitStatusLabel(
-            PV_FB_ENABLE, word_length=6, bit=1, parent=self.ui.ind_bc14e)
-        BC14BL_enable = bitStatusLabel(
-            PV_FB_ENABLE, word_length=6, bit=5, parent=self.ui.ind_bc14bl)
+        # BC14E_enable = bitStatusLabel(
+        #     PV_FB_ENABLE, word_length=6, bit=1, parent=self.ui.ind_bc14e)
+        # BC14BL_enable = bitStatusLabel(
+        #     PV_FB_ENABLE, word_length=6, bit=5, parent=self.ui.ind_bc14bl)
 
-        BC20E_enable = bitStatusLabel(
-            PV_FB_ENABLE, word_length=6, bit=4, parent=self.ui.ind_bc20e)
+        # BC20E_enable = bitStatusLabel(
+        #     PV_FB_ENABLE, word_length=6, bit=4, parent=self.ui.ind_bc20e)
 
-        for ind in [
-            Qbunch_enable,
-            DL10E_enable,
-            BC11E_enable,
-            BC11BL_enable,
-            BC14E_enable,
-            BC14BL_enable,
-            BC20E_enable,
-            ]:
-            ind.setGeometry(0,0,70,38)
-            ind.setFont(STAT_REG)
-            ind.onstyle = STYLE_GREEN
-            ind.offstyle = STYLE_YELLOW
+        # for ind in [
+        #     Qbunch_enable,
+        #     DL10E_enable,
+        #     BC11E_enable,
+        #     BC11BL_enable,
+        #     BC14E_enable,
+        #     BC14BL_enable,
+        #     BC20E_enable,
+        #     ]:
+        #     ind.setGeometry(0,0,70,38)
+        #     ind.setFont(STAT_REG)
+        #     ind.onstyle = STYLE_GREEN
+        #     ind.offstyle = STYLE_YELLOW
 
         ind_LI11 = F2SteeringFeedbackIndicator(
             'LI11:FBCK:26:HSTA', parent=self.ui.ind_l2steer)

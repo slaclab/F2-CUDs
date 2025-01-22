@@ -1356,41 +1356,6 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         </property>
        </widget>
       </item>
-      <item row="1" column="3">
-       <widget class="PyDMByteIndicator" name="PyDMByteIndicator_11">
-        <property name="minimumSize">
-         <size>
-          <width>20</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>20</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="toolTip">
-         <string/>
-        </property>
-        <property name="channel" stdset="0">
-         <string>KLYS:LI10:41:SFB_ADIS</string>
-        </property>
-        <property name="offColor" stdset="0">
-         <color>
-          <red>255</red>
-          <green>0</green>
-          <blue>0</blue>
-         </color>
-        </property>
-        <property name="showLabels" stdset="0">
-         <bool>false</bool>
-        </property>
-        <property name="circles" stdset="0">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
       <item row="0" column="3">
        <widget class="PyDMByteIndicator" name="PyDMByteIndicator_12">
         <property name="minimumSize">

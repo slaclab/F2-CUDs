@@ -117,34 +117,6 @@ class F2_WFH(Display):
         #     xMin=170, xMax=1340, yMin=110, yMax=1000
         #     )
 
-        DL10E_enable = bitStatusLabel(
-            PV_FB_ENABLE, word_length=6, bit=0, parent=self.ui.ind_dl10e)
-
-        BC11E_enable = bitStatusLabel(
-            PV_FB_ENABLE, word_length=6, bit=2, parent=self.ui.ind_bc11e)
-        BC11BL_enable = bitStatusLabel(
-            PV_FB_ENABLE, word_length=6, bit=3, parent=self.ui.ind_bc11bl)
-
-        BC14E_enable = bitStatusLabel(
-            PV_FB_ENABLE, word_length=6, bit=1, parent=self.ui.ind_bc14e)
-        BC14BL_enable = bitStatusLabel(
-            PV_FB_ENABLE, word_length=6, bit=5, parent=self.ui.ind_bc14bl)
-
-        BC20E_enable = bitStatusLabel(
-            PV_FB_ENABLE, word_length=6, bit=4, parent=self.ui.ind_bc20e)
-
-        for ind in [
-            DL10E_enable,
-            BC11E_enable,
-            BC11BL_enable,
-            BC14E_enable,
-            BC14BL_enable,
-            BC20E_enable,
-            ]:
-            ind.setGeometry(0,0,114,27)
-            ind.onstyle = STYLE_GREEN
-            ind.offstyle = STYLE_YELLOW
-
         self.L0_msmt     = PyDMChannel(address=PV_L0_MSMT, value_slot=self.msmt_ts_L0)
         self.L2_msmt     = PyDMChannel(address=PV_L2_MSMT, value_slot=self.msmt_ts_L2)
         self.L3_msmt     = PyDMChannel(address=PV_L3_MSMT, value_slot=self.msmt_ts_L3)
