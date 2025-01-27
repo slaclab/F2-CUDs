@@ -95,8 +95,8 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         </property>
         <property name="yAxes">
          <stringlist>
-          <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 14000.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
-          <string>{&quot;name&quot;: &quot;Axis 2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 14000.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+          <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -7280.0, &quot;maxRange&quot;: 7280.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+          <string>{&quot;name&quot;: &quot;Axis 2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -7280.0, &quot;maxRange&quot;: 7280.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
          </stringlist>
         </property>
         <property name="curves">
@@ -116,7 +116,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          <bool>true</bool>
         </property>
         <property name="maxYRange">
-         <double>14000.000000000000000</double>
+         <double>1.000000000000000</double>
         </property>
        </widget>
       </item>
@@ -133,8 +133,8 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         </property>
         <property name="yAxes">
          <stringlist>
-          <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 9000.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
-          <string>{&quot;name&quot;: &quot;Axis 2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 9000.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+          <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -4867.2, &quot;maxRange&quot;: 4867.2, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+          <string>{&quot;name&quot;: &quot;Axis 2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -4867.2, &quot;maxRange&quot;: 4867.2, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
          </stringlist>
         </property>
         <property name="curves">
@@ -154,7 +154,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          <bool>true</bool>
         </property>
         <property name="maxYRange">
-         <double>9000.000000000000000</double>
+         <double>1.000000000000000</double>
         </property>
        </widget>
       </item>
@@ -171,8 +171,8 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         </property>
         <property name="yAxes">
          <stringlist>
-          <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -300.0, &quot;maxRange&quot;: 0.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
-          <string>{&quot;name&quot;: &quot;Axis2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;  &quot;, &quot;minRange&quot;: -300.0, &quot;maxRange&quot;: 0.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+          <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -162.24, &quot;maxRange&quot;: 162.24, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+          <string>{&quot;name&quot;: &quot;Axis2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;  &quot;, &quot;minRange&quot;: -312.24, &quot;maxRange&quot;: 12.24, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
          </stringlist>
         </property>
         <property name="curves">
@@ -190,10 +190,10 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          <bool>true</bool>
         </property>
         <property name="minYRange">
-         <double>-300.000000000000000</double>
+         <double>0.000000000000000</double>
         </property>
         <property name="maxYRange">
-         <double>0.000000000000000</double>
+         <double>1.000000000000000</double>
         </property>
        </widget>
       </item>
@@ -210,14 +210,14 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         </property>
         <property name="yAxes">
          <stringlist>
-          <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 9000.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
-          <string>{&quot;name&quot;: &quot;Axis 2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 9000.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+          <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -4867.2, &quot;maxRange&quot;: 4867.2, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+          <string>{&quot;name&quot;: &quot;Axis 2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -4867.2, &quot;maxRange&quot;: 4867.2, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
          </stringlist>
         </property>
         <property name="curves">
          <stringlist>
           <string>{&quot;channel&quot;: &quot;BLEN:LI11:359:BZ11359B_S_SUM&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BLEN:LI11:359:BZ11359B_S_SUM&quot;, &quot;color&quot;: &quot;#ffff7f&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-          <string>{&quot;channel&quot;: &quot;ca://SIOC:SYS1:ML01:AO221&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;SIOC:SYS1:ML01:AO221&quot;, &quot;color&quot;: &quot;#ffaa00&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+          <string>{&quot;channel&quot;: &quot;PHYS:SYS1:1:F2LFB_BC11BL_TARGET&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;SIOC:SYS1:ML01:AO221&quot;, &quot;color&quot;: &quot;#ffaa00&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
           <string>{&quot;channel&quot;: &quot;KLYS:LI11:11:PREQ&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI11:11:PREQ&quot;, &quot;color&quot;: &quot;#00aa7f&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
           <string>{&quot;channel&quot;: &quot;KLYS:LI11:21:PREQ&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI11:21:PREQ&quot;, &quot;color&quot;: &quot;#00aa7f&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
          </stringlist>
@@ -232,7 +232,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          <bool>true</bool>
         </property>
         <property name="maxYRange">
-         <double>9000.000000000000000</double>
+         <double>1.000000000000000</double>
         </property>
        </widget>
       </item>
@@ -249,14 +249,14 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         </property>
         <property name="yAxes">
          <stringlist>
-          <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 9000.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
-          <string>{&quot;name&quot;: &quot;Axis 2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 9000.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+          <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -5061.888, &quot;maxRange&quot;: 5061.888, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+          <string>{&quot;name&quot;: &quot;Axis 2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -5061.888, &quot;maxRange&quot;: 5061.888, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
          </stringlist>
         </property>
         <property name="curves">
          <stringlist>
           <string>{&quot;channel&quot;: &quot;BPMS:IN10:731:X1H&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BPMS:IN10:731:X1H&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-          <string>{&quot;channel&quot;: &quot;KLYS:LI10:41:SFB_ADES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI10:41:SFB_ADES&quot;, &quot;color&quot;: &quot;#ffaaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+          <string>{&quot;channel&quot;: &quot;KLYS:LI10:41:ADES&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;KLYS:LI10:41:SFB_ADES&quot;, &quot;color&quot;: &quot;#ffaaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
          </stringlist>
         </property>
         <property name="updateMode" stdset="0">
@@ -269,7 +269,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          <bool>true</bool>
         </property>
         <property name="maxYRange">
-         <double>9000.000000000000000</double>
+         <double>1.000000000000000</double>
         </property>
        </widget>
       </item>
@@ -286,14 +286,14 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         </property>
         <property name="yAxes">
          <stringlist>
-          <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 14000.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
-          <string>{&quot;name&quot;: &quot;Axis 2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 14000.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+          <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -7571.2, &quot;maxRange&quot;: 7571.2, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+          <string>{&quot;name&quot;: &quot;Axis 2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -7571.2, &quot;maxRange&quot;: 7571.2, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
          </stringlist>
         </property>
         <property name="curves">
          <stringlist>
           <string>{&quot;channel&quot;: &quot;BLEN:LI14:888:BZ14888B_S_SUM&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;BLEN:LI14:888:BZ14888B_S_SUM&quot;, &quot;color&quot;: &quot;#ffff7f&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-          <string>{&quot;channel&quot;: &quot;ca://SIOC:SYS1:ML00:CALC144&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;SIOC:SYS1:ML00:CALC144&quot;, &quot;color&quot;: &quot;#ffaa00&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+          <string>{&quot;channel&quot;: &quot;PHYS:SYS1:1:F2LFB_BC14BL_TARGET&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;SIOC:SYS1:ML00:CALC144&quot;, &quot;color&quot;: &quot;#ffaa00&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
           <string>{&quot;channel&quot;: &quot;LI12:SBST:1:PHAS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI12:SBST:1:PHAS&quot;, &quot;color&quot;: &quot;#00aa7f&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
           <string>{&quot;channel&quot;: &quot;LI13:SBST:1:PHAS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI13:SBST:PHAS&quot;, &quot;color&quot;: &quot;#00aa7f&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
           <string>{&quot;channel&quot;: &quot;LI14:SBST:1:PHAS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI13:SBST:PHAS&quot;, &quot;color&quot;: &quot;#00aa7f&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
@@ -309,7 +309,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          <bool>true</bool>
         </property>
         <property name="maxYRange">
-         <double>14000.000000000000000</double>
+         <double>1.000000000000000</double>
         </property>
        </widget>
       </item>
@@ -326,8 +326,8 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         </property>
         <property name="yAxes">
          <stringlist>
-          <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -300.0, &quot;maxRange&quot;: 0.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
-          <string>{&quot;name&quot;: &quot;Axis 2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -300.0, &quot;maxRange&quot;: 0.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+          <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -162.24, &quot;maxRange&quot;: 162.24, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+          <string>{&quot;name&quot;: &quot;Axis 2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -162.24, &quot;maxRange&quot;: 162.24, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
          </stringlist>
         </property>
         <property name="curves">
@@ -347,10 +347,10 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          <bool>true</bool>
         </property>
         <property name="minYRange">
-         <double>-300.000000000000000</double>
+         <double>0.000000000000000</double>
         </property>
         <property name="maxYRange">
-         <double>0.000000000000000</double>
+         <double>1.000000000000000</double>
         </property>
        </widget>
       </item>
