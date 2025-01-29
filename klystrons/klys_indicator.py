@@ -197,7 +197,7 @@ STYLE_PDES_ZERO = 'background-color: rgb(30,30,30);'
 STYLE_PDES_NONZERO = 'background-color: rgb(255,120,0);'
 
 # the follow klystrons don't exist, klysIndicator will be an empty QFrame
-NONEXISTANT_RFS = ['11-3', '14-7', '15-2', '19-7', '19-8']
+NONEXISTANT_RFS = ['11-3', '14-7', '15-2', '17-8', '19-7', '19-8']
 
 # size parameters for klystron status indicators
 H_ONBEAM    = 6
