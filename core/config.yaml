@@ -9,6 +9,7 @@ CUD_IDs: [
   long_FB,
   long_FB_hist,
   transport,
+  transport_LM,
   PPS_BCS,
   mini_klys,
   network,
@@ -29,7 +30,7 @@ ACR:
     LM21R: orbit
     LM22L: S20
     LM22R: klystrons
-    LM23L: history
+    LM23L: transport_LM
     # LM23R: injector
     # LM24L: klystrons
     # LM24R: S20
@@ -90,6 +91,10 @@ long_FB_hist:
 transport:
   desc: 'Beam Transport'
   pydm: 'transport/main.py'
+
+transport_LM:
+  desc: 'Beam Transport (LM)'
+  pydm: 'transport/main_LM.ui'
 
 PPS_BCS:
   desc: 'PPS/BCS'
