@@ -3018,7 +3018,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          <string/>
         </property>
         <property name="channel" stdset="0">
-         <string>KLYS:LI11:11:AREQ</string>
+         <string>KLYS:LI11:11:FE_PWR</string>
         </property>
         <property name="enableRichText" stdset="0">
          <bool>false</bool>
@@ -3247,7 +3247,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          <number>3</number>
         </property>
         <property name="precision" stdset="0">
-         <number>3</number>
+         <number>1</number>
         </property>
         <property name="showUnits" stdset="0">
          <bool>true</bool>
@@ -3265,7 +3265,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          <string/>
         </property>
         <property name="channel" stdset="0">
-         <string>KLYS:LI11:21:AREQ</string>
+         <string>KLYS:LI11:21:FE_PWR</string>
         </property>
         <property name="enableRichText" stdset="0">
          <bool>false</bool>
