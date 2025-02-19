@@ -20,7 +20,8 @@ from PyQt5.QtGui import QColor, QFont
 from orbit import FacetOrbit, DiffOrbit, BaseOrbit, BPM, FacetSCPBPM
 from orbit_view import OrbitView 
 
-from epics import caget
+from epics import caget, get_pv
+from scipy.signal import find_peaks
 from skimage.measure import regionprops
 from skimage.filters import threshold_mean
 
@@ -50,7 +51,10 @@ MASK = np.ones((IMG_W,IMG_H),dtype=int)
 
 def calc_dtotr_centroid():
     """ get the image centroid from DTOTR2 & determine CUD image ROI """
+    IMG_W = get_pv(f'{PV_DTOTR}:Image:ArraySize0_RBV').get()
+    IMG_H = get_pv(f'{PV_DTOTR}:Image:ArraySize1_RBV').get()
     image = np.reshape(caget(PV_DTOTR_IMG), (IMG_W,IMG_H), order='F')
+    image = image - min(image.flatten())
     mask = (image > threshold_mean(image)).astype(int)
     cy,cx = regionprops(mask, image)[0].centroid
     return cx,cy
@@ -158,7 +162,7 @@ class F2_CUD_S20(Display):
     def set_DTOTR2_ROI(self):
         cx,cy = calc_dtotr_centroid()
         self.ui.live_DTOTR2.getView().getViewBox().setLimits(
-            xMin=cx-200, xMax=cx+200, yMin=cy-215, yMax=cy+215
+            xMin=cx-200, xMax=cx+200, yMin=cy-200, yMax=cy+200
             )
         return
 
