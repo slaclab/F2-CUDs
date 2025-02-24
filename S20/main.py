@@ -21,9 +21,6 @@ from orbit import FacetOrbit, DiffOrbit, BaseOrbit, BPM, FacetSCPBPM
 from orbit_view import OrbitView 
 
 from epics import caget, get_pv
-from scipy.signal import find_peaks
-from skimage.measure import regionprops
-from skimage.filters import threshold_mean
 
 # ==== for later =====
 # RESOLUTION 9.91
@@ -44,20 +41,20 @@ ORBIT_TMIT_MAX = 1.4e10
 PV_REF_UPDATE = 'SIOC:SYS1:ML03:AO976'
 
 PV_DTOTR = 'CAMR:LI20:107'
-PV_DTOTR_IMG = f'{PV_DTOTR}:Image:ArrayData'
-IMG_W = caget(f'{PV_DTOTR}:Image:ArraySize0_RBV')
-IMG_H = caget(f'{PV_DTOTR}:Image:ArraySize1_RBV')
-MASK = np.ones((IMG_W,IMG_H),dtype=int)
+
 
 def calc_dtotr_centroid():
-    """ get the image centroid from DTOTR2 & determine CUD image ROI """
-    IMG_W = get_pv(f'{PV_DTOTR}:Image:ArraySize0_RBV').get()
-    IMG_H = get_pv(f'{PV_DTOTR}:Image:ArraySize1_RBV').get()
-    image = np.reshape(caget(PV_DTOTR_IMG), (IMG_W,IMG_H), order='F')
+    """ get the image centroid (x/y peaks) from DTOTR2 & determine CUD image ROI """
+    pv_img = get_pv(f'{PV_DTOTR}:Image:ArrayData')
+    pv_imgw = get_pv(f'{PV_DTOTR}:Image:ArraySize0_RBV')
+    pv_imgh = get_pv(f'{PV_DTOTR}:Image:ArraySize1_RBV')
+    image = np.reshape(pv_img.get(), (pv_imgw.get(), pv_imgh.get()), order='F')
     image = image - min(image.flatten())
-    mask = (image > threshold_mean(image)).astype(int)
-    cy,cx = regionprops(mask, image)[0].centroid
-    return cx,cy
+    px = np.nanmean(image, axis=0)
+    py = np.nanmean(image, axis=1)
+    cx = px.argmax()
+    cy = py.argmax()
+    return cx, cy
 
 class F2_CUD_S20(Display):
 
