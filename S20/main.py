@@ -42,13 +42,17 @@ PV_REF_UPDATE = 'SIOC:SYS1:ML03:AO976'
 
 PV_DTOTR = 'CAMR:LI20:107'
 
+PV_DTOTR_TRACK_UPDATE = 'SIOC:SYS1:ML03:AO977'
+
 
 def calc_dtotr_centroid():
     """ get the image centroid (x/y peaks) from DTOTR2 & determine CUD image ROI """
     pv_img = get_pv(f'{PV_DTOTR}:Image:ArrayData')
     pv_imgw = get_pv(f'{PV_DTOTR}:Image:ArraySize0_RBV')
     pv_imgh = get_pv(f'{PV_DTOTR}:Image:ArraySize1_RBV')
-    image = np.reshape(pv_img.get(), (pv_imgw.get(), pv_imgh.get()), order='F')
+    imraw = pv_img.get()
+    w, h = pv_imgw.get(), pv_imgh.get()
+    image = np.reshape(imraw, (w,h), order='F')
     image = image - min(image.flatten())
     px = np.nanmean(image, axis=0)
     py = np.nanmean(image, axis=1)
@@ -76,7 +80,7 @@ class F2_CUD_S20(Display):
 
         self.track_dtotr = QTimer(self)
         self.track_dtotr.start()
-        self.track_dtotr.setInterval(200)
+        self.track_dtotr.setInterval(500)
         self.track_dtotr.timeout.connect(self.set_DTOTR2_ROI)
 
         # setup S20 orbit
@@ -107,6 +111,7 @@ class F2_CUD_S20(Display):
 
         self.setWindowTitle('FACET-II CUD: Sector 20')
         return
+
 
     def ui_filename(self):
         return os.path.join(SELF_PATH, 'main.ui')
@@ -157,11 +162,17 @@ class F2_CUD_S20(Display):
         return bpms
 
     def set_DTOTR2_ROI(self):
-        cx,cy = calc_dtotr_centroid()
-        self.ui.live_DTOTR2.getView().getViewBox().setLimits(
-            xMin=cx-200, xMax=cx+200, yMin=cy-200, yMax=cy+200
-            )
-        return
+        if get_pv(PV_DTOTR_TRACK_UPDATE).get() != 1: return
+        try:
+            cx,cy = calc_dtotr_centroid()
+            self.ui.live_DTOTR2.getView().getViewBox().setLimits(
+                xMin=cx-200, xMax=cx+200, yMin=cy-200, yMax=cy+200
+                )
+            return
+        except:
+            print('dtotr image processing failed')
+            return
+
 
 # subclass to flip iamge in X/Y - performance intensive :(
 class SYAGImg(PyDMImageView):
