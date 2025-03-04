@@ -220,7 +220,7 @@ class F2CUDManager(Display):
             self.ui.launch_long_FB: 'long_FB',
             self.ui.launch_long_FB_hist: 'long_FB_hist',
             
-            self.ui.launch_mini_klys: 'mini_klys',
+            self.ui.launch_wfh: 'wfh',
 
             self.ui.launch_PPS_BCS: 'PPS_BCS',
             self.ui.launch_MPS: 'MPS',
