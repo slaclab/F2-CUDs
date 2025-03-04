@@ -93,7 +93,7 @@ transport:
   pydm: 'transport/main.py'
 
 transport_LM:
-  desc: 'Beam Transport (LM)'
+  desc: 'Beam Loss Monitors'
   pydm: 'transport/main_LM.ui'
 
 PPS_BCS:
