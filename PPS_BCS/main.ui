@@ -1594,7 +1594,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
     </property>
     <property name="yAxes">
      <stringlist>
-      <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;ION CHAMBER SIGNAL (V)&quot;, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 2.55, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+      <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;ION CHAMBER SIGNAL (V)&quot;, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 2.55, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
      </stringlist>
     </property>
     <property name="showLegend">
@@ -3536,7 +3536,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>LI19:PPS:72:PANIC</string>
+        <string>PPS:LI19:1:PANIC_STATE</string>
        </property>
        <property name="enableRichText" stdset="0">
         <bool>false</bool>
@@ -3595,7 +3595,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>LI16:PPS:72:PANIC</string>
+        <string>PPS:LI16:1:PANIC_STATE</string>
        </property>
        <property name="enableRichText" stdset="0">
         <bool>false</bool>
@@ -3654,7 +3654,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>LI18:PPS:72:SECTOR</string>
+        <string>PPS:LI18:1:SECTOR</string>
        </property>
        <property name="enableRichText" stdset="0">
         <bool>false</bool>
@@ -3733,7 +3733,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>LI17:PPS:72:PANIC</string>
+        <string>PPS:LI17:1:PANIC_STATE</string>
        </property>
        <property name="enableRichText" stdset="0">
         <bool>false</bool>
@@ -3792,7 +3792,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>LI19:PPS:72:SECTOR</string>
+        <string>PPS:LI19:1:SECTOR</string>
        </property>
        <property name="enableRichText" stdset="0">
         <bool>false</bool>
@@ -4352,7 +4352,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>LI20:PPS:72:PANIC</string>
+        <string>PPS:LI20:1:PANIC_STATE</string>
        </property>
        <property name="enableRichText" stdset="0">
         <bool>false</bool>
@@ -4570,7 +4570,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>LI17:PPS:72:SECTOR</string>
+        <string>PPS:LI17:1:SECTOR</string>
        </property>
        <property name="enableRichText" stdset="0">
         <bool>false</bool>
@@ -4675,7 +4675,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>LI18:PPS:72:PANIC</string>
+        <string>PPS:LI18:1:PANIC_STATE</string>
        </property>
        <property name="enableRichText" stdset="0">
         <bool>false</bool>
@@ -5061,7 +5061,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>LI20:PPS:72:SECTOR</string>
+        <string>PPS:LI20:1:SECTOR</string>
        </property>
        <property name="enableRichText" stdset="0">
         <bool>false</bool>
@@ -5179,7 +5179,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>LI16:PPS:72:SECTOR</string>
+        <string>PPS:LI16:1:SECTOR</string>
        </property>
        <property name="enableRichText" stdset="0">
         <bool>false</bool>
