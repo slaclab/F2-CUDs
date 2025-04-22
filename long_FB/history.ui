@@ -136,7 +136,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <string>{}</string>
        </property>
        <property name="filename" stdset="0">
-        <string>/usr/local/facet/tools/python/F2-CUDs/long_FB/histplots.ui</string>
+        <string notr="true">/home/fphysics/zack/workspace/F2-CUDs/long_FB/histplots.py</string>
        </property>
        <property name="loadWhenShown" stdset="0">
         <bool>true</bool>
@@ -154,8 +154,8 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
    <widget class="QLabel" name="label_80">
     <property name="geometry">
      <rect>
-      <x>85</x>
-      <y>35</y>
+      <x>95</x>
+      <y>30</y>
       <width>300</width>
       <height>30</height>
      </rect>
@@ -166,6 +166,9 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
       <weight>75</weight>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="midLineWidth">
+     <number>-3</number>
     </property>
     <property name="text">
      <string>L0 → DL10 Energy</string>
@@ -174,8 +177,8 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
    <widget class="QLabel" name="label_81">
     <property name="geometry">
      <rect>
-      <x>85</x>
-      <y>285</y>
+      <x>100</x>
+      <y>305</y>
       <width>300</width>
       <height>30</height>
      </rect>
@@ -187,6 +190,9 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
       <bold>true</bold>
      </font>
     </property>
+    <property name="midLineWidth">
+     <number>-3</number>
+    </property>
     <property name="text">
      <string>L1 → BC11 Energy</string>
     </property>
@@ -194,8 +200,8 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
    <widget class="QLabel" name="label_84">
     <property name="geometry">
      <rect>
-      <x>85</x>
-      <y>535</y>
+      <x>95</x>
+      <y>445</y>
       <width>300</width>
       <height>30</height>
      </rect>
@@ -214,8 +220,8 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
    <widget class="QLabel" name="label_83">
     <property name="geometry">
      <rect>
-      <x>85</x>
-      <y>785</y>
+      <x>95</x>
+      <y>725</y>
       <width>300</width>
       <height>30</height>
      </rect>
@@ -234,8 +240,8 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
    <widget class="QLabel" name="label_82">
     <property name="geometry">
      <rect>
-      <x>1035</x>
-      <y>285</y>
+      <x>100</x>
+      <y>165</y>
       <width>200</width>
       <height>30</height>
      </rect>
@@ -254,8 +260,8 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
    <widget class="QLabel" name="label_85">
     <property name="geometry">
      <rect>
-      <x>1040</x>
-      <y>530</y>
+      <x>95</x>
+      <y>585</y>
       <width>200</width>
       <height>30</height>
      </rect>
@@ -274,8 +280,8 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
    <widget class="QLabel" name="label_86">
     <property name="geometry">
      <rect>
-      <x>1040</x>
-      <y>785</y>
+      <x>100</x>
+      <y>865</y>
       <width>200</width>
       <height>30</height>
      </rect>
