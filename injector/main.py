@@ -112,6 +112,8 @@ class F2_CUD_injector(Display):
         ref_update_flag = PyDMChannel(address=PV_REF_UPDATE, value_slot=self.update_ref_orbit)
         ref_update_flag.connect()
 
+        self.ui.inj_T_plot.hideAxis('bottom')
+
         return
 
     def ui_filename(self):

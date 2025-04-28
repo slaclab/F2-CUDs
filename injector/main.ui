@@ -2825,36 +2825,28 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
      <enum>QFrame::Raised</enum>
     </property>
     <layout class="QGridLayout" name="gridLayout_3">
+     <property name="leftMargin">
+      <number>5</number>
+     </property>
+     <property name="topMargin">
+      <number>5</number>
+     </property>
+     <property name="rightMargin">
+      <number>5</number>
+     </property>
+     <property name="bottomMargin">
+      <number>5</number>
+     </property>
+     <property name="spacing">
+      <number>5</number>
+     </property>
      <item row="0" column="0">
-      <widget class="PyDMTimePlot" name="PyDMTimePlot_2">
+      <widget class="PyDMEmbeddedDisplay" name="PyDMEmbeddedDisplay">
        <property name="toolTip">
         <string/>
        </property>
-       <property name="yAxes">
-        <stringlist>
-         <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;T (F)&quot;, &quot;minRange&quot;: -1.124864, &quot;maxRange&quot;: 1.124864, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
-        </stringlist>
-       </property>
-       <property name="showLegend">
-        <bool>true</bool>
-       </property>
-       <property name="curves">
-        <stringlist>
-         <string>{&quot;channel&quot;: &quot;DAQ:LR10:TM01:AF01Temp_F&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Laser Room&quot;, &quot;color&quot;: &quot;#8dd3c7&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-         <string>{&quot;channel&quot;: &quot;LASR:LR10:1:OSCILATOR&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Drive Oscillator&quot;, &quot;color&quot;: &quot;#ffffb3&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-         <string>{&quot;channel&quot;: &quot;GUN:IN10:111:WGBDYTEMP1&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Gun Waveguide&quot;, &quot;color&quot;: &quot;#bebada&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-         <string>{&quot;channel&quot;: &quot;CATH:IN10:111:TEMP1&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Photocathode&quot;, &quot;color&quot;: &quot;#fb8072&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-         <string>{&quot;channel&quot;: &quot;SOLN:IN10:111:SUPPORT_TEMP&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Gun Solenoid&quot;, &quot;color&quot;: &quot;#80b1d3&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-        </stringlist>
-       </property>
-       <property name="updateMode" stdset="0">
-        <enum>PyDMTimePlot::AtFixedRate</enum>
-       </property>
-       <property name="timeSpan">
-        <double>3600.000000000000000</double>
-       </property>
-       <property name="updateInterval">
-        <double>15.000000000000000</double>
+       <property name="filename" stdset="0">
+        <string>inj_T_histplot.py</string>
        </property>
       </widget>
      </item>
@@ -5762,6 +5754,11 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
    <class>PyDMDrawingPolygon</class>
    <extends>QWidget</extends>
    <header>pydm.widgets.drawing</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMEmbeddedDisplay</class>
+   <extends>QFrame</extends>
+   <header>pydm.widgets.embedded_display</header>
   </customwidget>
  </customwidgets>
  <resources/>
