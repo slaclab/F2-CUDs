@@ -97,10 +97,10 @@ class F2_inj_T_plot(Display):
             self.plotdata[label].setData(times, temp, name=label, pen=PENS[i])
         
         xax = self.pw.getAxis('bottom')
-        maxx = self.dt['Chiller'][-1]
+        maxx = self.dt['Vitara'][-1]
         minx = maxx - 2*86400
         self.pw.setXRange(minx, maxx)
-        tticks, t0 = [], self.dt['Chiller'][-1]
+        tticks, t0 = [], self.dt['Vitara'][-1]
         tticks.append(t0)
         for i in range(1,10):
             tt = t0 - i*21600
