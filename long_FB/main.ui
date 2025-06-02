@@ -176,13 +176,13 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="yAxes">
       <stringlist>
-       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -0.5408, &quot;maxRange&quot;: 0.5408, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
       </stringlist>
      </property>
      <property name="curves">
       <stringlist>
        <string>{&quot;channel&quot;: &quot;PHYS:SYS1:1:F2LFB_DL10E_MEAS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot; &quot;, &quot;color&quot;: &quot;#0a84ff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-       <string>{&quot;channel&quot;: &quot;PHYS:SYS1:1:F2LFB_DL10E_VERN&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;PHYS:SYS1:1:F2LFB_DL10E_VERN&quot;, &quot;color&quot;: &quot;#ffaa00&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+       <string>{&quot;channel&quot;: &quot;PHYS:SYS1:1:F2LFB_DL10E_VERN&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;PHYS:SYS1:1:F2LFB_DL10E_VERN&quot;, &quot;color&quot;: &quot;white&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
       </stringlist>
      </property>
      <property name="updatesAsynchronously">
@@ -1004,13 +1004,13 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="yAxes">
       <stringlist>
-       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -3300.0, &quot;maxRange&quot;: 3300.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -3569.28, &quot;maxRange&quot;: 3569.28, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
       </stringlist>
      </property>
      <property name="curves">
       <stringlist>
        <string>{&quot;channel&quot;: &quot;PHYS:SYS1:1:F2LFB_BC11E_MEAS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot; &quot;, &quot;color&quot;: &quot;#0a84ff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-       <string>{&quot;channel&quot;: &quot;PHYS:SYS1:1:F2LFB_BC11E_VERN&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;PHYS:SYS1:1:F2LFB_BC11E_VERN&quot;, &quot;color&quot;: &quot;#ffaa00&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+       <string>{&quot;channel&quot;: &quot;PHYS:SYS1:1:F2LFB_BC11E_VERN&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;PHYS:SYS1:1:F2LFB_BC11E_VERN&quot;, &quot;color&quot;: &quot;white&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
       </stringlist>
      </property>
      <property name="updatesAsynchronously">
@@ -1829,13 +1829,13 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="yAxes">
       <stringlist>
-       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 7500.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -4056.0, &quot;maxRange&quot;: 4056.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
       </stringlist>
      </property>
      <property name="curves">
       <stringlist>
-       <string>{&quot;channel&quot;: &quot;PHYS:SYS1:1:F2LFB_BC11BL_MEAS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot; &quot;, &quot;color&quot;: &quot;#0a84ff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-       <string>{&quot;channel&quot;: &quot;PHYS:SYS1:1:F2LFB_BC11BL_TARGET&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;PHYS:SYS1:1:F2LFB_BC11BL_TARGET&quot;, &quot;color&quot;: &quot;#ffaa00&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+       <string>{&quot;channel&quot;: &quot;PHYS:SYS1:1:F2LFB_BC11BL_MEAS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot; &quot;, &quot;color&quot;: &quot;#ffff7f&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+       <string>{&quot;channel&quot;: &quot;PHYS:SYS1:1:F2LFB_BC11BL_TARGET&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;PHYS:SYS1:1:F2LFB_BC11BL_TARGET&quot;, &quot;color&quot;: &quot;white&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
       </stringlist>
      </property>
      <property name="updatesAsynchronously">
@@ -2648,13 +2648,13 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="yAxes">
       <stringlist>
-       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 84.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -45.427200000000006, &quot;maxRange&quot;: 45.427200000000006, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
       </stringlist>
      </property>
      <property name="curves">
       <stringlist>
        <string>{&quot;channel&quot;: &quot;PHYS:SYS1:1:F2LFB_BC14E_MEAS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot; &quot;, &quot;color&quot;: &quot;#0a84ff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-       <string>{&quot;channel&quot;: &quot;PHYS:SYS1:1:F2LFB_BC14E_VERN&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;PHYS:SYS1:1:F2LFB_BC14E_VERN&quot;, &quot;color&quot;: &quot;#ffaa00&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+       <string>{&quot;channel&quot;: &quot;PHYS:SYS1:1:F2LFB_BC14E_VERN&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;PHYS:SYS1:1:F2LFB_BC14E_VERN&quot;, &quot;color&quot;: &quot;white&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
       </stringlist>
      </property>
      <property name="updatesAsynchronously">
@@ -3376,13 +3376,13 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="yAxes">
       <stringlist>
-       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -0.5408, &quot;maxRange&quot;: 0.5408, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
       </stringlist>
      </property>
      <property name="curves">
       <stringlist>
-       <string>{&quot;channel&quot;: &quot;PHYS:SYS1:1:F2LFB_BC14BL_MEAS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot; &quot;, &quot;color&quot;: &quot;#0a84ff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-       <string>{&quot;channel&quot;: &quot;PHYS:SYS1:1:F2LFB_BC14BL_TARGET&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;PHYS:SYS1:1:F2LFB_BC14BL_TARGET&quot;, &quot;color&quot;: &quot;#ffaa00&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+       <string>{&quot;channel&quot;: &quot;PHYS:SYS1:1:F2LFB_BC14BL_MEAS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot; &quot;, &quot;color&quot;: &quot;#ffff7f&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+       <string>{&quot;channel&quot;: &quot;PHYS:SYS1:1:F2LFB_BC14BL_TARGET&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;PHYS:SYS1:1:F2LFB_BC14BL_TARGET&quot;, &quot;color&quot;: &quot;white&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
       </stringlist>
      </property>
      <property name="updatesAsynchronously">
@@ -4281,13 +4281,13 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="yAxes">
       <stringlist>
-       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -165.0, &quot;maxRange&quot;: 165.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -178.464, &quot;maxRange&quot;: 178.464, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
       </stringlist>
      </property>
      <property name="curves">
       <stringlist>
        <string>{&quot;channel&quot;: &quot;PHYS:SYS1:1:F2LFB_BC20E_MEAS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot; &quot;, &quot;color&quot;: &quot;#0a84ff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-       <string>{&quot;channel&quot;: &quot;PHYS:SYS1:1:F2LFB_BC20E_VERN&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;PHYS:SYS1:1:F2LFB_BC20E_VERN&quot;, &quot;color&quot;: &quot;#ffaa00&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+       <string>{&quot;channel&quot;: &quot;PHYS:SYS1:1:F2LFB_BC20E_VERN&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;PHYS:SYS1:1:F2LFB_BC20E_VERN&quot;, &quot;color&quot;: &quot;white&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
       </stringlist>
      </property>
      <property name="updatesAsynchronously">
