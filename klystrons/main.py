@@ -70,8 +70,8 @@ class F2_CUD_klystrons(Display):
         return
 
     def setup_injector(self):
-        ind_gun   = klysIndicator('10-2', parent=self.ui.cont_gun)
-        ind_L0A   = klysIndicator('10-3', parent=self.ui.cont_L0A)
+        ind_gun   = klysIndicator('10-3', parent=self.ui.cont_gun)
+        ind_L0A   = klysIndicator('10-8', parent=self.ui.cont_L0A)
         ind_L0B   = klysIndicator('10-4', parent=self.ui.cont_L0B)
         ind_TCAV0 = klysIndicator('10-5', parent=self.ui.cont_TCAV0)
 
