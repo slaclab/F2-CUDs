@@ -192,8 +192,8 @@ class F2_WFH(Display):
         label_obj.setText(ts_str)
 
     def setup_injector(self):
-        ind_gun   = klysIndicator('10-2', parent=self.ui.cont_gun_2)
-        ind_L0A   = klysIndicator('10-3', parent=self.ui.cont_L0A_2)
+        ind_gun   = klysIndicator('10-3', parent=self.ui.cont_gun_2)
+        ind_L0A   = klysIndicator('10-8', parent=self.ui.cont_L0A_2)
         ind_L0B   = klysIndicator('10-4', parent=self.ui.cont_L0B_2)
         ind_TCAV0 = klysIndicator('10-5', parent=self.ui.cont_TCAV0_2)
 
