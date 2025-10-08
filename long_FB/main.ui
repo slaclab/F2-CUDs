@@ -19,58 +19,21 @@
      <x>0</x>
      <y>0</y>
      <width>1920</width>
-     <height>50</height>
+     <height>10</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255,149,60);
 color: rgb(0, 34, 130);</string>
    </property>
-   <widget class="PyDMDrawingImage" name="F2_icon">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>5</y>
-      <width>40</width>
-      <height>40</height>
-     </rect>
-    </property>
-    <property name="toolTip">
-     <string/>
-    </property>
-    <property name="filename" stdset="0">
-     <string>/home/fphysics/zack/workspace/resources/F2_icon.png</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="title">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>0</y>
-      <width>1000</width>
-      <height>50</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>30</pointsize>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>LONGITUDINAL FEEDBACK SYSTEM</string>
-    </property>
-   </widget>
   </widget>
   <widget class="QWidget" name="body" native="true">
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>50</y>
+     <y>9</y>
      <width>1920</width>
-     <height>1030</height>
+     <height>1071</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -109,7 +72,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
+      <y>60</y>
       <width>310</width>
       <height>800</height>
      </rect>
@@ -176,7 +139,7 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="yAxes">
       <stringlist>
-       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -0.5849292799999999, &quot;maxRange&quot;: 0.5849292799999999, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -0.6083264511999998, &quot;maxRange&quot;: 0.6083264511999998, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
       </stringlist>
      </property>
      <property name="curves">
@@ -937,7 +900,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;2&quot;] {
     <property name="geometry">
      <rect>
       <x>328</x>
-      <y>10</y>
+      <y>60</y>
       <width>310</width>
       <height>800</height>
      </rect>
@@ -1004,7 +967,7 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="yAxes">
       <stringlist>
-       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -3860.533248, &quot;maxRange&quot;: 3860.533248, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -4014.9545779200002, &quot;maxRange&quot;: 4014.9545779200002, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
       </stringlist>
      </property>
      <property name="curves">
@@ -1762,7 +1725,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;2&quot;] {
     <property name="geometry">
      <rect>
       <x>646</x>
-      <y>10</y>
+      <y>60</y>
       <width>310</width>
       <height>800</height>
      </rect>
@@ -1829,7 +1792,7 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="yAxes">
       <stringlist>
-       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -4218.24, &quot;maxRange&quot;: 4218.24, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -4386.969599999999, &quot;maxRange&quot;: 4386.969599999999, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
       </stringlist>
      </property>
      <property name="curves">
@@ -2581,7 +2544,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
     <property name="geometry">
      <rect>
       <x>964</x>
-      <y>10</y>
+      <y>60</y>
       <width>310</width>
       <height>800</height>
      </rect>
@@ -2648,7 +2611,7 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="yAxes">
       <stringlist>
-       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -49.13405952000001, &quot;maxRange&quot;: 49.13405952000001, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -51.09942190080001, &quot;maxRange&quot;: 51.09942190080001, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
       </stringlist>
      </property>
      <property name="curves">
@@ -3309,7 +3272,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;2&quot;] {
     <property name="geometry">
      <rect>
       <x>1282</x>
-      <y>10</y>
+      <y>60</y>
       <width>310</width>
       <height>800</height>
      </rect>
@@ -3376,7 +3339,7 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="yAxes">
       <stringlist>
-       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -0.5624319999999999, &quot;maxRange&quot;: 0.5624319999999999, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -0.5849292799999999, &quot;maxRange&quot;: 0.5849292799999999, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
       </stringlist>
      </property>
      <property name="curves">
@@ -4214,7 +4177,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
     <property name="geometry">
      <rect>
       <x>1600</x>
-      <y>10</y>
+      <y>60</y>
       <width>310</width>
       <height>800</height>
      </rect>
@@ -4281,7 +4244,7 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="yAxes">
       <stringlist>
-       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -193.02666240000002, &quot;maxRange&quot;: 193.02666240000002, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -200.747728896, &quot;maxRange&quot;: 200.747728896, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
       </stringlist>
      </property>
      <property name="curves">
@@ -4973,7 +4936,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;2&quot;] {
     <property name="geometry">
      <rect>
       <x>455</x>
-      <y>825</y>
+      <y>875</y>
       <width>1451</width>
       <height>146</height>
      </rect>
@@ -5903,7 +5866,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>825</y>
+      <y>875</y>
       <width>436</width>
       <height>186</height>
      </rect>
@@ -6257,6 +6220,27 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
      </item>
     </layout>
    </widget>
+   <widget class="QLabel" name="title">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>5</y>
+      <width>1000</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>30</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>LONGITUDINAL FEEDBACK SYSTEM</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <customwidgets>
@@ -6269,11 +6253,6 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
    <class>PyDMTimePlot</class>
    <extends>QGraphicsView</extends>
    <header>pydm.widgets.timeplot</header>
-  </customwidget>
-  <customwidget>
-   <class>PyDMDrawingImage</class>
-   <extends>QWidget</extends>
-   <header>pydm.widgets.drawing</header>
   </customwidget>
   <customwidget>
    <class>PyDMDrawingLine</class>

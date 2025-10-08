@@ -22,58 +22,21 @@
      <x>0</x>
      <y>0</y>
      <width>1920</width>
-     <height>50</height>
+     <height>10</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255,149,60);
 color: rgb(0, 34, 130);</string>
    </property>
-   <widget class="PyDMDrawingImage" name="F2_icon">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>5</y>
-      <width>40</width>
-      <height>40</height>
-     </rect>
-    </property>
-    <property name="toolTip">
-     <string/>
-    </property>
-    <property name="filename" stdset="0">
-     <string>/home/fphysics/zack/workspace/resources/F2_icon.png</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="title">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>0</y>
-      <width>1000</width>
-      <height>50</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>30</pointsize>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>SECTOR 20 EXPERIMENTAL AREA</string>
-    </property>
-   </widget>
   </widget>
   <widget class="QWidget" name="body" native="true">
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>50</y>
+     <y>9</y>
      <width>1920</width>
-     <height>1030</height>
+     <height>1071</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -114,7 +77,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
     <property name="geometry">
      <rect>
       <x>320</x>
-      <y>620</y>
+      <y>655</y>
       <width>790</width>
       <height>401</height>
      </rect>
@@ -237,7 +200,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
     <property name="geometry">
      <rect>
       <x>1125</x>
-      <y>189</y>
+      <y>224</y>
       <width>496</width>
       <height>821</height>
      </rect>
@@ -574,7 +537,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
+      <y>45</y>
       <width>1900</width>
       <height>170</height>
      </rect>
@@ -2816,7 +2779,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>190</y>
+      <y>225</y>
       <width>1100</width>
       <height>420</height>
      </rect>
@@ -3009,7 +2972,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
     <property name="geometry">
      <rect>
       <x>1635</x>
-      <y>190</y>
+      <y>225</y>
       <width>275</width>
       <height>170</height>
      </rect>
@@ -3749,7 +3712,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>620</y>
+      <y>655</y>
       <width>300</width>
       <height>400</height>
      </rect>
@@ -4566,7 +4529,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
     <property name="geometry">
      <rect>
       <x>1630</x>
-      <y>380</y>
+      <y>415</y>
       <width>275</width>
       <height>641</height>
      </rect>
@@ -5450,7 +5413,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
     <property name="geometry">
      <rect>
       <x>1150</x>
-      <y>550</y>
+      <y>585</y>
       <width>123</width>
       <height>25</height>
      </rect>
@@ -5476,7 +5439,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
     <property name="geometry">
      <rect>
       <x>1150</x>
-      <y>260</y>
+      <y>295</y>
       <width>123</width>
       <height>25</height>
      </rect>
@@ -5496,6 +5459,27 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
     </property>
     <property name="alignment">
      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="title">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>5</y>
+      <width>1000</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>30</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>SECTOR 20 EXPERIMENTAL AREA</string>
     </property>
    </widget>
   </widget>
@@ -5518,11 +5502,6 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
   </customwidget>
   <customwidget>
    <class>PyDMDrawingCircle</class>
-   <extends>QWidget</extends>
-   <header>pydm.widgets.drawing</header>
-  </customwidget>
-  <customwidget>
-   <class>PyDMDrawingImage</class>
    <extends>QWidget</extends>
    <header>pydm.widgets.drawing</header>
   </customwidget>
