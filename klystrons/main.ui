@@ -170,28 +170,28 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
        <property name="alignment">
         <set>Qt::AlignCenter</set>
        </property>
-       <property name="precision" stdset="0">
+       <property name="precision">
         <number>0</number>
        </property>
-       <property name="showUnits" stdset="0">
+       <property name="showUnits">
         <bool>false</bool>
        </property>
-       <property name="precisionFromPV" stdset="0">
+       <property name="precisionFromPV">
         <bool>true</bool>
        </property>
-       <property name="alarmSensitiveContent" stdset="0">
+       <property name="alarmSensitiveContent">
         <bool>true</bool>
        </property>
-       <property name="alarmSensitiveBorder" stdset="0">
+       <property name="alarmSensitiveBorder">
         <bool>true</bool>
        </property>
-       <property name="PyDMToolTip" stdset="0">
+       <property name="PyDMToolTip">
         <string/>
        </property>
-       <property name="channel" stdset="0">
+       <property name="channel">
         <string>ALRM:SYS1:KLYSCUD:ALHBERR</string>
        </property>
-       <property name="enableRichText" stdset="0">
+       <property name="enableRichText">
         <bool>false</bool>
        </property>
       </widget>
@@ -223,7 +223,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
        <property name="alignment">
         <set>Qt::AlignCenter</set>
        </property>
-       <property name="channel" stdset="0">
+       <property name="channel">
         <string>F2:WATCHER:MDLFF_STAT</string>
        </property>
       </widget>
@@ -619,28 +619,28 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
      <property name="alignment">
       <set>Qt::AlignCenter</set>
      </property>
-     <property name="precision" stdset="0">
+     <property name="precision">
       <number>0</number>
      </property>
-     <property name="showUnits" stdset="0">
+     <property name="showUnits">
       <bool>false</bool>
      </property>
-     <property name="precisionFromPV" stdset="0">
+     <property name="precisionFromPV">
       <bool>true</bool>
      </property>
-     <property name="alarmSensitiveContent" stdset="0">
+     <property name="alarmSensitiveContent">
       <bool>false</bool>
      </property>
-     <property name="alarmSensitiveBorder" stdset="0">
+     <property name="alarmSensitiveBorder">
       <bool>true</bool>
      </property>
-     <property name="PyDMToolTip" stdset="0">
+     <property name="PyDMToolTip">
       <string/>
      </property>
-     <property name="channel" stdset="0">
+     <property name="channel">
       <string>KLYS:LI10:31:PEAKPOWER_MPS</string>
      </property>
-     <property name="enableRichText" stdset="0">
+     <property name="enableRichText">
       <bool>false</bool>
      </property>
     </widget>
@@ -791,41 +791,41 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <property name="toolTip">
          <string/>
         </property>
-        <property name="alarmSensitiveContent" stdset="0">
+        <property name="alarmSensitiveContent">
          <bool>false</bool>
         </property>
-        <property name="alarmSensitiveBorder" stdset="0">
+        <property name="alarmSensitiveBorder">
          <bool>true</bool>
         </property>
-        <property name="PyDMToolTip" stdset="0">
+        <property name="PyDMToolTip">
          <string/>
         </property>
-        <property name="channel" stdset="0">
+        <property name="channel">
          <string>KLYS:LI10:81:AFBST</string>
         </property>
-        <property name="offColor" stdset="0">
+        <property name="offColor">
          <color>
           <red>255</red>
           <green>0</green>
           <blue>0</blue>
          </color>
         </property>
-        <property name="showLabels" stdset="0">
+        <property name="showLabels">
          <bool>false</bool>
         </property>
-        <property name="bigEndian" stdset="0">
+        <property name="bigEndian">
          <bool>false</bool>
         </property>
-        <property name="circles" stdset="0">
+        <property name="circles">
          <bool>true</bool>
         </property>
-        <property name="numBits" stdset="0">
+        <property name="numBits">
          <number>1</number>
         </property>
-        <property name="shift" stdset="0">
+        <property name="shift">
          <number>0</number>
         </property>
-        <property name="labels" stdset="0">
+        <property name="labels">
          <stringlist>
           <string>Bit 0</string>
          </stringlist>
@@ -901,28 +901,28 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <property name="margin">
          <number>3</number>
         </property>
-        <property name="precision" stdset="0">
+        <property name="precision">
          <number>1</number>
         </property>
-        <property name="showUnits" stdset="0">
+        <property name="showUnits">
          <bool>true</bool>
         </property>
-        <property name="precisionFromPV" stdset="0">
+        <property name="precisionFromPV">
          <bool>false</bool>
         </property>
-        <property name="alarmSensitiveContent" stdset="0">
+        <property name="alarmSensitiveContent">
          <bool>false</bool>
         </property>
-        <property name="alarmSensitiveBorder" stdset="0">
+        <property name="alarmSensitiveBorder">
          <bool>true</bool>
         </property>
-        <property name="PyDMToolTip" stdset="0">
+        <property name="PyDMToolTip">
          <string/>
         </property>
-        <property name="channel" stdset="0">
+        <property name="channel">
          <string>ACCL:LI10:81:POWER_W0CH0</string>
         </property>
-        <property name="enableRichText" stdset="0">
+        <property name="enableRichText">
          <bool>false</bool>
         </property>
        </widget>
@@ -944,41 +944,41 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <property name="toolTip">
          <string/>
         </property>
-        <property name="alarmSensitiveContent" stdset="0">
+        <property name="alarmSensitiveContent">
          <bool>false</bool>
         </property>
-        <property name="alarmSensitiveBorder" stdset="0">
+        <property name="alarmSensitiveBorder">
          <bool>true</bool>
         </property>
-        <property name="PyDMToolTip" stdset="0">
+        <property name="PyDMToolTip">
          <string/>
         </property>
-        <property name="channel" stdset="0">
+        <property name="channel">
          <string>KLYS:LI10:81:PFBST</string>
         </property>
-        <property name="offColor" stdset="0">
+        <property name="offColor">
          <color>
           <red>255</red>
           <green>0</green>
           <blue>0</blue>
          </color>
         </property>
-        <property name="showLabels" stdset="0">
+        <property name="showLabels">
          <bool>false</bool>
         </property>
-        <property name="bigEndian" stdset="0">
+        <property name="bigEndian">
          <bool>false</bool>
         </property>
-        <property name="circles" stdset="0">
+        <property name="circles">
          <bool>true</bool>
         </property>
-        <property name="numBits" stdset="0">
+        <property name="numBits">
          <number>1</number>
         </property>
-        <property name="shift" stdset="0">
+        <property name="shift">
          <number>0</number>
         </property>
-        <property name="labels" stdset="0">
+        <property name="labels">
          <stringlist>
           <string>Bit 0</string>
          </stringlist>
@@ -1032,28 +1032,28 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <property name="margin">
          <number>3</number>
         </property>
-        <property name="precision" stdset="0">
+        <property name="precision">
          <number>1</number>
         </property>
-        <property name="showUnits" stdset="0">
+        <property name="showUnits">
          <bool>false</bool>
         </property>
-        <property name="precisionFromPV" stdset="0">
+        <property name="precisionFromPV">
          <bool>false</bool>
         </property>
-        <property name="alarmSensitiveContent" stdset="0">
+        <property name="alarmSensitiveContent">
          <bool>true</bool>
         </property>
-        <property name="alarmSensitiveBorder" stdset="0">
+        <property name="alarmSensitiveBorder">
          <bool>true</bool>
         </property>
-        <property name="PyDMToolTip" stdset="0">
+        <property name="PyDMToolTip">
          <string/>
         </property>
-        <property name="channel" stdset="0">
+        <property name="channel">
          <string>ACCL:LI10:81:PHASE_W0CH0</string>
         </property>
-        <property name="enableRichText" stdset="0">
+        <property name="enableRichText">
          <bool>false</bool>
         </property>
        </widget>
@@ -1075,41 +1075,41 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <property name="toolTip">
          <string/>
         </property>
-        <property name="alarmSensitiveContent" stdset="0">
+        <property name="alarmSensitiveContent">
          <bool>false</bool>
         </property>
-        <property name="alarmSensitiveBorder" stdset="0">
+        <property name="alarmSensitiveBorder">
          <bool>true</bool>
         </property>
-        <property name="PyDMToolTip" stdset="0">
+        <property name="PyDMToolTip">
          <string/>
         </property>
-        <property name="channel" stdset="0">
+        <property name="channel">
          <string>KLYS:LI10:81:SFB_ADIS</string>
         </property>
-        <property name="offColor" stdset="0">
+        <property name="offColor">
          <color>
           <red>255</red>
           <green>0</green>
           <blue>0</blue>
          </color>
         </property>
-        <property name="showLabels" stdset="0">
+        <property name="showLabels">
          <bool>false</bool>
         </property>
-        <property name="bigEndian" stdset="0">
+        <property name="bigEndian">
          <bool>false</bool>
         </property>
-        <property name="circles" stdset="0">
+        <property name="circles">
          <bool>true</bool>
         </property>
-        <property name="numBits" stdset="0">
+        <property name="numBits">
          <number>1</number>
         </property>
-        <property name="shift" stdset="0">
+        <property name="shift">
          <number>0</number>
         </property>
-        <property name="labels" stdset="0">
+        <property name="labels">
          <stringlist>
           <string>Bit 0</string>
          </stringlist>
@@ -1133,41 +1133,41 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <property name="toolTip">
          <string/>
         </property>
-        <property name="alarmSensitiveContent" stdset="0">
+        <property name="alarmSensitiveContent">
          <bool>false</bool>
         </property>
-        <property name="alarmSensitiveBorder" stdset="0">
+        <property name="alarmSensitiveBorder">
          <bool>true</bool>
         </property>
-        <property name="PyDMToolTip" stdset="0">
+        <property name="PyDMToolTip">
          <string/>
         </property>
-        <property name="channel" stdset="0">
+        <property name="channel">
          <string>KLYS:LI10:81:SFB_PDIS</string>
         </property>
-        <property name="offColor" stdset="0">
+        <property name="offColor">
          <color>
           <red>255</red>
           <green>0</green>
           <blue>0</blue>
          </color>
         </property>
-        <property name="showLabels" stdset="0">
+        <property name="showLabels">
          <bool>false</bool>
         </property>
-        <property name="bigEndian" stdset="0">
+        <property name="bigEndian">
          <bool>false</bool>
         </property>
-        <property name="circles" stdset="0">
+        <property name="circles">
          <bool>true</bool>
         </property>
-        <property name="numBits" stdset="0">
+        <property name="numBits">
          <number>1</number>
         </property>
-        <property name="shift" stdset="0">
+        <property name="shift">
          <number>0</number>
         </property>
-        <property name="labels" stdset="0">
+        <property name="labels">
          <stringlist>
           <string>Bit 0</string>
          </stringlist>
@@ -1263,28 +1263,28 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <property name="margin">
          <number>3</number>
         </property>
-        <property name="precision" stdset="0">
+        <property name="precision">
          <number>1</number>
         </property>
-        <property name="showUnits" stdset="0">
+        <property name="showUnits">
          <bool>true</bool>
         </property>
-        <property name="precisionFromPV" stdset="0">
+        <property name="precisionFromPV">
          <bool>false</bool>
         </property>
-        <property name="alarmSensitiveContent" stdset="0">
+        <property name="alarmSensitiveContent">
          <bool>false</bool>
         </property>
-        <property name="alarmSensitiveBorder" stdset="0">
+        <property name="alarmSensitiveBorder">
          <bool>true</bool>
         </property>
-        <property name="PyDMToolTip" stdset="0">
+        <property name="PyDMToolTip">
          <string/>
         </property>
-        <property name="channel" stdset="0">
+        <property name="channel">
          <string>ACCL:LI10:41:POWER_W0CH0</string>
         </property>
-        <property name="enableRichText" stdset="0">
+        <property name="enableRichText">
          <bool>false</bool>
         </property>
        </widget>
@@ -1336,28 +1336,28 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <property name="margin">
          <number>3</number>
         </property>
-        <property name="precision" stdset="0">
+        <property name="precision">
          <number>1</number>
         </property>
-        <property name="showUnits" stdset="0">
+        <property name="showUnits">
          <bool>false</bool>
         </property>
-        <property name="precisionFromPV" stdset="0">
+        <property name="precisionFromPV">
          <bool>false</bool>
         </property>
-        <property name="alarmSensitiveContent" stdset="0">
+        <property name="alarmSensitiveContent">
          <bool>true</bool>
         </property>
-        <property name="alarmSensitiveBorder" stdset="0">
+        <property name="alarmSensitiveBorder">
          <bool>true</bool>
         </property>
-        <property name="PyDMToolTip" stdset="0">
+        <property name="PyDMToolTip">
          <string/>
         </property>
-        <property name="channel" stdset="0">
+        <property name="channel">
          <string>ACCL:LI10:41:PHASE_W0CH0</string>
         </property>
-        <property name="enableRichText" stdset="0">
+        <property name="enableRichText">
          <bool>false</bool>
         </property>
        </widget>
@@ -1379,20 +1379,20 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <property name="toolTip">
          <string/>
         </property>
-        <property name="channel" stdset="0">
+        <property name="channel">
          <string>KLYS:LI10:41:AFBST</string>
         </property>
-        <property name="offColor" stdset="0">
+        <property name="offColor">
          <color>
           <red>255</red>
           <green>0</green>
           <blue>0</blue>
          </color>
         </property>
-        <property name="showLabels" stdset="0">
+        <property name="showLabels">
          <bool>false</bool>
         </property>
-        <property name="circles" stdset="0">
+        <property name="circles">
          <bool>true</bool>
         </property>
        </widget>
@@ -1414,20 +1414,20 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <property name="toolTip">
          <string/>
         </property>
-        <property name="channel" stdset="0">
+        <property name="channel">
          <string>KLYS:LI10:41:PFBST</string>
         </property>
-        <property name="offColor" stdset="0">
+        <property name="offColor">
          <color>
           <red>255</red>
           <green>0</green>
           <blue>0</blue>
          </color>
         </property>
-        <property name="showLabels" stdset="0">
+        <property name="showLabels">
          <bool>false</bool>
         </property>
-        <property name="circles" stdset="0">
+        <property name="circles">
          <bool>true</bool>
         </property>
        </widget>
@@ -1465,20 +1465,20 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <property name="toolTip">
          <string/>
         </property>
-        <property name="channel" stdset="0">
+        <property name="channel">
          <string>KLYS:LI10:41:SFB_PDIS</string>
         </property>
-        <property name="offColor" stdset="0">
+        <property name="offColor">
          <color>
           <red>255</red>
           <green>0</green>
           <blue>0</blue>
          </color>
         </property>
-        <property name="showLabels" stdset="0">
+        <property name="showLabels">
          <bool>false</bool>
         </property>
-        <property name="circles" stdset="0">
+        <property name="circles">
          <bool>true</bool>
         </property>
        </widget>
@@ -1572,28 +1572,28 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <property name="margin">
          <number>3</number>
         </property>
-        <property name="precision" stdset="0">
+        <property name="precision">
          <number>1</number>
         </property>
-        <property name="showUnits" stdset="0">
+        <property name="showUnits">
          <bool>true</bool>
         </property>
-        <property name="precisionFromPV" stdset="0">
+        <property name="precisionFromPV">
          <bool>false</bool>
         </property>
-        <property name="alarmSensitiveContent" stdset="0">
+        <property name="alarmSensitiveContent">
          <bool>false</bool>
         </property>
-        <property name="alarmSensitiveBorder" stdset="0">
+        <property name="alarmSensitiveBorder">
          <bool>true</bool>
         </property>
-        <property name="PyDMToolTip" stdset="0">
+        <property name="PyDMToolTip">
          <string/>
         </property>
-        <property name="channel" stdset="0">
+        <property name="channel">
          <string>ACCL:LI10:51:POWER_W0CH0</string>
         </property>
-        <property name="enableRichText" stdset="0">
+        <property name="enableRichText">
          <bool>false</bool>
         </property>
        </widget>
@@ -1661,28 +1661,28 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <property name="margin">
          <number>3</number>
         </property>
-        <property name="precision" stdset="0">
+        <property name="precision">
          <number>1</number>
         </property>
-        <property name="showUnits" stdset="0">
+        <property name="showUnits">
          <bool>false</bool>
         </property>
-        <property name="precisionFromPV" stdset="0">
+        <property name="precisionFromPV">
          <bool>false</bool>
         </property>
-        <property name="alarmSensitiveContent" stdset="0">
+        <property name="alarmSensitiveContent">
          <bool>true</bool>
         </property>
-        <property name="alarmSensitiveBorder" stdset="0">
+        <property name="alarmSensitiveBorder">
          <bool>true</bool>
         </property>
-        <property name="PyDMToolTip" stdset="0">
+        <property name="PyDMToolTip">
          <string/>
         </property>
-        <property name="channel" stdset="0">
+        <property name="channel">
          <string>ACCL:LI10:51:PHASE_W0CH0</string>
         </property>
-        <property name="enableRichText" stdset="0">
+        <property name="enableRichText">
          <bool>false</bool>
         </property>
        </widget>
@@ -1704,20 +1704,20 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <property name="toolTip">
          <string/>
         </property>
-        <property name="channel" stdset="0">
+        <property name="channel">
          <string>KLYS:LI10:51:AFBST</string>
         </property>
-        <property name="offColor" stdset="0">
+        <property name="offColor">
          <color>
           <red>255</red>
           <green>0</green>
           <blue>0</blue>
          </color>
         </property>
-        <property name="showLabels" stdset="0">
+        <property name="showLabels">
          <bool>false</bool>
         </property>
-        <property name="circles" stdset="0">
+        <property name="circles">
          <bool>true</bool>
         </property>
        </widget>
@@ -1739,20 +1739,20 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <property name="toolTip">
          <string/>
         </property>
-        <property name="channel" stdset="0">
+        <property name="channel">
          <string>KLYS:LI10:51:PFBST</string>
         </property>
-        <property name="offColor" stdset="0">
+        <property name="offColor">
          <color>
           <red>255</red>
           <green>0</green>
           <blue>0</blue>
          </color>
         </property>
-        <property name="showLabels" stdset="0">
+        <property name="showLabels">
          <bool>false</bool>
         </property>
-        <property name="circles" stdset="0">
+        <property name="circles">
          <bool>true</bool>
         </property>
        </widget>
@@ -1774,20 +1774,20 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <property name="toolTip">
          <string/>
         </property>
-        <property name="channel" stdset="0">
+        <property name="channel">
          <string>KLYS:LI10:51:SFB_ADIS</string>
         </property>
-        <property name="offColor" stdset="0">
+        <property name="offColor">
          <color>
           <red>255</red>
           <green>0</green>
           <blue>0</blue>
          </color>
         </property>
-        <property name="showLabels" stdset="0">
+        <property name="showLabels">
          <bool>false</bool>
         </property>
-        <property name="circles" stdset="0">
+        <property name="circles">
          <bool>true</bool>
         </property>
        </widget>
@@ -1809,20 +1809,20 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <property name="toolTip">
          <string/>
         </property>
-        <property name="channel" stdset="0">
+        <property name="channel">
          <string>KLYS:LI10:51:SFB_PDIS</string>
         </property>
-        <property name="offColor" stdset="0">
+        <property name="offColor">
          <color>
           <red>255</red>
           <green>0</green>
           <blue>0</blue>
          </color>
         </property>
-        <property name="showLabels" stdset="0">
+        <property name="showLabels">
          <bool>false</bool>
         </property>
-        <property name="circles" stdset="0">
+        <property name="circles">
          <bool>true</bool>
         </property>
        </widget>
@@ -1915,16 +1915,16 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
        </property>
-       <property name="precision" stdset="0">
+       <property name="precision">
         <number>1</number>
        </property>
-       <property name="showUnits" stdset="0">
+       <property name="showUnits">
         <bool>true</bool>
        </property>
-       <property name="precisionFromPV" stdset="0">
+       <property name="precisionFromPV">
         <bool>false</bool>
        </property>
-       <property name="channel" stdset="0">
+       <property name="channel">
         <string>BPMS:LI11:333:X1H</string>
        </property>
       </widget>
@@ -2185,16 +2185,16 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
        </property>
-       <property name="precision" stdset="0">
+       <property name="precision">
         <number>1</number>
        </property>
-       <property name="showUnits" stdset="0">
+       <property name="showUnits">
         <bool>true</bool>
        </property>
-       <property name="precisionFromPV" stdset="0">
+       <property name="precisionFromPV">
         <bool>false</bool>
        </property>
-       <property name="channel" stdset="0">
+       <property name="channel">
         <string>BPMS:LI20:2445:X1H</string>
        </property>
       </widget>
@@ -2314,28 +2314,28 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
        </property>
-       <property name="precision" stdset="0">
+       <property name="precision">
         <number>1</number>
        </property>
-       <property name="showUnits" stdset="0">
+       <property name="showUnits">
         <bool>true</bool>
        </property>
-       <property name="precisionFromPV" stdset="0">
+       <property name="precisionFromPV">
         <bool>false</bool>
        </property>
-       <property name="alarmSensitiveContent" stdset="0">
+       <property name="alarmSensitiveContent">
         <bool>false</bool>
        </property>
-       <property name="alarmSensitiveBorder" stdset="0">
+       <property name="alarmSensitiveBorder">
         <bool>true</bool>
        </property>
-       <property name="PyDMToolTip" stdset="0">
+       <property name="PyDMToolTip">
         <string/>
        </property>
-       <property name="channel" stdset="0">
+       <property name="channel">
         <string>BPMS:LI14:801:X1H</string>
        </property>
-       <property name="enableRichText" stdset="0">
+       <property name="enableRichText">
         <bool>false</bool>
        </property>
       </widget>
@@ -2444,16 +2444,16 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
        </property>
-       <property name="precision" stdset="0">
+       <property name="precision">
         <number>1</number>
        </property>
-       <property name="showUnits" stdset="0">
+       <property name="showUnits">
         <bool>true</bool>
        </property>
-       <property name="precisionFromPV" stdset="0">
+       <property name="precisionFromPV">
         <bool>false</bool>
        </property>
-       <property name="channel" stdset="0">
+       <property name="channel">
         <string>BPMS:IN10:731:X1H</string>
        </property>
       </widget>
@@ -2485,7 +2485,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -1.1, &quot;maxRange&quot;: 1.1, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
-       <property name="maxRedrawRate" stdset="0">
+       <property name="maxRedrawRate">
         <number>10</number>
        </property>
        <property name="curves">
@@ -2540,7 +2540,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -2.2, &quot;maxRange&quot;: 2.2, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
-       <property name="maxRedrawRate" stdset="0">
+       <property name="maxRedrawRate">
         <number>10</number>
        </property>
        <property name="curves">
@@ -2595,7 +2595,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -4.4, &quot;maxRange&quot;: 4.4, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
-       <property name="maxRedrawRate" stdset="0">
+       <property name="maxRedrawRate">
         <number>10</number>
        </property>
        <property name="curves">
@@ -2650,7 +2650,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -4.4, &quot;maxRange&quot;: 4.4, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
-       <property name="maxRedrawRate" stdset="0">
+       <property name="maxRedrawRate">
         <number>10</number>
        </property>
        <property name="curves">
@@ -2955,28 +2955,28 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <property name="margin">
          <number>3</number>
         </property>
-        <property name="precision" stdset="0">
+        <property name="precision">
          <number>1</number>
         </property>
-        <property name="showUnits" stdset="0">
+        <property name="showUnits">
          <bool>false</bool>
         </property>
-        <property name="precisionFromPV" stdset="0">
+        <property name="precisionFromPV">
          <bool>false</bool>
         </property>
-        <property name="alarmSensitiveContent" stdset="0">
+        <property name="alarmSensitiveContent">
          <bool>true</bool>
         </property>
-        <property name="alarmSensitiveBorder" stdset="0">
+        <property name="alarmSensitiveBorder">
          <bool>true</bool>
         </property>
-        <property name="PyDMToolTip" stdset="0">
+        <property name="PyDMToolTip">
          <string/>
         </property>
-        <property name="channel" stdset="0">
+        <property name="channel">
          <string>KLYS:LI11:11:PREQ</string>
         </property>
-        <property name="enableRichText" stdset="0">
+        <property name="enableRichText">
          <bool>false</bool>
         </property>
        </widget>
@@ -2998,20 +2998,20 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <property name="toolTip">
          <string/>
         </property>
-        <property name="channel" stdset="0">
+        <property name="channel">
          <string>KLYS:LI11:11:AFBST</string>
         </property>
-        <property name="offColor" stdset="0">
+        <property name="offColor">
          <color>
           <red>255</red>
           <green>0</green>
           <blue>0</blue>
          </color>
         </property>
-        <property name="showLabels" stdset="0">
+        <property name="showLabels">
          <bool>false</bool>
         </property>
-        <property name="circles" stdset="0">
+        <property name="circles">
          <bool>true</bool>
         </property>
        </widget>
@@ -3075,28 +3075,28 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <property name="margin">
          <number>3</number>
         </property>
-        <property name="precision" stdset="0">
+        <property name="precision">
          <number>1</number>
         </property>
-        <property name="showUnits" stdset="0">
+        <property name="showUnits">
          <bool>true</bool>
         </property>
-        <property name="precisionFromPV" stdset="0">
+        <property name="precisionFromPV">
          <bool>false</bool>
         </property>
-        <property name="alarmSensitiveContent" stdset="0">
+        <property name="alarmSensitiveContent">
          <bool>false</bool>
         </property>
-        <property name="alarmSensitiveBorder" stdset="0">
+        <property name="alarmSensitiveBorder">
          <bool>true</bool>
         </property>
-        <property name="PyDMToolTip" stdset="0">
+        <property name="PyDMToolTip">
          <string/>
         </property>
-        <property name="channel" stdset="0">
+        <property name="channel">
          <string>KLYS:LI11:11:FE_PWR</string>
         </property>
-        <property name="enableRichText" stdset="0">
+        <property name="enableRichText">
          <bool>false</bool>
         </property>
        </widget>
@@ -3118,20 +3118,20 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <property name="toolTip">
          <string/>
         </property>
-        <property name="channel" stdset="0">
+        <property name="channel">
          <string>KLYS:LI11:11:PFBST</string>
         </property>
-        <property name="offColor" stdset="0">
+        <property name="offColor">
          <color>
           <red>255</red>
           <green>0</green>
           <blue>0</blue>
          </color>
         </property>
-        <property name="showLabels" stdset="0">
+        <property name="showLabels">
          <bool>false</bool>
         </property>
-        <property name="circles" stdset="0">
+        <property name="circles">
          <bool>true</bool>
         </property>
        </widget>
@@ -3210,20 +3210,20 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <property name="toolTip">
          <string/>
         </property>
-        <property name="channel" stdset="0">
+        <property name="channel">
          <string>KLYS:LI11:21:AFBST</string>
         </property>
-        <property name="offColor" stdset="0">
+        <property name="offColor">
          <color>
           <red>255</red>
           <green>0</green>
           <blue>0</blue>
          </color>
         </property>
-        <property name="showLabels" stdset="0">
+        <property name="showLabels">
          <bool>false</bool>
         </property>
-        <property name="circles" stdset="0">
+        <property name="circles">
          <bool>true</bool>
         </property>
        </widget>
@@ -3245,20 +3245,20 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <property name="toolTip">
          <string/>
         </property>
-        <property name="channel" stdset="0">
+        <property name="channel">
          <string>KLYS:LI11:21:PFBST</string>
         </property>
-        <property name="offColor" stdset="0">
+        <property name="offColor">
          <color>
           <red>255</red>
           <green>0</green>
           <blue>0</blue>
          </color>
         </property>
-        <property name="showLabels" stdset="0">
+        <property name="showLabels">
          <bool>false</bool>
         </property>
-        <property name="circles" stdset="0">
+        <property name="circles">
          <bool>true</bool>
         </property>
        </widget>
@@ -3322,28 +3322,28 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <property name="margin">
          <number>3</number>
         </property>
-        <property name="precision" stdset="0">
+        <property name="precision">
          <number>1</number>
         </property>
-        <property name="showUnits" stdset="0">
+        <property name="showUnits">
          <bool>true</bool>
         </property>
-        <property name="precisionFromPV" stdset="0">
+        <property name="precisionFromPV">
          <bool>false</bool>
         </property>
-        <property name="alarmSensitiveContent" stdset="0">
+        <property name="alarmSensitiveContent">
          <bool>false</bool>
         </property>
-        <property name="alarmSensitiveBorder" stdset="0">
+        <property name="alarmSensitiveBorder">
          <bool>true</bool>
         </property>
-        <property name="PyDMToolTip" stdset="0">
+        <property name="PyDMToolTip">
          <string/>
         </property>
-        <property name="channel" stdset="0">
+        <property name="channel">
          <string>KLYS:LI11:21:FE_PWR</string>
         </property>
-        <property name="enableRichText" stdset="0">
+        <property name="enableRichText">
          <bool>false</bool>
         </property>
        </widget>
@@ -3395,28 +3395,28 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <property name="margin">
          <number>3</number>
         </property>
-        <property name="precision" stdset="0">
+        <property name="precision">
          <number>1</number>
         </property>
-        <property name="showUnits" stdset="0">
+        <property name="showUnits">
          <bool>false</bool>
         </property>
-        <property name="precisionFromPV" stdset="0">
+        <property name="precisionFromPV">
          <bool>false</bool>
         </property>
-        <property name="alarmSensitiveContent" stdset="0">
+        <property name="alarmSensitiveContent">
          <bool>true</bool>
         </property>
-        <property name="alarmSensitiveBorder" stdset="0">
+        <property name="alarmSensitiveBorder">
          <bool>true</bool>
         </property>
-        <property name="PyDMToolTip" stdset="0">
+        <property name="PyDMToolTip">
          <string/>
         </property>
-        <property name="channel" stdset="0">
+        <property name="channel">
          <string>KLYS:LI11:21:PREQ</string>
         </property>
-        <property name="enableRichText" stdset="0">
+        <property name="enableRichText">
          <bool>false</bool>
         </property>
        </widget>
@@ -3683,28 +3683,28 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
-     <property name="precision" stdset="0">
+     <property name="precision">
       <number>1</number>
      </property>
-     <property name="showUnits" stdset="0">
+     <property name="showUnits">
       <bool>false</bool>
      </property>
-     <property name="precisionFromPV" stdset="0">
+     <property name="precisionFromPV">
       <bool>false</bool>
      </property>
-     <property name="alarmSensitiveContent" stdset="0">
+     <property name="alarmSensitiveContent">
       <bool>false</bool>
      </property>
-     <property name="alarmSensitiveBorder" stdset="0">
+     <property name="alarmSensitiveBorder">
       <bool>true</bool>
      </property>
-     <property name="PyDMToolTip" stdset="0">
+     <property name="PyDMToolTip">
       <string/>
      </property>
-     <property name="channel" stdset="0">
+     <property name="channel">
       <string>TCAV:LI20:2400:S_AV</string>
      </property>
-     <property name="enableRichText" stdset="0">
+     <property name="enableRichText">
       <bool>false</bool>
      </property>
     </widget>
@@ -3765,28 +3765,28 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
-     <property name="precision" stdset="0">
+     <property name="precision">
       <number>1</number>
      </property>
-     <property name="showUnits" stdset="0">
+     <property name="showUnits">
       <bool>false</bool>
      </property>
-     <property name="precisionFromPV" stdset="0">
+     <property name="precisionFromPV">
       <bool>false</bool>
      </property>
-     <property name="alarmSensitiveContent" stdset="0">
+     <property name="alarmSensitiveContent">
       <bool>true</bool>
      </property>
-     <property name="alarmSensitiveBorder" stdset="0">
+     <property name="alarmSensitiveBorder">
       <bool>true</bool>
      </property>
-     <property name="PyDMToolTip" stdset="0">
+     <property name="PyDMToolTip">
       <string/>
      </property>
-     <property name="channel" stdset="0">
+     <property name="channel">
       <string>TCAV:LI20:2400:S_PV</string>
      </property>
-     <property name="enableRichText" stdset="0">
+     <property name="enableRichText">
       <bool>false</bool>
      </property>
     </widget>
@@ -3842,41 +3842,41 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
        <property name="toolTip">
         <string/>
        </property>
-       <property name="alarmSensitiveContent" stdset="0">
+       <property name="alarmSensitiveContent">
         <bool>false</bool>
        </property>
-       <property name="alarmSensitiveBorder" stdset="0">
+       <property name="alarmSensitiveBorder">
         <bool>true</bool>
        </property>
-       <property name="PyDMToolTip" stdset="0">
+       <property name="PyDMToolTip">
         <string/>
        </property>
-       <property name="channel" stdset="0">
+       <property name="channel">
         <string>KLYS:LI10:31:PFBST</string>
        </property>
-       <property name="offColor" stdset="0">
+       <property name="offColor">
         <color>
          <red>255</red>
          <green>0</green>
          <blue>0</blue>
         </color>
        </property>
-       <property name="showLabels" stdset="0">
+       <property name="showLabels">
         <bool>false</bool>
        </property>
-       <property name="bigEndian" stdset="0">
+       <property name="bigEndian">
         <bool>false</bool>
        </property>
-       <property name="circles" stdset="0">
+       <property name="circles">
         <bool>true</bool>
        </property>
-       <property name="numBits" stdset="0">
+       <property name="numBits">
         <number>1</number>
        </property>
-       <property name="shift" stdset="0">
+       <property name="shift">
         <number>0</number>
        </property>
-       <property name="labels" stdset="0">
+       <property name="labels">
         <stringlist>
          <string>Bit 0</string>
         </stringlist>
@@ -3900,41 +3900,41 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
        <property name="toolTip">
         <string/>
        </property>
-       <property name="alarmSensitiveContent" stdset="0">
+       <property name="alarmSensitiveContent">
         <bool>false</bool>
        </property>
-       <property name="alarmSensitiveBorder" stdset="0">
+       <property name="alarmSensitiveBorder">
         <bool>true</bool>
        </property>
-       <property name="PyDMToolTip" stdset="0">
+       <property name="PyDMToolTip">
         <string/>
        </property>
-       <property name="channel" stdset="0">
+       <property name="channel">
         <string>KLYS:LI10:31:SFB_ADIS</string>
        </property>
-       <property name="offColor" stdset="0">
+       <property name="offColor">
         <color>
          <red>255</red>
          <green>0</green>
          <blue>0</blue>
         </color>
        </property>
-       <property name="showLabels" stdset="0">
+       <property name="showLabels">
         <bool>false</bool>
        </property>
-       <property name="bigEndian" stdset="0">
+       <property name="bigEndian">
         <bool>false</bool>
        </property>
-       <property name="circles" stdset="0">
+       <property name="circles">
         <bool>true</bool>
        </property>
-       <property name="numBits" stdset="0">
+       <property name="numBits">
         <number>1</number>
        </property>
-       <property name="shift" stdset="0">
+       <property name="shift">
         <number>0</number>
        </property>
-       <property name="labels" stdset="0">
+       <property name="labels">
         <stringlist>
          <string>Bit 0</string>
         </stringlist>
@@ -3994,28 +3994,28 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
        <property name="margin">
         <number>3</number>
        </property>
-       <property name="precision" stdset="0">
+       <property name="precision">
         <number>1</number>
        </property>
-       <property name="showUnits" stdset="0">
+       <property name="showUnits">
         <bool>true</bool>
        </property>
-       <property name="precisionFromPV" stdset="0">
+       <property name="precisionFromPV">
         <bool>false</bool>
        </property>
-       <property name="alarmSensitiveContent" stdset="0">
+       <property name="alarmSensitiveContent">
         <bool>false</bool>
        </property>
-       <property name="alarmSensitiveBorder" stdset="0">
+       <property name="alarmSensitiveBorder">
         <bool>true</bool>
        </property>
-       <property name="PyDMToolTip" stdset="0">
+       <property name="PyDMToolTip">
         <string/>
        </property>
-       <property name="channel" stdset="0">
-        <string>ACCL:LI10:31:POWER_W0CH6</string>
+       <property name="channel">
+        <string>ACCL:LI10:31:POWER_W0CH0</string>
        </property>
-       <property name="enableRichText" stdset="0">
+       <property name="enableRichText">
         <bool>false</bool>
        </property>
       </widget>
@@ -4037,41 +4037,41 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
        <property name="toolTip">
         <string/>
        </property>
-       <property name="alarmSensitiveContent" stdset="0">
+       <property name="alarmSensitiveContent">
         <bool>false</bool>
        </property>
-       <property name="alarmSensitiveBorder" stdset="0">
+       <property name="alarmSensitiveBorder">
         <bool>true</bool>
        </property>
-       <property name="PyDMToolTip" stdset="0">
+       <property name="PyDMToolTip">
         <string/>
        </property>
-       <property name="channel" stdset="0">
+       <property name="channel">
         <string>KLYS:LI10:31:SFB_PDIS</string>
        </property>
-       <property name="offColor" stdset="0">
+       <property name="offColor">
         <color>
          <red>255</red>
          <green>0</green>
          <blue>0</blue>
         </color>
        </property>
-       <property name="showLabels" stdset="0">
+       <property name="showLabels">
         <bool>false</bool>
        </property>
-       <property name="bigEndian" stdset="0">
+       <property name="bigEndian">
         <bool>false</bool>
        </property>
-       <property name="circles" stdset="0">
+       <property name="circles">
         <bool>true</bool>
        </property>
-       <property name="numBits" stdset="0">
+       <property name="numBits">
         <number>1</number>
        </property>
-       <property name="shift" stdset="0">
+       <property name="shift">
         <number>0</number>
        </property>
-       <property name="labels" stdset="0">
+       <property name="labels">
         <stringlist>
          <string>Bit 0</string>
         </stringlist>
@@ -4095,41 +4095,41 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
        <property name="toolTip">
         <string/>
        </property>
-       <property name="alarmSensitiveContent" stdset="0">
+       <property name="alarmSensitiveContent">
         <bool>false</bool>
        </property>
-       <property name="alarmSensitiveBorder" stdset="0">
+       <property name="alarmSensitiveBorder">
         <bool>true</bool>
        </property>
-       <property name="PyDMToolTip" stdset="0">
+       <property name="PyDMToolTip">
         <string/>
        </property>
-       <property name="channel" stdset="0">
+       <property name="channel">
         <string>KLYS:LI10:31:AFBST</string>
        </property>
-       <property name="offColor" stdset="0">
+       <property name="offColor">
         <color>
          <red>255</red>
          <green>0</green>
          <blue>0</blue>
         </color>
        </property>
-       <property name="showLabels" stdset="0">
+       <property name="showLabels">
         <bool>false</bool>
        </property>
-       <property name="bigEndian" stdset="0">
+       <property name="bigEndian">
         <bool>false</bool>
        </property>
-       <property name="circles" stdset="0">
+       <property name="circles">
         <bool>true</bool>
        </property>
-       <property name="numBits" stdset="0">
+       <property name="numBits">
         <number>1</number>
        </property>
-       <property name="shift" stdset="0">
+       <property name="shift">
         <number>0</number>
        </property>
-       <property name="labels" stdset="0">
+       <property name="labels">
         <stringlist>
          <string>Bit 0</string>
         </stringlist>
@@ -4183,28 +4183,28 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
        <property name="margin">
         <number>3</number>
        </property>
-       <property name="precision" stdset="0">
+       <property name="precision">
         <number>1</number>
        </property>
-       <property name="showUnits" stdset="0">
+       <property name="showUnits">
         <bool>false</bool>
        </property>
-       <property name="precisionFromPV" stdset="0">
+       <property name="precisionFromPV">
         <bool>false</bool>
        </property>
-       <property name="alarmSensitiveContent" stdset="0">
+       <property name="alarmSensitiveContent">
         <bool>true</bool>
        </property>
-       <property name="alarmSensitiveBorder" stdset="0">
+       <property name="alarmSensitiveBorder">
         <bool>true</bool>
        </property>
-       <property name="PyDMToolTip" stdset="0">
+       <property name="PyDMToolTip">
         <string/>
        </property>
-       <property name="channel" stdset="0">
+       <property name="channel">
         <string>ACCL:LI10:31:PHASE_W0CH6</string>
        </property>
-       <property name="enableRichText" stdset="0">
+       <property name="enableRichText">
         <bool>false</bool>
        </property>
       </widget>
@@ -4472,28 +4472,28 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
-     <property name="precision" stdset="0">
+     <property name="precision">
       <number>1</number>
      </property>
-     <property name="showUnits" stdset="0">
+     <property name="showUnits">
       <bool>true</bool>
      </property>
-     <property name="precisionFromPV" stdset="0">
+     <property name="precisionFromPV">
       <bool>false</bool>
      </property>
-     <property name="alarmSensitiveContent" stdset="0">
+     <property name="alarmSensitiveContent">
       <bool>false</bool>
      </property>
-     <property name="alarmSensitiveBorder" stdset="0">
+     <property name="alarmSensitiveBorder">
       <bool>true</bool>
      </property>
-     <property name="PyDMToolTip" stdset="0">
+     <property name="PyDMToolTip">
       <string/>
      </property>
-     <property name="channel" stdset="0">
+     <property name="channel">
       <string>TCAV:LI15:280:TC0_VFWD</string>
      </property>
-     <property name="enableRichText" stdset="0">
+     <property name="enableRichText">
       <bool>false</bool>
      </property>
     </widget>
@@ -4554,28 +4554,28 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
-     <property name="precision" stdset="0">
+     <property name="precision">
       <number>1</number>
      </property>
-     <property name="showUnits" stdset="0">
+     <property name="showUnits">
       <bool>false</bool>
      </property>
-     <property name="precisionFromPV" stdset="0">
+     <property name="precisionFromPV">
       <bool>false</bool>
      </property>
-     <property name="alarmSensitiveContent" stdset="0">
+     <property name="alarmSensitiveContent">
       <bool>true</bool>
      </property>
-     <property name="alarmSensitiveBorder" stdset="0">
+     <property name="alarmSensitiveBorder">
       <bool>true</bool>
      </property>
-     <property name="PyDMToolTip" stdset="0">
+     <property name="PyDMToolTip">
       <string/>
      </property>
-     <property name="channel" stdset="0">
+     <property name="channel">
       <string>TCAV:LI15:280:TC0_VRFLD</string>
      </property>
-     <property name="enableRichText" stdset="0">
+     <property name="enableRichText">
       <bool>false</bool>
      </property>
     </widget>
@@ -4632,17 +4632,17 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
    <property name="toolTip">
     <string/>
    </property>
-   <property name="channel" stdset="0">
+   <property name="channel">
     <string>FCUDKLYS:LI13:4:ONBEAM10.RVAL</string>
    </property>
-   <property name="onColor" stdset="0">
+   <property name="onColor">
     <color>
      <red>144</red>
      <green>194</green>
      <blue>255</blue>
     </color>
    </property>
-   <property name="showLabels" stdset="0">
+   <property name="showLabels">
     <bool>false</bool>
    </property>
   </widget>
@@ -4664,17 +4664,17 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
    <property name="toolTip">
     <string/>
    </property>
-   <property name="channel" stdset="0">
+   <property name="channel">
     <string>FCUDKLYS:LI13:4:ONBEAM10.RVAL</string>
    </property>
-   <property name="onColor" stdset="0">
+   <property name="onColor">
     <color>
      <red>144</red>
      <green>194</green>
      <blue>255</blue>
     </color>
    </property>
-   <property name="showLabels" stdset="0">
+   <property name="showLabels">
     <bool>false</bool>
    </property>
   </widget>
