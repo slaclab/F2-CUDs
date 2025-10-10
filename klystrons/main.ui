@@ -223,8 +223,70 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
        <property name="alignment">
         <set>Qt::AlignCenter</set>
        </property>
+       <property name="precision">
+        <number>0</number>
+       </property>
+       <property name="showUnits">
+        <bool>false</bool>
+       </property>
+       <property name="precisionFromPV">
+        <bool>true</bool>
+       </property>
+       <property name="alarmSensitiveContent">
+        <bool>false</bool>
+       </property>
+       <property name="alarmSensitiveBorder">
+        <bool>true</bool>
+       </property>
+       <property name="PyDMToolTip">
+        <string/>
+       </property>
        <property name="channel">
         <string>F2:WATCHER:MDLFF_STAT</string>
+       </property>
+       <property name="enableRichText">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="PyDMLabel" name="PyDMLabel_8">
+       <property name="font">
+        <font>
+         <pointsize>22</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="precision">
+        <number>0</number>
+       </property>
+       <property name="showUnits">
+        <bool>false</bool>
+       </property>
+       <property name="precisionFromPV">
+        <bool>true</bool>
+       </property>
+       <property name="alarmSensitiveContent">
+        <bool>false</bool>
+       </property>
+       <property name="alarmSensitiveBorder">
+        <bool>true</bool>
+       </property>
+       <property name="PyDMToolTip">
+        <string/>
+       </property>
+       <property name="channel">
+        <string>PHYS:SYS1:1:F2MDL_STAT</string>
+       </property>
+       <property name="enableRichText">
+        <bool>false</bool>
        </property>
       </widget>
      </item>

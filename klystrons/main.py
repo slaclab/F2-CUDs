@@ -59,11 +59,11 @@ class F2_CUD_klystrons(Display):
 
             plot.hideAxis('bottom')
 
-        mdlff_onstat = bitStatusLabel('SIOC:SYS1:ML01:AO489', word_length=1, bit=0)
-        mdlff_onstat.text_on = 'Enabled'
-        mdlff_onstat.text_off = 'Disabled'
-        mdlff_onstat.setFont(STATUS_FONT)
-        self.ui.procMonitor.layout().addWidget(mdlff_onstat)
+        # mdlff_onstat = bitStatusLabel('SIOC:SYS1:ML01:AO489', word_length=1, bit=0)
+        # mdlff_onstat.text_on = 'Enabled'
+        # mdlff_onstat.text_off = 'Disabled'
+        # mdlff_onstat.setFont(STATUS_FONT)
+        # self.ui.procMonitor.layout().addWidget(mdlff_onstat)
 
         self.setWindowTitle('FACET-II CUD: RF System')
         
