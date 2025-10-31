@@ -38,7 +38,7 @@ color: rgb(0, 34, 130);</string>
     <property name="toolTip">
      <string/>
     </property>
-    <property name="filename" stdset="0">
+    <property name="filename">
      <string>/home/fphysics/zack/workspace/resources/F2_icon.png</string>
     </property>
    </widget>
@@ -105,7 +105,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
   background-color: rgb(25,25,25);
 }</string>
    </property>
-   <layout class="QGridLayout" name="gridLayout" rowstretch="1,0,0,0,0">
+   <layout class="QGridLayout" name="gridLayout" rowstretch="1,1,1,1,1">
     <item row="1" column="0">
      <widget class="PyDMTimePlot" name="PyDMTimePlot">
       <property name="toolTip">
@@ -136,7 +136,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <string>{&quot;channel&quot;: &quot;TORO:LI20:3255:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:LI20:3255:TMIT_PC&quot;, &quot;color&quot;: &quot;#ccebc5&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
        </stringlist>
       </property>
-      <property name="updateMode" stdset="0">
+      <property name="updateMode">
        <enum>PyDMTimePlot::AtFixedRate</enum>
       </property>
       <property name="timeSpan">
@@ -193,7 +193,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <string>{&quot;channel&quot;: &quot;PICS:LI20:3486:VACT&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;LI19 FDMP IC2&quot;, &quot;color&quot;: &quot;#ccebc5&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
        </stringlist>
       </property>
-      <property name="updateMode" stdset="0">
+      <property name="updateMode">
        <enum>PyDMTimePlot::AtFixedRate</enum>
       </property>
       <property name="timeSpan">
