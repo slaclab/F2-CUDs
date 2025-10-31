@@ -15,12 +15,14 @@ from PyQt5 import QtGui, QtCore
 from PyQt5.QtWidgets import QGridLayout, QWidget, QProgressBar, QMessageBox
 from PyQt5.QtCore import Qt, QTimer
 from PyQt5.QtGui import QColor, QFont
+from pyqtgraph import colormap
 
 # import orbit
 from orbit import FacetOrbit, DiffOrbit, BaseOrbit, BPM, FacetSCPBPM
 from orbit_view import OrbitView 
 
 from epics import caget, get_pv
+
 
 # ==== for later =====
 # RESOLUTION 9.91
@@ -64,6 +66,7 @@ class F2_CUD_S20(Display):
 
     def __init__(self, parent=None, args=None):
         super(F2_CUD_S20, self).__init__(parent=parent, args=args)
+        # super(F2_CUD_S20, self).__init__()
 
         SYAG_image = SYAGImg(
             im_ch='CAMR:LI20:100:Image:ArrayData',
@@ -77,6 +80,7 @@ class F2_CUD_S20(Display):
             xMin=0, xMax=caget('CAMR:LI20:100:Image:ArraySize0_RBV')+100,
             yMin=0, yMax=caget('CAMR:LI20:100:Image:ArraySize1_RBV')/2.0
             )
+        SYAG_image.setColorMap(cmap=colormap.get('inferno'))
 
         self.track_dtotr = QTimer(self)
         self.track_dtotr.start()

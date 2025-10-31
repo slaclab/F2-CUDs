@@ -126,7 +126,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;Dose Rate (mrem/h)&quot;, &quot;minRange&quot;: -3000.0, &quot;maxRange&quot;: 153000.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;Dose Rate (mrem/h)&quot;, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 150000.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="showLegend">
@@ -398,9 +398,6 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
           <property name="colorMapMax">
            <double>255.000000000000000</double>
           </property>
-          <property name="colorMap">
-           <enum>PyDMImageView::Jet</enum>
-          </property>
           <property name="autoDownsample">
            <bool>true</bool>
           </property>
@@ -408,7 +405,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
            <number>0</number>
           </property>
           <property name="normalizeData">
-           <bool>true</bool>
+           <bool>false</bool>
           </property>
           <property name="readingOrder">
            <enum>PyDMImageView::Fortranlike</enum>
