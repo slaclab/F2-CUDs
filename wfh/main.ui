@@ -1767,7 +1767,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
           <string/>
          </property>
          <property name="channel">
-          <string>SIOC:SYS1:ML00:CA902</string>
+          <string>SIOC:SYS1:ML00:CA018</string>
          </property>
          <property name="enableRichText">
           <bool>false</bool>
@@ -2656,7 +2656,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
           <string/>
          </property>
          <property name="channel">
-          <string>SIOC:SYS1:ML00:CA903</string>
+          <string>SIOC:SYS1:ML00:CA019</string>
          </property>
          <property name="enableRichText">
           <bool>false</bool>
