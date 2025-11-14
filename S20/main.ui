@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1920</width>
-    <height>1080</height>
+    <height>1079</height>
    </rect>
   </property>
   <property name="contextMenuPolicy">
@@ -3921,7 +3921,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
         <string/>
        </property>
        <property name="channel">
-        <string>SIOC:SYS1:ML00:AO395</string>
+        <string>SIOC:SYS1:ML02:AO936</string>
        </property>
        <property name="enableRichText">
         <bool>false</bool>
@@ -4456,7 +4456,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
         </font>
        </property>
        <property name="text">
-        <string>DS match:</string>
+        <string>Imaged at</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>

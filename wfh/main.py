@@ -98,7 +98,7 @@ class F2_WFH(Display):
             parent=self.ui.frame_SYAG
             )
         self.SYAG_image.readingOrder = 1
-        self.SYAG_image.colorMap = 4
+        self.SYAG_image.colorMap = 1
         # SYAG_image.setGeometry(0,0, 340, 170)
 
         self.VCCF_image = InvertedImage(
@@ -107,13 +107,13 @@ class F2_WFH(Display):
             parent=self.ui.frame_vcc
             )
         self.VCCF_image.readingOrder = 1
-        self.VCCF_image.colorMap = 4
+        self.VCCF_image.colorMap = 1
         self.VCCF_image.colorMapMin = 10.0
         self.VCCF_image.colorMapMax = 60.0
         self.VCCF_image.showAxes = True
         self.VCCF_image.maxRedrawRate = 10
-        # VCCF_image.setGeometry(15,85,360,300)
-        # VCCF_image.getView().getViewBox().setLimits(
+        # self.VCCF_image.setGeometry(15,85,360,300)
+        # self.VCCF_image.getView().getViewBox().setLimits(
         #     xMin=170, xMax=1340, yMin=110, yMax=1000
         #     )
 
@@ -167,7 +167,7 @@ class F2_WFH(Display):
     def update_camera_FPS(self):
         self.VCCF_image.maxRedrawRate = int(self.ui.fps_VCC.currentText())
         self.SYAG_image.maxRedrawRate = int(self.ui.fps_SYAG.currentText())
-        self.ui.live_DTOTR2.maxRedrawRate = int(self.ui.fps_DTOTR2.currentText())
+        # self.ui.live_DTOTR2.maxRedrawRate = int(self.ui.fps_DTOTR2.currentText())
         return
 
     def msmt_ts_L0(self, value=None, char_value=None):
