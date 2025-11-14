@@ -4302,7 +4302,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
         <string/>
        </property>
        <property name="channel">
-        <string>SIOC:SYS1:ML00:AO396</string>
+        <string>SIOC:SYS1:ML02:AO937</string>
        </property>
        <property name="enableRichText">
         <bool>false</bool>
