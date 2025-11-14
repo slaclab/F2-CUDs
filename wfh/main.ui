@@ -2468,7 +2468,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
           </font>
          </property>
          <property name="text">
-          <string>(m)</string>
+          <string>(cm)</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -2602,7 +2602,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
           </font>
          </property>
          <property name="text">
-          <string>(m)</string>
+          <string>(cm)</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
