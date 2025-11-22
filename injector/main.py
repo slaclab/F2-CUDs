@@ -65,9 +65,9 @@ class F2_CUD_injector(Display):
         CATH_image.maxRedrawRate = 10
         CATH_image.normalizeData = True
         CATH_image.setGeometry(415,85,360,300)
-        CATH_image.getView().getViewBox().setLimits(
-            xMin=90, xMax=280, yMin=90, yMax=280
-            )
+        # CATH_image.getView().getViewBox().setLimits(
+        #     xMin=90, xMax=280, yMin=90, yMax=280
+        #     )
 
         # setup IN10 - TD11 orbit
         self.draw_orbit = QTimer(self)
