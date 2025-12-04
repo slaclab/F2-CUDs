@@ -113,6 +113,13 @@ class F2_CUD_S20(Display):
         ref_update_flag = PyDMChannel(address=PV_REF_UPDATE, value_slot=self.udpate_ref_orbit)
         ref_update_flag.connect()
 
+        self.ui.plot_PMT.plotItem.legend.setOffset((5,5))
+        self.ui.plot_PMT.plotItem.legend.setBrush(0,0,0,200)
+        self.ui.plot_PMT.plotItem.legend.setLabelTextColor(200,200,200)
+        self.ui.plot_RDM.plotItem.legend.setOffset((5,5))
+        self.ui.plot_RDM.plotItem.legend.setBrush(0,0,0,200)
+        self.ui.plot_RDM.plotItem.legend.setLabelTextColor(200,200,200)
+
         self.setWindowTitle('FACET-II CUD: Sector 20')
         return
 

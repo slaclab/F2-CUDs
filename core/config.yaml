@@ -1,5 +1,6 @@
 # FACET-II ACR CUD config/setup file
 
+# master display namelist
 CUD_IDs: [
   injector,
   linac,
@@ -22,6 +23,7 @@ CUD_IDs: [
   fields,
 ]
 
+# ACR monitor defaults
 ACR:
   lm:
     LM20L: injector
@@ -55,6 +57,8 @@ ACR:
     # SM28B: network
     # SM28C: MPS
     # SM28D: PPS_BCS
+
+# launch commands
 
 injector:
   desc: 'Injector'
@@ -94,11 +98,11 @@ transport:
 
 transport_LM:
   desc: 'Beam Loss Monitors'
-  pydm: 'transport/main_LM.ui'
+  pydm: 'transport/main_LM.py'
 
 PPS_BCS:
   desc: 'PPS/BCS'
-  pydm: 'PPS_BCS/main.ui'
+  pydm: 'PPS_BCS/main.py'
 
 MPS:
   desc: 'MPS'

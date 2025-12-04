@@ -104,6 +104,9 @@ class F2_CUD_injector(Display):
         self.draw_orbit.start()
 
         self.ui.plot_Q.getAxis('Axis 2').linkedView().setYRange(35,65)
+        self.ui.plot_gun_vac.plotItem.legend.setOffset((5,5))
+        self.ui.plot_gun_vac.plotItem.legend.setBrush(0,0,0,200)
+        self.ui.plot_gun_vac.plotItem.legend.setLabelTextColor(200,200,200)
 
         self.setWindowTitle('FACET-II CUD: Injector')
 

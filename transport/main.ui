@@ -38,7 +38,7 @@ color: rgb(0, 34, 130);</string>
     <property name="toolTip">
      <string/>
     </property>
-    <property name="filename" stdset="0">
+    <property name="filename">
      <string>/home/fphysics/zack/workspace/resources/F2_icon.png</string>
     </property>
    </widget>
@@ -106,7 +106,203 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
 }</string>
    </property>
    <layout class="QGridLayout" name="gridLayout" rowstretch="2,0,0,0,0,0">
-    <item row="1" column="1">
+    <item row="0" column="0" rowspan="6">
+     <widget class="QFrame" name="plot_frame">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout" stretch="1,1,1,1">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="showXGrid">
+          <bool>true</bool>
+         </property>
+         <property name="yAxes">
+          <stringlist>
+           <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -0.15, &quot;maxRange&quot;: 3.15, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+          </stringlist>
+         </property>
+         <property name="curves">
+          <stringlist>
+           <string>{&quot;y_channel&quot;: &quot;SCOP:IN10:FC02:WF_CH0_TRACE&quot;, &quot;x_channel&quot;: null, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Volts&quot;, &quot;color&quot;: &quot;#d4feff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;, &quot;redraw_mode&quot;: 2}</string>
+          </stringlist>
+         </property>
+         <property name="autoRangeY">
+          <bool>false</bool>
+         </property>
+         <property name="minYRange">
+          <double>-0.150000000000000</double>
+         </property>
+         <property name="maxYRange">
+          <double>3.150000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMTimePlot" name="plot_plic_slices">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="showXGrid">
+          <bool>true</bool>
+         </property>
+         <property name="showYGrid">
+          <bool>true</bool>
+         </property>
+         <property name="yAxes">
+          <stringlist>
+           <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;Counts&quot;, &quot;minRange&quot;: -200.0, &quot;maxRange&quot;: 12500.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+          </stringlist>
+         </property>
+         <property name="showLegend">
+          <bool>true</bool>
+         </property>
+         <property name="curves">
+          <stringlist>
+           <string>{&quot;channel&quot;: &quot;pva://PHYS:SYS1:2:PLIC_ILOSS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Total Loss&quot;, &quot;color&quot;: &quot;white&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+           <string>{&quot;channel&quot;: &quot;pva://PHYS:SYS1:2:PLIC_ILOSS_Z1&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Slice 1/10&quot;, &quot;color&quot;: &quot;#ffffb3&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+           <string>{&quot;channel&quot;: &quot;pva://PHYS:SYS1:2:PLIC_ILOSS_Z2&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Slice 2/10&quot;, &quot;color&quot;: &quot;#bebada&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+           <string>{&quot;channel&quot;: &quot;pva://PHYS:SYS1:2:PLIC_ILOSS_Z3&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Slice 3/10&quot;, &quot;color&quot;: &quot;#fb8072&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+           <string>{&quot;channel&quot;: &quot;pva://PHYS:SYS1:2:PLIC_ILOSS_Z4&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Slice 4/10&quot;, &quot;color&quot;: &quot;#80b1d3&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+           <string>{&quot;channel&quot;: &quot;pva://PHYS:SYS1:2:PLIC_ILOSS_Z5&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Slice 5/10&quot;, &quot;color&quot;: &quot;#fdb462&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+           <string>{&quot;channel&quot;: &quot;pva://PHYS:SYS1:2:PLIC_ILOSS_Z6&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Slice 6/10&quot;, &quot;color&quot;: &quot;#b3de69&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+           <string>{&quot;channel&quot;: &quot;pva://PHYS:SYS1:2:PLIC_ILOSS_Z7&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Slice 7/10&quot;, &quot;color&quot;: &quot;#fccde5&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+           <string>{&quot;channel&quot;: &quot;pva://PHYS:SYS1:2:PLIC_ILOSS_Z8&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Slice 8/10&quot;, &quot;color&quot;: &quot;#bc80bd&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+           <string>{&quot;channel&quot;: &quot;pva://PHYS:SYS1:2:PLIC_ILOSS_Z9&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Slice 9/10&quot;, &quot;color&quot;: &quot;#ccebc5&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+           <string>{&quot;channel&quot;: &quot;pva://PHYS:SYS1:2:PLIC_ILOSS_Z10&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Slice 10/10&quot;, &quot;color&quot;: &quot;#55aa7f&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+          </stringlist>
+         </property>
+         <property name="updateMode">
+          <enum>PyDMTimePlot::AtFixedRate</enum>
+         </property>
+         <property name="timeSpan">
+          <double>600.000000000000000</double>
+         </property>
+         <property name="autoRangeY">
+          <bool>false</bool>
+         </property>
+         <property name="minYRange">
+          <double>-200.000000000000000</double>
+         </property>
+         <property name="maxYRange">
+          <double>12500.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMTimePlot" name="plot_toroids">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="showXGrid">
+          <bool>true</bool>
+         </property>
+         <property name="showYGrid">
+          <bool>true</bool>
+         </property>
+         <property name="yAxes">
+          <stringlist>
+           <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;Q [pC]&quot;, &quot;minRange&quot;: -100.0, &quot;maxRange&quot;: 3100.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+          </stringlist>
+         </property>
+         <property name="showLegend">
+          <bool>true</bool>
+         </property>
+         <property name="curves">
+          <stringlist>
+           <string>{&quot;channel&quot;: &quot;TORO:IN10:431:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:IN10:431:TMIT_PC&quot;, &quot;color&quot;: &quot;#8dd3c7&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+           <string>{&quot;channel&quot;: &quot;TORO:IN10:591:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:IN10:591:TMIT_PC&quot;, &quot;color&quot;: &quot;#ffffb3&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+           <string>{&quot;channel&quot;: &quot;TORO:IN10:791:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:IN10:791:TMIT_PC&quot;, &quot;color&quot;: &quot;#bebada&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+           <string>{&quot;channel&quot;: &quot;TORO:LI11:360:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:LI11:360:TMIT_PC&quot;, &quot;color&quot;: &quot;#fb8072&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+           <string>{&quot;channel&quot;: &quot;TORO:LI14:890:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:LI14:890:TMIT_PC&quot;, &quot;color&quot;: &quot;#80b1d3&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+           <string>{&quot;channel&quot;: &quot;TORO:LI20:1988:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:LI20:1988:TMIT_PC&quot;, &quot;color&quot;: &quot;#fdb462&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+           <string>{&quot;channel&quot;: &quot;TORO:LI20:2040:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:LI20:2040:TMIT_PC&quot;, &quot;color&quot;: &quot;#b3de69&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+           <string>{&quot;channel&quot;: &quot;TORO:LI20:2452:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:LI20:2452:TMIT_PC&quot;, &quot;color&quot;: &quot;#fccde5&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+           <string>{&quot;channel&quot;: &quot;TORO:LI20:3163:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:LI20:3163:TMIT_PC&quot;, &quot;color&quot;: &quot;#bc80bd&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+           <string>{&quot;channel&quot;: &quot;TORO:LI20:3255:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:LI20:3255:TMIT_PC&quot;, &quot;color&quot;: &quot;#ccebc5&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+          </stringlist>
+         </property>
+         <property name="updateMode">
+          <enum>PyDMTimePlot::AtFixedRate</enum>
+         </property>
+         <property name="timeSpan">
+          <double>600.000000000000000</double>
+         </property>
+         <property name="autoRangeY">
+          <bool>false</bool>
+         </property>
+         <property name="minYRange">
+          <double>-100.000000000000000</double>
+         </property>
+         <property name="maxYRange">
+          <double>3100.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMTimePlot" name="plot_PMT">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="showXGrid">
+          <bool>true</bool>
+         </property>
+         <property name="showYGrid">
+          <bool>true</bool>
+         </property>
+         <property name="yAxes">
+          <stringlist>
+           <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;Counts&quot;, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 19500.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+          </stringlist>
+         </property>
+         <property name="showLegend">
+          <bool>true</bool>
+         </property>
+         <property name="curves">
+          <stringlist>
+           <string>{&quot;channel&quot;: &quot;PMT:LI20:3060:QDCRAW&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;PMT3060&quot;, &quot;color&quot;: &quot;#8dd3c7&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+           <string>{&quot;channel&quot;: &quot;PMT:LI20:3070:QDCRAW&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;PMT3070&quot;, &quot;color&quot;: &quot;#ffffb3&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+           <string>{&quot;channel&quot;: &quot;PMT:LI20:3179:QDCRAW&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;PMT3179&quot;, &quot;color&quot;: &quot;#bebada&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+           <string>{&quot;channel&quot;: &quot;PMT:LI20:3350:QDCRAW&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;PMT3350&quot;, &quot;color&quot;: &quot;#fb8072&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+           <string>{&quot;channel&quot;: &quot;PMT:LI20:3360:QDCRAW&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;PMT3360&quot;, &quot;color&quot;: &quot;#80b1d3&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+          </stringlist>
+         </property>
+         <property name="timeSpan">
+          <double>600.000000000000000</double>
+         </property>
+         <property name="autoRangeY">
+          <bool>false</bool>
+         </property>
+         <property name="maxYRange">
+          <double>19500.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="1" rowspan="2">
      <widget class="QFrame" name="plic_summary">
       <property name="maximumSize">
        <size>
@@ -182,28 +378,28 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
             </property>
-            <property name="precision" stdset="0">
+            <property name="precision">
              <number>0</number>
             </property>
-            <property name="showUnits" stdset="0">
+            <property name="showUnits">
              <bool>false</bool>
             </property>
-            <property name="precisionFromPV" stdset="0">
+            <property name="precisionFromPV">
              <bool>false</bool>
             </property>
-            <property name="alarmSensitiveContent" stdset="0">
+            <property name="alarmSensitiveContent">
              <bool>false</bool>
             </property>
-            <property name="alarmSensitiveBorder" stdset="0">
+            <property name="alarmSensitiveBorder">
              <bool>false</bool>
             </property>
-            <property name="PyDMToolTip" stdset="0">
+            <property name="PyDMToolTip">
              <string/>
             </property>
-            <property name="channel" stdset="0">
+            <property name="channel">
              <string>pva://PHYS:SYS1:2:PLIC_ILOSS_Z6</string>
             </property>
-            <property name="enableRichText" stdset="0">
+            <property name="enableRichText">
              <bool>false</bool>
             </property>
            </widget>
@@ -221,28 +417,28 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
             </property>
-            <property name="precision" stdset="0">
+            <property name="precision">
              <number>0</number>
             </property>
-            <property name="showUnits" stdset="0">
+            <property name="showUnits">
              <bool>false</bool>
             </property>
-            <property name="precisionFromPV" stdset="0">
+            <property name="precisionFromPV">
              <bool>false</bool>
             </property>
-            <property name="alarmSensitiveContent" stdset="0">
+            <property name="alarmSensitiveContent">
              <bool>false</bool>
             </property>
-            <property name="alarmSensitiveBorder" stdset="0">
+            <property name="alarmSensitiveBorder">
              <bool>false</bool>
             </property>
-            <property name="PyDMToolTip" stdset="0">
+            <property name="PyDMToolTip">
              <string/>
             </property>
-            <property name="channel" stdset="0">
+            <property name="channel">
              <string>pva://PHYS:SYS1:2:PLIC_ILOSS_Z8</string>
             </property>
-            <property name="enableRichText" stdset="0">
+            <property name="enableRichText">
              <bool>false</bool>
             </property>
            </widget>
@@ -278,28 +474,28 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
             </property>
-            <property name="precision" stdset="0">
+            <property name="precision">
              <number>0</number>
             </property>
-            <property name="showUnits" stdset="0">
+            <property name="showUnits">
              <bool>false</bool>
             </property>
-            <property name="precisionFromPV" stdset="0">
+            <property name="precisionFromPV">
              <bool>false</bool>
             </property>
-            <property name="alarmSensitiveContent" stdset="0">
+            <property name="alarmSensitiveContent">
              <bool>false</bool>
             </property>
-            <property name="alarmSensitiveBorder" stdset="0">
+            <property name="alarmSensitiveBorder">
              <bool>false</bool>
             </property>
-            <property name="PyDMToolTip" stdset="0">
+            <property name="PyDMToolTip">
              <string/>
             </property>
-            <property name="channel" stdset="0">
+            <property name="channel">
              <string>pva://PHYS:SYS1:2:PLIC_ILOSS_Z3</string>
             </property>
-            <property name="enableRichText" stdset="0">
+            <property name="enableRichText">
              <bool>false</bool>
             </property>
            </widget>
@@ -353,28 +549,28 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
             </property>
-            <property name="precision" stdset="0">
+            <property name="precision">
              <number>0</number>
             </property>
-            <property name="showUnits" stdset="0">
+            <property name="showUnits">
              <bool>false</bool>
             </property>
-            <property name="precisionFromPV" stdset="0">
+            <property name="precisionFromPV">
              <bool>false</bool>
             </property>
-            <property name="alarmSensitiveContent" stdset="0">
+            <property name="alarmSensitiveContent">
              <bool>false</bool>
             </property>
-            <property name="alarmSensitiveBorder" stdset="0">
+            <property name="alarmSensitiveBorder">
              <bool>false</bool>
             </property>
-            <property name="PyDMToolTip" stdset="0">
+            <property name="PyDMToolTip">
              <string/>
             </property>
-            <property name="channel" stdset="0">
+            <property name="channel">
              <string>pva://PHYS:SYS1:2:PLIC_ILOSS_Z1</string>
             </property>
-            <property name="enableRichText" stdset="0">
+            <property name="enableRichText">
              <bool>false</bool>
             </property>
            </widget>
@@ -410,28 +606,28 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
             </property>
-            <property name="precision" stdset="0">
+            <property name="precision">
              <number>0</number>
             </property>
-            <property name="showUnits" stdset="0">
+            <property name="showUnits">
              <bool>false</bool>
             </property>
-            <property name="precisionFromPV" stdset="0">
+            <property name="precisionFromPV">
              <bool>false</bool>
             </property>
-            <property name="alarmSensitiveContent" stdset="0">
+            <property name="alarmSensitiveContent">
              <bool>false</bool>
             </property>
-            <property name="alarmSensitiveBorder" stdset="0">
+            <property name="alarmSensitiveBorder">
              <bool>false</bool>
             </property>
-            <property name="PyDMToolTip" stdset="0">
+            <property name="PyDMToolTip">
              <string/>
             </property>
-            <property name="channel" stdset="0">
+            <property name="channel">
              <string>pva://PHYS:SYS1:2:PLIC_ILOSS_Z2</string>
             </property>
-            <property name="enableRichText" stdset="0">
+            <property name="enableRichText">
              <bool>false</bool>
             </property>
            </widget>
@@ -449,28 +645,28 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
             </property>
-            <property name="precision" stdset="0">
+            <property name="precision">
              <number>0</number>
             </property>
-            <property name="showUnits" stdset="0">
+            <property name="showUnits">
              <bool>false</bool>
             </property>
-            <property name="precisionFromPV" stdset="0">
+            <property name="precisionFromPV">
              <bool>false</bool>
             </property>
-            <property name="alarmSensitiveContent" stdset="0">
+            <property name="alarmSensitiveContent">
              <bool>false</bool>
             </property>
-            <property name="alarmSensitiveBorder" stdset="0">
+            <property name="alarmSensitiveBorder">
              <bool>false</bool>
             </property>
-            <property name="PyDMToolTip" stdset="0">
+            <property name="PyDMToolTip">
              <string/>
             </property>
-            <property name="channel" stdset="0">
+            <property name="channel">
              <string>pva://PHYS:SYS1:2:PLIC_ILOSS_Z7</string>
             </property>
-            <property name="enableRichText" stdset="0">
+            <property name="enableRichText">
              <bool>false</bool>
             </property>
            </widget>
@@ -565,28 +761,28 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
             </property>
-            <property name="precision" stdset="0">
+            <property name="precision">
              <number>0</number>
             </property>
-            <property name="showUnits" stdset="0">
+            <property name="showUnits">
              <bool>false</bool>
             </property>
-            <property name="precisionFromPV" stdset="0">
+            <property name="precisionFromPV">
              <bool>false</bool>
             </property>
-            <property name="alarmSensitiveContent" stdset="0">
+            <property name="alarmSensitiveContent">
              <bool>false</bool>
             </property>
-            <property name="alarmSensitiveBorder" stdset="0">
+            <property name="alarmSensitiveBorder">
              <bool>false</bool>
             </property>
-            <property name="PyDMToolTip" stdset="0">
+            <property name="PyDMToolTip">
              <string/>
             </property>
-            <property name="channel" stdset="0">
+            <property name="channel">
              <string>pva://PHYS:SYS1:2:PLIC_ILOSS_Z4</string>
             </property>
-            <property name="enableRichText" stdset="0">
+            <property name="enableRichText">
              <bool>false</bool>
             </property>
            </widget>
@@ -640,28 +836,28 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
             </property>
-            <property name="precision" stdset="0">
+            <property name="precision">
              <number>0</number>
             </property>
-            <property name="showUnits" stdset="0">
+            <property name="showUnits">
              <bool>false</bool>
             </property>
-            <property name="precisionFromPV" stdset="0">
+            <property name="precisionFromPV">
              <bool>false</bool>
             </property>
-            <property name="alarmSensitiveContent" stdset="0">
+            <property name="alarmSensitiveContent">
              <bool>false</bool>
             </property>
-            <property name="alarmSensitiveBorder" stdset="0">
+            <property name="alarmSensitiveBorder">
              <bool>false</bool>
             </property>
-            <property name="PyDMToolTip" stdset="0">
+            <property name="PyDMToolTip">
              <string/>
             </property>
-            <property name="channel" stdset="0">
+            <property name="channel">
              <string>pva://PHYS:SYS1:2:PLIC_ILOSS_Z5</string>
             </property>
-            <property name="enableRichText" stdset="0">
+            <property name="enableRichText">
              <bool>false</bool>
             </property>
            </widget>
@@ -679,28 +875,28 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
             </property>
-            <property name="precision" stdset="0">
+            <property name="precision">
              <number>0</number>
             </property>
-            <property name="showUnits" stdset="0">
+            <property name="showUnits">
              <bool>false</bool>
             </property>
-            <property name="precisionFromPV" stdset="0">
+            <property name="precisionFromPV">
              <bool>false</bool>
             </property>
-            <property name="alarmSensitiveContent" stdset="0">
+            <property name="alarmSensitiveContent">
              <bool>false</bool>
             </property>
-            <property name="alarmSensitiveBorder" stdset="0">
+            <property name="alarmSensitiveBorder">
              <bool>false</bool>
             </property>
-            <property name="PyDMToolTip" stdset="0">
+            <property name="PyDMToolTip">
              <string/>
             </property>
-            <property name="channel" stdset="0">
+            <property name="channel">
              <string>pva://PHYS:SYS1:2:PLIC_ILOSS_Z10</string>
             </property>
-            <property name="enableRichText" stdset="0">
+            <property name="enableRichText">
              <bool>false</bool>
             </property>
            </widget>
@@ -737,28 +933,28 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
             </property>
-            <property name="precision" stdset="0">
+            <property name="precision">
              <number>0</number>
             </property>
-            <property name="showUnits" stdset="0">
+            <property name="showUnits">
              <bool>true</bool>
             </property>
-            <property name="precisionFromPV" stdset="0">
+            <property name="precisionFromPV">
              <bool>false</bool>
             </property>
-            <property name="alarmSensitiveContent" stdset="0">
+            <property name="alarmSensitiveContent">
              <bool>false</bool>
             </property>
-            <property name="alarmSensitiveBorder" stdset="0">
+            <property name="alarmSensitiveBorder">
              <bool>false</bool>
             </property>
-            <property name="PyDMToolTip" stdset="0">
+            <property name="PyDMToolTip">
              <string/>
             </property>
-            <property name="channel" stdset="0">
+            <property name="channel">
              <string>pva://PHYS:SYS1:2:PLIC_ILOSS</string>
             </property>
-            <property name="enableRichText" stdset="0">
+            <property name="enableRichText">
              <bool>false</bool>
             </property>
            </widget>
@@ -776,28 +972,28 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
             </property>
-            <property name="precision" stdset="0">
+            <property name="precision">
              <number>0</number>
             </property>
-            <property name="showUnits" stdset="0">
+            <property name="showUnits">
              <bool>false</bool>
             </property>
-            <property name="precisionFromPV" stdset="0">
+            <property name="precisionFromPV">
              <bool>false</bool>
             </property>
-            <property name="alarmSensitiveContent" stdset="0">
+            <property name="alarmSensitiveContent">
              <bool>false</bool>
             </property>
-            <property name="alarmSensitiveBorder" stdset="0">
+            <property name="alarmSensitiveBorder">
              <bool>false</bool>
             </property>
-            <property name="PyDMToolTip" stdset="0">
+            <property name="PyDMToolTip">
              <string/>
             </property>
-            <property name="channel" stdset="0">
+            <property name="channel">
              <string>pva://PHYS:SYS1:2:PLIC_ILOSS_Z9</string>
             </property>
-            <property name="enableRichText" stdset="0">
+            <property name="enableRichText">
              <bool>false</bool>
             </property>
            </widget>
@@ -861,16 +1057,16 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
                <property name="alignment">
                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                </property>
-               <property name="showUnits" stdset="0">
+               <property name="showUnits">
                 <bool>true</bool>
                </property>
-               <property name="precisionFromPV" stdset="0">
+               <property name="precisionFromPV">
                 <bool>false</bool>
                </property>
-               <property name="alarmSensitiveBorder" stdset="0">
+               <property name="alarmSensitiveBorder">
                 <bool>false</bool>
                </property>
-               <property name="channel" stdset="0">
+               <property name="channel">
                 <string>TORO:IN10:591:TMIT_PC</string>
                </property>
               </widget>
@@ -888,16 +1084,16 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
                <property name="alignment">
                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                </property>
-               <property name="showUnits" stdset="0">
+               <property name="showUnits">
                 <bool>true</bool>
                </property>
-               <property name="precisionFromPV" stdset="0">
+               <property name="precisionFromPV">
                 <bool>false</bool>
                </property>
-               <property name="alarmSensitiveBorder" stdset="0">
+               <property name="alarmSensitiveBorder">
                 <bool>false</bool>
                </property>
-               <property name="channel" stdset="0">
+               <property name="channel">
                 <string>TORO:LI11:360:TMIT_PC</string>
                </property>
               </widget>
@@ -932,16 +1128,16 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
                <property name="alignment">
                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                </property>
-               <property name="showUnits" stdset="0">
+               <property name="showUnits">
                 <bool>true</bool>
                </property>
-               <property name="precisionFromPV" stdset="0">
+               <property name="precisionFromPV">
                 <bool>false</bool>
                </property>
-               <property name="alarmSensitiveBorder" stdset="0">
+               <property name="alarmSensitiveBorder">
                 <bool>false</bool>
                </property>
-               <property name="channel" stdset="0">
+               <property name="channel">
                 <string>TORO:LI20:3255:TMIT_PC</string>
                </property>
               </widget>
@@ -1027,16 +1223,16 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
                <property name="alignment">
                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                </property>
-               <property name="showUnits" stdset="0">
+               <property name="showUnits">
                 <bool>true</bool>
                </property>
-               <property name="precisionFromPV" stdset="0">
+               <property name="precisionFromPV">
                 <bool>false</bool>
                </property>
-               <property name="alarmSensitiveBorder" stdset="0">
+               <property name="alarmSensitiveBorder">
                 <bool>false</bool>
                </property>
-               <property name="channel" stdset="0">
+               <property name="channel">
                 <string>TORO:IN10:791:TMIT_PC</string>
                </property>
               </widget>
@@ -1054,16 +1250,16 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
                <property name="alignment">
                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                </property>
-               <property name="showUnits" stdset="0">
+               <property name="showUnits">
                 <bool>true</bool>
                </property>
-               <property name="precisionFromPV" stdset="0">
+               <property name="precisionFromPV">
                 <bool>false</bool>
                </property>
-               <property name="alarmSensitiveBorder" stdset="0">
+               <property name="alarmSensitiveBorder">
                 <bool>false</bool>
                </property>
-               <property name="channel" stdset="0">
+               <property name="channel">
                 <string>TORO:LI20:2040:TMIT_PC</string>
                </property>
               </widget>
@@ -1081,16 +1277,16 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
                <property name="alignment">
                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                </property>
-               <property name="showUnits" stdset="0">
+               <property name="showUnits">
                 <bool>true</bool>
                </property>
-               <property name="precisionFromPV" stdset="0">
+               <property name="precisionFromPV">
                 <bool>false</bool>
                </property>
-               <property name="alarmSensitiveBorder" stdset="0">
+               <property name="alarmSensitiveBorder">
                 <bool>false</bool>
                </property>
-               <property name="channel" stdset="0">
+               <property name="channel">
                 <string>TORO:LI20:1988:TMIT_PC</string>
                </property>
               </widget>
@@ -1108,16 +1304,16 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
                <property name="alignment">
                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                </property>
-               <property name="showUnits" stdset="0">
+               <property name="showUnits">
                 <bool>true</bool>
                </property>
-               <property name="precisionFromPV" stdset="0">
+               <property name="precisionFromPV">
                 <bool>false</bool>
                </property>
-               <property name="alarmSensitiveBorder" stdset="0">
+               <property name="alarmSensitiveBorder">
                 <bool>false</bool>
                </property>
-               <property name="channel" stdset="0">
+               <property name="channel">
                 <string>TORO:IN10:431:TMIT_PC</string>
                </property>
               </widget>
@@ -1135,16 +1331,16 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
                <property name="alignment">
                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                </property>
-               <property name="showUnits" stdset="0">
+               <property name="showUnits">
                 <bool>true</bool>
                </property>
-               <property name="precisionFromPV" stdset="0">
+               <property name="precisionFromPV">
                 <bool>false</bool>
                </property>
-               <property name="alarmSensitiveBorder" stdset="0">
+               <property name="alarmSensitiveBorder">
                 <bool>false</bool>
                </property>
-               <property name="channel" stdset="0">
+               <property name="channel">
                 <string>TORO:LI20:2452:TMIT_PC</string>
                </property>
               </widget>
@@ -1162,16 +1358,16 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
                <property name="alignment">
                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                </property>
-               <property name="showUnits" stdset="0">
+               <property name="showUnits">
                 <bool>true</bool>
                </property>
-               <property name="precisionFromPV" stdset="0">
+               <property name="precisionFromPV">
                 <bool>false</bool>
                </property>
-               <property name="alarmSensitiveBorder" stdset="0">
+               <property name="alarmSensitiveBorder">
                 <bool>false</bool>
                </property>
-               <property name="channel" stdset="0">
+               <property name="channel">
                 <string>TORO:LI14:890:TMIT_PC</string>
                </property>
               </widget>
@@ -1223,16 +1419,16 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
                <property name="alignment">
                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                </property>
-               <property name="showUnits" stdset="0">
+               <property name="showUnits">
                 <bool>true</bool>
                </property>
-               <property name="precisionFromPV" stdset="0">
+               <property name="precisionFromPV">
                 <bool>false</bool>
                </property>
-               <property name="alarmSensitiveBorder" stdset="0">
+               <property name="alarmSensitiveBorder">
                 <bool>false</bool>
                </property>
-               <property name="channel" stdset="0">
+               <property name="channel">
                 <string>TORO:LI20:3163:TMIT_PC</string>
                </property>
               </widget>
@@ -1388,13 +1584,13 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          <property name="alignment">
           <set>Qt::AlignCenter</set>
          </property>
-         <property name="precisionFromPV" stdset="0">
+         <property name="precisionFromPV">
           <bool>true</bool>
          </property>
-         <property name="alarmSensitiveBorder" stdset="0">
+         <property name="alarmSensitiveBorder">
           <bool>false</bool>
          </property>
-         <property name="channel" stdset="0">
+         <property name="channel">
           <string>SCOP:IN10:FC02:BI_ACQ_STAT</string>
          </property>
         </widget>
@@ -1446,7 +1642,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          <property name="alignment">
           <set>Qt::AlignCenter</set>
          </property>
-         <property name="channel" stdset="0">
+         <property name="channel">
           <string>SIOC:SYS1:SC01:HEARTBEATSUM</string>
          </property>
         </widget>
@@ -1549,201 +1745,11 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          <property name="alignment">
           <set>Qt::AlignCenter</set>
          </property>
-         <property name="alarmSensitiveBorder" stdset="0">
+         <property name="alarmSensitiveBorder">
           <bool>true</bool>
          </property>
-         <property name="channel" stdset="0">
+         <property name="channel">
           <string>SCOP:IN10:FC02:BI_STATE</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="1" column="0" rowspan="5">
-     <widget class="QFrame" name="plot_frame">
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout" stretch="1,1,1,1">
-       <property name="spacing">
-        <number>0</number>
-       </property>
-       <property name="leftMargin">
-        <number>0</number>
-       </property>
-       <property name="topMargin">
-        <number>0</number>
-       </property>
-       <property name="rightMargin">
-        <number>0</number>
-       </property>
-       <property name="bottomMargin">
-        <number>0</number>
-       </property>
-       <item>
-        <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot">
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="showXGrid">
-          <bool>true</bool>
-         </property>
-         <property name="yAxes">
-          <stringlist>
-           <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -0.15, &quot;maxRange&quot;: 3.15, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
-          </stringlist>
-         </property>
-         <property name="curves">
-          <stringlist>
-           <string>{&quot;y_channel&quot;: &quot;SCOP:IN10:FC02:WF_CH0_TRACE&quot;, &quot;x_channel&quot;: null, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Volts&quot;, &quot;color&quot;: &quot;#d4feff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;, &quot;redraw_mode&quot;: 2}</string>
-          </stringlist>
-         </property>
-         <property name="autoRangeY">
-          <bool>false</bool>
-         </property>
-         <property name="minYRange">
-          <double>-0.150000000000000</double>
-         </property>
-         <property name="maxYRange">
-          <double>3.150000000000000</double>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="PyDMTimePlot" name="PyDMTimePlot_2">
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="showXGrid">
-          <bool>true</bool>
-         </property>
-         <property name="showYGrid">
-          <bool>true</bool>
-         </property>
-         <property name="yAxes">
-          <stringlist>
-           <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;Counts&quot;, &quot;minRange&quot;: -200.0, &quot;maxRange&quot;: 12500.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
-          </stringlist>
-         </property>
-         <property name="curves">
-          <stringlist>
-           <string>{&quot;channel&quot;: &quot;pva://PHYS:SYS1:2:PLIC_ILOSS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Total Loss&quot;, &quot;color&quot;: &quot;white&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-           <string>{&quot;channel&quot;: &quot;pva://PHYS:SYS1:2:PLIC_ILOSS_Z1&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Slice 1/10&quot;, &quot;color&quot;: &quot;#ffffb3&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-           <string>{&quot;channel&quot;: &quot;pva://PHYS:SYS1:2:PLIC_ILOSS_Z2&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Slice 2/10&quot;, &quot;color&quot;: &quot;#bebada&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-           <string>{&quot;channel&quot;: &quot;pva://PHYS:SYS1:2:PLIC_ILOSS_Z3&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Slice 3/10&quot;, &quot;color&quot;: &quot;#fb8072&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-           <string>{&quot;channel&quot;: &quot;pva://PHYS:SYS1:2:PLIC_ILOSS_Z4&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Slice 4/10&quot;, &quot;color&quot;: &quot;#80b1d3&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-           <string>{&quot;channel&quot;: &quot;pva://PHYS:SYS1:2:PLIC_ILOSS_Z5&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Slice 5/10&quot;, &quot;color&quot;: &quot;#fdb462&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-           <string>{&quot;channel&quot;: &quot;pva://PHYS:SYS1:2:PLIC_ILOSS_Z6&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Slice 6/10&quot;, &quot;color&quot;: &quot;#b3de69&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-           <string>{&quot;channel&quot;: &quot;pva://PHYS:SYS1:2:PLIC_ILOSS_Z7&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Slice 7/10&quot;, &quot;color&quot;: &quot;#fccde5&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-           <string>{&quot;channel&quot;: &quot;pva://PHYS:SYS1:2:PLIC_ILOSS_Z8&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Slice 8/10&quot;, &quot;color&quot;: &quot;#bc80bd&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-           <string>{&quot;channel&quot;: &quot;pva://PHYS:SYS1:2:PLIC_ILOSS_Z9&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Slice 9/10&quot;, &quot;color&quot;: &quot;#ccebc5&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-           <string>{&quot;channel&quot;: &quot;pva://PHYS:SYS1:2:PLIC_ILOSS_Z10&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Slice 10/10&quot;, &quot;color&quot;: &quot;#55aa7f&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-          </stringlist>
-         </property>
-         <property name="updateMode" stdset="0">
-          <enum>PyDMTimePlot::AtFixedRate</enum>
-         </property>
-         <property name="timeSpan">
-          <double>600.000000000000000</double>
-         </property>
-         <property name="autoRangeY">
-          <bool>false</bool>
-         </property>
-         <property name="minYRange">
-          <double>-200.000000000000000</double>
-         </property>
-         <property name="maxYRange">
-          <double>12500.000000000000000</double>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="PyDMTimePlot" name="PyDMTimePlot">
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="showXGrid">
-          <bool>true</bool>
-         </property>
-         <property name="showYGrid">
-          <bool>true</bool>
-         </property>
-         <property name="yAxes">
-          <stringlist>
-           <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;Q [pC]&quot;, &quot;minRange&quot;: -100.0, &quot;maxRange&quot;: 3100.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
-          </stringlist>
-         </property>
-         <property name="curves">
-          <stringlist>
-           <string>{&quot;channel&quot;: &quot;TORO:IN10:431:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:IN10:431:TMIT_PC&quot;, &quot;color&quot;: &quot;#8dd3c7&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-           <string>{&quot;channel&quot;: &quot;TORO:IN10:591:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:IN10:591:TMIT_PC&quot;, &quot;color&quot;: &quot;#ffffb3&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-           <string>{&quot;channel&quot;: &quot;TORO:IN10:791:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:IN10:791:TMIT_PC&quot;, &quot;color&quot;: &quot;#bebada&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-           <string>{&quot;channel&quot;: &quot;TORO:LI11:360:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:LI11:360:TMIT_PC&quot;, &quot;color&quot;: &quot;#fb8072&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-           <string>{&quot;channel&quot;: &quot;TORO:LI14:890:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:LI14:890:TMIT_PC&quot;, &quot;color&quot;: &quot;#80b1d3&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-           <string>{&quot;channel&quot;: &quot;TORO:LI20:1988:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:LI20:1988:TMIT_PC&quot;, &quot;color&quot;: &quot;#fdb462&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-           <string>{&quot;channel&quot;: &quot;TORO:LI20:2040:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:LI20:2040:TMIT_PC&quot;, &quot;color&quot;: &quot;#b3de69&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-           <string>{&quot;channel&quot;: &quot;TORO:LI20:2452:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:LI20:2452:TMIT_PC&quot;, &quot;color&quot;: &quot;#fccde5&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-           <string>{&quot;channel&quot;: &quot;TORO:LI20:3163:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:LI20:3163:TMIT_PC&quot;, &quot;color&quot;: &quot;#bc80bd&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-           <string>{&quot;channel&quot;: &quot;TORO:LI20:3255:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:LI20:3255:TMIT_PC&quot;, &quot;color&quot;: &quot;#ccebc5&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-          </stringlist>
-         </property>
-         <property name="updateMode" stdset="0">
-          <enum>PyDMTimePlot::AtFixedRate</enum>
-         </property>
-         <property name="timeSpan">
-          <double>600.000000000000000</double>
-         </property>
-         <property name="autoRangeY">
-          <bool>false</bool>
-         </property>
-         <property name="minYRange">
-          <double>-100.000000000000000</double>
-         </property>
-         <property name="maxYRange">
-          <double>3100.000000000000000</double>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="PyDMTimePlot" name="plot_PMT">
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="showXGrid">
-          <bool>true</bool>
-         </property>
-         <property name="showYGrid">
-          <bool>true</bool>
-         </property>
-         <property name="yAxes">
-          <stringlist>
-           <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;Counts&quot;, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 19500.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
-          </stringlist>
-         </property>
-         <property name="showLegend">
-          <bool>true</bool>
-         </property>
-         <property name="curves">
-          <stringlist>
-           <string>{&quot;channel&quot;: &quot;PMT:LI20:3060:QDCRAW&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;PMT3060&quot;, &quot;color&quot;: &quot;#8dd3c7&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-           <string>{&quot;channel&quot;: &quot;PMT:LI20:3070:QDCRAW&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;PMT3070&quot;, &quot;color&quot;: &quot;#ffffb3&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-           <string>{&quot;channel&quot;: &quot;PMT:LI20:3179:QDCRAW&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;PMT3179&quot;, &quot;color&quot;: &quot;#bebada&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-           <string>{&quot;channel&quot;: &quot;PMT:LI20:3350:QDCRAW&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;PMT3350&quot;, &quot;color&quot;: &quot;#fb8072&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-           <string>{&quot;channel&quot;: &quot;PMT:LI20:3360:QDCRAW&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;PMT3360&quot;, &quot;color&quot;: &quot;#80b1d3&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-          </stringlist>
-         </property>
-         <property name="timeSpan">
-          <double>600.000000000000000</double>
-         </property>
-         <property name="autoRangeY">
-          <bool>false</bool>
-         </property>
-         <property name="maxYRange">
-          <double>19500.000000000000000</double>
          </property>
         </widget>
        </item>

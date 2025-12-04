@@ -106,55 +106,8 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
 }</string>
    </property>
    <layout class="QGridLayout" name="gridLayout" rowstretch="1,1,1,1,1">
-    <item row="1" column="0">
-     <widget class="PyDMTimePlot" name="PyDMTimePlot">
-      <property name="toolTip">
-       <string/>
-      </property>
-      <property name="showXGrid">
-       <bool>true</bool>
-      </property>
-      <property name="showYGrid">
-       <bool>true</bool>
-      </property>
-      <property name="yAxes">
-       <stringlist>
-        <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;Q [pC]&quot;, &quot;minRange&quot;: -100.0, &quot;maxRange&quot;: 3100.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
-       </stringlist>
-      </property>
-      <property name="curves">
-       <stringlist>
-        <string>{&quot;channel&quot;: &quot;TORO:IN10:431:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:IN10:431:TMIT_PC&quot;, &quot;color&quot;: &quot;#8dd3c7&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-        <string>{&quot;channel&quot;: &quot;TORO:IN10:591:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:IN10:591:TMIT_PC&quot;, &quot;color&quot;: &quot;#ffffb3&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-        <string>{&quot;channel&quot;: &quot;TORO:IN10:791:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:IN10:791:TMIT_PC&quot;, &quot;color&quot;: &quot;#bebada&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-        <string>{&quot;channel&quot;: &quot;TORO:LI11:360:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:LI11:360:TMIT_PC&quot;, &quot;color&quot;: &quot;#fb8072&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-        <string>{&quot;channel&quot;: &quot;TORO:LI14:890:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:LI14:890:TMIT_PC&quot;, &quot;color&quot;: &quot;#80b1d3&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-        <string>{&quot;channel&quot;: &quot;TORO:LI20:1988:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:LI20:1988:TMIT_PC&quot;, &quot;color&quot;: &quot;#fdb462&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-        <string>{&quot;channel&quot;: &quot;TORO:LI20:2040:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:LI20:2040:TMIT_PC&quot;, &quot;color&quot;: &quot;#b3de69&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-        <string>{&quot;channel&quot;: &quot;TORO:LI20:2452:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:LI20:2452:TMIT_PC&quot;, &quot;color&quot;: &quot;#fccde5&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-        <string>{&quot;channel&quot;: &quot;TORO:LI20:3163:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:LI20:3163:TMIT_PC&quot;, &quot;color&quot;: &quot;#bc80bd&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-        <string>{&quot;channel&quot;: &quot;TORO:LI20:3255:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:LI20:3255:TMIT_PC&quot;, &quot;color&quot;: &quot;#ccebc5&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
-       </stringlist>
-      </property>
-      <property name="updateMode">
-       <enum>PyDMTimePlot::AtFixedRate</enum>
-      </property>
-      <property name="timeSpan">
-       <double>600.000000000000000</double>
-      </property>
-      <property name="autoRangeY">
-       <bool>false</bool>
-      </property>
-      <property name="minYRange">
-       <double>-100.000000000000000</double>
-      </property>
-      <property name="maxYRange">
-       <double>3100.000000000000000</double>
-      </property>
-     </widget>
-    </item>
     <item row="4" column="0">
-     <widget class="PyDMTimePlot" name="PyDMTimePlot_2">
+     <widget class="PyDMTimePlot" name="plot_lions">
       <property name="toolTip">
        <string/>
       </property>
@@ -207,6 +160,35 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
       </property>
      </widget>
     </item>
+    <item row="0" column="0">
+     <widget class="PyDMWaveformPlot" name="plot_plic">
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="showXGrid">
+       <bool>true</bool>
+      </property>
+      <property name="yAxes">
+       <stringlist>
+        <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;Cts&quot;, &quot;minRange&quot;: -0.15, &quot;maxRange&quot;: 3.15, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+       </stringlist>
+      </property>
+      <property name="curves">
+       <stringlist>
+        <string>{&quot;y_channel&quot;: &quot;SCOP:IN10:FC02:WF_CH0_TRACE&quot;, &quot;x_channel&quot;: null, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Volts&quot;, &quot;color&quot;: &quot;#d4feff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;, &quot;redraw_mode&quot;: 2}</string>
+       </stringlist>
+      </property>
+      <property name="autoRangeY">
+       <bool>false</bool>
+      </property>
+      <property name="minYRange">
+       <double>-0.150000000000000</double>
+      </property>
+      <property name="maxYRange">
+       <double>3.150000000000000</double>
+      </property>
+     </widget>
+    </item>
     <item row="2" column="0">
      <widget class="PyDMTimePlot" name="plot_PMT">
       <property name="minimumSize">
@@ -252,6 +234,114 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
       </property>
      </widget>
     </item>
+    <item row="1" column="0">
+     <widget class="PyDMTimePlot" name="plot_toroids">
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="showXGrid">
+       <bool>true</bool>
+      </property>
+      <property name="showYGrid">
+       <bool>true</bool>
+      </property>
+      <property name="yAxes">
+       <stringlist>
+        <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;Q [pC]&quot;, &quot;minRange&quot;: -100.0, &quot;maxRange&quot;: 3100.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+       </stringlist>
+      </property>
+      <property name="showLegend">
+       <bool>true</bool>
+      </property>
+      <property name="curves">
+       <stringlist>
+        <string>{&quot;channel&quot;: &quot;TORO:IN10:431:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:IN10:431:TMIT_PC&quot;, &quot;color&quot;: &quot;#8dd3c7&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+        <string>{&quot;channel&quot;: &quot;TORO:IN10:591:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:IN10:591:TMIT_PC&quot;, &quot;color&quot;: &quot;#ffffb3&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+        <string>{&quot;channel&quot;: &quot;TORO:IN10:791:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:IN10:791:TMIT_PC&quot;, &quot;color&quot;: &quot;#bebada&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+        <string>{&quot;channel&quot;: &quot;TORO:LI11:360:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:LI11:360:TMIT_PC&quot;, &quot;color&quot;: &quot;#fb8072&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+        <string>{&quot;channel&quot;: &quot;TORO:LI14:890:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:LI14:890:TMIT_PC&quot;, &quot;color&quot;: &quot;#80b1d3&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+        <string>{&quot;channel&quot;: &quot;TORO:LI20:1988:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:LI20:1988:TMIT_PC&quot;, &quot;color&quot;: &quot;#fdb462&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+        <string>{&quot;channel&quot;: &quot;TORO:LI20:2040:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:LI20:2040:TMIT_PC&quot;, &quot;color&quot;: &quot;#b3de69&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+        <string>{&quot;channel&quot;: &quot;TORO:LI20:2452:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:LI20:2452:TMIT_PC&quot;, &quot;color&quot;: &quot;#fccde5&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+        <string>{&quot;channel&quot;: &quot;TORO:LI20:3163:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:LI20:3163:TMIT_PC&quot;, &quot;color&quot;: &quot;#bc80bd&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+        <string>{&quot;channel&quot;: &quot;TORO:LI20:3255:TMIT_PC&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;TORO:LI20:3255:TMIT_PC&quot;, &quot;color&quot;: &quot;#ccebc5&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+       </stringlist>
+      </property>
+      <property name="updateMode">
+       <enum>PyDMTimePlot::AtFixedRate</enum>
+      </property>
+      <property name="timeSpan">
+       <double>600.000000000000000</double>
+      </property>
+      <property name="autoRangeY">
+       <bool>false</bool>
+      </property>
+      <property name="minYRange">
+       <double>-100.000000000000000</double>
+      </property>
+      <property name="maxYRange">
+       <double>3100.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLabel" name="label_6">
+      <property name="minimumSize">
+       <size>
+        <width>200</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Linac Toroids</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+      <property name="margin">
+       <number>10</number>
+      </property>
+      <property name="indent">
+       <number>0</number>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QLabel" name="label_8">
+      <property name="minimumSize">
+       <size>
+        <width>200</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>S20 RDMs</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+      <property name="margin">
+       <number>10</number>
+      </property>
+      <property name="indent">
+       <number>0</number>
+      </property>
+     </widget>
+    </item>
     <item row="2" column="1">
      <widget class="QLabel" name="label_7">
       <property name="minimumSize">
@@ -271,15 +361,18 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
        <string>S20 PMTs</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
       </property>
       <property name="margin">
        <number>10</number>
       </property>
+      <property name="indent">
+       <number>0</number>
+      </property>
      </widget>
     </item>
-    <item row="0" column="1">
-     <widget class="QLabel" name="label_5">
+    <item row="4" column="1">
+     <widget class="QLabel" name="label_9">
       <property name="minimumSize">
        <size>
         <width>200</width>
@@ -294,13 +387,16 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
        </font>
       </property>
       <property name="text">
-       <string>Linac PLIC</string>
+       <string>BCS LIONs</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
       </property>
       <property name="margin">
        <number>10</number>
+      </property>
+      <property name="indent">
+       <number>0</number>
       </property>
      </widget>
     </item>
@@ -346,8 +442,8 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
       </property>
      </widget>
     </item>
-    <item row="1" column="1">
-     <widget class="QLabel" name="label_6">
+    <item row="0" column="1">
+     <widget class="QLabel" name="label_5">
       <property name="minimumSize">
        <size>
         <width>200</width>
@@ -362,94 +458,16 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
        </font>
       </property>
       <property name="text">
-       <string>Linac Toroids</string>
+       <string>Linac PLIC</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
       </property>
       <property name="margin">
        <number>10</number>
       </property>
-     </widget>
-    </item>
-    <item row="3" column="1">
-     <widget class="QLabel" name="label_8">
-      <property name="minimumSize">
-       <size>
-        <width>200</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>18</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>S20 RDMs</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
-      </property>
-      <property name="margin">
-       <number>10</number>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="1">
-     <widget class="QLabel" name="label_9">
-      <property name="minimumSize">
-       <size>
-        <width>200</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>18</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>BCS LIONs</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
-      </property>
-      <property name="margin">
-       <number>10</number>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="0">
-     <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot">
-      <property name="toolTip">
-       <string/>
-      </property>
-      <property name="showXGrid">
-       <bool>true</bool>
-      </property>
-      <property name="yAxes">
-       <stringlist>
-        <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;Cts&quot;, &quot;minRange&quot;: -0.15, &quot;maxRange&quot;: 3.15, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
-       </stringlist>
-      </property>
-      <property name="curves">
-       <stringlist>
-        <string>{&quot;y_channel&quot;: &quot;SCOP:IN10:FC02:WF_CH0_TRACE&quot;, &quot;x_channel&quot;: null, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;Volts&quot;, &quot;color&quot;: &quot;#d4feff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;, &quot;redraw_mode&quot;: 2}</string>
-       </stringlist>
-      </property>
-      <property name="autoRangeY">
-       <bool>false</bool>
-      </property>
-      <property name="minYRange">
-       <double>-0.150000000000000</double>
-      </property>
-      <property name="maxYRange">
-       <double>3.150000000000000</double>
+      <property name="indent">
+       <number>0</number>
       </property>
      </widget>
     </item>

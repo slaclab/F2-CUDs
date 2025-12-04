@@ -68,7 +68,7 @@ class F2_inj_T_plot(Display):
         self.pw.hideAxis('left')
         self.pw.showAxis('right')
         self.pw.getAxis('right').setTickSpacing(10,1)
-        self.pw.addLegend()
+        self.pw.addLegend(offset=(5,5), labelTextColor=(200,200,200), brush=(0,0,0,200))
 
         self.make_dT_plot()
         self.update_dT_plot()

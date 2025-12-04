@@ -1,48 +1,20 @@
-import os, sys
-from sys import exit
-
-from epics import caget
-
-import pydm
+from os import path
 from pydm import Display
-
-from matplotlib import pyplot as plt
+from matplotlib.pyplot import get_cmap
 from numpy import linspace
 
-SELF_PATH = os.path.dirname(os.path.abspath(__file__))
-
-# F2 PLOT COLORS
-# chosen to avoid collision with alarm statuses
-# so no pure red/yellow/green
-"""
-141 211 199   #8dd3c7
-255 255 179   #ffffb3
-190 186 218   #bebada
-251 128 114   #fb8072
-128 177 211   #80b1d3
-253 180 98    #fbd462
-179 222 105   #b3de69
-252 205 229   #fccde5
-188 128 189   #bc80bd
-204 235 197   #ccebc5
-"""
+SELF_PATH = path.dirname(path.abspath(__file__))
 
 class F2Transport(Display):
 
     def __init__(self, parent=None, args=None):
         super(F2Transport, self).__init__(parent=parent, args=args)
 
+        # colors chosen to avoid collision with alarm statuses
+        # so no pure red/yellow/green
         cstr = 'color: rgb({}, {}, {});'
-        cmap = plt.get_cmap('Set3')
-
-        # toro_colors2 = (255*cmap(linspace(0,1,20))).astype(int)
-        # for i in toro_colors2: print(i[0], i[1], i[2])
-
+        cmap = get_cmap('Set3')
         toro_colors2 = (255*cmap(linspace(0,1,12))).astype(int)
-
-        # del toro_colors[8]
-        # del toro_colors[]
-
         toro_colors = [
             toro_colors2[0],
             toro_colors2[1],
@@ -55,7 +27,6 @@ class F2Transport(Display):
             toro_colors2[9],
             toro_colors2[10],
             ]
-
         toro_labels = [
             self.ui.toro_1,
             self.ui.toro_2,
@@ -76,7 +47,12 @@ class F2Transport(Display):
             toro_label.setStyleSheet(cstr.format(r, g, b))
 
         self.setWindowTitle('FACET-II CUD: Beam Transport')
-
+        for pw in [self.ui.plot_PMT, self.ui.plot_toroids, self.ui.plot_plic_slices]:
+            pw.plotItem.legend.setOffset((5,5))
+            pw.plotItem.legend.setBrush(0,0,0,200)
+            pw.plotItem.legend.setLabelTextColor(200,200,200)
+        self.ui.plot_toroids.plotItem.legend.setColumnCount(2)
+        self.ui.plot_plic_slices.plotItem.legend.setColumnCount(2)
         return
 
     def ui_filename(self):
