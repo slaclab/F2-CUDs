@@ -21,11 +21,9 @@ MPS_CMD = f'pydm --hide-nav-bar --hide-menu-bar --hide-status-bar -m "{TMP_MACRO
 
 # shell commands to launch displays not captured by the above
 ALT_LAUNCH_COMMANDS = {
-    # 'orbit': 'bash /home/fphysics/zack/workspace/F2_CUD_orbit/launcher.sh',
     'orbit': 'python /home/fphysics/zack/workspace/F2_CUD_orbit/orbit_display.py --cud --path facet --rate TH',
     # 'MPS': 'bash /home/fphysics/zack/workspace/F2_CUD_MPS/nc_mps_gui.bash -c summary',
     'MPS': MPS_CMD,
-    'network': 'pydm --hide-nav-bar --hide-menu-bar --hide-status-bar /home/fphysics/aaditya/workspace/network_panel/F2_CUD_watcher.py',
 }
 
 

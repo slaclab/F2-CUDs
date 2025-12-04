@@ -6,21 +6,16 @@ CUD_IDs: [
   linac,
   klystrons,
   S20,
-  alarms,
   long_FB,
   long_FB_hist,
   transport,
   transport_LM,
   PPS_BCS,
-  mini_klys,
-  network,
   orbit,
   MPS,
   wfh,
-  history,
   lem,
   screens,
-  fields,
 ]
 
 # ACR monitor defaults
@@ -50,11 +45,11 @@ ACR:
     SM24C: orbit
     SM24D: transport
     SM26A: lem
-    SM26B: network
+    SM26B: MPS
     # SM26C: PPS_BCS
     # SM26D: transport
-    # SM28A: alarms
-    # SM28B: network
+    # SM28A: MPS
+    # SM28B: MPS
     # SM28C: MPS
     # SM28D: PPS_BCS
 
@@ -80,10 +75,6 @@ orbit:
   desc: 'Orbit Display'
   pydm: ''
 
-alarms:
-  desc: 'EPICS alarms'
-  pydm: 'alarms/main.ui'
-
 long_FB:
   desc: 'Longitudinal FB'
   pydm: 'long_FB/main.py'
@@ -108,17 +99,9 @@ MPS:
   desc: 'MPS'
   pydm: ''
 
-mini_klys:
-  desc: 'RF System'
-  pydm: 'klystrons_mini/main.py'
-
 wfh:
   desc: 'Work-from-home Display'
   pydm: 'wfh/main.py'
-
-history:
-  desc: 'History Plots'
-  pydm: 'history_plots/main.py'
 
 lem:
   desc: 'LEM'
@@ -128,10 +111,3 @@ screens:
   desc: 'Beam Stay-clear'
   pydm: 'screens/main.ui'
 
-fields:
-  desc: 'Field Errors'
-  pydm: 'lattice/main.ui'
-
-network:
-  desc: 'Network/Watchers'
-  pydm: ''
