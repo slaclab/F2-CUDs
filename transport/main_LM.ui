@@ -419,7 +419,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
       </property>
       <property name="yAxes">
        <stringlist>
-        <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;Dose Rate (mrem/h)&quot;, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 150000.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+        <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;Dose Rate (mrem/h)&quot;, &quot;minRange&quot;: -3000.0, &quot;maxRange&quot;: 153000.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
        </stringlist>
       </property>
       <property name="showLegend">
@@ -427,7 +427,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
       </property>
       <property name="curves">
        <stringlist>
-        <string>{&quot;channel&quot;: &quot;RADM:LI20:1:CH01:MEAS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;US RDM&quot;, &quot;color&quot;: &quot;#fbd462&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+        <string>{&quot;channel&quot;: &quot;RADM:LI20:1:CH01:MEAS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;US RDM&quot;, &quot;color&quot;: &quot;#ffaaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
         <string>{&quot;channel&quot;: &quot;RADM:LI20:2:CH01:MEAS&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;DS RDM&quot;, &quot;color&quot;: &quot;#b3de69&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 2, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
        </stringlist>
       </property>
