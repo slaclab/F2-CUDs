@@ -1,28 +1,18 @@
-import os, sys
+import sys
 from os import path
 from sys import exit
 from numpy import flip
 from functools import partial
-
-import pydm
 from pydm import Display
-from pydm.widgets.label import PyDMLabel
-from pydm.widgets.base import PyDMWidget
 from pydm.widgets.channel import PyDMChannel
 from pydm.widgets.image import PyDMImageView
-from pydm.widgets.timeplot import PyDMTimePlot
-
-from PyQt5 import QtGui, QtCore
-from PyQt5.QtWidgets import QGridLayout, QWidget, QProgressBar
-from PyQt5.QtCore import Qt, QTimer
-from PyQt5.QtGui import QColor, QFont
+from PyQt5.QtCore import QTimer
 
 from orbit import FacetOrbit, DiffOrbit, BaseOrbit, BPM
 from orbit_view import OrbitView 
 
 SELF_PATH = path.dirname(path.abspath(__file__))
 REPO_ROOT = path.join(*path.split(SELF_PATH)[:-1])
-
 sys.path.append(REPO_ROOT)
 
 from core import beam_refs
@@ -118,7 +108,7 @@ class F2_CUD_injector(Display):
         return
 
     def ui_filename(self):
-        return os.path.join(SELF_PATH, 'main.ui')
+        return path.join(SELF_PATH, 'main.ui')
 
     def update_ref_orbit(self):
         ref_dict = beam_refs.read_current_refs()

@@ -1,28 +1,24 @@
 # common methods/subclasses for FACET-II CUDs
 
 
-import os, sys
-from sys import exit
+from os import path
 from functools import partial
 from epics import caput, PV
-from datetime import datetime as dt
 import yaml
 
-import pydm
 from pydm import Display
 from pydm.widgets.label import PyDMLabel
-from pydm.widgets.base import PyDMWidget
 from pydm.widgets.channel import PyDMChannel
 
 from PyQt5 import QtGui, QtCore
-from PyQt5.QtWidgets import QGridLayout, QWidget, QFrame
-from PyQt5.QtCore import Qt, QTimer
-from PyQt5.QtGui import QColor, QFont
+from PyQt5.QtWidgets import QFrame
+from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QFont
 
-SELF_PATH = os.path.dirname(os.path.abspath(__file__))
-REPO_ROOT = os.path.join(*os.path.split(SELF_PATH)[:-1])
-DIR_CONFIG = os.path.join(SELF_PATH, 'config')
-with open(os.path.join(REPO_ROOT, 'core', 'config.yaml'), 'r') as f:
+SELF_PATH = path.dirname(path.abspath(__file__))
+REPO_ROOT = path.join(*path.split(SELF_PATH)[:-1])
+DIR_CONFIG = path.join(SELF_PATH, 'config')
+with open(path.join(REPO_ROOT, 'core', 'config.yaml'), 'r') as f:
     CONFIG = yaml.safe_load(f)
 
 

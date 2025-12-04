@@ -1,33 +1,15 @@
-import os, sys
+import sys
 from os import path
-from sys import exit
-from functools import partial
-from epics import caput, PV
-from datetime import datetime as dt
-
-import pydm
 from pydm import Display
-from pydm.widgets.label import PyDMLabel
-from pydm.widgets.base import PyDMWidget
-from pydm.widgets.channel import PyDMChannel
-
-from PyQt5 import QtGui, QtCore
-from PyQt5.QtWidgets import QGridLayout, QWidget, QProgressBar
-from PyQt5.QtCore import Qt, QTimer
-from PyQt5.QtGui import QColor, QFont, QPen
+from PyQt5.QtCore import QTimer
+from PyQt5.QtGui import QColor, QPen
 import pyqtgraph as pg
 from matplotlib import colormaps as cm
 
 SELF_PATH = path.dirname(path.abspath(__file__))
 REPO_ROOT = path.join(*path.split(SELF_PATH)[:-1])
-
-# sys.path.append(REPO_ROOT)
-
 sys.path.append('/usr/local/facet/tools/python/')
 from F2_pytools import inj_T_hist
-
-SELF_PATH = os.path.dirname(os.path.abspath(__file__))
-
 
 DT_LABELS = [
     'now',

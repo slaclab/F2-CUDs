@@ -1,26 +1,13 @@
 import os, sys
 from sys import exit
-
 from klys_indicator import sbstIndicator, klysIndicator
-
-import pydm
 from pydm import Display
-from pydm.widgets.label import PyDMLabel
-from pydm.widgets.base import PyDMWidget
-from pydm.widgets.channel import PyDMChannel
-from pydm.widgets.byte import PyDMByteIndicator
-
-from PyQt5 import QtGui, QtCore
-from PyQt5.QtWidgets import QGridLayout, QVBoxLayout, QWidget, QFrame
-from PyQt5.QtCore import Qt, QTimer
-from PyQt5.QtGui import QColor, QFont
+from PyQt5.QtWidgets import QGridLayout
+from PyQt5.QtGui import QFont
 
 SELF_PATH = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.join(*os.path.split(SELF_PATH)[:-1])
-
 sys.path.append(REPO_ROOT)
-
-from core.common import bitStatusLabel
 
 
 # L2: S11-S14, L3: S15-S19, 8x klys per sector
@@ -56,14 +43,8 @@ class F2_CUD_klystrons(Display):
             self.ui.plot_DL10, self.ui.plot_BC11,
             self.ui.plot_BC14,self.ui.plot_BC20
             ]:
-
             plot.hideAxis('bottom')
 
-        # mdlff_onstat = bitStatusLabel('SIOC:SYS1:ML01:AO489', word_length=1, bit=0)
-        # mdlff_onstat.text_on = 'Enabled'
-        # mdlff_onstat.text_off = 'Disabled'
-        # mdlff_onstat.setFont(STATUS_FONT)
-        # self.ui.procMonitor.layout().addWidget(mdlff_onstat)
 
         self.setWindowTitle('FACET-II CUD: RF System')
         

@@ -1,29 +1,17 @@
-import os, sys
+import sys
 from os import path
-from sys import exit
-from functools import partial
-from epics import caput, PV
+from epics import get_pv
 from datetime import datetime as dt
-
-import pydm
 from pydm import Display
 from pydm.widgets.label import PyDMLabel
-from pydm.widgets.base import PyDMWidget
 from pydm.widgets.channel import PyDMChannel
-
-from PyQt5 import QtGui, QtCore
-from PyQt5.QtWidgets import QGridLayout, QWidget, QProgressBar
-from PyQt5.QtCore import Qt, QTimer
-from PyQt5.QtGui import QColor, QFont
+from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QFont
 
 SELF_PATH = path.dirname(path.abspath(__file__))
 REPO_ROOT = path.join(*path.split(SELF_PATH)[:-1])
-
 sys.path.append(REPO_ROOT)
-
 from core.common import bitStatusLabel
-
-SELF_PATH = os.path.dirname(os.path.abspath(__file__))
 
 
 # TIMESTAMP PVs
@@ -46,25 +34,6 @@ PV_FB_ENABLE = 'SIOC:SYS1:ML00:AO856'
 
 STAT_REG  = QFont('Sans Serif', 18)
 
-# STYLE_GREEN = """
-# PyDMLabel {
-#   border-radius: 2px;
-# }
-# PyDMLabel[alarmSensitiveBorder="true"][alarmSeverity="0"] {
-#   background-color: rgb(0,0,10);
-#   color: rgb(0,255,0);
-# }
-# """
-
-# STYLE_YELLOW = """
-# PyDMLabel {
-#   border-radius: 2px;
-# }
-# PyDMLabel[alarmSensitiveBorder="true"][alarmSeverity="0"] {
-#   background-color: rgb(0,0,10);
-#   color: rgb(255,255,0);
-# }
-# """
 
 STYLE_GREEN = """
 PyDMLabel {
@@ -99,8 +68,6 @@ class F2_CUD_linac(Display):
     def __init__(self, parent=None, args=None):
         super(F2_CUD_linac, self).__init__(parent=parent, args=args)
 
-        # f = partial(msmt_ts, self.L2_MSMT, 'SIOC:SYS1:ML03:CA951')
-
         self.L0_msmt     = PyDMChannel(address=PV_L0_MSMT, value_slot=self.msmt_ts_L0)
         self.L2_msmt     = PyDMChannel(address=PV_L2_MSMT, value_slot=self.msmt_ts_L2)
         self.L3_msmt     = PyDMChannel(address=PV_L3_MSMT, value_slot=self.msmt_ts_L3)
@@ -109,11 +76,11 @@ class F2_CUD_linac(Display):
         for ch in [self.L0_msmt, self.L2_msmt, self.L3_msmt, self.IPWS1_msmt, self.IPBlen_msmt]:
             ch.connect()
 
-        self.L0_msmt_PV     = PV(PV_L0_MSMT)
-        self.L2_msmt_PV     = PV(PV_L2_MSMT)
-        self.L3_msmt_PV     = PV(PV_L3_MSMT)
-        self.IPWS1_msmt_PV  = PV(PV_IPWS1_MSMT)
-        self.IPBlen_msmt_PV = PV(PV_IPBlen_MSMT)
+        self.L0_msmt_PV     = get_pv(PV_L0_MSMT)
+        self.L2_msmt_PV     = get_pv(PV_L2_MSMT)
+        self.L3_msmt_PV     = get_pv(PV_L3_MSMT)
+        self.IPWS1_msmt_PV  = get_pv(PV_IPWS1_MSMT)
+        self.IPBlen_msmt_PV = get_pv(PV_IPBlen_MSMT)
 
         Qbunch_enable = bitStatusLabel(
             'SIOC:SYS1:ML03:AO502', word_length=1, bit=0, parent=self.ui.ind_qfb)
@@ -122,35 +89,6 @@ class F2_CUD_linac(Display):
         Qbunch_enable.onstyle = STYLE_GREEN
         Qbunch_enable.offstyle = STYLE_YELLOW
 
-        # DL10E_enable = bitStatusLabel(
-        #     PV_FB_ENABLE, word_length=6, bit=0, parent=self.ui.ind_dl10e)
-
-        # BC11E_enable = bitStatusLabel(
-        #     PV_FB_ENABLE, word_length=6, bit=2, parent=self.ui.ind_bc11e)
-        # BC11BL_enable = bitStatusLabel(
-        #     PV_FB_ENABLE, word_length=6, bit=3, parent=self.ui.ind_bc11bl)
-
-        # BC14E_enable = bitStatusLabel(
-        #     PV_FB_ENABLE, word_length=6, bit=1, parent=self.ui.ind_bc14e)
-        # BC14BL_enable = bitStatusLabel(
-        #     PV_FB_ENABLE, word_length=6, bit=5, parent=self.ui.ind_bc14bl)
-
-        # BC20E_enable = bitStatusLabel(
-        #     PV_FB_ENABLE, word_length=6, bit=4, parent=self.ui.ind_bc20e)
-
-        # for ind in [
-        #     Qbunch_enable,
-        #     DL10E_enable,
-        #     BC11E_enable,
-        #     BC11BL_enable,
-        #     BC14E_enable,
-        #     BC14BL_enable,
-        #     BC20E_enable,
-        #     ]:
-        #     ind.setGeometry(0,0,70,38)
-        #     ind.setFont(STAT_REG)
-        #     ind.onstyle = STYLE_GREEN
-        #     ind.offstyle = STYLE_YELLOW
 
         ind_LI11 = F2SteeringFeedbackIndicator(
             'LI11:FBCK:26:HSTA', parent=self.ui.ind_l2steer)
@@ -166,7 +104,7 @@ class F2_CUD_linac(Display):
         return
 
     def ui_filename(self):
-        return os.path.join(SELF_PATH, 'main.ui')
+        return path.join(SELF_PATH, 'main.ui')
 
     def msmt_ts_L0(self, value=None, char_value=None):
         self.msmt_ts(self.L0_msmt_PV, self.ui.ts_L0, value=value, char_value=char_value)
@@ -185,7 +123,6 @@ class F2_CUD_linac(Display):
 
     def msmt_ts(self, PV_msmt_obj, label_obj, value=None, char_value=None, **kw):
         """ temp kludge to update L2, L3 & IP Blen measurement timestamps """
-        if not value: caput(PV_ts, "BAD/NULL TIMESTAMP"); return
         ts_str = str(dt.fromtimestamp(PV_msmt_obj.timestamp).strftime('%d-%b-%Y %H:%M'))
         label_obj.setText(ts_str)
 

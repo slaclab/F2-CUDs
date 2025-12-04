@@ -1,22 +1,18 @@
-import os, sys
+import sys
 from os import path
-import numpy as np
-from sys import exit
+from numpy import flip
 from functools import partial
-from epics import caput, PV
+from epics import get_pv
 from datetime import datetime as dt
 
-import pydm
 from pydm import Display
 from pydm.widgets.label import PyDMLabel
-from pydm.widgets.base import PyDMWidget
 from pydm.widgets.channel import PyDMChannel
 from pydm.widgets.image import PyDMImageView
 
-from PyQt5 import QtGui, QtCore
-from PyQt5.QtWidgets import QGridLayout, QWidget, QProgressBar
-from PyQt5.QtCore import Qt, QTimer
-from PyQt5.QtGui import QColor, QFont
+from PyQt5.QtWidgets import QGridLayout
+from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QFont
 
 SELF_PATH = path.dirname(path.abspath(__file__))
 REPO_ROOT = path.join(*path.split(SELF_PATH)[:-1])
@@ -26,7 +22,7 @@ sys.path.append(REPO_ROOT)
 from klys_indicator import sbstIndicator, klysIndicator
 from core.common import bitStatusLabel
 
-SELF_PATH = os.path.dirname(os.path.abspath(__file__))
+SELF_PATH = path.dirname(path.abspath(__file__))
 
 
 # TIMESTAMP PVs
@@ -45,7 +41,7 @@ PV_IPWS1_MSMT  = 'WIRE:LI20:3179:XRMS'
 PV_IPBlen_MSMT = 'CAMR:LI20:107:BLEN'
 # PV_IPBlen_TS   = 'SIOC:SYS1:ML03:CA954'
 
-SELF_PATH = os.path.dirname(os.path.abspath(__file__))
+SELF_PATH = path.dirname(path.abspath(__file__))
 
 # L2: S11-S14, L3: S15-S19, 8x klys per sector
 L2 = [str(i) for i in range(11,15)]
@@ -125,11 +121,11 @@ class F2_WFH(Display):
         for ch in [self.L0_msmt, self.L2_msmt, self.L3_msmt, self.IPWS1_msmt, self.IPBlen_msmt]:
             ch.connect()
 
-        self.L0_msmt_PV     = PV(PV_L0_MSMT)
-        self.L2_msmt_PV     = PV(PV_L2_MSMT)
-        self.L3_msmt_PV     = PV(PV_L3_MSMT)
-        self.IPWS1_msmt_PV  = PV(PV_IPWS1_MSMT)
-        self.IPBlen_msmt_PV = PV(PV_IPBlen_MSMT)
+        self.L0_msmt_PV     = get_pv(PV_L0_MSMT)
+        self.L2_msmt_PV     = get_pv(PV_L2_MSMT)
+        self.L3_msmt_PV     = get_pv(PV_L3_MSMT)
+        self.IPWS1_msmt_PV  = get_pv(PV_IPWS1_MSMT)
+        self.IPBlen_msmt_PV = get_pv(PV_IPBlen_MSMT)
 
         self.setup_injector()
         self.setup_L1()
@@ -162,7 +158,7 @@ class F2_WFH(Display):
         return
 
     def ui_filename(self):
-        return os.path.join(SELF_PATH, 'main.ui')
+        return path.join(SELF_PATH, 'main.ui')
 
     def update_camera_FPS(self):
         self.VCCF_image.maxRedrawRate = int(self.ui.fps_VCC.currentText())
@@ -187,7 +183,6 @@ class F2_WFH(Display):
 
     def msmt_ts(self, PV_msmt_obj, label_obj, value=None, char_value=None, **kw):
         """ temp kludge to update L2, L3 & IP Blen measurement timestamps """
-        if not value: caput(PV_ts, "BAD/NULL TIMESTAMP"); return
         ts_str = str(dt.fromtimestamp(PV_msmt_obj.timestamp).strftime('%d-%b-%Y %H:%M'))
         label_obj.setText(ts_str)
 
@@ -239,14 +234,14 @@ class InvertedImage(PyDMImageView):
     def __init__(self, im_ch, w_ch, parent=None, args=None):
         PyDMImageView.__init__(self, parent=parent, image_channel=im_ch, width_channel=w_ch)
 
-    def process_image(self, image): return np.flip(image)
+    def process_image(self, image): return flip(image)
 
 class F2SteeringFeedbackIndicator(PyDMLabel):
     """ checks FBCK hardware status to check for feedback enable/compute """
 
     def __init__(self, init_channel, parent=None, args=None):
         PyDMLabel.__init__(self, init_channel=init_channel, parent=parent)
-        self.setAlignment(Qt.AlignCenter)
+        self.setAlignment(AlignCenter)
 
     def value_changed(self, new_value):
         PyDMLabel.value_changed(self, new_value)

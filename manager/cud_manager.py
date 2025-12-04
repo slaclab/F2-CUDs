@@ -1,27 +1,18 @@
-import os, sys
+import sys
 from os import path, environ
 from functools import partial
 from socket import gethostname
-from time import sleep
-from multiprocessing import Pool
 import yaml
-
-from epics import caget, caput
-
-import pydm
+from epics import caget
 from pydm import Display
-from pydm import PyDMApplication
 from pydm.widgets.label import PyDMLabel
-from pydm.widgets.base import PyDMWidget
 from pydm.widgets.channel import PyDMChannel
-
-from PyQt5.QtWidgets import QGridLayout, QWidget, QFrame, QPushButton, QComboBox, QApplication, QFileDialog
+from PyQt5.QtWidgets import QPushButton, QComboBox, QFileDialog
 from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QColor, QFont
 
 SELF_PATH = path.dirname(path.abspath(__file__))
 REPO_ROOT = path.join(*path.split(SELF_PATH)[:-1])
-with open(os.path.join(REPO_ROOT, 'core', 'config.yaml'), 'r') as f:
+with open(path.join(REPO_ROOT, 'core', 'config.yaml'), 'r') as f:
     CONFIG = yaml.safe_load(f)
 
 sys.path.append(REPO_ROOT)
@@ -54,7 +45,6 @@ color: rgb(200,200,200);
 
 
 
-# class F2CUDManager(Display):
 class F2CUDManager(Display):
 
     def __init__(self, parent=None, args=None):
@@ -122,7 +112,7 @@ class F2CUDManager(Display):
         return
 
     def ui_filename(self):
-        return os.path.join(SELF_PATH, 'main.ui')
+        return path.join(SELF_PATH, 'main.ui')
 
     def status(self, msg): self.statusMessage.appendPlainText(msg)
 

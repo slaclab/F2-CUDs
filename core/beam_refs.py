@@ -3,11 +3,9 @@
 
 from os import path, environ
 from datetime import datetime
-from epics import caget, caput
+from epics import caput
 from numpy import loadtxt
 from time import sleep
-
-from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog, QMessageBox, QTextEdit, QWidget, QHBoxLayout, QLabel, QPushButton
 
 
 SELF_PATH = path.dirname(path.abspath(__file__))

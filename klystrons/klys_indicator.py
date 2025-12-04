@@ -2,14 +2,11 @@
 special PyDMLabel sublass with some extra style handling for
 klystron CUD status codes
 """
-
-import pydm
 from pydm.widgets.frame import PyDMFrame
 from pydm.widgets.label import PyDMLabel
 from pydm.widgets.byte import PyDMByteIndicator
-
 from PyQt5.QtWidgets import QVBoxLayout, QWidget, QFrame, QLabel
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore.Qt import AlignCenter
 from PyQt5.QtGui import QColor, QFont
 
 
@@ -265,13 +262,13 @@ class sbstIndicator(QFrame):
 
         sector_label = QLabel(str(sector))
         sector_label.setFont(SBST_BOLD)
-        sector_label.setAlignment(Qt.AlignCenter)
+        sector_label.setAlignment(AlignCenter)
         # sector_label.setFixedHeight(H_SBST)
 
         stat = PyDMLabel(init_channel=f'FCUDSBST:LI{sector}:1:STATUS')
         stat.setStyleSheet(STYLE_DEFAULT_NO_BORDER_GREEN)
         stat.setFont(SBST_REG)
-        stat.setAlignment(Qt.AlignCenter)
+        stat.setAlignment(AlignCenter)
         stat.precisionFromPV = False
         stat.precision = 1
 
@@ -296,7 +293,7 @@ class klysStat(PyDMLabel):
         PyDMLabel.__init__(self, init_channel=init_channel, parent=parent)
         self.setStyleSheet(STYLE_DEFAULT)
         self.setFont(STAT_REG)
-        self.setAlignment(Qt.AlignCenter)
+        self.setAlignment(AlignCenter)
 
     def value_changed(self, new_value):
         PyDMLabel.value_changed(self, new_value)

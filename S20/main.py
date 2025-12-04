@@ -1,27 +1,17 @@
-import os, sys
+import sys
 from os import path
 from sys import exit
-import numpy as np
+from numpy import flip, nanmean, reshape
 from functools import partial
-
-import pydm
 from pydm import Display
-from pydm.widgets.label import PyDMLabel
-from pydm.widgets.base import PyDMWidget
 from pydm.widgets.channel import PyDMChannel
 from pydm.widgets.image import PyDMImageView
-
-from PyQt5 import QtGui, QtCore
-from PyQt5.QtWidgets import QGridLayout, QWidget, QProgressBar, QMessageBox
-from PyQt5.QtCore import Qt, QTimer
-from PyQt5.QtGui import QColor, QFont
-from pyqtgraph import colormap
+from PyQt5.QtCore import QTimer
+from epics import get_pv
 
 # import orbit
 from orbit import FacetOrbit, DiffOrbit, BaseOrbit, BPM, FacetSCPBPM
 from orbit_view import OrbitView 
-
-from epics import caget, get_pv
 
 
 # ==== for later =====
@@ -54,10 +44,10 @@ def calc_dtotr_centroid():
     pv_imgh = get_pv(f'{PV_DTOTR}:Image:ArraySize1_RBV')
     imraw = pv_img.get()
     w, h = pv_imgw.get(), pv_imgh.get()
-    image = np.reshape(imraw, (w,h), order='F')
+    image = reshape(imraw, (w,h), order='F')
     image = image - min(image.flatten())
-    px = np.nanmean(image, axis=0)
-    py = np.nanmean(image, axis=1)
+    px = nanmean(image, axis=0)
+    py = nanmean(image, axis=1)
     cx = px.argmax()
     cy = py.argmax()
     return cx, cy
@@ -77,8 +67,8 @@ class F2_CUD_S20(Display):
         SYAG_image.colorMap = 4
         SYAG_image.setGeometry(5, 5, 490, 240)
         SYAG_image.getView().getViewBox().setLimits(
-            xMin=0, xMax=caget('CAMR:LI20:100:Image:ArraySize0_RBV')+100,
-            yMin=0, yMax=caget('CAMR:LI20:100:Image:ArraySize1_RBV')/2.0
+            xMin=0, xMax=get_pv('CAMR:LI20:100:Image:ArraySize0_RBV').get()+100,
+            yMin=0, yMax=get_pv('CAMR:LI20:100:Image:ArraySize1_RBV').get()/2.0
             )
         SYAG_image.setColorMap(cmap=colormap.get('inferno'))
 
@@ -125,7 +115,7 @@ class F2_CUD_S20(Display):
 
 
     def ui_filename(self):
-        return os.path.join(SELF_PATH, 'main.ui')
+        return path.join(SELF_PATH, 'main.ui')
 
     def udpate_ref_orbit(self):
         ref_dict = beam_refs.read_current_refs()
@@ -190,4 +180,4 @@ class SYAGImg(PyDMImageView):
     def __init__(self, im_ch, w_ch, parent=None, args=None):
         PyDMImageView.__init__(self, parent=parent, image_channel=im_ch, width_channel=w_ch)
 
-    def process_image(self, image): return np.flip(image)
+    def process_image(self, image): return flip(image)

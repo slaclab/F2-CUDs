@@ -1,30 +1,20 @@
 # longitudinal feedbacks CUD v2 for new system
 
-import os, sys
+import sys
 from os import path
-import time
-import numpy as np
-import logging
 import yaml
-
-from PyQt5.QtCore import Qt, QTimer
-from PyQt5.QtGui import QColor, QFont
-
-from epics import get_pv
+from PyQt5.QtGui import QFont
 from pydm import Display
 
 SELF_PATH = path.dirname(path.abspath(__file__))
 REPO_ROOT = path.join(*path.split(SELF_PATH)[:-1])
-
 sys.path.append(REPO_ROOT)
-
-# FB_REPO = '/usr/local/facet/tools/python/F2_long_feedback'
-FB_REPO = '/home/fphysics/zack/workspace/F2_long_feedback'
-
-with open(path.join(FB_REPO, 'config.yaml'), 'r') as f: CONFIG = yaml.safe_load(f)
-
-sys.path.append('/home/fphysics/zack/workspace/')
+sys.path.append('/usr/local/facet/tools/python/')
 from F2_long_feedback.loop_stat_label import lfbLoopStatusLabel
+
+FB_REPO = '/usr/local/facet/tools/python/F2_long_feedback'
+with open(path.join(FB_REPO, 'config.yaml'), 'r') as f:
+    CONFIG = yaml.safe_load(f)
 
 
 STYLE_STAT_NOM = """
@@ -93,5 +83,5 @@ class facetFeedbackCUD(Display):
         return
 
     def ui_filename(self):
-        return os.path.join(SELF_PATH, 'main.ui')
+        return path.join(SELF_PATH, 'main.ui')
 

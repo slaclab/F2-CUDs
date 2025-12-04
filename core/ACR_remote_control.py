@@ -1,11 +1,9 @@
 # remote launch/kill controls for ACR
 
-import os, sys
+from os import environ
 from subprocess import call, check_output, CalledProcessError
 from time import sleep
-
-from epics import caget, caput
-
+from epics import caget
 from core import launch, common
 
 
@@ -131,8 +129,8 @@ def send_to_monitor(monitor, CUD_ID):
     """
 
     # set $DISPLAY env var to the relevant LM/SM sunray
-    init_disp = os.environ['DISPLAY']
-    os.environ['DISPLAY'] = get_display_name(monitor)
+    init_disp = environ['DISPLAY']
+    environ['DISPLAY'] = get_display_name(monitor)
 
     p = launch.run_CUD(CUD_ID)
 
@@ -157,7 +155,7 @@ def send_to_monitor(monitor, CUD_ID):
     call(PHYS_CAPUT.format(CUD_PV_wid(monitor), CUD_win_ID), shell=True)
 
     # restore $DISPLAY to localhost
-    os.environ['DISPLAY'] = init_disp
+    environ['DISPLAY'] = init_disp
     return
 
 def _get_win_ID_list():
