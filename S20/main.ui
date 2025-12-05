@@ -126,7 +126,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;Dose Rate (mrem/h)&quot;, &quot;minRange&quot;: -6120.0, &quot;maxRange&quot;: 156120.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;Dose Rate (mrem/h)&quot;, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 150000.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="showLegend">
@@ -200,7 +200,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
     <property name="geometry">
      <rect>
       <x>1125</x>
-      <y>224</y>
+      <y>225</y>
       <width>496</width>
       <height>821</height>
      </rect>
@@ -5482,6 +5482,16 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
      <string>SECTOR 20 EXPERIMENTAL AREA</string>
     </property>
    </widget>
+   <zorder>title</zorder>
+   <zorder>frame_rads</zorder>
+   <zorder>frame_cameras</zorder>
+   <zorder>cont_map</zorder>
+   <zorder>frame_generic_13</zorder>
+   <zorder>frame_3</zorder>
+   <zorder>frame_ff_size</zorder>
+   <zorder>frame</zorder>
+   <zorder>label_38</zorder>
+   <zorder>label_42</zorder>
   </widget>
  </widget>
  <customwidgets>
