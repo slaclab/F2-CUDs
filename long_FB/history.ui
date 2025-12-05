@@ -95,19 +95,19 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
        <property name="toolTip">
         <string/>
        </property>
-       <property name="macros" stdset="0">
+       <property name="macros">
         <string>{}</string>
        </property>
-       <property name="filename" stdset="0">
-        <string notr="true">/home/fphysics/zack/workspace/F2-CUDs/long_FB/histplots.py</string>
+       <property name="filename">
+        <string notr="true">/usr/local/facet/tools/python/F2-CUDs/long_FB/histplots.py</string>
        </property>
-       <property name="loadWhenShown" stdset="0">
+       <property name="loadWhenShown">
         <bool>true</bool>
        </property>
-       <property name="disconnectWhenHidden" stdset="0">
+       <property name="disconnectWhenHidden">
         <bool>true</bool>
        </property>
-       <property name="followSymlinks" stdset="0">
+       <property name="followSymlinks">
         <bool>false</bool>
        </property>
       </widget>
@@ -141,7 +141,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>350</y>
+      <y>210</y>
       <width>300</width>
       <height>30</height>
      </rect>
@@ -204,7 +204,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>210</y>
+      <y>350</y>
       <width>200</width>
       <height>30</height>
      </rect>
