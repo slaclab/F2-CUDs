@@ -4,7 +4,7 @@ from PyQt5.QtWidgets import QGraphicsView, QGraphicsLineItem, QApplication, QMen
 from PyQt5.QtGui import QColor, QBrush, QPen
 from PyQt5.QtCore import pyqtSlot, QLineF, QRectF, QPoint, QPointF, Qt, Q_ENUMS
 from pyqtgraph import GraphicsLayoutWidget, PlotItem, ViewBox, GraphicsItem, GraphicsView, PlotDataItem, TextItem, ButtonItem, FillBetweenItem
-from bpm_line_item import BPMLineItem
+from widgets.bpm_line_item import BPMLineItem
 # from magnet_view import MagnetView
 from PyQt5.QtCore import QTimer
 
