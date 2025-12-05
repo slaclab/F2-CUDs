@@ -1684,10 +1684,10 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
      <widget class="QFrame" name="frame_ff_size">
       <property name="geometry">
        <rect>
-        <x>285</x>
-        <y>175</y>
-        <width>900</width>
-        <height>160</height>
+        <x>690</x>
+        <y>170</y>
+        <width>496</width>
+        <height>176</height>
        </rect>
       </property>
       <property name="font">
@@ -1720,173 +1720,39 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
        <property name="spacing">
         <number>5</number>
        </property>
-       <item row="5" column="3">
-        <widget class="PyDMLabel" name="PyDMLabel_14">
+       <item row="8" column="2">
+        <widget class="QLabel" name="label_40">
          <property name="font">
           <font>
            <pointsize>12</pointsize>
            <weight>75</weight>
+           <italic>true</italic>
            <bold>true</bold>
           </font>
          </property>
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">PyDMLabel {
-  border-radius: 2px;
-}
-PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
-  background-color: rgb(0,0,10);
-  color: rgb(104,160,255);
-}
-</string>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::NoFrame</enum>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-         <property name="precision">
-          <number>0</number>
-         </property>
-         <property name="showUnits">
-          <bool>false</bool>
-         </property>
-         <property name="precisionFromPV">
-          <bool>true</bool>
-         </property>
-         <property name="alarmSensitiveContent">
-          <bool>false</bool>
-         </property>
-         <property name="alarmSensitiveBorder">
-          <bool>true</bool>
-         </property>
-         <property name="PyDMToolTip">
-          <string/>
-         </property>
-         <property name="channel">
-          <string>SIOC:SYS1:ML00:CA018</string>
-         </property>
-         <property name="enableRichText">
-          <bool>false</bool>
-         </property>
-         <property name="displayFormat">
-          <enum>PyDMLabel::String</enum>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="12">
-        <widget class="QLabel" name="label_119">
-         <property name="maximumSize">
-          <size>
-           <width>50</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-           <weight>50</weight>
-           <bold>false</bold>
-          </font>
-         </property>
          <property name="text">
-          <string>(μm)</string>
+          <string>βy = </string>
          </property>
          <property name="alignment">
-          <set>Qt::AlignCenter</set>
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
          </property>
         </widget>
        </item>
-       <item row="3" column="2">
-        <widget class="QLabel" name="label_112">
+       <item row="6" column="6">
+        <widget class="QLabel" name="label_52">
          <property name="font">
           <font>
            <pointsize>12</pointsize>
            <weight>75</weight>
-           <italic>false</italic>
+           <italic>true</italic>
            <bold>true</bold>
           </font>
          </property>
          <property name="text">
-          <string>Final Focus Setup</string>
+          <string>σy = </string>
          </property>
          <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="11">
-        <widget class="PyDMLabel" name="pwr_gun_65">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>25</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>25</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">PyDMLabel {
-  border-radius: 2px;
-}
-PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
-  background-color: rgb(0,0,10);
-  color: rgb(104,160,255);
-}
-</string>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::Box</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Plain</enum>
-         </property>
-         <property name="text">
-          <string>00.0</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-         <property name="precision">
-          <number>2</number>
-         </property>
-         <property name="showUnits">
-          <bool>false</bool>
-         </property>
-         <property name="precisionFromPV">
-          <bool>false</bool>
-         </property>
-         <property name="alarmSensitiveContent">
-          <bool>false</bool>
-         </property>
-         <property name="alarmSensitiveBorder">
-          <bool>true</bool>
-         </property>
-         <property name="PyDMToolTip">
-          <string/>
-         </property>
-         <property name="channel">
-          <string>CAMR:LI20:107:BLEN</string>
-         </property>
-         <property name="enableRichText">
-          <bool>false</bool>
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
          </property>
         </widget>
        </item>
@@ -1962,8 +1828,112 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
          </property>
         </widget>
        </item>
-       <item row="6" column="7">
-        <widget class="PyDMLabel" name="pwr_gun_58">
+       <item row="6" column="8">
+        <widget class="QLabel" name="label_114">
+         <property name="maximumSize">
+          <size>
+           <width>50</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>(μm)</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="2">
+        <widget class="QLabel" name="label_54">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Waist:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="4">
+        <widget class="QLabel" name="label_117">
+         <property name="maximumSize">
+          <size>
+           <width>50</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>(cm)</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="8">
+        <widget class="QLabel" name="label_116">
+         <property name="maximumSize">
+          <size>
+           <width>50</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>(μm)</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="6">
+        <widget class="QLabel" name="label_28">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <italic>true</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>σx = </string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="7">
+        <widget class="PyDMLabel" name="pwr_gun_65">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -2024,454 +1994,13 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
           <bool>true</bool>
          </property>
          <property name="PyDMToolTip">
-          <string>WIRE:LI20:3179:YRMS'</string>
-         </property>
-         <property name="channel">
-          <string>WIRE:LI20:3179:YRMS</string>
-         </property>
-         <property name="enableRichText">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="5" rowspan="4">
-        <widget class="PyDMDrawingLine" name="PyDMDrawingLine_13">
-         <property name="minimumSize">
-          <size>
-           <width>5</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>10</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-          </font>
-         </property>
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="brush">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>200</red>
-            <green>200</green>
-            <blue>200</blue>
-           </color>
-          </brush>
-         </property>
-         <property name="penColor">
-          <color>
-           <red>80</red>
-           <green>80</green>
-           <blue>80</blue>
-          </color>
-         </property>
-         <property name="penWidth">
-          <double>1.000000000000000</double>
-         </property>
-         <property name="rotation">
-          <double>90.000000000000000</double>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="10">
-        <widget class="QLabel" name="label_55">
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-           <weight>75</weight>
-           <italic>true</italic>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>σz = </string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="8">
-        <widget class="QLabel" name="label_116">
-         <property name="maximumSize">
-          <size>
-           <width>50</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-           <weight>50</weight>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>(μm)</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="7" column="2">
-        <widget class="QLabel" name="label_41">
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-           <weight>75</weight>
-           <italic>true</italic>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>βx = </string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="9" rowspan="4">
-        <widget class="PyDMDrawingLine" name="PyDMDrawingLine_15">
-         <property name="minimumSize">
-          <size>
-           <width>5</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>10</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-          </font>
-         </property>
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="brush">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>200</red>
-            <green>200</green>
-            <blue>200</blue>
-           </color>
-          </brush>
-         </property>
-         <property name="penColor">
-          <color>
-           <red>80</red>
-           <green>80</green>
-           <blue>80</blue>
-          </color>
-         </property>
-         <property name="penWidth">
-          <double>1.000000000000000</double>
-         </property>
-         <property name="rotation">
-          <double>90.000000000000000</double>
-         </property>
-        </widget>
-       </item>
-       <item row="7" column="3">
-        <widget class="PyDMLabel" name="pwr_gun_63">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>25</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>25</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">PyDMLabel {
-  border-radius: 2px;
-}
-PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
-  background-color: rgb(0,0,10);
-  color: rgb(104,160,255);
-}
-</string>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::Box</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Plain</enum>
-         </property>
-         <property name="text">
-          <string>##</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-         <property name="precision">
-          <number>2</number>
-         </property>
-         <property name="showUnits">
-          <bool>false</bool>
-         </property>
-         <property name="precisionFromPV">
-          <bool>false</bool>
-         </property>
-         <property name="alarmSensitiveContent">
-          <bool>false</bool>
-         </property>
-         <property name="alarmSensitiveBorder">
-          <bool>true</bool>
-         </property>
-         <property name="PyDMToolTip">
           <string/>
          </property>
          <property name="channel">
-          <string>SIOC:SYS1:ML02:AO936</string>
+          <string>CAMR:LI20:107:BLEN</string>
          </property>
          <property name="enableRichText">
           <bool>false</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="7" column="11">
-        <widget class="PyDMLabel" name="ts_IPBlen">
-         <property name="font">
-          <font>
-           <pointsize>11</pointsize>
-          </font>
-         </property>
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">PyDMLabel {
-  border-radius: 2px;
-}
-PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
-  background-color: rgb(20,20,30);
-  color: rgb(200,200,200);
-}
-</string>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::Box</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Plain</enum>
-         </property>
-         <property name="text">
-          <string>YYYY:MM:DD hh:mm</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-         </property>
-         <property name="precision">
-          <number>1</number>
-         </property>
-         <property name="showUnits">
-          <bool>true</bool>
-         </property>
-         <property name="precisionFromPV">
-          <bool>false</bool>
-         </property>
-         <property name="alarmSensitiveContent">
-          <bool>false</bool>
-         </property>
-         <property name="alarmSensitiveBorder">
-          <bool>true</bool>
-         </property>
-         <property name="PyDMToolTip">
-          <string/>
-         </property>
-         <property name="channel">
-          <string/>
-         </property>
-         <property name="enableRichText">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="6">
-        <widget class="QLabel" name="label_28">
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-           <weight>75</weight>
-           <italic>true</italic>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>σx = </string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="2" colspan="11">
-        <widget class="PyDMDrawingLine" name="PyDMDrawingLine_37">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>10</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>10</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-          </font>
-         </property>
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="brush">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>200</red>
-            <green>200</green>
-            <blue>200</blue>
-           </color>
-          </brush>
-         </property>
-         <property name="penColor">
-          <color>
-           <red>80</red>
-           <green>80</green>
-           <blue>80</blue>
-          </color>
-         </property>
-         <property name="penWidth">
-          <double>1.000000000000000</double>
-         </property>
-        </widget>
-       </item>
-       <item row="7" column="7">
-        <widget class="PyDMLabel" name="ts_IPWS1">
-         <property name="font">
-          <font>
-           <pointsize>11</pointsize>
-          </font>
-         </property>
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">PyDMLabel {
-  border-radius: 2px;
-}
-PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
-  background-color: rgb(20,20,30);
-  color: rgb(200,200,200);
-}
-</string>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::Box</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Plain</enum>
-         </property>
-         <property name="text">
-          <string>YYYY:MM:DD hh:mm</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-         </property>
-         <property name="precision">
-          <number>1</number>
-         </property>
-         <property name="showUnits">
-          <bool>true</bool>
-         </property>
-         <property name="precisionFromPV">
-          <bool>false</bool>
-         </property>
-         <property name="alarmSensitiveContent">
-          <bool>false</bool>
-         </property>
-         <property name="alarmSensitiveBorder">
-          <bool>true</bool>
-         </property>
-         <property name="PyDMToolTip">
-          <string/>
-         </property>
-         <property name="channel">
-          <string/>
-         </property>
-         <property name="enableRichText">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="8" column="2">
-        <widget class="QLabel" name="label_40">
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-           <weight>75</weight>
-           <italic>true</italic>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>βy = </string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="8" column="4">
-        <widget class="QLabel" name="label_117">
-         <property name="maximumSize">
-          <size>
-           <width>50</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-           <weight>50</weight>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>(cm)</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
          </property>
         </widget>
        </item>
@@ -2547,68 +2076,6 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
          </property>
         </widget>
        </item>
-       <item row="6" column="2">
-        <widget class="QLabel" name="label_57">
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-           <weight>50</weight>
-           <italic>false</italic>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>Image point:</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-         </property>
-         <property name="wordWrap">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="6" column="6">
-        <widget class="QLabel" name="label_52">
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-           <weight>75</weight>
-           <italic>true</italic>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>σy = </string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="7" column="4">
-        <widget class="QLabel" name="label_118">
-         <property name="maximumSize">
-          <size>
-           <width>50</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-           <weight>50</weight>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>(cm)</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
        <item row="6" column="3">
         <widget class="PyDMLabel" name="PyDMLabel_17">
          <property name="font">
@@ -2666,8 +2133,20 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
          </property>
         </widget>
        </item>
-       <item row="5" column="2">
-        <widget class="QLabel" name="label_54">
+       <item row="6" column="7">
+        <widget class="PyDMLabel" name="pwr_gun_58">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>25</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <pointsize>12</pointsize>
@@ -2675,16 +2154,268 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
            <bold>true</bold>
           </font>
          </property>
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">PyDMLabel {
+  border-radius: 2px;
+}
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
+  background-color: rgb(0,0,10);
+  color: rgb(104,160,255);
+}
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
          <property name="text">
-          <string>Waist:</string>
+          <string>00.0</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="precision">
+          <number>2</number>
+         </property>
+         <property name="showUnits">
+          <bool>false</bool>
+         </property>
+         <property name="precisionFromPV">
+          <bool>false</bool>
+         </property>
+         <property name="alarmSensitiveContent">
+          <bool>false</bool>
+         </property>
+         <property name="alarmSensitiveBorder">
+          <bool>true</bool>
+         </property>
+         <property name="PyDMToolTip">
+          <string>WIRE:LI20:3179:YRMS'</string>
+         </property>
+         <property name="channel">
+          <string>WIRE:LI20:3179:YRMS</string>
+         </property>
+         <property name="enableRichText">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="2">
+        <widget class="QLabel" name="label_57">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Image point:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="3">
+        <widget class="PyDMLabel" name="pwr_gun_63">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">PyDMLabel {
+  border-radius: 2px;
+}
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
+  background-color: rgb(0,0,10);
+  color: rgb(104,160,255);
+}
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <property name="text">
+          <string>##</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="precision">
+          <number>2</number>
+         </property>
+         <property name="showUnits">
+          <bool>false</bool>
+         </property>
+         <property name="precisionFromPV">
+          <bool>false</bool>
+         </property>
+         <property name="alarmSensitiveContent">
+          <bool>false</bool>
+         </property>
+         <property name="alarmSensitiveBorder">
+          <bool>true</bool>
+         </property>
+         <property name="PyDMToolTip">
+          <string/>
+         </property>
+         <property name="channel">
+          <string>SIOC:SYS1:ML02:AO936</string>
+         </property>
+         <property name="enableRichText">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="3">
+        <widget class="PyDMLabel" name="PyDMLabel_14">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">PyDMLabel {
+  border-radius: 2px;
+}
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
+  background-color: rgb(0,0,10);
+  color: rgb(104,160,255);
+}
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="precision">
+          <number>0</number>
+         </property>
+         <property name="showUnits">
+          <bool>false</bool>
+         </property>
+         <property name="precisionFromPV">
+          <bool>true</bool>
+         </property>
+         <property name="alarmSensitiveContent">
+          <bool>false</bool>
+         </property>
+         <property name="alarmSensitiveBorder">
+          <bool>true</bool>
+         </property>
+         <property name="PyDMToolTip">
+          <string/>
+         </property>
+         <property name="channel">
+          <string>SIOC:SYS1:ML00:CA018</string>
+         </property>
+         <property name="enableRichText">
+          <bool>false</bool>
+         </property>
+         <property name="displayFormat">
+          <enum>PyDMLabel::String</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="2">
+        <widget class="QLabel" name="label_41">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <italic>true</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>βx = </string>
          </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
          </property>
         </widget>
        </item>
-       <item row="6" column="8">
-        <widget class="QLabel" name="label_114">
+       <item row="8" column="6">
+        <widget class="QLabel" name="label_55">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <italic>true</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>σz = </string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="4">
+        <widget class="QLabel" name="label_118">
+         <property name="maximumSize">
+          <size>
+           <width>50</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>(cm)</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="8">
+        <widget class="QLabel" name="label_119">
          <property name="maximumSize">
           <size>
            <width>50</width>
@@ -2706,13 +2437,236 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
          </property>
         </widget>
        </item>
+       <item row="4" column="2" colspan="7">
+        <widget class="PyDMDrawingLine" name="PyDMDrawingLine_37">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="brush">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>200</red>
+            <green>200</green>
+            <blue>200</blue>
+           </color>
+          </brush>
+         </property>
+         <property name="penColor">
+          <color>
+           <red>80</red>
+           <green>80</green>
+           <blue>80</blue>
+          </color>
+         </property>
+         <property name="penWidth">
+          <double>1.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2" colspan="4">
+        <widget class="QLabel" name="label_112">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Final Focus Setup</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="6" colspan="3">
+        <widget class="PyDMLabel" name="ts_IPWS1">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">PyDMLabel {
+  border-radius: 2px;
+}
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
+  background-color: rgb(20,20,30);
+  color: rgb(200,200,200);
+}
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <property name="text">
+          <string>YYYY:MM:DD hh:mm</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="precision">
+          <number>1</number>
+         </property>
+         <property name="showUnits">
+          <bool>true</bool>
+         </property>
+         <property name="precisionFromPV">
+          <bool>false</bool>
+         </property>
+         <property name="alarmSensitiveContent">
+          <bool>false</bool>
+         </property>
+         <property name="alarmSensitiveBorder">
+          <bool>true</bool>
+         </property>
+         <property name="PyDMToolTip">
+          <string/>
+         </property>
+         <property name="channel">
+          <string/>
+         </property>
+         <property name="enableRichText">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="7" colspan="2">
+        <widget class="PyDMLabel" name="ts_IPBlen">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">PyDMLabel {
+  border-radius: 2px;
+}
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
+  background-color: rgb(20,20,30);
+  color: rgb(200,200,200);
+}
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <property name="text">
+          <string>YYYY:MM:DD hh:mm</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="precision">
+          <number>1</number>
+         </property>
+         <property name="showUnits">
+          <bool>true</bool>
+         </property>
+         <property name="precisionFromPV">
+          <bool>false</bool>
+         </property>
+         <property name="alarmSensitiveContent">
+          <bool>false</bool>
+         </property>
+         <property name="alarmSensitiveBorder">
+          <bool>true</bool>
+         </property>
+         <property name="PyDMToolTip">
+          <string/>
+         </property>
+         <property name="channel">
+          <string/>
+         </property>
+         <property name="enableRichText">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="5" rowspan="5">
+        <widget class="PyDMDrawingLine" name="PyDMDrawingLine_13">
+         <property name="minimumSize">
+          <size>
+           <width>5</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>10</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="brush">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>200</red>
+            <green>200</green>
+            <blue>200</blue>
+           </color>
+          </brush>
+         </property>
+         <property name="penColor">
+          <color>
+           <red>80</red>
+           <green>80</green>
+           <blue>80</blue>
+          </color>
+         </property>
+         <property name="penWidth">
+          <double>1.000000000000000</double>
+         </property>
+         <property name="rotation">
+          <double>90.000000000000000</double>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
      <widget class="QFrame" name="frame_cameras">
       <property name="geometry">
        <rect>
         <x>545</x>
-        <y>350</y>
+        <y>355</y>
         <width>640</width>
         <height>266</height>
        </rect>
@@ -3114,7 +3068,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
       <property name="geometry">
        <rect>
         <x>285</x>
-        <y>350</y>
+        <y>355</y>
         <width>250</width>
         <height>266</height>
        </rect>
@@ -5166,6 +5120,770 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
          </property>
          <property name="channel">
           <string>PHYS:SYS1:1:F2LFB_BC20E</string>
+         </property>
+         <property name="enableRichText">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QFrame" name="frame_ff_size_4">
+      <property name="geometry">
+       <rect>
+        <x>285</x>
+        <y>170</y>
+        <width>396</width>
+        <height>176</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(20,20,30);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_22">
+       <property name="leftMargin">
+        <number>5</number>
+       </property>
+       <property name="topMargin">
+        <number>10</number>
+       </property>
+       <property name="rightMargin">
+        <number>5</number>
+       </property>
+       <property name="bottomMargin">
+        <number>5</number>
+       </property>
+       <property name="horizontalSpacing">
+        <number>10</number>
+       </property>
+       <property name="verticalSpacing">
+        <number>5</number>
+       </property>
+       <item row="9" column="3">
+        <widget class="QLabel" name="label_145">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(255,255,255);</string>
+         </property>
+         <property name="text">
+          <string>Model srv 1</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="1">
+        <widget class="QLabel" name="label_130">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(255,255,255);</string>
+         </property>
+         <property name="text">
+          <string>Long. FB</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1" colspan="4">
+        <widget class="PyDMDrawingLine" name="PyDMDrawingLine_44">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="brush">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>200</red>
+            <green>200</green>
+            <blue>200</blue>
+           </color>
+          </brush>
+         </property>
+         <property name="penColor">
+          <color>
+           <red>80</red>
+           <green>80</green>
+           <blue>80</blue>
+          </color>
+         </property>
+         <property name="penWidth">
+          <double>1.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="3">
+        <widget class="QLabel" name="label_146">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(255,255,255);</string>
+         </property>
+         <property name="text">
+          <string>Model srv 2</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="4">
+        <widget class="PyDMLabel" name="HB_MDLFF_12">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
+  background-color: rgb(0,0,10);
+  color: rgb(0,255,0);
+  border-color: rgb(0,255,0);
+  border-width: 2px;
+}
+
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;1&quot;] {
+  background-color: rgb(0,0,10);
+  color: rgb(255,255,0);
+  border-color: rgb(180,180,0);
+  border-width: 2px;
+}
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;2&quot;] {
+  background-color: rgb(255,0,0);
+  color: rgb(255,255,255);
+}</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="precision">
+          <number>0</number>
+         </property>
+         <property name="showUnits">
+          <bool>false</bool>
+         </property>
+         <property name="precisionFromPV">
+          <bool>true</bool>
+         </property>
+         <property name="alarmSensitiveContent">
+          <bool>true</bool>
+         </property>
+         <property name="alarmSensitiveBorder">
+          <bool>true</bool>
+         </property>
+         <property name="PyDMToolTip">
+          <string/>
+         </property>
+         <property name="channel">
+          <string>F2:WATCHER:DIFFPUMP_STAT</string>
+         </property>
+         <property name="enableRichText">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="2">
+        <widget class="PyDMLabel" name="HB_MDLFF_11">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
+  background-color: rgb(0,0,10);
+  color: rgb(0,255,0);
+  border-color: rgb(0,255,0);
+  border-width: 2px;
+}
+
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;1&quot;] {
+  background-color: rgb(0,0,10);
+  color: rgb(255,255,0);
+  border-color: rgb(180,180,0);
+  border-width: 2px;
+}
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;2&quot;] {
+  background-color: rgb(255,0,0);
+  color: rgb(255,255,255);
+}</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="precision">
+          <number>0</number>
+         </property>
+         <property name="showUnits">
+          <bool>false</bool>
+         </property>
+         <property name="precisionFromPV">
+          <bool>true</bool>
+         </property>
+         <property name="alarmSensitiveContent">
+          <bool>true</bool>
+         </property>
+         <property name="alarmSensitiveBorder">
+          <bool>true</bool>
+         </property>
+         <property name="PyDMToolTip">
+          <string/>
+         </property>
+         <property name="channel">
+          <string>F2:WATCHER:FEEDBACKS_STAT</string>
+         </property>
+         <property name="enableRichText">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="2">
+        <widget class="PyDMLabel" name="HB_MDLFF_15">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
+  background-color: rgb(0,0,10);
+  color: rgb(0,255,0);
+  border-color: rgb(0,255,0);
+  border-width: 2px;
+}
+
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;1&quot;] {
+  background-color: rgb(0,0,10);
+  color: rgb(255,255,0);
+  border-color: rgb(180,180,0);
+  border-width: 2px;
+}</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="precision">
+          <number>0</number>
+         </property>
+         <property name="showUnits">
+          <bool>false</bool>
+         </property>
+         <property name="precisionFromPV">
+          <bool>true</bool>
+         </property>
+         <property name="alarmSensitiveContent">
+          <bool>true</bool>
+         </property>
+         <property name="alarmSensitiveBorder">
+          <bool>true</bool>
+         </property>
+         <property name="PyDMToolTip">
+          <string/>
+         </property>
+         <property name="channel">
+          <string>F2:WATCHER:MDLFF_STAT</string>
+         </property>
+         <property name="enableRichText">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="2">
+        <widget class="PyDMLabel" name="HB_MDLFF_13">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
+  background-color: rgb(0,0,10);
+  color: rgb(0,255,0);
+  border-color: rgb(0,255,0);
+  border-width: 2px;
+}
+
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;1&quot;] {
+  background-color: rgb(0,0,10);
+  color: rgb(255,255,0);
+  border-color: rgb(180,180,0);
+  border-width: 2px;
+}
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;2&quot;] {
+  background-color: rgb(255,0,0);
+  color: rgb(255,255,255);
+}</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="precision">
+          <number>0</number>
+         </property>
+         <property name="showUnits">
+          <bool>false</bool>
+         </property>
+         <property name="precisionFromPV">
+          <bool>true</bool>
+         </property>
+         <property name="alarmSensitiveContent">
+          <bool>true</bool>
+         </property>
+         <property name="alarmSensitiveBorder">
+          <bool>true</bool>
+         </property>
+         <property name="PyDMToolTip">
+          <string/>
+         </property>
+         <property name="channel">
+          <string>F2:WATCHER:VITARA_STAT</string>
+         </property>
+         <property name="enableRichText">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="2">
+        <widget class="PyDMLabel" name="HB_MDLFF_5">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
+  background-color: rgb(0,0,10);
+  color: rgb(0,255,0);
+  border-color: rgb(0,255,0);
+  border-width: 2px;
+}
+
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;1&quot;] {
+  background-color: rgb(0,0,10);
+  color: rgb(255,255,0);
+  border-color: rgb(180,180,0);
+  border-width: 2px;
+}
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;2&quot;] {
+  background-color: rgb(255,0,0);
+  color: rgb(255,255,255);
+}</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="precision">
+          <number>0</number>
+         </property>
+         <property name="showUnits">
+          <bool>false</bool>
+         </property>
+         <property name="precisionFromPV">
+          <bool>true</bool>
+         </property>
+         <property name="alarmSensitiveContent">
+          <bool>true</bool>
+         </property>
+         <property name="alarmSensitiveBorder">
+          <bool>true</bool>
+         </property>
+         <property name="PyDMToolTip">
+          <string/>
+         </property>
+         <property name="channel">
+          <string>F2:WATCHER:CHARGEFEEDBACK_STAT</string>
+         </property>
+         <property name="enableRichText">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="4">
+        <widget class="PyDMLabel" name="HB_MDLFF_9">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
+  background-color: rgb(0,0,10);
+  color: rgb(0,255,0);
+  border-color: rgb(0,255,0);
+  border-width: 2px;
+}
+
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;1&quot;] {
+  background-color: rgb(0,0,10);
+  color: rgb(255,255,0);
+  border-color: rgb(180,180,0);
+  border-width: 2px;
+}
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;2&quot;] {
+  background-color: rgb(255,0,0);
+  color: rgb(255,255,255);
+}</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="precision">
+          <number>0</number>
+         </property>
+         <property name="showUnits">
+          <bool>false</bool>
+         </property>
+         <property name="precisionFromPV">
+          <bool>true</bool>
+         </property>
+         <property name="alarmSensitiveContent">
+          <bool>true</bool>
+         </property>
+         <property name="alarmSensitiveBorder">
+          <bool>true</bool>
+         </property>
+         <property name="PyDMToolTip">
+          <string/>
+         </property>
+         <property name="channel">
+          <string>F2:WATCHER:MODEL_SERVER_STAT</string>
+         </property>
+         <property name="enableRichText">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="3">
+        <widget class="QLabel" name="label_131">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(255,255,255);</string>
+         </property>
+         <property name="text">
+          <string>Klys. CUD</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="3">
+        <widget class="QLabel" name="label_147">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(255,255,255);</string>
+         </property>
+         <property name="text">
+          <string>S20 DPS</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="1">
+        <widget class="QLabel" name="label_148">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(255,255,255);</string>
+         </property>
+         <property name="text">
+          <string>MDL FF</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="4">
+        <widget class="PyDMLabel" name="HB_MDLFF_10">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
+  background-color: rgb(0,0,10);
+  color: rgb(0,255,0);
+  border-color: rgb(0,255,0);
+  border-width: 2px;
+}
+
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;1&quot;] {
+  background-color: rgb(0,0,10);
+  color: rgb(255,255,0);
+  border-color: rgb(180,180,0);
+  border-width: 2px;
+}
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;2&quot;] {
+  background-color: rgb(255,0,0);
+  color: rgb(255,255,255);
+}</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="precision">
+          <number>0</number>
+         </property>
+         <property name="showUnits">
+          <bool>false</bool>
+         </property>
+         <property name="precisionFromPV">
+          <bool>true</bool>
+         </property>
+         <property name="alarmSensitiveContent">
+          <bool>true</bool>
+         </property>
+         <property name="alarmSensitiveBorder">
+          <bool>true</bool>
+         </property>
+         <property name="PyDMToolTip">
+          <string/>
+         </property>
+         <property name="channel">
+          <string>F2:WATCHER:KLYSCUD_STAT</string>
+         </property>
+         <property name="enableRichText">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QLabel" name="label_127">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(255,255,255);</string>
+         </property>
+         <property name="text">
+          <string>S10 Vitara</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1" colspan="4">
+        <widget class="QLabel" name="label_140">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>19</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>19</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Watcher Processes</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="1">
+        <widget class="QLabel" name="label_128">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(255,255,255);</string>
+         </property>
+         <property name="text">
+          <string>Charge FB</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="4">
+        <widget class="PyDMLabel" name="HB_MDLFF_14">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;0&quot;] {
+  background-color: rgb(0,0,10);
+  color: rgb(0,255,0);
+  border-color: rgb(0,255,0);
+  border-width: 2px;
+}
+
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;1&quot;] {
+  background-color: rgb(0,0,10);
+  color: rgb(255,255,0);
+  border-color: rgb(180,180,0);
+  border-width: 2px;
+}
+PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;2&quot;] {
+  background-color: rgb(255,0,0);
+  color: rgb(255,255,255);
+}</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="precision">
+          <number>0</number>
+         </property>
+         <property name="showUnits">
+          <bool>false</bool>
+         </property>
+         <property name="precisionFromPV">
+          <bool>true</bool>
+         </property>
+         <property name="alarmSensitiveContent">
+          <bool>true</bool>
+         </property>
+         <property name="alarmSensitiveBorder">
+          <bool>true</bool>
+         </property>
+         <property name="PyDMToolTip">
+          <string/>
+         </property>
+         <property name="channel">
+          <string>F2:WATCHER:MODEL_SERVER2_STAT</string>
          </property>
          <property name="enableRichText">
           <bool>false</bool>
