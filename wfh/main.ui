@@ -6286,8 +6286,29 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
        <property name="alignment">
         <set>Qt::AlignCenter</set>
        </property>
+       <property name="precision">
+        <number>0</number>
+       </property>
+       <property name="showUnits">
+        <bool>false</bool>
+       </property>
+       <property name="precisionFromPV">
+        <bool>true</bool>
+       </property>
+       <property name="alarmSensitiveContent">
+        <bool>false</bool>
+       </property>
+       <property name="alarmSensitiveBorder">
+        <bool>true</bool>
+       </property>
+       <property name="PyDMToolTip">
+        <string/>
+       </property>
        <property name="channel">
-        <string>KLYS:LI10:21:PEAKPOWER_MPS</string>
+        <string>KLYS:LI10:31:PEAKPOWER_MPS</string>
+       </property>
+       <property name="enableRichText">
+        <bool>false</bool>
        </property>
       </widget>
       <widget class="QLabel" name="label_20">
@@ -6613,7 +6634,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
            <string/>
           </property>
           <property name="channel">
-           <string>ACCL:LI10:31:POWER_W0CH0</string>
+           <string>ACCL:LI10:81:POWER_W0CH0</string>
           </property>
           <property name="enableRichText">
            <bool>false</bool>
@@ -6744,7 +6765,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
            <string/>
           </property>
           <property name="channel">
-           <string>ACCL:LI10:31:PHASE_W0CH0</string>
+           <string>ACCL:LI10:81:PHASE_W0CH0</string>
           </property>
           <property name="enableRichText">
            <bool>false</bool>
@@ -7717,7 +7738,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
            <string/>
           </property>
           <property name="channel">
-           <string>ACCL:LI10:21:POWER_W0CH6</string>
+           <string>ACCL:LI10:31:POWER_W0CH6</string>
           </property>
           <property name="enableRichText">
            <bool>false</bool>
@@ -7906,7 +7927,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
            <string/>
           </property>
           <property name="channel">
-           <string>ACCL:LI10:21:PHASE_W0CH6</string>
+           <string>ACCL:LI10:31:PHASE_W0CH6</string>
           </property>
           <property name="enableRichText">
            <bool>false</bool>
