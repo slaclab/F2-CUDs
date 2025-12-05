@@ -5,7 +5,6 @@ from numpy import flip
 from functools import partial
 from pydm import Display
 from pydm.widgets.channel import PyDMChannel
-from pydm.widgets.image import PyDMImageView
 from PyQt5.QtCore import QTimer
 
 from orbit import FacetOrbit, DiffOrbit, BaseOrbit, BPM
@@ -16,6 +15,7 @@ sys.path.append(REPO_ROOT)
 
 from core import beam_refs
 from widgets.orbit_view import OrbitView
+from widgets.InvertedPyDMImage import InvertedPyDMImage
 
 ORBIT_DRAW_RATE = 10
 ORBIT_POS_SCALE = 1
@@ -28,7 +28,7 @@ class F2_CUD_injector(Display):
     def __init__(self, parent=None, args=None):
         super(F2_CUD_injector, self).__init__(parent=parent, args=args)
 
-        VCCF_image = InvertedImage(
+        VCCF_image = InvertedPyDMImage(
             im_ch='CAMR:LT10:900:Image:ArrayData',
             w_ch='CAMR:LT10:900:Image:ArraySize0_RBV',
             parent=self.ui.frame_cameras
@@ -44,7 +44,7 @@ class F2_CUD_injector(Display):
             xMin=0, xMax=1340, yMin=0, yMax=1000
             )
 
-        CATH_image = InvertedImage(
+        CATH_image = InvertedPyDMImage(
             im_ch='CTHD:IN10:111:Image:ArrayData',
             w_ch='CTHD:IN10:111:Image:ArraySize0_RBV',
             parent=self.ui.frame_cameras
@@ -134,9 +134,4 @@ class F2_CUD_injector(Display):
         return
 
 
-# subclass to flip iamge in X/Y - performance intensive :(
-class InvertedImage(PyDMImageView):
-    def __init__(self, im_ch, w_ch, parent=None, args=None):
-        PyDMImageView.__init__(self, parent=parent, image_channel=im_ch, width_channel=w_ch)
 
-    def process_image(self, image): return flip(image)
