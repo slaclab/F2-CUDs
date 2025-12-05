@@ -63,7 +63,7 @@ class F2_CUD_S20(Display):
         SYAG_image.setGeometry(5, 5, 490, 240)
         SYAG_image.setShowAxes(True)
         SYAG_image.getView().getViewBox().setLimits(
-            xMin=0, xMax=get_pv(f'{PV_SYAG}:Image:ArraySize0_RBV').get()+100,
+            xMin=0, xMax=get_pv(f'{PV_SYAG}:Image:ArraySize0_RBV').get(),
             yMin=0, yMax=get_pv(f'{PV_SYAG}:Image:ArraySize1_RBV').get()/2.0
             )
         SYAG_image.setColorMap(cmap=colormap.get('inferno'))
