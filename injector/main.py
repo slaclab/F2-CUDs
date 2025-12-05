@@ -31,9 +31,7 @@ class F2_CUD_injector(Display):
             parent=self.ui.frame_cameras
             )
         VCCF_image.readingOrder = 1
-        VCCF_image.colorMap = 4
-        VCCF_image.colorMapMin = 10.0
-        VCCF_image.colorMapMax = 60.0
+        VCCF_image.colorMap = 1
         VCCF_image.showAxes = True
         VCCF_image.maxRedrawRate = 10
         VCCF_image.setGeometry(15,85,360,300)
