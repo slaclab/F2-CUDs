@@ -1,14 +1,13 @@
 import os, sys
-from sys import exit
-from klys_indicator import sbstIndicator, klysIndicator
+from os import path
 from pydm import Display
 from PyQt5.QtWidgets import QGridLayout
 from PyQt5.QtGui import QFont
 
-SELF_PATH = os.path.dirname(os.path.abspath(__file__))
-REPO_ROOT = os.path.join(*os.path.split(SELF_PATH)[:-1])
+SELF_PATH = path.dirname(path.abspath(__file__))
+REPO_ROOT = path.join(*path.split(SELF_PATH)[:-1])
 sys.path.append(REPO_ROOT)
-
+from widgets.klystronStatusIndicator import sbstIndicator, klysIndicator
 
 # L2: S11-S14, L3: S15-S19, 8x klys per sector
 L2 = [str(i) for i in range(11,15)]
@@ -25,7 +24,6 @@ STATUS_FONT.setPointSize(22)
 
 
 class F2_CUD_klystrons(Display):
-
     def __init__(self, parent=None, args=None):
         super(F2_CUD_klystrons, self).__init__(parent=parent, args=args)
 
@@ -44,8 +42,6 @@ class F2_CUD_klystrons(Display):
             self.ui.plot_BC14,self.ui.plot_BC20
             ]:
             plot.hideAxis('bottom')
-
-
         self.setWindowTitle('FACET-II CUD: RF System')
         
         return
@@ -55,10 +51,8 @@ class F2_CUD_klystrons(Display):
         ind_L0A   = klysIndicator('10-8', parent=self.ui.cont_L0A)
         ind_L0B   = klysIndicator('10-4', parent=self.ui.cont_L0B)
         ind_TCAV0 = klysIndicator('10-5', parent=self.ui.cont_TCAV0)
-
         for ind in [ind_gun, ind_L0A, ind_L0B, ind_TCAV0]:
             ind.setGeometry(0,0,100,80)
-
         return
 
     def setup_L1(self):
@@ -68,13 +62,11 @@ class F2_CUD_klystrons(Display):
         ind_L1B = klysIndicator(
             '11-2', pv_pdes='KLYS:LI11:21:PREQ', parent=self.ui.cont_L1SB
             )
-
         for ind in [ind_L1A, ind_L1B]:
             ind.setGeometry(0,0,100,80)
         return
 
     def setup_L2_L3(self):
-
         for linac, container in zip([L2, L3], [self.ui.area_L2, self.ui.area_L3]):
             L = QGridLayout()
             L.setSpacing(5)
@@ -92,10 +84,8 @@ class F2_CUD_klystrons(Display):
                     if s == '14' and k == '8': continue
                     klys = klysIndicator(f'{s}-{k}')
                     L.addWidget(klys, int(k), i_sbst)
-
-            
         return
 
 
     def ui_filename(self):
-        return os.path.join(SELF_PATH, 'main.ui')
+        return path.join(SELF_PATH, 'main.ui')
