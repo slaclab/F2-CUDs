@@ -8,19 +8,15 @@ from pydm.widgets.channel import PyDMChannel
 from pyqtgraph import colormap
 from PyQt5.QtCore import QTimer
 from epics import get_pv
-
-# import orbit
 from orbit import FacetOrbit, DiffOrbit, BaseOrbit, BPM, FacetSCPBPM
-from orbit_view import OrbitView 
-
 
 SELF_PATH = path.dirname(path.abspath(__file__))
 REPO_ROOT = path.join(*path.split(SELF_PATH)[:-1])
-
 sys.path.append(REPO_ROOT)
 
 from core import beam_refs
 from widgets.InvertedPyDMImage import InvertedPyDMImage
+from widgets.orbit_view import OrbitView
 
 ORBIT_DRAW_RATE = 10
 ORBIT_POS_SCALE = 1.1

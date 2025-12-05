@@ -9,13 +9,13 @@ from pydm.widgets.image import PyDMImageView
 from PyQt5.QtCore import QTimer
 
 from orbit import FacetOrbit, DiffOrbit, BaseOrbit, BPM
-from orbit_view import OrbitView 
 
 SELF_PATH = path.dirname(path.abspath(__file__))
 REPO_ROOT = path.join(*path.split(SELF_PATH)[:-1])
 sys.path.append(REPO_ROOT)
 
 from core import beam_refs
+from widgets.orbit_view import OrbitView
 
 ORBIT_DRAW_RATE = 10
 ORBIT_POS_SCALE = 1
