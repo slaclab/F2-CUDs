@@ -33,6 +33,9 @@ PV_L3_MSMT     = 'WIRE:LI19:144:EMITN_X'
 PV_IPWS1_MSMT  = 'WIRE:LI20:3179:XRMS'
 PV_IPBlen_MSMT = 'CAMR:LI20:107:BLEN'
 
+PV_DTOTR_ESCALE_ETA = 'SIOC:SYS1:ML00:AO332'
+PV_DTOTR_ESCALE_E0 = 'SIOC:SYS1:ML00:AO333'
+
 SELF_PATH = path.dirname(path.abspath(__file__))
 
 # L2: S11-S14, L3: S15-S19, 8x klys per sector
@@ -58,25 +61,35 @@ class F2_WFH(Display):
             w_ch='CAMR:LI20:100:Image:ArraySize0_RBV',
             parent=self.ui.frame_SYAG
             )
+        self.SYAG_image.setScaleXAxis(get_pv(f'CAMR:LI20:100:RESOLUTION').value*1e-3)
+        self.SYAG_image.setScaleYAxis(get_pv(f'CAMR:LI20:100:RESOLUTION').value*1e-3)
         self.SYAG_image.readingOrder = 1
         self.SYAG_image.colorMap = 1
-        # SYAG_image.setGeometry(0,0, 340, 170)
+        self.SYAG_image.showAxes = True
+        self.SYAG_image.setGeometry(0,0, 446,177)
 
         self.VCCF_image = InvertedPyDMImage(
             im_ch='CAMR:LT10:900:Image:ArrayData',
             w_ch='CAMR:LT10:900:Image:ArraySize0_RBV',
             parent=self.ui.frame_vcc
             )
+        self.SYAG_image.setScaleXAxis(get_pv(f'CAMR:LT10:900:RESOLUTION').value*1e-3)
+        self.SYAG_image.setScaleYAxis(get_pv(f'CAMR:LT10:900:RESOLUTION').value*1e-3)
         self.VCCF_image.readingOrder = 1
         self.VCCF_image.colorMap = 1
-        self.VCCF_image.colorMapMin = 10.0
-        self.VCCF_image.colorMapMax = 60.0
         self.VCCF_image.showAxes = True
         self.VCCF_image.maxRedrawRate = 10
-        # self.VCCF_image.setGeometry(15,85,360,300)
+        self.VCCF_image.setGeometry(0,0, 230,175)
         # self.VCCF_image.getView().getViewBox().setLimits(
         #     xMin=170, xMax=1340, yMin=110, yMax=1000
         #     )
+
+        reso = get_pv(f'CAMR:LI20:107:RESOLUTION').value*1e-3
+        Escale_eta = get_pv(PV_DTOTR_ESCALE_ETA).value
+        Escale_E0 = get_pv(PV_DTOTR_ESCALE_E0).value
+        self.ui.live_DTOTR2.showAxes = True
+        self.ui.live_DTOTR2.setScaleXAxis(reso)
+        self.ui.live_DTOTR2.setScaleYAxis(reso)
 
         # connect to emittance & S20 measurement PVs to update timestamps
         self.L0_msmt_PV     = get_pv(PV_L0_MSMT)
