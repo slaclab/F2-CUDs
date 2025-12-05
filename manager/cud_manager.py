@@ -207,6 +207,7 @@ class F2CUDManager(Display):
 
             self.ui.launch_LEM: 'lem',
             self.ui.launch_transport: 'transport',
+            self.ui.launch_transport_LM: 'transport_LM',
             self.ui.launch_long_FB: 'long_FB',
             self.ui.launch_long_FB_hist: 'long_FB_hist',
             
@@ -216,8 +217,6 @@ class F2CUDManager(Display):
             self.ui.launch_MPS: 'MPS',
             
             self.ui.launch_orbit: 'orbit',
-            self.ui.launch_alarms: 'alarms',
-            self.ui.launch_network: 'network',
             }
         for button, CUD_ID in buttons.items():
             button.clicked.connect(partial(self.local_CUD_launch, CUD_ID))

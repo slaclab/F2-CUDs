@@ -100,7 +100,7 @@ color: rgb(0, 34, 130);</string>
     <property name="toolTip">
      <string/>
     </property>
-    <property name="filename" stdset="0">
+    <property name="filename">
      <string>/home/fphysics/zack/workspace/resources/F2_icon.png</string>
     </property>
    </widget>
@@ -145,10 +145,10 @@ color: rgb(0, 34, 130);</string>
     <property name="alignment">
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
-    <property name="alarmSensitiveBorder" stdset="0">
+    <property name="alarmSensitiveBorder">
      <bool>false</bool>
     </property>
-    <property name="channel" stdset="0">
+    <property name="channel">
      <string>SIOC:SYS1:AL00:TOD</string>
     </property>
    </widget>
@@ -212,13 +212,13 @@ color: rgb(0, 34, 130);</string>
         <string>Main</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_5">
-        <item row="30" column="0">
-         <spacer name="verticalSpacer_7">
+        <item row="4" column="0">
+         <spacer name="verticalSpacer_6">
           <property name="orientation">
            <enum>Qt::Vertical</enum>
           </property>
           <property name="sizeType">
-           <enum>QSizePolicy::Expanding</enum>
+           <enum>QSizePolicy::Minimum</enum>
           </property>
           <property name="sizeHint" stdset="0">
            <size>
@@ -228,12 +228,444 @@ color: rgb(0, 34, 130);</string>
           </property>
          </spacer>
         </item>
+        <item row="11" column="1">
+         <widget class="QPushButton" name="launch_orbit">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string/>
+          </property>
+          <property name="text">
+           <string>Orbit</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="2">
+         <widget class="QPushButton" name="kill_all">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(180, 0, 0);
+color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>Kill Everything</string>
+          </property>
+         </widget>
+        </item>
+        <item row="21" column="2">
+         <widget class="PyDMPushButton" name="ref_UNLOCK">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string/>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Allow Changes</string>
+          </property>
+          <property name="rules">
+           <string>[{&quot;name&quot;: &quot;locked&quot;, &quot;property&quot;: &quot;Opacity&quot;, &quot;initial_value&quot;: &quot;0.5 * ch[0] + 0.5&quot;, &quot;expression&quot;: &quot;0.5 * ch[0] + 0.5&quot;, &quot;channels&quot;: [{&quot;channel&quot;: &quot;SIOC:SYS1:ML03:AO975&quot;, &quot;trigger&quot;: true, &quot;use_enum&quot;: false}], &quot;notes&quot;: &quot;&quot;}]</string>
+          </property>
+          <property name="channel">
+           <string>SIOC:SYS1:ML03:AO975</string>
+          </property>
+          <property name="passwordProtected">
+           <bool>true</bool>
+          </property>
+          <property name="password">
+           <string/>
+          </property>
+          <property name="protectedPassword">
+           <string>75a2527ed2545b84c6fc6f631bb11f5710ee94d7e06eefea038d204d85d0d384</string>
+          </property>
+          <property name="showConfirmDialog">
+           <bool>false</bool>
+          </property>
+          <property name="releaseValue">
+           <string>0</string>
+          </property>
+          <property name="writeWhenRelease">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0" colspan="4">
+         <widget class="Line" name="line_7">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>5</height>
+           </size>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="21" column="3">
+         <widget class="PyDMPushButton" name="ref_LOCK">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string/>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Lock Config</string>
+          </property>
+          <property name="rules">
+           <string>[{&quot;name&quot;: &quot;locked&quot;, &quot;property&quot;: &quot;Opacity&quot;, &quot;initial_value&quot;: &quot;0.5 * (1 - ch[0]) + 0.5&quot;, &quot;expression&quot;: &quot;0.5 * (1 - ch[0]) + 0.5&quot;, &quot;channels&quot;: [{&quot;channel&quot;: &quot;SIOC:SYS1:ML03:AO975&quot;, &quot;trigger&quot;: true, &quot;use_enum&quot;: false}], &quot;notes&quot;: &quot;&quot;}]</string>
+          </property>
+          <property name="alarmSensitiveContent">
+           <bool>false</bool>
+          </property>
+          <property name="alarmSensitiveBorder">
+           <bool>false</bool>
+          </property>
+          <property name="PyDMToolTip">
+           <string/>
+          </property>
+          <property name="monitorDisp">
+           <bool>false</bool>
+          </property>
+          <property name="channel">
+           <string>SIOC:SYS1:ML03:AO975</string>
+          </property>
+          <property name="PyDMIcon">
+           <string/>
+          </property>
+          <property name="showConfirmDialog">
+           <bool>false</bool>
+          </property>
+          <property name="confirmMessage">
+           <string>Are you sure you want to proceed?</string>
+          </property>
+          <property name="pressValue">
+           <string>1</string>
+          </property>
+          <property name="releaseValue">
+           <string>1</string>
+          </property>
+          <property name="writeWhenRelease">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="20" column="0">
+         <spacer name="verticalSpacer_8">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Minimum</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="8" column="1">
+         <widget class="QPushButton" name="launch_linac">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string/>
+          </property>
+          <property name="text">
+           <string>Linac</string>
+          </property>
+         </widget>
+        </item>
+        <item row="12" column="1">
+         <widget class="QPushButton" name="launch_MPS">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string/>
+          </property>
+          <property name="text">
+           <string>MPS</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="4">
+         <widget class="Line" name="line_3">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>5</height>
+           </size>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="2">
+         <widget class="QPushButton" name="launch_transport">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string/>
+          </property>
+          <property name="text">
+           <string>Beam Transport</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="3">
+         <widget class="QPushButton" name="launch_S20">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string/>
+          </property>
+          <property name="text">
+           <string>Sector 20</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QPushButton" name="kill_LM">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 120, 120);
+color: rgb(0,0,10);</string>
+          </property>
+          <property name="text">
+           <string>Kill LMs</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QPushButton" name="autosetup_LM">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(144,194,255);
+color: rgb(0,0,10);</string>
+          </property>
+          <property name="text">
+           <string>Launch LMs</string>
+          </property>
+         </widget>
+        </item>
+        <item row="21" column="0" colspan="2">
+         <widget class="QLabel" name="label_28">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Modify Beam References (Expert Only)</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QPushButton" name="autosetup_SM">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(144,194,255);
+color: rgb(0,0,10);</string>
+          </property>
+          <property name="text">
+           <string>Launch SMs</string>
+          </property>
+         </widget>
+        </item>
+        <item row="12" column="0">
+         <widget class="QPushButton" name="launch_PPS_BCS">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string/>
+          </property>
+          <property name="text">
+           <string>PPS/BCS</string>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="3">
+         <widget class="QPushButton" name="launch_long_FB">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string/>
+          </property>
+          <property name="text">
+           <string>Longitudinal FB</string>
+          </property>
+         </widget>
+        </item>
         <item row="23" column="0" colspan="4">
          <widget class="PyDMFrame" name="frame_ref_edits">
           <property name="toolTip">
            <string/>
           </property>
-          <property name="rules" stdset="0">
+          <property name="rules">
            <string>[{&quot;name&quot;: &quot;hide when locked&quot;, &quot;property&quot;: &quot;Opacity&quot;, &quot;initial_value&quot;: &quot;0.5 * (1 - ch[0]) + 0.5&quot;, &quot;expression&quot;: &quot;0.5 * (1 - ch[0]) + 0.5&quot;, &quot;channels&quot;: [{&quot;channel&quot;: &quot;SIOC:SYS1:ML03:AO975&quot;, &quot;trigger&quot;: true, &quot;use_enum&quot;: true}], &quot;notes&quot;: &quot;&quot;}, {&quot;name&quot;: &quot;enable when unlocked&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;initial_value&quot;: &quot;ch[0] == 0&quot;, &quot;expression&quot;: &quot;ch[0] == 0&quot;, &quot;channels&quot;: [{&quot;channel&quot;: &quot;SIOC:SYS1:ML03:AO975&quot;, &quot;trigger&quot;: true, &quot;use_enum&quot;: true}], &quot;notes&quot;: &quot;&quot;}]</string>
           </property>
           <layout class="QGridLayout" name="gridLayout_8">
@@ -407,79 +839,8 @@ color: rgb(0, 34, 130);</string>
           </layout>
          </widget>
         </item>
-        <item row="8" column="3">
-         <widget class="QPushButton" name="launch_S20">
-          <property name="minimumSize">
-           <size>
-            <width>100</width>
-            <height>30</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <property name="toolTip">
-           <string/>
-          </property>
-          <property name="text">
-           <string>Sector 20</string>
-          </property>
-         </widget>
-        </item>
-        <item row="21" column="2">
-         <widget class="PyDMPushButton" name="ref_UNLOCK">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>30</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="toolTip">
-           <string/>
-          </property>
-          <property name="styleSheet">
-           <string notr="true"/>
-          </property>
-          <property name="text">
-           <string>Allow Changes</string>
-          </property>
-          <property name="rules" stdset="0">
-           <string>[{&quot;name&quot;: &quot;locked&quot;, &quot;property&quot;: &quot;Opacity&quot;, &quot;initial_value&quot;: &quot;0.5 * ch[0] + 0.5&quot;, &quot;expression&quot;: &quot;0.5 * ch[0] + 0.5&quot;, &quot;channels&quot;: [{&quot;channel&quot;: &quot;SIOC:SYS1:ML03:AO975&quot;, &quot;trigger&quot;: true, &quot;use_enum&quot;: false}], &quot;notes&quot;: &quot;&quot;}]</string>
-          </property>
-          <property name="channel" stdset="0">
-           <string>SIOC:SYS1:ML03:AO975</string>
-          </property>
-          <property name="passwordProtected" stdset="0">
-           <bool>true</bool>
-          </property>
-          <property name="password" stdset="0">
-           <string/>
-          </property>
-          <property name="protectedPassword" stdset="0">
-           <string>75a2527ed2545b84c6fc6f631bb11f5710ee94d7e06eefea038d204d85d0d384</string>
-          </property>
-          <property name="showConfirmDialog" stdset="0">
-           <bool>false</bool>
-          </property>
-          <property name="releaseValue" stdset="0">
-           <string>0</string>
-          </property>
-          <property name="writeWhenRelease" stdset="0">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="11" column="1">
-         <widget class="QPushButton" name="launch_orbit">
+        <item row="11" column="0">
+         <widget class="QPushButton" name="launch_LEM">
           <property name="enabled">
            <bool>true</bool>
           </property>
@@ -498,13 +859,170 @@ color: rgb(0, 34, 130);</string>
            <string/>
           </property>
           <property name="text">
-           <string>Orbit</string>
+           <string>LEM</string>
           </property>
-          <property name="checkable">
-           <bool>false</bool>
+         </widget>
+        </item>
+        <item row="32" column="0" colspan="4">
+         <widget class="Line" name="line_8">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>5</height>
+           </size>
           </property>
-          <property name="flat">
-           <bool>false</bool>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="2">
+         <widget class="QPushButton" name="autosetup_all">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(0,180,0);
+color: rgb(0,0,10);</string>
+          </property>
+          <property name="text">
+           <string>ACR Quadrant 2 Auto-setup</string>
+          </property>
+         </widget>
+        </item>
+        <item row="33" column="0" colspan="2">
+         <widget class="PyDMCheckbox" name="PyDMCheckbox">
+          <property name="toolTip">
+           <string/>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>S20 CUD DTOTR2 tracking</string>
+          </property>
+          <property name="monitorDisp">
+           <bool>true</bool>
+          </property>
+          <property name="channel">
+           <string>SIOC:SYS1:ML03:AO977</string>
+          </property>
+         </widget>
+        </item>
+        <item row="30" column="0">
+         <spacer name="verticalSpacer_7">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Expanding</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="31" column="0">
+         <widget class="QLabel" name="label_31">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Misc.</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1" colspan="3">
+         <widget class="QLabel" name="label_20">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>50</weight>
+            <italic>true</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Kills all (selected) monitors and launches default displays.</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="0">
+         <widget class="QPushButton" name="launch_injector">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string/>
+          </property>
+          <property name="text">
+           <string>Injector</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0" colspan="2">
+         <widget class="QLabel" name="label_25">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Run Displays Locally</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
           </property>
          </widget>
         </item>
@@ -545,136 +1063,8 @@ color: rgb(0,0,10);</string>
           </property>
          </widget>
         </item>
-        <item row="8" column="0">
-         <widget class="QPushButton" name="launch_injector">
-          <property name="minimumSize">
-           <size>
-            <width>100</width>
-            <height>30</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <property name="toolTip">
-           <string/>
-          </property>
-          <property name="text">
-           <string>Injector</string>
-          </property>
-         </widget>
-        </item>
-        <item row="8" column="1">
-         <widget class="QPushButton" name="launch_linac">
-          <property name="minimumSize">
-           <size>
-            <width>100</width>
-            <height>30</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <property name="toolTip">
-           <string/>
-          </property>
-          <property name="text">
-           <string>Linac</string>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="2">
-         <widget class="QPushButton" name="kill_LM">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>30</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-            <weight>50</weight>
-            <bold>false</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 120, 120);
-color: rgb(0,0,10);</string>
-          </property>
-          <property name="text">
-           <string>Kill LMs</string>
-          </property>
-         </widget>
-        </item>
-        <item row="21" column="3">
-         <widget class="PyDMPushButton" name="ref_LOCK">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>30</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="toolTip">
-           <string/>
-          </property>
-          <property name="styleSheet">
-           <string notr="true"/>
-          </property>
-          <property name="text">
-           <string>Lock Config</string>
-          </property>
-          <property name="rules" stdset="0">
-           <string>[{&quot;name&quot;: &quot;locked&quot;, &quot;property&quot;: &quot;Opacity&quot;, &quot;initial_value&quot;: &quot;0.5 * (1 - ch[0]) + 0.5&quot;, &quot;expression&quot;: &quot;0.5 * (1 - ch[0]) + 0.5&quot;, &quot;channels&quot;: [{&quot;channel&quot;: &quot;SIOC:SYS1:ML03:AO975&quot;, &quot;trigger&quot;: true, &quot;use_enum&quot;: false}], &quot;notes&quot;: &quot;&quot;}]</string>
-          </property>
-          <property name="alarmSensitiveContent" stdset="0">
-           <bool>false</bool>
-          </property>
-          <property name="alarmSensitiveBorder" stdset="0">
-           <bool>false</bool>
-          </property>
-          <property name="PyDMToolTip" stdset="0">
-           <string/>
-          </property>
-          <property name="monitorDisp" stdset="0">
-           <bool>false</bool>
-          </property>
-          <property name="channel" stdset="0">
-           <string>SIOC:SYS1:ML03:AO975</string>
-          </property>
-          <property name="PyDMIcon" stdset="0">
-           <string/>
-          </property>
-          <property name="showConfirmDialog" stdset="0">
-           <bool>false</bool>
-          </property>
-          <property name="confirmMessage" stdset="0">
-           <string>Are you sure you want to proceed?</string>
-          </property>
-          <property name="pressValue" stdset="0">
-           <string>1</string>
-          </property>
-          <property name="releaseValue" stdset="0">
-           <string>1</string>
-          </property>
-          <property name="writeWhenRelease" stdset="0">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="21" column="0" colspan="2">
-         <widget class="QLabel" name="label_28">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_19">
           <property name="minimumSize">
            <size>
             <width>0</width>
@@ -689,38 +1079,15 @@ color: rgb(0,0,10);</string>
            </font>
           </property>
           <property name="text">
-           <string>Modify Beam References (Expert Only)</string>
+           <string>ACR Automatic Setup</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
           </property>
          </widget>
         </item>
-        <item row="31" column="0">
-         <widget class="QLabel" name="label_31">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>30</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>Misc.</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item row="11" column="3">
-         <widget class="QPushButton" name="launch_long_FB">
+        <item row="12" column="2">
+         <widget class="QPushButton" name="launch_wfh">
           <property name="minimumSize">
            <size>
             <width>100</width>
@@ -736,39 +1103,12 @@ color: rgb(0,0,10);</string>
            <string/>
           </property>
           <property name="text">
-           <string>Longitudinal FB</string>
+           <string>Work-from-home</string>
           </property>
          </widget>
         </item>
-        <item row="2" column="0" colspan="2">
-         <widget class="QPushButton" name="autosetup_all">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>30</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(0,180,0);
-color: rgb(0,0,10);</string>
-          </property>
-          <property name="text">
-           <string>ACR Quadrant 2 Auto-setup</string>
-          </property>
-         </widget>
-        </item>
-        <item row="12" column="1">
-         <widget class="QPushButton" name="launch_MPS">
-          <property name="enabled">
-           <bool>true</bool>
-          </property>
+        <item row="12" column="3">
+         <widget class="QPushButton" name="launch_long_FB_hist">
           <property name="minimumSize">
            <size>
             <width>100</width>
@@ -784,28 +1124,7 @@ color: rgb(0,0,10);</string>
            <string/>
           </property>
           <property name="text">
-           <string>MPS</string>
-          </property>
-         </widget>
-        </item>
-        <item row="12" column="0">
-         <widget class="QPushButton" name="launch_PPS_BCS">
-          <property name="minimumSize">
-           <size>
-            <width>100</width>
-            <height>30</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <property name="toolTip">
-           <string/>
-          </property>
-          <property name="text">
-           <string>PPS/BCS</string>
+           <string>Long. FB History</string>
           </property>
          </widget>
         </item>
@@ -827,29 +1146,6 @@ color: rgb(0,0,10);</string>
           </property>
           <property name="text">
            <string>RF (Klystrons)</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="0">
-         <widget class="QLabel" name="label_19">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>30</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>ACR Automatic Setup</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
           </property>
          </widget>
         </item>
@@ -877,11 +1173,8 @@ color: rgb(0,0,10);</string>
           </property>
          </widget>
         </item>
-        <item row="11" column="0">
-         <widget class="QPushButton" name="launch_LEM">
-          <property name="enabled">
-           <bool>true</bool>
-          </property>
+        <item row="13" column="0">
+         <widget class="QPushButton" name="launch_transport_LM">
           <property name="minimumSize">
            <size>
             <width>100</width>
@@ -897,324 +1190,7 @@ color: rgb(0,0,10);</string>
            <string/>
           </property>
           <property name="text">
-           <string>LEM</string>
-          </property>
-         </widget>
-        </item>
-        <item row="5" column="0" colspan="2">
-         <widget class="QLabel" name="label_25">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>30</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>Run Displays Locally</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="0" colspan="2">
-         <widget class="QPushButton" name="kill_all">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>30</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(180, 0, 0);
-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="text">
-           <string>Kill Everything</string>
-          </property>
-         </widget>
-        </item>
-        <item row="11" column="2">
-         <widget class="QPushButton" name="launch_transport">
-          <property name="minimumSize">
-           <size>
-            <width>100</width>
-            <height>30</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <property name="toolTip">
-           <string/>
-          </property>
-          <property name="text">
-           <string>Beam Transport</string>
-          </property>
-         </widget>
-        </item>
-        <item row="33" column="0" colspan="2">
-         <widget class="PyDMCheckbox" name="PyDMCheckbox">
-          <property name="toolTip">
-           <string/>
-          </property>
-          <property name="styleSheet">
-           <string notr="true"/>
-          </property>
-          <property name="text">
-           <string>S20 CUD DTOTR2 tracking</string>
-          </property>
-          <property name="monitorDisp" stdset="0">
-           <bool>true</bool>
-          </property>
-          <property name="channel" stdset="0">
-           <string>SIOC:SYS1:ML03:AO977</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="2">
-         <widget class="QPushButton" name="autosetup_LM">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>30</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-            <weight>50</weight>
-            <bold>false</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(144,194,255);
-color: rgb(0,0,10);</string>
-          </property>
-          <property name="text">
-           <string>Launch LMs</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1" colspan="3">
-         <widget class="QLabel" name="label_20">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>30</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-            <weight>50</weight>
-            <italic>true</italic>
-            <bold>false</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>Kills all (selected) monitors and launches default displays.</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="3">
-         <widget class="QPushButton" name="autosetup_SM">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>30</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-            <weight>50</weight>
-            <bold>false</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(144,194,255);
-color: rgb(0,0,10);</string>
-          </property>
-          <property name="text">
-           <string>Launch SMs</string>
-          </property>
-         </widget>
-        </item>
-        <item row="12" column="3">
-         <widget class="QPushButton" name="launch_alarms">
-          <property name="minimumSize">
-           <size>
-            <width>100</width>
-            <height>30</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <property name="toolTip">
-           <string/>
-          </property>
-          <property name="text">
-           <string>EPICS Alarms</string>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="0">
-         <spacer name="verticalSpacer_6">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Minimum</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item row="20" column="0">
-         <spacer name="verticalSpacer_8">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Minimum</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item row="1" column="0" colspan="4">
-         <widget class="Line" name="line_3">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>5</height>
-           </size>
-          </property>
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-         </widget>
-        </item>
-        <item row="6" column="0" colspan="4">
-         <widget class="Line" name="line_7">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>5</height>
-           </size>
-          </property>
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-         </widget>
-        </item>
-        <item row="12" column="2">
-         <widget class="QPushButton" name="launch_network">
-          <property name="enabled">
-           <bool>true</bool>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>100</width>
-            <height>30</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <property name="toolTip">
-           <string/>
-          </property>
-          <property name="text">
-           <string>Network/Watchers</string>
-          </property>
-         </widget>
-        </item>
-        <item row="32" column="0" colspan="4">
-         <widget class="Line" name="line_8">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>5</height>
-           </size>
-          </property>
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-         </widget>
-        </item>
-        <item row="14" column="1">
-         <widget class="QPushButton" name="launch_long_FB_hist">
-          <property name="minimumSize">
-           <size>
-            <width>100</width>
-            <height>30</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <property name="toolTip">
-           <string/>
-          </property>
-          <property name="text">
-           <string>Long. FB History</string>
-          </property>
-         </widget>
-        </item>
-        <item row="14" column="0">
-         <widget class="QPushButton" name="launch_wfh">
-          <property name="minimumSize">
-           <size>
-            <width>100</width>
-            <height>30</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <property name="toolTip">
-           <string/>
-          </property>
-          <property name="text">
-           <string>Work-from-home</string>
+           <string>Beam Transport (LM)</string>
           </property>
          </widget>
         </item>
