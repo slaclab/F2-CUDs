@@ -1,7 +1,7 @@
 import sys
 from os import path
 from pydm import Display
-from PyQt5.QtCore import QTimer
+from PyQt5.QtCore import Qt, QTimer
 from PyQt5.QtGui import QColor, QPen
 import pyqtgraph as pg
 from matplotlib import colormaps as cm
@@ -91,4 +91,4 @@ class F2_inj_T_plot(Display):
         return
 
     def ui_filename(self):
-        return os.path.join(SELF_PATH, 'inj_T_hist.ui')
+        return path.join(SELF_PATH, 'inj_T_hist.ui')
