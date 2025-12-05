@@ -12,6 +12,7 @@ SELF_PATH = path.dirname(path.abspath(__file__))
 REPO_ROOT = path.join(*path.split(SELF_PATH)[:-1])
 sys.path.append(REPO_ROOT)
 
+sys.path.append('/usr/local/facet/tools/python/')
 from F2_pytools.dpmdl import normed_pmdl_history, temp_prs_history
 
 
