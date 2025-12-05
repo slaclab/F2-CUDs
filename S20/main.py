@@ -1,11 +1,11 @@
 import sys
 from os import path
 from sys import exit
-from numpy import flip, nanmean, reshape
+from numpy import nanmean, reshape
 from functools import partial
 from pydm import Display
 from pydm.widgets.channel import PyDMChannel
-from pydm.widgets.image import PyDMImageView
+from pyqtgraph import colormap
 from PyQt5.QtCore import QTimer
 from epics import get_pv
 
@@ -14,17 +14,13 @@ from orbit import FacetOrbit, DiffOrbit, BaseOrbit, BPM, FacetSCPBPM
 from orbit_view import OrbitView 
 
 
-# ==== for later =====
-# RESOLUTION 9.91
-SYAG_CONVERSION = 'CAMR:LI20:100:RESOLUTION'
-
-
 SELF_PATH = path.dirname(path.abspath(__file__))
 REPO_ROOT = path.join(*path.split(SELF_PATH)[:-1])
 
 sys.path.append(REPO_ROOT)
 
 from core import beam_refs
+from widgets.InvertedPyDMImage import InvertedPyDMImage
 
 ORBIT_DRAW_RATE = 10
 ORBIT_POS_SCALE = 1.1
@@ -32,7 +28,10 @@ ORBIT_TMIT_MAX = 1.4e10
 
 PV_REF_UPDATE = 'SIOC:SYS1:ML03:AO976'
 
+PV_SYAG = 'CAMR:LI20:100'
 PV_DTOTR = 'CAMR:LI20:107'
+PV_DTOTR_ESCALE_ETA = 'SIOC:SYS1:ML00:AO332'
+PV_DTOTR_ESCALE_E0 = 'SIOC:SYS1:ML00:AO333'
 
 PV_DTOTR_TRACK_UPDATE = 'SIOC:SYS1:ML03:AO977'
 
@@ -58,19 +57,28 @@ class F2_CUD_S20(Display):
         super(F2_CUD_S20, self).__init__(parent=parent, args=args)
         # super(F2_CUD_S20, self).__init__()
 
-        SYAG_image = SYAGImg(
-            im_ch='CAMR:LI20:100:Image:ArrayData',
-            w_ch='CAMR:LI20:100:Image:ArraySize0_RBV',
+        SYAG_image = InvertedPyDMImage(
+            im_ch=f'{PV_SYAG}:Image:ArrayData',
+            w_ch=f'{PV_SYAG}:Image:ArraySize0_RBV',
             parent=self.ui.frame_SYAG
             )
         SYAG_image.readingOrder = 1
         SYAG_image.colorMap = 4
         SYAG_image.setGeometry(5, 5, 490, 240)
+        SYAG_image.setShowAxes(True)
         SYAG_image.getView().getViewBox().setLimits(
-            xMin=0, xMax=get_pv('CAMR:LI20:100:Image:ArraySize0_RBV').get()+100,
-            yMin=0, yMax=get_pv('CAMR:LI20:100:Image:ArraySize1_RBV').get()/2.0
+            xMin=0, xMax=get_pv(f'{PV_SYAG}:Image:ArraySize0_RBV').get()+100,
+            yMin=0, yMax=get_pv(f'{PV_SYAG}:Image:ArraySize1_RBV').get()/2.0
             )
         SYAG_image.setColorMap(cmap=colormap.get('inferno'))
+        SYAG_image.setScaleXAxis(get_pv(f'{PV_SYAG}:RESOLUTION').value*1e-3)
+        SYAG_image.setScaleYAxis(get_pv(f'{PV_SYAG}:RESOLUTION').value*1e-3)
+
+        reso = get_pv(f'{PV_DTOTR}:RESOLUTION').value*1e-3
+        Escale_eta = get_pv(PV_DTOTR_ESCALE_ETA).value
+        Escale_E0 = get_pv(PV_DTOTR_ESCALE_E0).value
+        self.ui.live_DTOTR2.setScaleXAxis(reso)
+        self.ui.live_DTOTR2.setScaleYAxis(reso)
 
         self.track_dtotr = QTimer(self)
         self.track_dtotr.start()
@@ -173,11 +181,3 @@ class F2_CUD_S20(Display):
         except:
             print('dtotr image processing failed')
             return
-
-
-# subclass to flip iamge in X/Y - performance intensive :(
-class SYAGImg(PyDMImageView):
-    def __init__(self, im_ch, w_ch, parent=None, args=None):
-        PyDMImageView.__init__(self, parent=parent, image_channel=im_ch, width_channel=w_ch)
-
-    def process_image(self, image): return flip(image)
