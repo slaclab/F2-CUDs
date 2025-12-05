@@ -5587,7 +5587,7 @@ PyDMLabel[alarmSensitiveBorder=&quot;true&quot;][alarmSeverity=&quot;4&quot;] {
         <string/>
        </property>
        <property name="filename">
-        <string>/home/fphysics/zack/workspace/pmdl_plots/main.py</string>
+        <string>/usr/local/facet/tools/python/F2-CUDs/linac/pmdl_plots.py</string>
        </property>
       </widget>
      </item>
