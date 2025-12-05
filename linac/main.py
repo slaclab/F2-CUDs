@@ -4,9 +4,7 @@ from epics import get_pv
 from datetime import datetime as dt
 from functools import partial
 from pydm import Display
-from pydm.widgets.label import PyDMLabel
 from pydm.widgets.channel import PyDMChannel
-from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QFont
 
 SELF_PATH = path.dirname(path.abspath(__file__))

@@ -1,18 +1,13 @@
 import sys
 from os import path
-from numpy import flip
 from functools import partial
 from epics import get_pv
 from datetime import datetime as dt
-
-from pydm import Display
-from pydm.widgets.label import PyDMLabel
-from pydm.widgets.channel import PyDMChannel
-from pydm.widgets.image import PyDMImageView
-
 from PyQt5.QtWidgets import QGridLayout
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QFont
+from pydm import Display
+from pydm.widgets.channel import PyDMChannel
 
 SELF_PATH = path.dirname(path.abspath(__file__))
 REPO_ROOT = path.join(*path.split(SELF_PATH)[:-1])

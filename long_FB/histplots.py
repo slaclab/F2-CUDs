@@ -1,18 +1,9 @@
-import os, sys
+import sys
 from os import path
-from sys import exit
-import time
-import numpy as np
-
-from epics import caget
-
-import pydm
 from pydm import Display
-from pydm.widgets.channel import PyDMChannel
 
 SELF_PATH = path.dirname(path.abspath(__file__))
 REPO_ROOT = path.join(*path.split(SELF_PATH)[:-1])
-
 sys.path.append(REPO_ROOT)
 
 class F2longHist(Display):
@@ -32,4 +23,4 @@ class F2longHist(Display):
         return
 
     def ui_filename(self):
-        return os.path.join(SELF_PATH, 'histplots_stacked.ui')
+        return path.join(SELF_PATH, 'histplots_stacked.ui')

@@ -1,12 +1,9 @@
 import sys
 from os import path
-from sys import exit
-from numpy import flip
 from functools import partial
 from pydm import Display
 from pydm.widgets.channel import PyDMChannel
 from PyQt5.QtCore import QTimer
-
 from orbit import FacetOrbit, DiffOrbit, BaseOrbit, BPM
 
 SELF_PATH = path.dirname(path.abspath(__file__))
