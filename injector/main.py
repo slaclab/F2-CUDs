@@ -15,7 +15,7 @@ from widgets.orbit_view import OrbitView
 from widgets.InvertedPyDMImage import InvertedPyDMImage
 
 ORBIT_DRAW_RATE = 10
-ORBIT_POS_SCALE = 1
+ORBIT_POS_SCALE = 0.6
 ORBIT_TMIT_MAX = 1.4e10
 
 PV_REF_UPDATE = 'SIOC:SYS1:ML03:AO976'
@@ -28,13 +28,13 @@ class F2_CUD_injector(Display):
         VCCF_image = InvertedPyDMImage(
             im_ch='CAMR:LT10:900:Image:ArrayData',
             w_ch='CAMR:LT10:900:Image:ArraySize0_RBV',
-            parent=self.ui.frame_cameras
+            parent=self.ui.frame_vccf
             )
         VCCF_image.readingOrder = 1
         VCCF_image.colorMap = 1
         VCCF_image.showAxes = True
         VCCF_image.maxRedrawRate = 10
-        VCCF_image.setGeometry(15,85,360,300)
+        VCCF_image.setGeometry(0,0,382,327)
         VCCF_image.getView().getViewBox().setLimits(
             xMin=0, xMax=1340, yMin=0, yMax=1000
             )
@@ -42,14 +42,14 @@ class F2_CUD_injector(Display):
         CATH_image = InvertedPyDMImage(
             im_ch='CTHD:IN10:111:Image:ArrayData',
             w_ch='CTHD:IN10:111:Image:ArraySize0_RBV',
-            parent=self.ui.frame_cameras
+            parent=self.ui.frame_cathodef
             )
         CATH_image.readingOrder = 1
         CATH_image.colorMap = 1
         CATH_image.showAxes = True
         CATH_image.maxRedrawRate = 10
         CATH_image.normalizeData = True
-        CATH_image.setGeometry(415,85,360,300)
+        CATH_image.setGeometry(0,0,382,327)
         # CATH_image.getView().getViewBox().setLimits(
         #     xMin=90, xMax=280, yMin=90, yMax=280
         #     )
